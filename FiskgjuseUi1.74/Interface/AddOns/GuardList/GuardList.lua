@@ -52,7 +52,7 @@ AnimatedImageStartAnimation ("GuardList_Window0Glow", 0, true, true, 0)
 	for i=1,5 do
 		CreateWindowFromTemplate("GuardList_Window"..i, "GuardList_Window0", "Root")
 		WindowClearAnchors("GuardList_Window"..i)
-		WindowAddAnchor( "GuardList_Window"..i , "bottom", "GuardList_Window"..(i-1), "top", 0,7)	
+		WindowAddAnchor( "GuardList_Window"..i , "bottom", "GuardList_Window"..(i-1), "top", 0,14)	
 		WindowSetMovable( "GuardList_Window"..i, false )			
 	end
 

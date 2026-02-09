@@ -482,7 +482,7 @@ function RVMOD_Manager.InitializeManagerWindow()
 	LabelSetText(WindowManager.."ContentRVGeneralScrollChildLicenseLabel", L"License:")
 	LabelSetText(WindowManager.."ContentRVGeneralScrollChildProjectURLLabel", L"Project URL:")
 	LabelSetText(WindowManager.."ContentRVGeneralScrollChildRecentUpdatesLabel", L"Recent Updates:")
-	local ScrollChildWidth = 665
+	local ScrollChildWidth = 1330
 	WindowSetDimensions(WindowManager.."ContentRVGeneralScrollChild", ScrollChildWidth, 0)
 	WindowSetDimensions(WindowManager.."ContentRVGeneralScrollChildAuthorText", ScrollChildWidth-230, 0)
 	WindowSetDimensions(WindowManager.."ContentRVGeneralScrollChildCreditsText", ScrollChildWidth-230, 0)
@@ -1129,7 +1129,7 @@ function RVMOD_Manager.OnMouseOverFilterAll()
 	Tooltips.SetTooltipColor(3, 1, 100, 160, 100)
 	Tooltips.Finalize()
 
-	local anchor = {Point="topleft", RelativeTo=SystemData.ActiveWindow.name, RelativePoint="bottomleft", XOffset=0, YOffset=-8}
+	local anchor = {Point="topleft", RelativeTo=SystemData.ActiveWindow.name, RelativePoint="bottomleft", XOffset=0, YOffset=-16}
 	Tooltips.AnchorTooltip(anchor)
 	Tooltips.SetTooltipAlpha(1)
 end
@@ -1144,7 +1144,7 @@ function RVMOD_Manager.OnMouseOverFilterRV()
 	Tooltips.SetTooltipColor(3, 1, 100, 160, 100)
 	Tooltips.Finalize()
 
-	local anchor = {Point="topleft", RelativeTo=SystemData.ActiveWindow.name, RelativePoint="bottomleft", XOffset=0, YOffset=-8}
+	local anchor = {Point="topleft", RelativeTo=SystemData.ActiveWindow.name, RelativePoint="bottomleft", XOffset=0, YOffset=-16}
 	Tooltips.AnchorTooltip(anchor)
 	Tooltips.SetTooltipAlpha(1)
 end
@@ -1159,7 +1159,7 @@ function RVMOD_Manager.OnMouseOverFilterEA()
 	Tooltips.SetTooltipColor(3, 1, 100, 160, 100)
 	Tooltips.Finalize()
 
-	local anchor = {Point="topleft", RelativeTo=SystemData.ActiveWindow.name, RelativePoint="bottomleft", XOffset=0, YOffset=-8}
+	local anchor = {Point="topleft", RelativeTo=SystemData.ActiveWindow.name, RelativePoint="bottomleft", XOffset=0, YOffset=-16}
 	Tooltips.AnchorTooltip(anchor)
 	Tooltips.SetTooltipAlpha(1)
 end
@@ -1172,7 +1172,7 @@ function RVMOD_Manager.OnMouseOverSortBy()
 	Tooltips.SetTooltipColor(2, 1, 100, 160, 100)
 	Tooltips.Finalize()
 
-	local anchor = {Point="topleft", RelativeTo=SystemData.ActiveWindow.name, RelativePoint="bottomleft", XOffset=0, YOffset=-8}
+	local anchor = {Point="topleft", RelativeTo=SystemData.ActiveWindow.name, RelativePoint="bottomleft", XOffset=0, YOffset=-16}
 	Tooltips.AnchorTooltip(anchor)
 	Tooltips.SetTooltipAlpha(1)
 end
@@ -1185,7 +1185,7 @@ function RVMOD_Manager.OnMouseOverMagnifier()
 	Tooltips.SetTooltipColor(2, 1, 100, 160, 100)
 	Tooltips.Finalize()
 
-	local anchor = {Point="topleft", RelativeTo=SystemData.ActiveWindow.name, RelativePoint="bottomleft", XOffset=0, YOffset=-8}
+	local anchor = {Point="topleft", RelativeTo=SystemData.ActiveWindow.name, RelativePoint="bottomleft", XOffset=0, YOffset=-16}
 	Tooltips.AnchorTooltip(anchor)
 	Tooltips.SetTooltipAlpha(1)
 end

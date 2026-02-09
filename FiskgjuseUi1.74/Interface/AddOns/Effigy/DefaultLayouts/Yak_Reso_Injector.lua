@@ -23,7 +23,7 @@ local function Apply_1280_1024_to_YakUI()
 	--bars.PlayerHP.labels.Level.anchors[1].y = 16
 	bars.PlayerHP.labels.Name.clip_after = 12
 	--bars.Castbar.images.Foreground.anchors[1].y = -6
-	bars.Castbar.images.CBEnd.height = 20
+	bars.Castbar.images.CBEnd.height = 40
 	bars.Castbar.images.CBEnd.anchors[1].y = 1
 	bars.Castbar.anchors[1].y = -332
 	bars.Castbar.anchors[1].x = -2
@@ -45,7 +45,7 @@ local function Apply_1280_1024_to_YakUI()
 			bars["GroupMember"..i].anchors[1].parentpoint = "left"
 		end
 		bars["GroupMember"..i].labels.Value.anchors[1].x = 0
-		bars["GroupMember"..i].labels.Value.width = 50
+		bars["GroupMember"..i].labels.Value.width = 100
 		--bars["GroupMember"..i].labels.Value.anchors[1].y = 18
 		bars["GroupMember"..i].labels.Value.anchors[1].point = "bottomright"
 		bars["GroupMember"..i].labels.Name.clip_after = 9
@@ -79,7 +79,7 @@ local function Apply_1440_900_075_to_YakUI()
 	bars.PlayerHP.labels.Name.clip_after = 12
 	bars.PlayerHP.labels.Name.anchors[1].y = 17
 	--bars.Castbar.images.Foreground.anchors[1].y = -6
-	bars.Castbar.images.CBEnd.height = 20
+	bars.Castbar.images.CBEnd.height = 40
 	bars.Castbar.images.CBEnd.anchors[1].y = 1
 	bars.Castbar.anchors[1].y = -314
 	bars.Castbar.anchors[1].x = -200
@@ -102,7 +102,7 @@ local function Apply_1440_900_075_to_YakUI()
 			bars["GroupMember"..i].anchors[1].parentpoint = "left"
 		end
 		bars["GroupMember"..i].labels.Value.anchors[1].x = 0
-		bars["GroupMember"..i].labels.Value.width = 50
+		bars["GroupMember"..i].labels.Value.width = 100
 		bars["GroupMember"..i].labels.Value.anchors[1].y = 18
 		bars["GroupMember"..i].labels.Value.anchors[1].point = "bottomright"
 		bars["GroupMember"..i].labels.Name.clip_after = 7
@@ -207,7 +207,7 @@ local function Apply_1360_768_to_YakUI()
 	bars.Pet.anchors[1].y = 200
 	--bars.Pet.labels.Name.anchors[1].x = 56
 	--bars.Castbar.images.Foreground.anchors[1].y = -6
-	bars.Castbar.images.CBEnd.height = 20
+	bars.Castbar.images.CBEnd.height = 40
 	bars.Castbar.images.CBEnd.anchors[1].y = 1
 	bars.Castbar.anchors[1].y = -273
 	bars.Castbar.anchors[1].x = -133
@@ -227,7 +227,7 @@ local function Apply_1360_768_to_YakUI()
 		bars["GroupMember"..i].anchors[1].y = 10
 		--[[bars["GroupMember"..i].labels.Name.anchors[1].x = 56
 		bars["GroupMember"..i].labels.Value.anchors[1].x = 0
-		bars["GroupMember"..i].labels.Value.width = 50
+		bars["GroupMember"..i].labels.Value.width = 100
 		bars["GroupMember"..i].labels.Value.anchors[1].y = 18
 		bars["GroupMember"..i].labels.Value.anchors[1].point = "bottomright"]]--
 		bars["GroupMember"..i].labels.Name.clip_after = 7
@@ -268,7 +268,7 @@ local function Apply_1440_900_1_to_YakUI()
 	--bars.Pet.labels.Name.anchors[1].x = 56
 	--bars.PlayerCareer.anchors[1].y = 2
 	--bars.Castbar.images.Foreground.anchors[1].y = -6
-	bars.Castbar.images.CBEnd.height = 20
+	bars.Castbar.images.CBEnd.height = 40
 	bars.Castbar.images.CBEnd.anchors[1].y = 1
 	bars.Castbar.anchors[1].point = "center"
 	bars.Castbar.anchors[1].parentpoint = "center"
@@ -288,7 +288,7 @@ local function Apply_1440_900_1_to_YakUI()
 		bars["GroupMember"..i].anchors[1].y = 10
 		--[[bars["GroupMember"..i].labels.Name.anchors[1].x = 56
 		bars["GroupMember"..i].labels.Value.anchors[1].x = 0
-		bars["GroupMember"..i].labels.Value.width = 50
+		bars["GroupMember"..i].labels.Value.width = 100
 		bars["GroupMember"..i].labels.Value.anchors[1].y = 18
 		bars["GroupMember"..i].labels.Value.anchors[1].point = "bottomright"]]--
 		bars["GroupMember"..i].labels.Name.clip_after = 7

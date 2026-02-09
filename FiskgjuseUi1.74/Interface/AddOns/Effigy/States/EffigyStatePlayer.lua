@@ -344,7 +344,7 @@ end
 --
 -- Mouse Handlers
 --
-local XP_TOOLTIP_ANCHOR = { Point = "bottom",  RelativeTo = "XpBarWindow", RelativePoint = "top",  XOffset = 0, YOffset = 10 }
+local XP_TOOLTIP_ANCHOR = { Point = "bottom",  RelativeTo = "XpBarWindow", RelativePoint = "top",  XOffset = 0, YOffset = 20 }
 function Addon.MouseoverXPBar()
 	XP_TOOLTIP_ANCHOR.RelativeTo = SystemData.ActiveWindow.name
     Tooltips.CreateTextOnlyTooltip( SystemData.ActiveWindow.name )
@@ -393,7 +393,7 @@ function Addon.SetXPLabelText()
 end
 
 -- OnMouseOver Handler for Rp bar
-RP_TOOLTIP_ANCHOR = { Point = "bottom",  RelativeTo = "RpBarWindow", RelativePoint = "top",  XOffset = 0, YOffset = 10 }
+RP_TOOLTIP_ANCHOR = { Point = "bottom",  RelativeTo = "RpBarWindow", RelativePoint = "top",  XOffset = 0, YOffset = 20 }
 function Addon.MouseoverRPBar()
 	RP_TOOLTIP_ANCHOR.RelativeTo = SystemData.ActiveWindow.name
     Tooltips.CreateTextOnlyTooltip( SystemData.ActiveWindow.name )

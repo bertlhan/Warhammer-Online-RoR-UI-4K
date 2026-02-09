@@ -278,7 +278,7 @@ function DAoCBuffSettings.RightListOnMouseOver()
 	Tooltips.SetTooltipColorDef(1, 1, Tooltips.COLOR_HEADING)
 	Tooltips.SetTooltipColorDef(3, 1, Tooltips.COLOR_BODY)
 
-	local tooltip_anchor = { Point = "center",	RelativeTo = SystemData.ActiveWindow.name, RelativePoint = "topleft",	XOffset = 0, YOffset = 8 }
+	local tooltip_anchor = { Point = "center",	RelativeTo = SystemData.ActiveWindow.name, RelativePoint = "topleft",	XOffset = 0, YOffset = 16 }
 	Tooltips.AnchorTooltip(tooltip_anchor)
 	Tooltips.SetTooltipText(1, 1, name)
 	if(effecttext~=nil)then Tooltips.SetTooltipText(3, 1, effecttext) end
@@ -296,7 +296,7 @@ function DAoCBuffSettings.LeftListOnMouseOver()
 	Tooltips.SetTooltipColorDef(1, 1, Tooltips.COLOR_HEADING)
 	Tooltips.SetTooltipColorDef(3, 1, Tooltips.COLOR_BODY)
 
-	local tooltip_anchor = { Point = "center",	RelativeTo = SystemData.ActiveWindow.name, RelativePoint = "topleft",	XOffset = 0, YOffset = 8 }
+	local tooltip_anchor = { Point = "center",	RelativeTo = SystemData.ActiveWindow.name, RelativePoint = "topleft",	XOffset = 0, YOffset = 16 }
 	Tooltips.AnchorTooltip(tooltip_anchor)
 	Tooltips.SetTooltipText(1, 1, name)
 	if(effecttext~=nil)then Tooltips.SetTooltipText(3, 1, effecttext) end
@@ -1554,7 +1554,7 @@ function DAoCBuffSettings.ShowTooltip()
 
 		Tooltips.Finalize()
 
-		local tooltip_anchor = { Point = "bottomright",  RelativeTo = SystemData.ActiveWindow.name, RelativePoint = "topleft",   XOffset = 5, YOffset = 15 }
+		local tooltip_anchor = { Point = "bottomright",  RelativeTo = SystemData.ActiveWindow.name, RelativePoint = "topleft",   XOffset = 10, YOffset = 30 }
 
 		Tooltips.AnchorTooltip(tooltip_anchor)
 	end

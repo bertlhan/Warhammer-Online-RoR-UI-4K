@@ -87,7 +87,7 @@ UFTemplates.Layouts.Limbo.PlayerHP =
 	visibility_group = "none",
 	name = "PlayerHP",
 	interactive_type = "player",
-	height = 22,
+	height = 44,
 	scale = 1,
 	border = 
 	{
@@ -135,7 +135,7 @@ UFTemplates.Layouts.Limbo.PlayerHP =
 	watching_states = {},
 	hide_if_zero = false,
 	show_with_target = false,
-	width = 187,
+	width = 374,
 	show = true,
 	bg = 
 	{
@@ -210,7 +210,7 @@ UFTemplates.Layouts.Limbo.PlayerHP =
 			},
 			scale = 0.6,
 			visibility_group = "CombatOrNotFull",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -387,10 +387,10 @@ UFTemplates.Layouts.Limbo.PlayerAP =
 		alpha_group = "none",
 	},
 	show_with_target = false,
-	width = 187,
+	width = 374,
 	visibility_group = "none",
 	interactive_type = "none",
-	height = 11,
+	height = 22,
 	interactive = false,
 	state = "PlayerAP",
 	anchors = {
@@ -424,7 +424,7 @@ UFTemplates.Layouts.Limbo.PlayerAP =
 			},
 			scale = 0.4,
 			visibility_group = "Combat",
-			height = 25,
+			height = 50,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -473,11 +473,11 @@ UFTemplates.Layouts.Limbo.FriendlyTarget =
 			texture = 
 			{
 				scale = 1,
-				width = 512,
+				width = 1024,
 				texture_group = "none",
 				x = 0,
 				name = "tint_square",
-				height = 128,
+				height = 256,
 				style = "cut",
 				y = 0,
 				slice = "none",
@@ -485,7 +485,7 @@ UFTemplates.Layouts.Limbo.FriendlyTarget =
 			parent = "Bar",
 			layer = "background",
 			alpha = 1,
-			width = 187,
+			width = 374,
 			show = true,
 			visibility_group = "none",
 			scale = 1,
@@ -507,7 +507,7 @@ UFTemplates.Layouts.Limbo.FriendlyTarget =
 				allow_overrides = false,
 				color_group = "none",
 			},
-			height = 33,
+			height = 66,
 			follow_bg_alpha = false,
 			anchors = {
 				[1] = {
@@ -660,7 +660,7 @@ UFTemplates.Layouts.Limbo.FriendlyTarget =
 			style = "cut",
 		},
 	},
-	width = 187,
+	width = 374,
 	no_tooltip = false,
 	hide_if_zero = false,
 	interactive = true,
@@ -675,7 +675,7 @@ UFTemplates.Layouts.Limbo.FriendlyTarget =
 	visibility_group = "none",
 	name = "FriendlyTarget",
 	interactive_type = "friendly",
-	height = 20,
+	height = 40,
 	show = true,
 	anchors = {
 		[1] = {
@@ -707,7 +707,7 @@ UFTemplates.Layouts.Limbo.FriendlyTarget =
 			visibility_group = "none",
 			alpha_group = "none",
 			scale = 0.4,
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -755,7 +755,7 @@ UFTemplates.Layouts.Limbo.FriendlyTarget =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -803,7 +803,7 @@ UFTemplates.Layouts.Limbo.FriendlyTarget =
 				name = "font_heading_target_mouseover_name",
 				case = "none",
 			},
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -851,7 +851,7 @@ UFTemplates.Layouts.Limbo.FriendlyTarget =
 			},
 			alpha_group = "none",
 			parent = "Bar Fill",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -890,7 +890,7 @@ UFTemplates.Layouts.Limbo.FriendlyTarget =
 			layer = "overlay",
 			always_show = false,
 			alpha = 1,
-			width = 400,
+			width = 800,
 			show = true,
 			font = 
 			{
@@ -900,7 +900,7 @@ UFTemplates.Layouts.Limbo.FriendlyTarget =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -970,11 +970,11 @@ UFTemplates.Layouts.Limbo.Castbar =
 		texture = 
 		{
 			scale = 1,
-			width = 211,
+			width = 422,
 			texture_group = "none",
 			slice = "none",
 			name = "XPerl_StatusBar3",
-			height = 10,
+			height = 20,
 			x = 0,
 			y = 0,
 			style = "cut",
@@ -1006,7 +1006,7 @@ UFTemplates.Layouts.Limbo.Castbar =
 	state = "Castbar",
 	name = "Castbar",
 	interactive_type = "none",
-	height = 21,
+	height = 42,
 	scale = 1,
 	border = 
 	{
@@ -1055,7 +1055,7 @@ UFTemplates.Layouts.Limbo.Castbar =
 	hide_if_zero = true,
 	show_with_target = false,
 	visibility_group = "none",
-	width = 410,
+	width = 820,
 	show = true,
 	interactive = false,
 	bg = 
@@ -1129,7 +1129,7 @@ UFTemplates.Layouts.Limbo.Castbar =
 			},
 			scale = 0.6,
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1305,11 +1305,11 @@ UFTemplates.Layouts.Limbo.PlayerCareer =
 	},
 	show_with_target = false,
 	visibility_group = "none",
-	width = 410,
+	width = 820,
 	show = true,
 	interactive = false,
 	interactive_type = "none",
-	height = 16,
+	height = 32,
 	state = "PlayerCareer",
 	anchors = {
 		[1] = {
@@ -1341,7 +1341,7 @@ UFTemplates.Layouts.Limbo.PlayerCareer =
 			},
 			scale = 0.4,
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1390,12 +1390,12 @@ UFTemplates.Layouts.Limbo.HostileTarget =
 			scale = 1,
 			layer = "background",
 			alpha = 1,
-			width = 187,
+			width = 374,
 			show = true,
 			visibility_group = "none",
 			parent = "Bar",
 			follow_bg_alpha = false,
-			height = 33,
+			height = 66,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1426,11 +1426,11 @@ UFTemplates.Layouts.Limbo.HostileTarget =
 			texture = 
 			{
 				scale = 1,
-				width = 512,
+				width = 1024,
 				y = 0,
 				x = 0,
 				name = "tint_square",
-				height = 128,
+				height = 256,
 				style = "cut",
 				texture_group = "none",
 				slice = "none",
@@ -1577,7 +1577,7 @@ UFTemplates.Layouts.Limbo.HostileTarget =
 			slice = "none",
 		},
 	},
-	width = 187,
+	width = 374,
 	no_tooltip = false,
 	hide_if_zero = false,
 	--interactive = false,
@@ -1592,7 +1592,7 @@ UFTemplates.Layouts.Limbo.HostileTarget =
 	visibility_group = "none",
 	name = "HostileTarget",
 	interactive_type = "none",
-	height = 20,
+	height = 40,
 	show = true,
 	anchors = {
 		[1] = {
@@ -1614,7 +1614,7 @@ UFTemplates.Layouts.Limbo.HostileTarget =
 			layer = "overlay",
 			always_show = false,
 			alpha = 1,
-			width = 400,
+			width = 800,
 			show = true,
 			font = 
 			{
@@ -1624,7 +1624,7 @@ UFTemplates.Layouts.Limbo.HostileTarget =
 			},
 			scale = 0.53,
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1673,7 +1673,7 @@ UFTemplates.Layouts.Limbo.HostileTarget =
 			},
 			scale = 0.6,
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1722,7 +1722,7 @@ UFTemplates.Layouts.Limbo.HostileTarget =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1769,7 +1769,7 @@ UFTemplates.Layouts.Limbo.HostileTarget =
 				name = "font_clear_small_bold",
 				case = "none",
 			},
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1816,7 +1816,7 @@ UFTemplates.Layouts.Limbo.HostileTarget =
 			},
 			parent = "Bar",
 			scale = 0.4,
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",

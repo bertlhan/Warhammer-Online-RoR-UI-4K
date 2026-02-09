@@ -22,7 +22,7 @@ function Addon.GetDefaultLabel()
 		parent = "Bar",
 		
 		width = 0,						-- 0: width of Bar
-		height = 24,
+		height = 48,
 		scale = 1,
 
 		anchors = {
@@ -83,8 +83,8 @@ function Addon.GetDefaultImage()
 		},
 		
 		--Size; Fallback for no second Anchor
-		width = 60,
-		height = 60,
+		width = 120,
+		height = 120,
 		scale = 1,
 		
 		colorsettings =
@@ -220,8 +220,8 @@ UFTemplates.Images.Indicator = {
 	follow_bg_alpha = true,
 
 	--Size
-	width = 9,
-	height = 9,
+	width = 18,
+	height = 18,
 	scale = 1,
 	
 	anchors = {
@@ -256,7 +256,7 @@ UFTemplates.Labels.Value = {
 	parent = "Bar",
 	layer = "secondary",
 	
-	height = 24,
+	height = 48,
 	width = 0,						-- 0: width of Bar
 	scale = 1,
 	
@@ -288,7 +288,7 @@ UFTemplates.Labels.Level = {
 	parent = "Bar",
 	layer = "secondary",
 	
-	height = 24,
+	height = 48,
 	width = 0,						-- 0: width of Bar
 	scale = 1,
 
@@ -320,7 +320,7 @@ UFTemplates.Labels.Name = {
 	layer = "secondary",
 	parent = "Bar",
 	
-	height = 24,
+	height = 48,
 	width = 0,						-- 0: width of Bar
 	scale = 1,
 	
@@ -353,8 +353,8 @@ EffigyBarDefaults = {
     interactive_type = "none",
 	
     grow = "right",
-    width = 300,
-    height = 20,
+    width = 600,
+    height = 40,
 
 -- General Positioning
 	pos_at_world_object = false,

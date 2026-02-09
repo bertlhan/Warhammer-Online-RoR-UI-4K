@@ -1169,7 +1169,7 @@ config_dlg.properties =
 		type = "int[]",
 		size = 2,
 		min = { 1, 1 },
-		max = { 500, 500 },
+		max = { 2000, 2000 },
 		default = Enemy.DefaultSettings.combatLogIDSRowSize
 	},
 	combatLogIDSRowPadding =
@@ -1309,7 +1309,7 @@ config_dlg.properties =
 		type = "int[]",
 		size = 2,
 		min = { 1, 1 },
-		max = { 500, 500 },
+		max = { 2000, 2000 },
 		default = Enemy.DefaultSettings.combatLogTargetDefenseSize
 	},
 	combatLogTargetDefenseScale =

@@ -92,7 +92,7 @@ local function ShowButtons(showApply, showCreate)
 		if (showApply) then
 			WindowAddAnchor(windowName .. "CreateButton", "topleft", windowName .. "ApplyButton", "topright", 0, 0);
 		else
-			WindowAddAnchor(windowName .. "CreateButton", "bottomright", windowName, "bottomright", -20, -20);
+			WindowAddAnchor(windowName .. "CreateButton", "bottomright", windowName, "bottomright", -40, -40);
 		end
 	end
 

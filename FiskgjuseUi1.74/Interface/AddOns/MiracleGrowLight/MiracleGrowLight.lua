@@ -58,9 +58,9 @@ function MiracleGrowLight.onHover()
     local mglX,mglY = WindowGetScreenPosition(windowName)
     local anchor = nil
     if mglX*2 > rootWidth then
-        anchor = { Point = "topleft",  RelativeTo = windowName, RelativePoint = "topright",   XOffset = -10, YOffset = 0 }
+        anchor = { Point = "topleft",  RelativeTo = windowName, RelativePoint = "topright",   XOffset = -20, YOffset = 0 }
     else
-        anchor = { Point = "topright",  RelativeTo = windowName, RelativePoint = "topleft",   XOffset = 10, YOffset = 0 }
+        anchor = { Point = "topright",  RelativeTo = windowName, RelativePoint = "topleft",   XOffset = 20, YOffset = 0 }
     end
     Tooltips.AnchorTooltip( anchor )
 end

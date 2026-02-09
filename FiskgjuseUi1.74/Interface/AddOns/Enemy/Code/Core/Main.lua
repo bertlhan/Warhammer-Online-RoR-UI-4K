@@ -690,7 +690,7 @@ function Enemy._DebugTest ()
 	frame:UpdateEffects (player)
 
 	WindowClearAnchors (frame.windowName)
-	WindowAddAnchor (frame.windowName, "center", "Root", "center", -350, -300)
+	WindowAddAnchor (frame.windowName, "center", "Root", "center", -700, -600)
 
 	DebugWindow.ClearTextLog ()
 	d (frame.effectsIndicators[6].effectFilters[1]:IsMatch (player.effects[26]))

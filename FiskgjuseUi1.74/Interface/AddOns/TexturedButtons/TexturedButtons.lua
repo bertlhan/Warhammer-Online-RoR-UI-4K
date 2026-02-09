@@ -149,8 +149,8 @@ local function CustomizeButtonGlow(button, width, height, x, y)
 		WindowAddAnchor(frame.m_Name, "topleft", button.m_Name .. "Overlay", "topleft", glowX, glowY);
 	else
 		-- default glow location
-		WindowSetDimensions(frame.m_Name, 80, 110);
-		WindowAddAnchor(frame.m_Name, "center", button.m_Name .. "Overlay", "center", -8, -26);
+		WindowSetDimensions(frame.m_Name, 160, 220);
+		WindowAddAnchor(frame.m_Name, "center", button.m_Name .. "Overlay", "center", -16, -52);
 	end
 				
 end
@@ -189,7 +189,7 @@ local function LayoutButton(button, buttonTexture, sliceTexture)
 	
 	if (texture) then
 		if (texture.Size) then
-			buttonSize[slot] = buttonSize[slot] or { Width = 64, Height = 64 };
+			buttonSize[slot] = buttonSize[slot] or { Width = 128, Height = 128 };
 			local width, height = texture.Size.Width or 64, texture.Size.Height or 64;
 			local x, y = texture.Size.X or 0, texture.Size.Y or 0;
 			if (forceResizeButtons or buttonSize[slot].Width ~= width or buttonSize[slot].Height ~= height) then

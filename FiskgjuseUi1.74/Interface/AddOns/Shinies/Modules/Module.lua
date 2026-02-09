@@ -176,7 +176,7 @@ end
 -- @param name name of the module type
 -- @param defaults a dictionary of default values that all modules will have that inherit from this module type
 -- @param update_texts if texts on the frame should be updated along with :UpdateLayout
--- @usage MyModule:NewModuleType("mytype", { size = 50, verbosity = "lots" })
+-- @usage MyModule:NewModuleType("mytype", { size = 100, verbosity = "lots" })
 function Shinies:NewModuleType(name, defaults)
 	module_types[name] = {}
 	module_types_to_module_defaults[name] = defaults or {}

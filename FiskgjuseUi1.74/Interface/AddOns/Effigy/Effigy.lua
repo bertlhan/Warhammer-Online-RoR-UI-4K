@@ -544,7 +544,7 @@ local function GroupMouseOver(bar)
 					Point = "topleft",  
 					RelativeTo = bar.name, 
 					RelativePoint = "topleft",   
-					XOffset = -5, YOffset = -5 }
+					XOffset = -10, YOffset = -10 }
 
 	Tooltips.AnchorTooltip(anchor)
 end
@@ -571,7 +571,7 @@ local function GenericMouseOver(bar)
 					Point = "topleft",  
 					RelativeTo = bar.name, 
 					RelativePoint = "topleft",   
-					XOffset = -5, YOffset = -5 }
+					XOffset = -10, YOffset = -10 }
 
 	Tooltips.AnchorTooltip(anchor)
 end

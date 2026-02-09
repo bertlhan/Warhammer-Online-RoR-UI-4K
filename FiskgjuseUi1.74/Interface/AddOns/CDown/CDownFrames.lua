@@ -79,7 +79,7 @@ function CCDownFrameB:Create(windowName,parentWindow,CDSlot,tracker)
 			WindowAddAnchor(TimeBarEnd,"right",TimeBar,"left",0,0)
 			if(tracker.bend)
 			then
-				WindowAddAnchor(TimeBar,"right",Icon,"left",-10,0)
+				WindowAddAnchor(TimeBar,"right",Icon,"left",-20,0)
 			else
 				WindowAddAnchor(TimeBar,"right",Icon,"left",0,0)
 			end
@@ -99,7 +99,7 @@ function CCDownFrameB:Create(windowName,parentWindow,CDSlot,tracker)
 			DynamicImageSetTextureOrientation(TimeBarEnd,true)
 			if(tracker.bend)
 			then
-				WindowAddAnchor(TimeBar,"left",Icon,"right",10,0)
+				WindowAddAnchor(TimeBar,"left",Icon,"right",20,0)
 			else
 				WindowAddAnchor(TimeBar,"left",Icon,"right",0,0)
 			end
@@ -115,7 +115,7 @@ function CCDownFrameB:Create(windowName,parentWindow,CDSlot,tracker)
 		WindowSetDimensions(name.."Name",tracker.width,23)
 		if(tracker.bend)
 		then
-			WindowSetDimensions(TimeBarEnd,10,23)
+			WindowSetDimensions(TimeBarEnd,20,46)
 		end
 		DynamicImageSetTexture(BackBar,"CDown_Statusbar",0,0)
 		DynamicImageSetTexture(TimeBar,"CDown_Statusbar",0,0)
@@ -139,7 +139,7 @@ function CCDownFrameB:Create(windowName,parentWindow,CDSlot,tracker)
 			WindowAddAnchor(TimeBarEnd,"bottom",TimeBar,"top",0,0)
 			if(tracker.bend)
 			then
-				WindowAddAnchor(TimeBar,"bottom",Icon,"top",0,-10)
+				WindowAddAnchor(TimeBar,"bottom",Icon,"top",0,-20)
 			else
 				WindowAddAnchor(TimeBar,"bottom",Icon,"top",0,0)
 			end
@@ -148,7 +148,7 @@ function CCDownFrameB:Create(windowName,parentWindow,CDSlot,tracker)
 				WindowAddAnchor(Time,"bootom",BackBar,"top",0,0)
 			else
 				WindowClearAnchors(Icon)
-				WindowAddAnchor(Time,"topleft",name,"topleft",-13,0)
+				WindowAddAnchor(Time,"topleft",name,"topleft",-26,0)
 				WindowAddAnchor(Icon,"bottom",Time,"top",0,0)
 			end
 			DynamicImageSetTexture(TimeBarEnd,"CDown_StatusbarEndR2",0,0)
@@ -159,7 +159,7 @@ function CCDownFrameB:Create(windowName,parentWindow,CDSlot,tracker)
 			WindowAddAnchor(TimeBarEnd,"top",TimeBar,"bottom",0,0)
 			if(tracker.bend)
 			then
-				WindowAddAnchor(TimeBar,"top",Icon,"bottom",0,10)
+				WindowAddAnchor(TimeBar,"top",Icon,"bottom",0,20)
 			else
 				WindowAddAnchor(TimeBar,"top",Icon,"bottom",0,0)
 			end
@@ -168,7 +168,7 @@ function CCDownFrameB:Create(windowName,parentWindow,CDSlot,tracker)
 				WindowAddAnchor(Time,"top",BackBar,"bottom",0,0)
 			else
 				WindowClearAnchors(Icon)
-				WindowAddAnchor(Time,"bottomleft",name,"bottomleft",-13,0)
+				WindowAddAnchor(Time,"bottomleft",name,"bottomleft",-26,0)
 				WindowAddAnchor(Icon,"top",Time,"bottom",0,0)
 			end
 			DynamicImageSetTexture(TimeBarEnd,"CDown_StatusbarEndR1",0,0)
@@ -176,7 +176,7 @@ function CCDownFrameB:Create(windowName,parentWindow,CDSlot,tracker)
 		LabelSetWordWrap(name.."Name",true)
 		if(tracker.bend)
 		then
-			WindowSetDimensions(TimeBarEnd,23,10)
+			WindowSetDimensions(TimeBarEnd,46,20)
 		end
 		DynamicImageSetTexture(BackBar,"CDown_StatusbarR",0,0)
 		DynamicImageSetTexture(TimeBar,"CDown_StatusbarR",0,0)
@@ -451,10 +451,10 @@ function CCDownTracker:Create(windowName,parentName,initialAnchor,options)
 	if(not options.bar)
 	then
 		if(options.CDsbelow==1)then
-			if(options.tfont==1)then YOffset=20
-			elseif(options.tfont==2)then YOffset=22
-			elseif(options.tfont==3)then YOffset=25
-			elseif(options.tfont==4)then YOffset=25
+			if(options.tfont==1)then YOffset=40
+			elseif(options.tfont==2)then YOffset=44
+			elseif(options.tfont==3)then YOffset=50
+			elseif(options.tfont==4)then YOffset=50
 			end
 		else
 			YOffset=0

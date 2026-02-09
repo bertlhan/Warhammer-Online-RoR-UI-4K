@@ -45,8 +45,8 @@ Addon.LayoutPanel.W = nil
 -- Description:
 --------------------------------------------------------------
 function Addon.LayoutPanel.InitializeSettingsWindow(ParentWindow)
-	local frameSizeW = 630
-	local frameSizeH = 200
+	local frameSizeW = 1260
+	local frameSizeH = 400
 	--
 	-- XML Part
 	--

@@ -25,7 +25,7 @@ function Enemy.GuardInitialize ()
 		g.guardMarkTemplate.scale = 0.8
 		g.guardMarkTemplate.canClearOnClick = false
 		g.guardMarkTemplate.neverExpire = true
-		g.guardMarkTemplate.offsetY = 75
+		g.guardMarkTemplate.offsetY = 150
 
 		Enemy.Settings.guardMarkTemplate = Enemy.clone (g.guardMarkTemplate)
 	end
@@ -550,7 +550,7 @@ config_dlg.properties =
 		order = 120,
 		name = L"Edit guard mark template",
 		type = "button",
-		windowWidth = 300,
+		windowWidth = 600,
 		onClick = function ()
 			config_dlg.guardMarkTemplate:Edit ()
 			Enemy.Guard_OnSettingsChanged (config_dlg)

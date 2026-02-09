@@ -328,7 +328,7 @@ function ReferWindow.RepositionReferBoxes()
             WindowAddAnchor(ref.windowName, "bottomright", "ReferList_Button", "topleft", 0, 0)
         else
             local prevRef = sortedRefs[index-1].ref
-            WindowAddAnchor(ref.windowName, "bottomleft", prevRef.windowName, "topleft", 0, 5)
+            WindowAddAnchor(ref.windowName, "bottomleft", prevRef.windowName, "topleft", 0, 10)
         end
     end
 end

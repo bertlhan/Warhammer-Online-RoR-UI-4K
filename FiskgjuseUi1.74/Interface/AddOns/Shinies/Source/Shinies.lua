@@ -64,7 +64,7 @@ local isLoaded					= false
 local windowId					= "ShiniesWindow"
 local tabWindowId				= "ShiniesTabs"
 
-local windowMinWidth			= 1050
+local windowMinWidth			= 2100
 local windowMinHeight			= 615
 
 -- generic deepcopy
@@ -360,15 +360,15 @@ function AnchorUITabs()
 	leftAnchor.RelativeTo		= windowId
 	leftAnchor.Point 			= "bottomleft"
 	leftAnchor.RelativePoint 	= "topleft"
-	leftAnchor.XOffset			= 15
-	leftAnchor.YOffset			= -7
+	leftAnchor.XOffset			= 30
+	leftAnchor.YOffset			= -14
 	
 	-- Preset our right anchor
 	rightAnchor.RelativeTo		= windowId
 	rightAnchor.Point 			= "bottomright"
 	rightAnchor.RelativePoint 	= "topright"
-	rightAnchor.XOffset			= -15
-	rightAnchor.YOffset			= -7
+	rightAnchor.XOffset			= -30
+	rightAnchor.YOffset			= -14
 	
 	-- Anchor the left tabs
 	for index, tab in ipairs( leftTabs )
@@ -380,7 +380,7 @@ function AnchorUITabs()
 		leftAnchor.RelativeTo		= tab.name
 		leftAnchor.Point 			= "topright"
 		leftAnchor.RelativePoint 	= "topleft"
-		leftAnchor.XOffset			= 5
+		leftAnchor.XOffset			= 10
 		leftAnchor.YOffset			= 0
 	end
 	
@@ -393,7 +393,7 @@ function AnchorUITabs()
 		rightAnchor.RelativeTo		= tab.name
 		rightAnchor.Point 			= "topleft"
 		rightAnchor.RelativePoint 	= "topright"
-		rightAnchor.XOffset			= -5
+		rightAnchor.XOffset			= -10
 		rightAnchor.YOffset			= 0
 	end
 	
@@ -443,8 +443,8 @@ function CreateUI( module )
 		
 		-- Anchor the window to ourselves
 		WindowClearAnchors( config.windowId )
-		WindowAddAnchor( config.windowId, "bottomleft", windowId .. "TitleBar", "topleft", 8, 0 )
-		WindowAddAnchor( config.windowId, "bottomright", windowId, "bottomright", -8, -8)
+		WindowAddAnchor( config.windowId, "bottomleft", windowId .. "TitleBar", "topleft", 16, 0 )
+		WindowAddAnchor( config.windowId, "bottomright", windowId, "bottomright", -16, -16)
 		
 		-- Hide the window
 		WindowSetShowing( config.windowId, false )

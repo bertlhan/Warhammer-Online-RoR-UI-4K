@@ -36,9 +36,9 @@ local dmgMessagePattern = "'s ([^%.]+) hits you for (%d+) ";
 local critMessagePattern = "'s ([^%.]+) critically hits you for (%d+) ";
 
 local statusHeight = 20
-local statusWidth = 25
+local statusWidth = 50
 local imageHeight = 20
-local imageWidth = 20
+local imageWidth = 40
 local padding  = 5
 local color1 = {r=254,g=240,b=1}
 

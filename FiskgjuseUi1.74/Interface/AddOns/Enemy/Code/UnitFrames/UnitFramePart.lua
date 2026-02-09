@@ -91,8 +91,8 @@ local commonProperties =
 {
 	anchorFrom =	{ key = "anchorFrom",	order = 1,		name = L"Anchor (from)",		type = "select",						default = "topleft",			values = Enemy.ConfigurationWindowGetAnchorsSelectValues },
 	anchorTo =		{ key = "anchorTo",		order = 2,		name = L"Anchor (to)",			type = "select",						default = "topleft",			values = Enemy.ConfigurationWindowGetAnchorsSelectValues },
-	pos =			{ key = "pos",			order = 3,		name = L"Position (XY)",		type = "int[]",			size = 2,		default = {0, 0},				min = {-5000, -5000},		max = {5000, 5000} },
-	size =			{ key = "size",			order = 4,		name = L"Size (XY)",			type = "int[]",			size = 2,		default = {50, 50},				min = {0, 0},				max = {5000, 5000} },
+	pos =			{ key = "pos",			order = 3,		name = L"Position (XY)",		type = "int[]",			size = 2,		default = {0, 0},				min = {-20000, -20000},		max = {20000, 20000} },
+	size =			{ key = "size",			order = 4,		name = L"Size (XY)",			type = "int[]",			size = 2,		default = {100, 100},				min = {0, 0},				max = {20000, 20000} },
 	scale =			{ key = "scale",		order = 5,		name = L"Scale",				type = "float",							default = 1,					min = 0,					max = 5 },
 	layer =			{ key = "layer",		order = 6,		name = L"Layer",				type = "select",						default = 1,					values = Enemy.ConfigurationWindowGetLayersSelectValues },
 	
@@ -650,7 +650,7 @@ local dlg =
 			type = "bool",
 			default = false,
 			tooltip = L"Make sure currently edited visual part bounding box is withing unit frame bounding box or otherwise this visual part will be not mouse clickable.",
-			windowWidth = 300
+			windowWidth = 600
 		},
 		exampleShowUnitFrameBoundingBox =
 		{
@@ -660,7 +660,7 @@ local dlg =
 			type = "bool",
 			default = false,
 			tooltip = L"Make sure currently edited visual part bounding box is withing unit frame bounding box or otherwise this visual part will be not mouse clickable.",
-			windowWidth = 300
+			windowWidth = 600
 		},
 		exampleHideEffectsIndicators =
 		{
@@ -669,7 +669,7 @@ local dlg =
 			name = L"Hide effects indicators",
 			type = "bool",
 			default = true,
-			windowWidth = 300
+			windowWidth = 600
 		},
 		exampleNew =
 		{
@@ -677,7 +677,7 @@ local dlg =
 			order = 40,
 			name = L"New example",
 			type = "button",
-			windowWidth = 150
+			windowWidth = 300
 		}
 	}
 }
@@ -728,7 +728,7 @@ function Enemy.UnitFramesUI_UnitFramePartDialog_Open (data, settings, ignoreName
 		
 		dlg.wncp = "EnemyUnitFramePartDialogContentScrollChildCommonProperties"
 		Enemy.CreateConfigurationWindow (dlg.wncp, "EnemyUnitFramePartDialogContentScrollChild", commonProperties, Enemy.UnitFramesUI_UnitFramePartDialog_UpdateExample)
-		WindowAddAnchor (dlg.wncp, "bottomleft", "EnemyUnitFramePartDialogContentScrollChildTypeLabel", "topleft", 0, 30)
+		WindowAddAnchor (dlg.wncp, "bottomleft", "EnemyUnitFramePartDialogContentScrollChildTypeLabel", "topleft", 0, 60)
 		
 		LabelSetText ("EnemyUnitFramePartDialogContentScrollChildTypeLabel", L"Type")
 		
@@ -802,14 +802,14 @@ function Enemy.UnitFramesUI_UnitFramePartDialog_Open (data, settings, ignoreName
 	dlg.example:Update (dlg.examplePlayer)
 
 	WindowClearAnchors (dlg.example.windowName)
-	WindowAddAnchor (dlg.example.windowName, "topright", "EnemyUnitFramePartDialog", "topleft", 50, 200)
+	WindowAddAnchor (dlg.example.windowName, "topright", "EnemyUnitFramePartDialog", "topleft", 100, 400)
 	WindowSetLayer (dlg.example.windowName, Window.Layers.OVERLAY)
 	
 	dlg.wnExampleCfg = "EnemyUnitFramePartDialogExampleCfg"
 	dlg.exampleConfigParameters.exampleNew.onClick = Enemy.UnitFramesUI_UnitFramePartDialog_OnNewExampleClick
 	Enemy.CreateConfigurationWindow (dlg.wnExampleCfg, "Root", dlg.exampleConfigParameters, Enemy.UnitFramesUI_UnitFramePartDialog_UpdateExample)
 	WindowClearAnchors (dlg.wnExampleCfg)
-	WindowAddAnchor (dlg.wnExampleCfg, "bottomleft", dlg.example.windowName, "topleft", 0, 50)
+	WindowAddAnchor (dlg.wnExampleCfg, "bottomleft", dlg.example.windowName, "topleft", 0, 100)
 	
 	-- fill form
 	dlg.firstLoad = true

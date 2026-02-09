@@ -15,8 +15,8 @@ local SettingsWindow = Addon.Name.."SettingsWindowMisc"
 -- Description:
 --------------------------------------------------------------
 function Addon.Misc.InitializeSettingsWindow(ParentWindow)
-	local frameSizeW = 630
-	local frameSizeH = 480
+	local frameSizeW = 1260
+	local frameSizeH = 960
 	--
 	-- XML Part
 	--

@@ -276,7 +276,7 @@ function TidyChatCore.SetWindowGroup(	wndGroupId,
 		
 		local foregroundAnchor2YOffset	= 0
 		if( not Settings.textentry_free and Settings.textentry_relative_to == wndGroupId and Settings.textentry_anchor_point == c_TEXTENTRY_ANCHOR_POINT_BOTTOM) then
-			foregroundAnchor2YOffset	= -34
+			foregroundAnchor2YOffset	= -68
 		end
 		
 		WindowClearAnchors(	wndGroupName .. "Foreground")
@@ -369,19 +369,19 @@ function TidyChatCore.SetWindowTextLog(	tabManagerId,
 		
 		-- Set Scrollbar Position
 		local textLogAnchor1XOffset = 0
-		local textLogAnchor2XOffset = -5
+		local textLogAnchor2XOffset = -10
 		
 		if( scrollbar_position == c_SCROLLBAR_POSITION_LEFT ) then
 			WindowClearAnchors(	scrollbarName)
-			WindowAddAnchor(	scrollbarName, "topleft", logDisplayName, "topleft", 0, 7)
-			WindowAddAnchor(	scrollbarName, "bottomleft", logDisplayName, "bottomright", 22, -29)
+			WindowAddAnchor(	scrollbarName, "topleft", logDisplayName, "topleft", 0, 14)
+			WindowAddAnchor(	scrollbarName, "bottomleft", logDisplayName, "bottomright", 44, -58)
 			
 		else
-			textLogAnchor1XOffset = -22
+			textLogAnchor1XOffset = -44
 			
 			WindowClearAnchors(	scrollbarName)
-			WindowAddAnchor(	scrollbarName, "topright", logDisplayName, "topright", -2, 7)
-			WindowAddAnchor(	scrollbarName, "bottomright", logDisplayName, "bottomleft", -24, -29)
+			WindowAddAnchor(	scrollbarName, "topright", logDisplayName, "topright", -4, 14)
+			WindowAddAnchor(	scrollbarName, "bottomright", logDisplayName, "bottomleft", -48, -58)
 		end
 		
 		
@@ -428,7 +428,7 @@ function TidyChatCore.SetTextEntry(	textentry_channel_showing,
 	
 	local EntryBoxAnchorXOffset	= 0
 	if( textentry_channel_showing ) then
-		EntryBoxAnchorXOffset = 29
+		EntryBoxAnchorXOffset = 58
 	end
 	
 	WindowAddAnchor(	c_TEXT_ENTRY_WINDOW .. "EntryBox", "topleft", c_TEXT_ENTRY_WINDOW, "topleft", EntryBoxAnchorXOffset, 0 )
@@ -964,8 +964,8 @@ function TidyChatFrames.Initialize()
 		WindowSetShowing(c_TEXT_ENTRY_WINDOW .. "EntryBoxLanguageButton", false)
 		
 		WindowClearAnchors( c_TEXT_ENTRY_WINDOW .. "EntryBoxTextInput" )
-		WindowAddAnchor( c_TEXT_ENTRY_WINDOW .. "EntryBoxTextInput", "topright", c_TEXT_ENTRY_WINDOW .. "EntryBoxChannelLabel", "topleft", 2, -5 )
-		WindowAddAnchor( c_TEXT_ENTRY_WINDOW .. "EntryBoxTextInput", "bottomright", c_TEXT_ENTRY_WINDOW .. "EntryBox", "bottomright", -4, 2 )
+		WindowAddAnchor( c_TEXT_ENTRY_WINDOW .. "EntryBoxTextInput", "topright", c_TEXT_ENTRY_WINDOW .. "EntryBoxChannelLabel", "topleft", 2, -10 )
+		WindowAddAnchor( c_TEXT_ENTRY_WINDOW .. "EntryBoxTextInput", "bottomright", c_TEXT_ENTRY_WINDOW .. "EntryBox", "bottomright", -8, 2 )
 		
 		WindowClearAnchors( c_TEXT_ENTRY_WINDOW .. "EntryBoxBG" )
 		WindowAddAnchor( c_TEXT_ENTRY_WINDOW .. "EntryBoxBG", "topleft", c_TEXT_ENTRY_WINDOW .. "EntryBox", "topleft", 0, 0 )
@@ -984,24 +984,24 @@ function TidyChatFrames.InitializeChannelMenuTidyChannelButtons()
 	
 	-- Add Alliance Button to Channel Menu
 	CreateWindowFromTemplate( c_CHANNEL_MENU .. "AllianceButton", "ChannelMenuButton", "ChatChannelSelectionWindow" )
-	WindowAddAnchor(c_CHANNEL_MENU .. "AllianceButton", "bottomleft", c_CHANNEL_MENU .. "GuildButton", "topleft", 0, 8 )
+	WindowAddAnchor(c_CHANNEL_MENU .. "AllianceButton", "bottomleft", c_CHANNEL_MENU .. "GuildButton", "topleft", 0, 16 )
 	
 	WindowClearAnchors(c_CHANNEL_MENU .. "WarbandButton")
-	WindowAddAnchor(c_CHANNEL_MENU .. "WarbandButton", "bottomleft", c_CHANNEL_MENU .. "AllianceButton", "topleft", 0, 8 )
+	WindowAddAnchor(c_CHANNEL_MENU .. "WarbandButton", "bottomleft", c_CHANNEL_MENU .. "AllianceButton", "topleft", 0, 16 )
 	
 	WindowSetId( c_CHANNEL_MENU .. "AllianceButton", ChatSettings.Channels[SystemData.ChatLogFilters.ALLIANCE].id )
 	ButtonSetText(c_CHANNEL_MENU .. "AllianceButton", L"/"..GetChatString(StringTables.Chat.CHAT_CHANNEL_NAME_ALLIANCE) )
 	
 	-- Add Advice Button to Channel Menu
 	CreateWindowFromTemplate( c_CHANNEL_MENU .. "AdviceButton", "ChannelMenuButton", "ChatChannelSelectionWindow" )
-	WindowAddAnchor(c_CHANNEL_MENU .. "AdviceButton", "bottomleft", c_CHANNEL_MENU .. "SayButton", "topleft", 0, 8 )
+	WindowAddAnchor(c_CHANNEL_MENU .. "AdviceButton", "bottomleft", c_CHANNEL_MENU .. "SayButton", "topleft", 0, 16 )
 	
 	WindowSetId( c_CHANNEL_MENU .. "AdviceButton", ChatSettings.Channels[SystemData.ChatLogFilters.ADVICE].id )
 	ButtonSetText(c_CHANNEL_MENU .. "AdviceButton", L"/"..GetChatString(StringTables.Chat.CHAT_CHANNEL_NAME_ADVICE) )
 	
 	-- Add Scenario Button to Channel Menu
 	CreateWindowFromTemplate( c_CHANNEL_MENU .. "ScenarioButton", "ChannelMenuButton", "ChatChannelSelectionWindow" )
-	WindowAddAnchor(c_CHANNEL_MENU .. "ScenarioButton", "bottomleft", c_CHANNEL_MENU .. "AdviceButton", "topleft", 0, 8 )
+	WindowAddAnchor(c_CHANNEL_MENU .. "ScenarioButton", "bottomleft", c_CHANNEL_MENU .. "AdviceButton", "topleft", 0, 16 )
 	
 	WindowSetId( c_CHANNEL_MENU .. "ScenarioButton", ChatSettings.Channels[SystemData.ChatLogFilters.SCENARIO].id )
 	ButtonSetText(c_CHANNEL_MENU .. "ScenarioButton", L"/"..GetChatString(StringTables.Chat.CHAT_CHANNEL_NAME_SCENARIO) )

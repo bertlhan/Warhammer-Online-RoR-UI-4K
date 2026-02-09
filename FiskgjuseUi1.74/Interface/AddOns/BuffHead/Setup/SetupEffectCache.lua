@@ -127,10 +127,10 @@ local function UpdateSortButtons()
 	
 	if (direction == SortDirection.Ascending) then		
 		WindowClearAnchors(windowName .. "SortBarUpArrow");
-		WindowAddAnchor(windowName .. "SortBarUpArrow", "right", sortButton[type].Name, "right", -10, 0);
+		WindowAddAnchor(windowName .. "SortBarUpArrow", "right", sortButton[type].Name, "right", -20, 0);
 	else
 		WindowClearAnchors(windowName .. "SortBarDownArrow");
-		WindowAddAnchor(windowName .. "SortBarDownArrow", "right", sortButton[type].Name, "right", -10, 0);
+		WindowAddAnchor(windowName .. "SortBarDownArrow", "right", sortButton[type].Name, "right", -20, 0);
 	end
 	
 end
@@ -297,7 +297,7 @@ function BuffHead.Setup.EffectCache.OnSortButtonMouseOver()
 	Tooltips.SetTooltipColorDef(1, 1, Tooltips.COLOR_HEADING);
 	Tooltips.Finalize();
 	
-	local anchor = { Point = "top", RelativeTo = windowName, RelativePoint = "center", XOffset = 0, YOffset = -32 };
+	local anchor = { Point = "top", RelativeTo = windowName, RelativePoint = "center", XOffset = 0, YOffset = -64 };
 	Tooltips.AnchorTooltip(anchor);
 	Tooltips.SetTooltipAlpha(1);
 	

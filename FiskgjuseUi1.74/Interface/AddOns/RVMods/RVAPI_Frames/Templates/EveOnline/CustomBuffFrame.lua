@@ -57,7 +57,7 @@ function CustomBuffTracker:Create( windowName, windowTemplate, parentName, initi
                 currentAnchor.RelativePoint     = "topleft"
                 currentAnchor.RelativeTo        = windowName..( nextSlot - buffRowStride )
                 currentAnchor.XOffset           = 0
-                currentAnchor.YOffset           = 24 -- vertical buff spacing between rows...parameterize?
+                currentAnchor.YOffset           = 48 -- vertical buff spacing between rows...parameterize?
             else
                 currentAnchor.Point             = "right"
                 currentAnchor.RelativePoint     = "left"

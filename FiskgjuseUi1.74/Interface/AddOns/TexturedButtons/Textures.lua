@@ -37,8 +37,8 @@ TexturedButtons.Register({
 	Size = {
 		X = 0,
 		Y = 0,
-		Width = 64,
-		Height = 64,
+		Width = 128,
+		Height = 128,
 	},
 	KeybindOffset = {
 		X = -5,
@@ -187,8 +187,8 @@ TexturedButtons.Register({
 		PressedHighlighted = "Skin4_PressedHighlighted",
 	},
 	Size = {
-		Width = 48,
-		Height = 48,
+		Width = 96,
+		Height = 96,
 		X = 8,
 		Y = 8,
 	},
@@ -211,8 +211,8 @@ TexturedButtons.Register({
 		PressedHighlighted = "Skin5_PressedHighlighted",
 	},
 	Size = {
-		Width = 48,
-		Height = 48,
+		Width = 96,
+		Height = 96,
 		X = 8,
 		Y = 8,
 	},
@@ -237,8 +237,8 @@ TexturedButtons.Register({
 		PressedHighlighted = "Skin6_PressedHighlighted",
 	},
 	Size = {
-		Width = 44,
-		Height = 44,
+		Width = 88,
+		Height = 88,
 		X = 12,
 		Y = 12,
 	},
@@ -265,8 +265,8 @@ TexturedButtons.Register({
 		PressedHighlighted = "Skin7_PressedHighlighted",
 	},
 	Size = {
-		Width = 46,
-		Height = 46,
+		Width = 92,
+		Height = 92,
 		X = 10,
 		Y = 10,
 	},
@@ -293,8 +293,8 @@ TexturedButtons.Register({
 		PressedHighlighted = "Skin8_PressedHighlighted",
 	},
 	Size = {
-		Width = 40,
-		Height = 40,
+		Width = 80,
+		Height = 80,
 		X = 12,
 		Y = 12,
 	},
@@ -505,8 +505,8 @@ TexturedButtons.Register({
 		PressedHighlighted = "TexturedButtons_Entropy_Highlight",
 	},
 	Size = {
-		Width = 52,
-		Height = 52,
+		Width = 104,
+		Height = 104,
 		X = 6,
 		Y = 6,
 	}
@@ -522,8 +522,8 @@ TexturedButtons.Register({
 		PressedHighlighted = "TexturedButtons_Vista_Highlight",
 	},
 	Size = {
-		Width = 50,
-		Height = 50,
+		Width = 100,
+		Height = 100,
 		X = 7,
 		Y = 7,
 	}

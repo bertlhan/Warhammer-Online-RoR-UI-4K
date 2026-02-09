@@ -390,7 +390,7 @@ function BuffHeadEffectFrame:OnMouseOver(flags, mouseX, mouseY)
 	
 	BuffFrame.PopulateTooltipFields(buffData, true);
 	
-	local tooltipAnchor = { Point = "bottom",  RelativeTo = self:GetName(), RelativePoint = "top", XOffset = 0, YOffset = 20 };
+	local tooltipAnchor = { Point = "bottom",  RelativeTo = self:GetName(), RelativePoint = "top", XOffset = 0, YOffset = 40 };
 	
 	Tooltips.AnchorTooltip(tooltipAnchor);
 	Tooltips.SetUpdateCallback(BuffHeadEffectFrame.MouseOverUpdate);

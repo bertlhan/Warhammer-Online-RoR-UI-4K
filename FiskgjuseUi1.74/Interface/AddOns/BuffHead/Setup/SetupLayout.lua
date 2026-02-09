@@ -430,7 +430,7 @@ function BuffHead.Setup.Layout.OnLayerMouseOver()
 	Tooltips.SetTooltipText(1, 1, localization["Setup.Layout.Layers.Tooltip"]);
 	Tooltips.Finalize();
 	
-	local anchor = { Point = "left", RelativeTo = windowName, RelativePoint = "right", XOffset = -10, YOffset = 0 };
+	local anchor = { Point = "left", RelativeTo = windowName, RelativePoint = "right", XOffset = -20, YOffset = 0 };
 	Tooltips.AnchorTooltip(anchor);
 	Tooltips.SetTooltipAlpha(1);
 end

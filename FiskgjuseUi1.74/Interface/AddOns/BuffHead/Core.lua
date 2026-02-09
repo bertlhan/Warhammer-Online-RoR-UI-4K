@@ -673,15 +673,15 @@ function BuffHead.LoadSettings()
 	if (not settings.Layout) then
 		settings.Layout =
 		{
-			Width = 48,
-			Height = 48,
+			Width = 96,
+			Height = 96,
 			
 			Icon =
 			{
 				X = 0,
 				Y = 0,
-				Width = 48,
-				Height = 48,
+				Width = 96,
+				Height = 96,
 				Scale = 1,
 				Alpha = 1,
 				Layer = 1,
@@ -697,8 +697,8 @@ function BuffHead.LoadSettings()
 			{
 				X = 0,
 				Y = 48,
-				Width = 48,
-				Height = 16,
+				Width = 96,
+				Height = 32,
 				Scale = 1,
 				Layer = 1,
 				
@@ -707,7 +707,7 @@ function BuffHead.LoadSettings()
 					Color = { R = 0, G = 0, B = 0 },
 					Alpha = 0.8,
 					Texture = "EA_TintableImage",
-					TextureDimensions = { Width = 128, Height = 128 },
+					TextureDimensions = { Width = 256, Height = 256 },
 					Stretch = true,
 				},
 				Foreground = 
@@ -716,7 +716,7 @@ function BuffHead.LoadSettings()
 					Alpha = 1,
 					Type = BuffHead.ColorType.EffectColor,
 					Texture = "EA_TintableImage",
-					TextureDimensions = { Width = 128, Height = 128 },
+					TextureDimensions = { Width = 256, Height = 256 },
 					Stretch = true,
 				},
 				
@@ -728,8 +728,8 @@ function BuffHead.LoadSettings()
 			{
 				X = 0,
 				Y = 30,
-				Width = 48,
-				Height = 16,
+				Width = 96,
+				Height = 32,
 				Scale = 1,
 				Alpha = 1,
 				Layer = 2,
@@ -743,8 +743,8 @@ function BuffHead.LoadSettings()
 			{
 				X = 0,
 				Y = 2,
-				Width = 48,
-				Height = 16,
+				Width = 96,
+				Height = 32,
 				Scale = 1,
 				Alpha = 1,
 				Layer = 2,
@@ -757,8 +757,8 @@ function BuffHead.LoadSettings()
 			{
 				X = 50,
 				Y = 12,
-				Width = 48,
-				Height = 16,
+				Width = 96,
+				Height = 32,
 				Scale = 1,
 				Alpha = 0,
 				Layer = 2,
