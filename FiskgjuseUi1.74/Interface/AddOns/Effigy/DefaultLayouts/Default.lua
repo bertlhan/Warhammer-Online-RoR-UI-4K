@@ -72,12 +72,12 @@ local function GetRangeLabel()
 			formattemplate = "$rangemax",
 			layer = "overlay",
 			alpha = 1,
-			width = 60,
+			width = 120,
 			show = true,
 			visibility_group = "none",
 			alpha_group = "none",
 			scale = 0.9,
-			height = 16,
+			height = 32,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -134,7 +134,7 @@ local function GetValueLabel()
 			},
 			scale = 0.8,
 			visibility_group = "none",
-			height = 17,
+			height = 34,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -186,7 +186,7 @@ local function GetNameLabel()
 			},
 			scale = 0.85,
 			visibility_group = "none",
-			height = 17,
+			height = 34,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -231,23 +231,23 @@ local function GetTargetFriendlyBar()
 				texture = 
 				{
 					scale = 1,
-					width = 512,
+					width = 1024,
 					texture_group = "none",
 					x = 0,
 					name = "LiquidUFFX",
-					height = 128,
+					height = 256,
 					style = "cut",
 					y = 0,
 					slice = "none",
 				},
 				layer = "default",
 				alpha = 0.5,
-				width = 215,
+				width = 430,
 				show = true,
 				visibility_group = "none",
 				follow_bg_alpha = true,
 				scale = 1,
-				height = 32,
+				height = 64,
 				colorsettings = 
 				{
 					ColorPreset = "none",
@@ -283,23 +283,23 @@ local function GetTargetFriendlyBar()
 				texture = 
 				{
 					scale = 1,
-					width = 512,
+					width = 1024,
 					y = 0,
 					slice = "none",
 					name = "LiquidUFBG",
-					height = 128,
+					height = 256,
 					style = "cut",
 					texture_group = "none",
 					x = 0,
 				},
 				layer = "background",
 				alpha = 0.7,
-				width = 215,
+				width = 430,
 				show = true,
 				visibility_group = "none",
 				follow_bg_alpha = true,
 				scale = 1,
-				height = 32,
+				height = 64,
 				colorsettings = 
 				{
 					ColorPreset = "none",
@@ -419,7 +419,7 @@ local function GetTargetFriendlyBar()
 		state = "FTHP",
 		name = "TargetFriendly",
 		interactive_type = "friendly",
-		height = 32,
+		height = 64,
 		scale = 1,
 		border = 
 		{
@@ -468,7 +468,7 @@ local function GetTargetFriendlyBar()
 		hide_if_zero = false,
 		show_with_target = false,
 		visibility_group = "none",
-		width = 216,
+		width = 432,
 		show = true,
 		--interactive = true,
 		pos_at_world_object = false,
@@ -537,18 +537,18 @@ UFTemplates.Layouts.Default =
 					name = "LiquidUFFX",
 					x = 0,
 					scale = 1,
-					height = 128,
+					height = 256,
 					y = 0,
-					width = 512,
+					width = 1024,
 				},
 				layer = "default",
 				alpha = 0.5,
-				width = 215,
+				width = 430,
 				show = true,
 				visibility_group = "none",
 				follow_bg_alpha = true,
 				scale = 1,
-				height = 50,
+				height = 100,
 				colorsettings = 
 				{
 					ColorPreset = "none",
@@ -589,17 +589,17 @@ UFTemplates.Layouts.Default =
 					x = 0,
 					scale = 1,
 					y = 0,
-					height = 128,
-					width = 512,
+					height = 256,
+					width = 1024,
 				},
 				layer = "background",
 				alpha = 0.7,
-				width = 215,
+				width = 430,
 				show = true,
 				visibility_group = "none",
 				follow_bg_alpha = true,
 				scale = 1,
-				height = 50,
+				height = 100,
 				colorsettings = 
 				{
 					ColorPreset = "none",
@@ -680,7 +680,7 @@ UFTemplates.Layouts.Default =
 		state = "PlayerHP",		
 		name = "PlayerHP",
 		interactive_type = "player",
-		height = 30,
+		height = 60,
 		scale = 1,
 		border = 
 		{
@@ -728,7 +728,7 @@ UFTemplates.Layouts.Default =
 		watching_states = {},
 		hide_if_zero = false,
 		show_with_target = false,
-		width = 216,
+		width = 432,
 		show = true,
 		visibility_group = "none",
 		invValue = false,
@@ -925,12 +925,12 @@ UFTemplates.Layouts.Default =
 			alpha_group = "none",
 		},
 		show_with_target = false,
-		width = 216,
+		width = 432,
 		state = "PlayerAP",
 		visibility_group = "none",
 		--interactive = false,
 		interactive_type = "none",
-		height = 20,
+		height = 40,
 		anchors = {
 			[1] = {
 				parent = "PlayerHP",
@@ -961,7 +961,7 @@ UFTemplates.Layouts.Default =
 				},
 				scale = 0.7,
 				visibility_group = "none",
-				height = 16,
+				height = 32,
 				colorsettings = 
 				{
 					ColorPreset = "none",
@@ -1004,7 +1004,7 @@ UFTemplates.Layouts.Default =
 				visibility_group = "none",
 				alpha_group = "none",
 				scale = 0.7,
-				height = 15,
+				height = 30,
 				colorsettings = 
 				{
 					ColorPreset = "none",
@@ -1053,11 +1053,11 @@ UFTemplates.Layouts.Default =
 				texture = 
 				{
 					scale = 1,
-					width = 512,
+					width = 1024,
 					y = 0,
 					slice = "none",
 					name = "LiquidUFFX",
-					height = 128,
+					height = 256,
 					x = 0,
 					texture_group = "none",
 					style = "cut",
@@ -1065,7 +1065,7 @@ UFTemplates.Layouts.Default =
 				alpha_group = "none",
 				layer = "default",
 				alpha = 0.5,
-				width = 215,
+				width = 430,
 				show = true,
 				visibility_group = "none",
 				colorsettings = 
@@ -1087,7 +1087,7 @@ UFTemplates.Layouts.Default =
 					color_group = "none",
 				},
 				parent = "Bar",
-				height = 32,
+				height = 64,
 				follow_bg_alpha = true,
 				anchors = {
 					[1] = {
@@ -1105,11 +1105,11 @@ UFTemplates.Layouts.Default =
 				texture = 
 				{
 					scale = 1,
-					width = 512,
+					width = 1024,
 					texture_group = "none",
 					x = 0,
 					name = "LiquidUFBG",
-					height = 128,
+					height = 256,
 					slice = "none",
 					y = 0,
 					style = "cut",
@@ -1117,7 +1117,7 @@ UFTemplates.Layouts.Default =
 				alpha_group = "none",
 				layer = "background",
 				alpha = 0.7,
-				width = 215,
+				width = 430,
 				show = true,
 				visibility_group = "none",
 				colorsettings = 
@@ -1139,7 +1139,7 @@ UFTemplates.Layouts.Default =
 					color_group = "none",
 				},
 				parent = "Bar",
-				height = 32,
+				height = 64,
 				follow_bg_alpha = true,
 				anchors = {
 					[1] = {
@@ -1242,7 +1242,7 @@ UFTemplates.Layouts.Default =
 		visibility_group = "none",
 		name = "Castbar",
 		interactive_type = "none",
-		height = 28,
+		height = 56,
 		pos_at_world_object = false,
 		border = 
 		{
@@ -1290,7 +1290,7 @@ UFTemplates.Layouts.Default =
 		watching_states = {},
 		hide_if_zero = false,
 		show_with_target = false,
-		width = 210,
+		width = 420,
 		show = true,
 		--interactive = false,
 		scale = 1,
@@ -1325,7 +1325,7 @@ UFTemplates.Layouts.Default =
 				},
 				scale = 0.85,
 				visibility_group = "none",
-				height = 17,
+				height = 34,
 				colorsettings = 
 				{
 					ColorPreset = "none",

@@ -20,8 +20,8 @@ function CMap_config.OnInitialize()
         },
       },
     box = {
-      width = 200,
-      height = 100,
+      width = 400,
+      height = 200,
       color = {50,100,200}
       },
     }

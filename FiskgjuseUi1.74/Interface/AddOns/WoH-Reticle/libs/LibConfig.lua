@@ -40,11 +40,11 @@ function LibConfig:New(title, settings, isTabbed, callbackFunction)
 	configMenu.firstShown = false
 	
 	if (isTabbed) then
-		configMenu.width = 700
+		configMenu.width = 1400
 	else
-		configMenu.width = 500
+		configMenu.width = 1000
 	end
-	configMenu.height = 550
+	configMenu.height = 1100
 	
 	-- create the window object
 	local window = LibGUI("blackframe")

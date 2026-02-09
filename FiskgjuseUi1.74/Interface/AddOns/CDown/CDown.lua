@@ -100,7 +100,7 @@ function CDown.Initialize()
 			glass=true,
 			name=true,
 			bar=false,
-			width=170,
+			width=340,
 			bend=true,
 			back=false,
 			bar_maxCDCount=6,
@@ -148,7 +148,7 @@ function CDown.RestartTracker()
 			WindowSetDimensions("CDownWindow",23,23+50+o.width)
 		end
 	else
-		WindowSetDimensions("CDownWindow",250,50)
+		WindowSetDimensions("CDownWindow",500,100)
 	end
 	LayoutEditor.RegisterWindow("CDownWindow", L"CDown", L"Alternative Cooldownwindow.",false,false,true,nil)
 	CDown.StartTracker()
@@ -441,7 +441,7 @@ function CDown.VersionHandler()
 		CDownVar.version=0.94
 		CDownVar.optCDs.name=true
 		CDownVar.optCDs.bar=false
-		CDownVar.optCDs.width=170
+		CDownVar.optCDs.width=340
 		CDownVar.optCDs.bend=true
 		CDownVar.optCDs.back=false
 		CDownVar.optCDs.bar_maxCDCount=6

@@ -13,7 +13,7 @@ local Icons =
 		name = L"effect",
 		texture = "enemy_unitframe_effect",
 		x = 0, y = 0,
-		width = 6, height = 9
+		width = 12, height = 18
 	},
 
 	effect2 =
@@ -22,7 +22,7 @@ local Icons =
 		name = L"effect2",
 		texture = "enemy_unitframe_effect2",
 		x = 0, y = 0,
-		width = 32, height = 32
+		width = 64, height = 64
 	},
 
 	FiskgjuseUiSideBuffTop =
@@ -31,7 +31,7 @@ local Icons =
 		name = L"FiskgjuseUiSideBuffTop",
 		texture = "FiskgjuseUiSideBuffTop",
 		x = 0, y = 0,
-		width = 75, height = 29
+		width = 150, height = 58
 	},
 
 	FiskgjuseUiSideBuffBot =
@@ -40,7 +40,7 @@ local Icons =
 		name = L"FiskgjuseUiSideBuffBot",
 		texture = "FiskgjuseUiSideBuffBot",
 		x = 0, y = 0,
-		width = 75, height = 29
+		width = 150, height = 58
 	},
 
 	FiskgjuseUiSideBuff =
@@ -49,7 +49,7 @@ local Icons =
 		name = L"FiskgjuseUiSideBuff",
 		texture = "FiskgjuseUiSideBuff",
 		x = 0, y = 0,
-		width = 75, height = 57
+		width = 150, height = 114
 	},
 
 	FiskgjuseUiGuard =
@@ -58,7 +58,7 @@ local Icons =
 		name = L"FiskgjuseUiGuard",
 		texture = "FiskgjuseUiGuard",
 		x = 0, y = 0,
-		width = 23, height = 29
+		width = 46, height = 58
 	},
 
 	guard =
@@ -67,7 +67,7 @@ local Icons =
 		name = L"guard",
 		texture = "enemy_unitframe_guard",
 		x = 0, y = 0,
-		width = 16, height = 16
+		width = 32, height = 32
 	},
 
 	question =
@@ -76,7 +76,7 @@ local Icons =
 		name = L"question",
 		texture = "enemy_unitframe_question",
 		x = 0, y = 0,
-		width = 32, height = 32
+		width = 64, height = 64
 	},
 
 	stagger =
@@ -85,7 +85,7 @@ local Icons =
 		name = L"stagger",
 		texture = "enemy_unitframe_stagger",
 		x = 0, y = 0,
-		width = 32, height = 32
+		width = 64, height = 64
 	},
 
 	heal  =
@@ -94,7 +94,7 @@ local Icons =
 		name = L"heal debuff",
 		texture = "enemy_unitframe_healdebuff",
 		x = 0, y = 0,
-		width = 32, height = 32
+		width = 64, height = 64
 	},
 
 	disabled =
@@ -103,7 +103,7 @@ local Icons =
 		name = L"disabled",
 		texture = "enemy_unitframe_disabled",
 		x = 0, y = 0,
-		width = 32, height = 32
+		width = 64, height = 64
 	},
 
 	dot =
@@ -112,7 +112,7 @@ local Icons =
 		name = L"dot",
 		texture = "enemy_1dot",
 		x = 0, y = 0,
-		width = 10, height = 10
+		width = 20, height = 20
 	}
 }
 
@@ -153,7 +153,7 @@ function EnemyEffectsIndicator.New (data)
 
 	obj.anchorFrom = 5
 	obj.anchorTo = 5
-	obj.offsetX = 20
+	obj.offsetX = 40
 	obj.offsetY = nil
 	obj.width = nil
 
@@ -600,7 +600,7 @@ local dlg =
 			name = L"Show bounding box",
 			type = "bool",
 			default = false,
-			windowWidth = 300
+			windowWidth = 600
 		},
 		exampleShowUnitFrameBoundingBox =
 		{
@@ -609,7 +609,7 @@ local dlg =
 			name = L"Show unit frame bounding box",
 			type = "bool",
 			default = false,
-			windowWidth = 300
+			windowWidth = 600
 		},
 		exampleHideOthers =
 		{
@@ -618,7 +618,7 @@ local dlg =
 			name = L"Hide other effects indicators",
 			type = "bool",
 			default = true,
-			windowWidth = 300
+			windowWidth = 600
 		},
 		exampleNew =
 		{
@@ -626,7 +626,7 @@ local dlg =
 			order = 40,
 			name = L"New example",
 			type = "button",
-			windowWidth = 150
+			windowWidth = 300
 		}
 	}
 }
@@ -782,14 +782,14 @@ function Enemy.UnitFramesUI_EffectsIndicatorDialog_Open (data, settings, ignoreI
 	dlg.example:Update (dlg.examplePlayer)
 
 	WindowClearAnchors (dlg.example.windowName)
-	WindowAddAnchor (dlg.example.windowName, "topright", "EnemyEffectsIndicatorDialog", "topleft", 50, 200)
+	WindowAddAnchor (dlg.example.windowName, "topright", "EnemyEffectsIndicatorDialog", "topleft", 100, 400)
 	WindowSetLayer (dlg.example.windowName, Window.Layers.OVERLAY)
 
 	dlg.wnExampleCfg = "EnemyEffectsIndicatorDialogExampleCfg"
 	dlg.exampleConfigParameters.exampleNew.onClick = Enemy.UnitFramesUI_EffectsIndicatorDialog_OnNewExampleClick
 	Enemy.CreateConfigurationWindow (dlg.wnExampleCfg, "Root", dlg.exampleConfigParameters, Enemy.UnitFramesUI_EffectsIndicatorDialog_UpdateExample)
 	WindowClearAnchors (dlg.wnExampleCfg)
-	WindowAddAnchor (dlg.wnExampleCfg, "bottomleft", dlg.example.windowName, "topleft", 0, 50)
+	WindowAddAnchor (dlg.wnExampleCfg, "bottomleft", dlg.example.windowName, "topleft", 0, 100)
 
 	-- fill form
 

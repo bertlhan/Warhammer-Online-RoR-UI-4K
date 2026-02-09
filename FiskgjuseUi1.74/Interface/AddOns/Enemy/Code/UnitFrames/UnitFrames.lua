@@ -813,7 +813,7 @@ config_dlg =
 			size = 2,
 			default = Enemy.DefaultSettings.unitFramesSize,
 			min = {0, 0},
-			max = {5000, 5000},
+			max = {20000, 20000},
 			tooltip = L"This is the size of virtual box where all visual parts will be placed (click on checkbox below to see it). Changing this will change the size of the area where unit frame will react on mouse clicks. To change HP bar size scroll down and edit HP visual part.",
 			paddingTop = 40
 		},
@@ -1026,7 +1026,7 @@ config_dlg =
 			type = "button",
 			onClick = Enemy.UnitFramesUI_ConfigDialog_Import,
 			paddingTop = 20,
-			windowWidth = 150
+			windowWidth = 300
 		},
 
 		exportOk =
@@ -1036,7 +1036,7 @@ config_dlg =
 			name = L"Export",
 			type = "button",
 			onClick = Enemy.UnitFramesUI_ConfigDialog_Export,
-			windowWidth = 150
+			windowWidth = 300
 		}
 	},
 

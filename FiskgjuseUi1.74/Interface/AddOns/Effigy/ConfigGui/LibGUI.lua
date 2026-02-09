@@ -351,8 +351,8 @@ do
         
         if CreateWindowFromTemplate(w.name, base, w.parent) then
             -- window successfully created, initialize it and return our new object
-            w.width = 500
-            w.height = 300
+            w.width = 1000
+            w.height = 600
             w:Resize(w.width, w.height)
             w:CaptureInput()
             w:MakeFixed()
@@ -405,8 +405,8 @@ do
         
         if CreateWindowFromTemplate(w.name, base, w.parent) then
             -- window successfully created, initialize it and return our new object
-            w.width = 200
-            w.height = 30
+            w.width = 400
+            w.height = 60
             w:Resize(w.width, w.height)
             w:RegisterDefaultEvents()
             return w
@@ -600,8 +600,8 @@ do
         
         if CreateWindowFromTemplate(w.name, "EA_Button_DefaultWindowClose", w.parent) then
             -- window successfully created, initialize it and return our new object
-            w.width = 37
-            w.height = 37
+            w.width = 74
+            w.height = 74
             w:RegisterDefaultEvents()
             return w
         else
@@ -626,8 +626,8 @@ do
         if CreateWindowFromTemplate(w.name, base, w.parent) then
             -- window successfully created, initialize it and return our new object
 			if base == "EA_EditBox_DefaultFrame" then
-				w.width = 200
-				w.height = 32
+				w.width = 400
+				w.height = 64
 			else
 				local x,y = WindowGetDimensions(w.name)
 				w.width = x

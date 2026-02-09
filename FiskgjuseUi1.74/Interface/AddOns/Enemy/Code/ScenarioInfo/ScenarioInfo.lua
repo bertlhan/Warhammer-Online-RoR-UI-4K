@@ -208,7 +208,7 @@ function Enemy.ScenarioInfoInitialize ()
 	local wn = "EnemyScenarioInfoDialog"
 	CreateWindow (wn, false)
 	WindowSetShowing (wn, false)
-	WindowSetDimensions (wn, 1000, 860)
+	WindowSetDimensions (wn, 2000, 1720)
 	WindowSetTintColor (wn.."Background", 0, 0, 0)
 	ButtonSetText (wn.."CancelButton", L"Close")
 	ButtonSetText (wn.."Cancel2Button", L"Close")
@@ -241,12 +241,12 @@ function Enemy.ScenarioInfoInitialize ()
 
 	wn = "EnemyScenarioInfoToggleButton"
 	CreateWindowFromTemplate (wn, "EnemyScenarioInfoToggleButtonTemplate", "ScenarioSummaryWindow")
-	WindowAddAnchor (wn, "topright", "ScenarioSummaryWindow", "topright", -100, 5)
+	WindowAddAnchor (wn, "topright", "ScenarioSummaryWindow", "topright", -200, 10)
 	ButtonSetText (wn, L"Switch to extended scenario info")
 
 	wn = "EnemyScenarioInfoToggleButton2"
 	CreateWindowFromTemplate (wn, "EnemyScenarioInfoToggleButtonTemplate", "ScenarioSummaryWindow")
-	WindowAddAnchor (wn, "bottomright", "ScenarioSummaryWindow", "bottomright", -100, -5)
+	WindowAddAnchor (wn, "bottomright", "ScenarioSummaryWindow", "bottomright", -200, -10)
 	ButtonSetText (wn, L"Switch to extended scenario info")
 
 	-- static events

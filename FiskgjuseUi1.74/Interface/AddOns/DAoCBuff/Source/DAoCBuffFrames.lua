@@ -256,7 +256,7 @@ function DAoCBuffFrame.OnMouseOver()
 
 	if(buffData ~= nil)
 	then
-		local tooltip_anchor = { Point = "bottom",	RelativeTo = SystemData.ActiveWindow.name, RelativePoint = "top",	XOffset = 0, YOffset = 20 }
+		local tooltip_anchor = { Point = "bottom",	RelativeTo = SystemData.ActiveWindow.name, RelativePoint = "top",	XOffset = 0, YOffset = 40 }
 		g_currentMouseOverBuff = buffFrame
 
 		if (not buffData.iscondensed) then
@@ -427,17 +427,17 @@ function DAoCBuffTracker:Create(windowName,parentName,options)
 			end
 		end
 	else
-		WindowAddAnchor(windowName,"center","Root","center",0,-200)
+		WindowAddAnchor(windowName,"center","Root","center",0,-400)
 	end
 
 	LayoutEditor.RegisterWindow(windowName,towstring(windowName),L"Alternative Buffwindow.",false,false,true,nil)
 
 	local YOffset=0
 	if(options.buffsbelow == 1)then
-		if(newTracker.m_fontnum==1)then YOffset=20
-		elseif(newTracker.m_fontnum==2)then YOffset=22
-		elseif(newTracker.m_fontnum==3)then YOffset=25
-		elseif(newTracker.m_fontnum==4)then YOffset=25
+		if(newTracker.m_fontnum==1)then YOffset=40
+		elseif(newTracker.m_fontnum==2)then YOffset=44
+		elseif(newTracker.m_fontnum==3)then YOffset=50
+		elseif(newTracker.m_fontnum==4)then YOffset=50
 		end
 	end
 
@@ -587,10 +587,10 @@ function DAoCBuffTracker:Stick()
 				if(self.m_StickMe.m_growup~=1)
 				then
 					if(self.m_buffsbelow == 1)then
-						if(self.m_fontnum==1)then YOffset=20
-						elseif(self.m_fontnum==2)then YOffset=22
-						elseif(self.m_fontnum==3)then YOffset=25
-						elseif(self.m_fontnum==4)then YOffset=25
+						if(self.m_fontnum==1)then YOffset=40
+						elseif(self.m_fontnum==2)then YOffset=44
+						elseif(self.m_fontnum==3)then YOffset=50
+						elseif(self.m_fontnum==4)then YOffset=50
 						end
 					end
 					if(self.m_StickMe.m_growleft==1)
@@ -601,10 +601,10 @@ function DAoCBuffTracker:Stick()
 					end
 				else
 					if(self.m_StickMe.m_buffsbelow == 1)then
-						if(self.m_StickMe.m_fontnum==1)then YOffset=20
-						elseif(self.m_StickMe.m_fontnum==2)then YOffset=22
-						elseif(self.m_StickMe.m_fontnum==3)then YOffset=25
-						elseif(self.m_StickMe.m_fontnum==4)then YOffset=25
+						if(self.m_StickMe.m_fontnum==1)then YOffset=40
+						elseif(self.m_StickMe.m_fontnum==2)then YOffset=44
+						elseif(self.m_StickMe.m_fontnum==3)then YOffset=50
+						elseif(self.m_StickMe.m_fontnum==4)then YOffset=50
 						end
 					end
 					if(self.m_StickMe.m_growleft==1)

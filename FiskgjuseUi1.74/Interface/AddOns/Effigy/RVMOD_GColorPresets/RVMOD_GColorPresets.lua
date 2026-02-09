@@ -27,7 +27,7 @@ local RVRecentUpdates		=
 
 local LibGUI = LibStub("LibGUI")
 
-Addon.ButtonWidth = 130
+Addon.ButtonWidth = 260
 Addon.ButtonInherits = "EA_Button_DefaultResizeable"
 Addon.FontHeadline = "font_default_war_heading" 
 Addon.FontBold = "font_default_medium_heading" --"font_clear_medium_bold"
@@ -206,7 +206,7 @@ function Addon.OnStandaloneShowSettingsWindow()
 	end
 	WindowSetParent(WindowSettings, w.name)
 	WindowClearAnchors(WindowSettings)
-	WindowAddAnchor(WindowSettings, "topleft", w.name, "topleft", 0, 20)
+	WindowAddAnchor(WindowSettings, "topleft", w.name, "topleft", 0, 40)
 	WindowAddAnchor(WindowSettings, "bottomright", w.name, "bottomright", 0, 0)
 end
 --------------------------------------------------------------

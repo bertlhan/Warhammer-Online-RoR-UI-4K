@@ -41,12 +41,12 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 			scale = 1,
 			my_anchor = "topleft",
 			alpha = 0.6,
-			width = 600,
+			width = 1200,
 			show = true,
 			visibility_group = "none",
 			layer = "overlay",
 			to_anchor = "topleft",
-			height = 70,
+			height = 140,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -73,9 +73,9 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 				name = "LiquidIPFX",
 				slice = "none",
 				scale = 1,
-				height = 70,
+				height = 140,
 				y = 0,
-				width = 600,
+				width = 1200,
 			},
 		},
 		Background = 
@@ -87,12 +87,12 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 			scale = 1,
 			my_anchor = "topleft",
 			alpha = 0.8,
-			width = 600,
+			width = 1200,
 			show = true,
 			visibility_group = "none",
 			layer = "background",
 			to_anchor = "topleft",
-			height = 70,
+			height = 140,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -115,11 +115,11 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 			texture = 
 			{
 				scale = 1,
-				width = 600,
+				width = 1200,
 				texture_group = "none",
 				x = 0,
 				style = "cut",
-				height = 70,
+				height = 140,
 				slice = "none",
 				y = 0,
 				name = "LiquidIPBG",
@@ -318,12 +318,12 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 	interactive = false,
 	visibility_group = "none",
 	show_with_target = false,
-	width = 600,
+	width = 1200,
 	y = 10,
 	x = 0,
 	relwin = "Root",
 	interactive_type = "none",
-	height = 70,
+	height = 140,
 	name = "InfoPanel",
 	state = "PlayerHP",
 	alphasettings = {
@@ -353,7 +353,7 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 			},
 			my_anchor = "center",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -396,7 +396,7 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 			},
 			my_anchor = "left",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -430,7 +430,7 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 			follow = "no",
 			always_show = false,
 			alpha = 1,
-			width = 230,
+			width = 460,
 			show = true,
 			font = 
 			{
@@ -440,7 +440,7 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 			},
 			visibility_group = "none",
 			parent = "Bar",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -483,7 +483,7 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 			},
 			always_show = false,
 			parent = "Bar",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -526,7 +526,7 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 			},
 			my_anchor = "right",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -569,7 +569,7 @@ UFTemplates.Bars.Yak_LiquidInfoPanel =
 			},
 			my_anchor = "left",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -694,11 +694,11 @@ UFTemplates.Bars.Yak_LiquidWorldGroupMember =
 		texture = 
 		{
 			scale = 0,
-			width = 48,
+			width = 96,
 			texture_group = "none",
 			slice = "none",
 			name = "SharedMediaYGroupIconShape",
-			height = 48,
+			height = 96,
 			x = 0,
 			y = 0,
 			style = "cut",
@@ -751,11 +751,11 @@ UFTemplates.Bars.Yak_LiquidWorldGroupMember =
 		texture = 
 		{
 			scale = 2,
-			width = 50,
+			width = 100,
 			texture_group = "none",
 			x = 4,
 			name = "SharedMediaYGroupIconShape",
-			height = 50,
+			height = 100,
 			slice = "none",
 			y = 7,
 			style = "cut",
@@ -791,12 +791,12 @@ UFTemplates.Bars.Yak_LiquidWorldGroupMember =
 	interactive = false,
 	visibility_group = "none",
 	show_with_target = false,
-	width = 34,
+	width = 68,
 	state = "grp1hp",
 	x = 0,
 	relwin = "WorldGroupMember1Invisi",
 	interactive_type = "none",
-	height = 34,
+	height = 68,
 	name = "WorldGroupMember1",
 	y = -100,
 	alphasettings = {
@@ -814,12 +814,12 @@ UFTemplates.Bars.Yak_LiquidWorldGroupMember =
 			scale = 1,
 			my_anchor = "topleft",
 			alpha = 1,
-			width = 36,
+			width = 72,
 			show = true,
 			visibility_group = "none",
 			layer = "overlay",
 			to_anchor = "topleft",
-			height = 36,
+			height = 72,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -847,8 +847,8 @@ UFTemplates.Bars.Yak_LiquidWorldGroupMember =
 				slice = "none",
 				scale = 1,
 				texture_group = "none",
-				height = 50,
-				width = 50,
+				height = 100,
+				width = 100,
 			},
 		},
 	},
@@ -873,12 +873,12 @@ UFTemplates.Bars.Yak_LiquidGroupMember =
 			scale = 1,
 			my_anchor = "topleft",
 			alpha = 0.6,
-			width = 170,
+			width = 340,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
 			to_anchor = "topleft",
-			height = 50,
+			height = 100,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -906,8 +906,8 @@ UFTemplates.Bars.Yak_LiquidGroupMember =
 				x = 0,
 				scale = 1,
 				y = 0,
-				height = 128,
-				width = 512,
+				height = 256,
+				width = 1024,
 			},
 		},
 		Background = 
@@ -919,12 +919,12 @@ UFTemplates.Bars.Yak_LiquidGroupMember =
 			scale = 1,
 			my_anchor = "topleft",
 			alpha = 0.8,
-			width = 170,
+			width = 340,
 			show = true,
 			visibility_group = "none",
 			layer = "background",
 			to_anchor = "topleft",
-			height = 50,
+			height = 100,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -952,8 +952,8 @@ UFTemplates.Bars.Yak_LiquidGroupMember =
 				x = 0,
 				scale = 1,
 				y = 0,
-				height = 128,
-				width = 512,
+				height = 256,
+				width = 1024,
 			},
 		},
 	},
@@ -1124,7 +1124,7 @@ UFTemplates.Bars.Yak_LiquidGroupMember =
 			name = "tint_square",
 		},
 	},
-	width = 160,
+	width = 320,
 	no_tooltip = false,
 	y = 80,
 	hide_if_zero = false,
@@ -1136,7 +1136,7 @@ UFTemplates.Bars.Yak_LiquidGroupMember =
 	x = 0,
 	relwin = "Root",
 	interactive_type = "group",
-	height = 24,
+	height = 48,
 	icon = 
 	{
 		scale = 0.64,
@@ -1185,7 +1185,7 @@ UFTemplates.Bars.Yak_LiquidGroupMember =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1228,7 +1228,7 @@ UFTemplates.Bars.Yak_LiquidGroupMember =
 				name = "font_clear_small_bold",
 				case = "none",
 			},
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1272,7 +1272,7 @@ UFTemplates.Bars.Yak_LiquidGroupMember =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1313,12 +1313,12 @@ UFTemplates.Bars.Yak_LiquidPlayerHP =
 			scale = 1,
 			my_anchor = "topleft",
 			alpha = 0.6,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
 			to_anchor = "topleft",
-			height = 66,
+			height = 132,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1345,9 +1345,9 @@ UFTemplates.Bars.Yak_LiquidPlayerHP =
 				name = "LiquidUFFX",
 				slice = "none",
 				scale = 1,
-				height = 128,
+				height = 256,
 				texture_group = "none",
-				width = 512,
+				width = 1024,
 			},
 		},
 		Background = 
@@ -1359,12 +1359,12 @@ UFTemplates.Bars.Yak_LiquidPlayerHP =
 			scale = 1,
 			my_anchor = "topleft",
 			alpha = 0.8,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "background",
 			to_anchor = "topleft",
-			height = 66,
+			height = 132,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1391,9 +1391,9 @@ UFTemplates.Bars.Yak_LiquidPlayerHP =
 				name = "LiquidUFBG",
 				slice = "none",
 				scale = 1,
-				height = 128,
+				height = 256,
 				texture_group = "none",
-				width = 512,
+				width = 1024,
 			},
 		},
 	},
@@ -1564,7 +1564,7 @@ UFTemplates.Bars.Yak_LiquidPlayerHP =
 			name = "tint_square",
 		},
 	},
-	width = 210,
+	width = 420,
 	no_tooltip = false,
 	y = 100,
 	hide_if_zero = false,
@@ -1576,7 +1576,7 @@ UFTemplates.Bars.Yak_LiquidPlayerHP =
 	x = -360,
 	relwin = "Root",
 	interactive_type = "player",
-	height = 24,
+	height = 48,
 	icon = 
 	{
 		scale = 0.64,
@@ -1625,7 +1625,7 @@ UFTemplates.Bars.Yak_LiquidPlayerHP =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1663,7 +1663,7 @@ UFTemplates.Bars.Yak_LiquidPlayerHP =
 			visibility_group = "none",
 			my_anchor = "topleft",
 			scale = 0.9,
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1712,7 +1712,7 @@ UFTemplates.Bars.Yak_LiquidPlayerHP =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1912,7 +1912,7 @@ UFTemplates.Bars.Yak_LiquidPlayerAP =
 			slice = "none",
 		},
 	},
-	width = 210, --207,
+	width = 420, --207,
 	no_tooltip = true,
 	state = "PlayerAP",
 	hide_if_zero = false,
@@ -1924,7 +1924,7 @@ UFTemplates.Bars.Yak_LiquidPlayerAP =
 	x = 0, --2,
 	name = "PlayerAP",
 	interactive_type = "none",
-	height = 10,
+	height = 20,
 	icon = 
 	{
 		scale = 1.1,
@@ -1972,7 +1972,7 @@ UFTemplates.Bars.Yak_LiquidPlayerAP =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2015,7 +2015,7 @@ UFTemplates.Bars.Yak_LiquidPlayerAP =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 25,
+			height = 50,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2195,7 +2195,7 @@ UFTemplates.Bars.Yak_LiquidPlayerCareer =
 		pos_y = 0,
 		pos_x = 0,
 	},
-	width = 210,--206,
+	width = 420,--206,
 	no_tooltip = false,
 	state = "PlayerCareer",
 	hide_if_zero = false,
@@ -2275,7 +2275,7 @@ UFTemplates.Bars.Yak_LiquidPlayerCareer =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2321,8 +2321,8 @@ UFTemplates.Bars.Yak_LiquidHostileTarget =
 	to_anchor = "center",
 	x = 360,
 	pos_at_world_object = false,
-	width = 210,
-	height = 24,
+	width = 420,
+	height = 48,
 	interactive = true,
 	slow_changing_value = false,
 	alphasettings = {
@@ -2422,12 +2422,12 @@ UFTemplates.Bars.Yak_LiquidHostileTarget =
 			scale = 1,
 			my_anchor = "topleft",
 			alpha = 0.6,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
 			to_anchor = "topleft",
-			height = 50,
+			height = 100,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2454,9 +2454,9 @@ UFTemplates.Bars.Yak_LiquidHostileTarget =
 				name = "LiquidUFFX",
 				slice = "none",
 				scale = 1,
-				height = 128,
+				height = 256,
 				texture_group = "none",
-				width = 512,
+				width = 1024,
 				style = "cut",
 			},
 		},
@@ -2469,12 +2469,12 @@ UFTemplates.Bars.Yak_LiquidHostileTarget =
 			scale = 1,
 			my_anchor = "topleft",
 			alpha = 0.8,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "background",
 			to_anchor = "topleft",
-			height = 50,
+			height = 100,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2502,8 +2502,8 @@ UFTemplates.Bars.Yak_LiquidHostileTarget =
 				slice = "none",
 				scale = 1,
 				texture_group = "none",
-				height = 128,
-				width = 512,
+				height = 256,
+				width = 1024,
 				style = "cut",
 			},
 		},
@@ -2629,7 +2629,7 @@ UFTemplates.Bars.Yak_LiquidHostileTarget =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2672,7 +2672,7 @@ UFTemplates.Bars.Yak_LiquidHostileTarget =
 				name = "font_clear_small_bold",
 				case = "none",
 			},
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2716,7 +2716,7 @@ UFTemplates.Bars.Yak_LiquidHostileTarget =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2754,7 +2754,7 @@ UFTemplates.Bars.Yak_LiquidHostileTarget =
 			visibility_group = "HideIfDead",
 			my_anchor = "right",
 			scale = 0.86,
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2806,8 +2806,8 @@ UFTemplates.Bars.Yak_LiquidFriendlyTarget =
 	to_anchor = "center",
 	x = 360,
 	pos_at_world_object = false,
-	width = 210,
-	height = 24,
+	width = 420,
+	height = 48,
 	interactive = true,
 	slow_changing_value = false,
 	alphasettings = {
@@ -2908,8 +2908,8 @@ UFTemplates.Bars.Yak_LiquidFriendlyTarget =
 				slice = "none",
 				scale = 1,
 				y = 0,
-				height = 128,
-				width = 512,
+				height = 256,
+				width = 1024,
 				style = "cut",
 			},
 			scale = 1,
@@ -2935,12 +2935,12 @@ UFTemplates.Bars.Yak_LiquidFriendlyTarget =
 			parent = "Bar",
 			my_anchor = "topleft",
 			alpha = 0.6,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
 			to_anchor = "topleft",
-			height = 50,
+			height = 100,
 			follow_bg_alpha = true,
 			pos_y = -6,
 			pos_x = -7,
@@ -2955,8 +2955,8 @@ UFTemplates.Bars.Yak_LiquidFriendlyTarget =
 				slice = "none",
 				scale = 1,
 				y = 0,
-				height = 128,
-				width = 512,
+				height = 256,
+				width = 1024,
 				style = "cut",
 			},
 			scale = 1,
@@ -2982,12 +2982,12 @@ UFTemplates.Bars.Yak_LiquidFriendlyTarget =
 			parent = "Bar",
 			my_anchor = "topleft",
 			alpha = 0.8,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "background",
 			to_anchor = "topleft",
-			height = 50,
+			height = 100,
 			follow_bg_alpha = true,
 			pos_y = -6,
 			pos_x = -7,
@@ -3114,7 +3114,7 @@ UFTemplates.Bars.Yak_LiquidFriendlyTarget =
 			},
 			scale = 0.9,
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -3157,7 +3157,7 @@ UFTemplates.Bars.Yak_LiquidFriendlyTarget =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -3201,7 +3201,7 @@ UFTemplates.Bars.Yak_LiquidFriendlyTarget =
 			},
 			scale = 0.86,
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -3244,7 +3244,7 @@ UFTemplates.Bars.Yak_LiquidFriendlyTarget =
 				case = "none",
 			},
 			scale = 0.86,
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -3313,12 +3313,12 @@ UFTemplates.Bars.Yak_LiquidCastbar =
 			parent = "Bar",
 			my_anchor = "topleft",
 			alpha = 0.6,
-			width = 225,
+			width = 450,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
 			to_anchor = "topleft",
-			height = 20,
+			height = 40,
 			follow_bg_alpha = true,
 			pos_y = -5,
 			pos_x = -7,
@@ -3332,9 +3332,9 @@ UFTemplates.Bars.Yak_LiquidCastbar =
 				name = "LiquidCBBG",
 				x = 0,
 				scale = 1,
-				height = 20,
+				height = 40,
 				y = 0,
-				width = 225,
+				width = 450,
 			},
 			scale = 1,
 			colorsettings = 
@@ -3359,12 +3359,12 @@ UFTemplates.Bars.Yak_LiquidCastbar =
 			parent = "Bar",
 			my_anchor = "topleft",
 			alpha = 0.8,
-			width = 225,
+			width = 450,
 			show = true,
 			visibility_group = "none",
 			layer = "background",
 			to_anchor = "topleft",
-			height = 20,
+			height = 40,
 			follow_bg_alpha = true,
 			pos_y = -5,
 			pos_x = -7,
@@ -3378,12 +3378,12 @@ UFTemplates.Bars.Yak_LiquidCastbar =
 			scale = 1,
 			my_anchor = "left",
 			alpha = 1,
-			width = 20,
+			width = 40,
 			show = true,
 			visibility_group = "none",
 			layer = "secondary",
 			to_anchor = "right",
-			height = 25,
+			height = 50,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -3411,8 +3411,8 @@ UFTemplates.Bars.Yak_LiquidCastbar =
 				x = 0,
 				scale = 1,
 				y = 0,
-				height = 25,
-				width = 20,
+				height = 50,
+				width = 40,
 			},
 		},
 	},
@@ -3529,11 +3529,11 @@ UFTemplates.Bars.Yak_LiquidCastbar =
 		texture = 
 		{
 			scale = 1,
-			width = 211,
+			width = 422,
 			texture_group = "none",
 			slice = "none",
 			name = "LiquidCBBar",
-			height = 10,
+			height = 20,
 			style = "cut",
 			y = 0,
 			x = 0,
@@ -3583,7 +3583,7 @@ UFTemplates.Bars.Yak_LiquidCastbar =
 			slice = "none",
 		},
 	},
-	width = 215,
+	width = 430,
 	no_tooltip = true,
 	state = "Castbar",
 	hide_if_zero = true,
@@ -3595,7 +3595,7 @@ UFTemplates.Bars.Yak_LiquidCastbar =
 	visibility_group = "none",
 	relwin = "Root",
 	interactive_type = "none",
-	height = 14,
+	height = 28,
 	icon = 
 	{
 		scale = 0.9,
@@ -3644,7 +3644,7 @@ UFTemplates.Bars.Yak_LiquidCastbar =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -3685,12 +3685,12 @@ UFTemplates.Bars.Yak_LiquidPet =
 			scale = 1,
 			my_anchor = "topleft",
 			alpha = 0.6,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
 			to_anchor = "topleft",
-			height = 50,
+			height = 100,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -3717,9 +3717,9 @@ UFTemplates.Bars.Yak_LiquidPet =
 				name = "LiquidUFFX",
 				x = 0,
 				scale = 1,
-				height = 128,
+				height = 256,
 				texture_group = "none",
-				width = 512,
+				width = 1024,
 			},
 		},
 		Background = 
@@ -3731,12 +3731,12 @@ UFTemplates.Bars.Yak_LiquidPet =
 			scale = 1,
 			my_anchor = "topleft",
 			alpha = 0.8,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
 			to_anchor = "topleft",
-			height = 50,
+			height = 100,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -3763,9 +3763,9 @@ UFTemplates.Bars.Yak_LiquidPet =
 				name = "LiquidUFBG",
 				x = 0,
 				scale = 1,
-				height = 128,
+				height = 256,
 				texture_group = "none",
-				width = 512,
+				width = 1024,
 			},
 		},
 	},
@@ -3898,7 +3898,7 @@ UFTemplates.Bars.Yak_LiquidPet =
 		pos_y = 3,
 		pos_x = 32,
 	},
-	width = 210,
+	width = 420,
 	no_tooltip = false,
 	show = true,
 	hide_if_zero = false,
@@ -3910,7 +3910,7 @@ UFTemplates.Bars.Yak_LiquidPet =
 	x = -360,
 	relwin = "Root",
 	interactive_type = "none",
-	height = 24,
+	height = 48,
 	alphasettings = {
 		alpha = 1,
 		alpha_group = "none"
@@ -3997,7 +3997,7 @@ UFTemplates.Bars.Yak_LiquidPet =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -4040,7 +4040,7 @@ UFTemplates.Bars.Yak_LiquidPet =
 				name = "font_clear_small_bold",
 				case = "none",
 			},
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -4084,7 +4084,7 @@ UFTemplates.Bars.Yak_LiquidPet =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",

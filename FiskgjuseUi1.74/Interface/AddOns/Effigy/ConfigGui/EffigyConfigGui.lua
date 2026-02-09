@@ -45,7 +45,7 @@ local RVRecentUpdates		=
 "\t- Includes Global Color Presers, BuffIndicators, LibBuffEvents"..
 "\t- started as Fork of HUD Unit Frames by tannecurse/Metaphaze"
 
-Addon.ButtonWidth = 130
+Addon.ButtonWidth = 260
 Addon.ButtonInherits = "EA_Button_DefaultResizeable"
 Addon.FontHeadline = "font_default_war_heading" 
 Addon.FontBold = "font_default_medium_heading" --"font_clear_medium_bold"
@@ -110,7 +110,7 @@ function Addon.SetToolTip(item, str, str2, str3, str4, str5, str6)
 					Point = "topleft",  
 					RelativeTo = item.name, 
 					RelativePoint = "topright",   
-					XOffset = -5, YOffset = -5 }
+					XOffset = -10, YOffset = -10 }
 
 	Tooltips.AnchorTooltip(anchor)
 end
@@ -232,9 +232,9 @@ function Addon.CreateStandaloneSettingsWindow()
 	end
 	WindowSetParent(WindowSettings, w.name)
 	WindowClearAnchors(WindowSettings)
-	WindowAddAnchor(WindowSettings, "topleft", w.name, "topleft", 6, 32)
-	WindowAddAnchor(WindowSettings, "bottomright", w.name, "bottomright", -6, 0)
-	--WindowSetDimensions(WindowSettings, 688, 753)
+	WindowAddAnchor(WindowSettings, "topleft", w.name, "topleft", 12, 64)
+	WindowAddAnchor(WindowSettings, "bottomright", w.name, "bottomright", -12, 0)
+	--WindowSetDimensions(WindowSettings, 1376, 1506)
 	Addon.UpdateSettingsWindow()
 	WindowSetShowing(WindowSettings, true)
 end

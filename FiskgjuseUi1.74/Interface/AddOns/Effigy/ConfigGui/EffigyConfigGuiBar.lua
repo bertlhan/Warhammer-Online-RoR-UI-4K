@@ -3032,11 +3032,11 @@ function Addon.BorderBarSettings.Create()
 
 			local width = WStringToString(w.tSizeW:GetText())
 			width = tonumber(width)
-			if (nil == width) then width = 200 end
+			if (nil == width) then width = 400 end
 			
 			local height = WStringToString(w.tSizeH:GetText())
 			height = tonumber(height)
-			if (nil == height) then height = 20 end
+			if (nil == height) then height = 40 end
 			
 			local alpha = WStringToString(w.bta:GetText())
 			alpha = tonumber(alpha)

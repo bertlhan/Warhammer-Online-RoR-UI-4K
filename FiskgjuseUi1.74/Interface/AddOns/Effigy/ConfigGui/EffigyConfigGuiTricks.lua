@@ -15,8 +15,8 @@ local SettingsWindow = Addon.Name.."SettingsWindowTricks"
 -- Description:
 --------------------------------------------------------------
 function Addon.TricksMode.InitializeSettingsWindow(ParentWindow)
-	local frameSizeW = 630
-	local frameSizeH = 180
+	local frameSizeW = 1260
+	local frameSizeH = 360
 	--
 	-- XML Part
 	--

@@ -279,8 +279,8 @@ function Obsidian.LoadSettings()
 			Scale = 0.8,
 			Size =
 			{
-				Width = 350,
-				Height = 30,
+				Width = 700,
+				Height = 60,
 				Border = 3,
 			},
 			Position =
@@ -312,7 +312,7 @@ function Obsidian.LoadSettings()
 			Fill =
 			{
 				Texture = "SharedMediaHealbot",
-				TextureDimensions = { Width = 256, Height = 32 },
+				TextureDimensions = { Width = 512, Height = 64 },
 				Alpha = 1,
 				Colors =
 				{
@@ -407,8 +407,8 @@ function Obsidian.LoadSettings()
 				FixedDuration = 0,
 				Size = 
 				{
-					Width = 170,
-					Height = 15,
+					Width = 340,
+					Height = 30,
 					Border = 0,
 				},
 				Background =
@@ -421,7 +421,7 @@ function Obsidian.LoadSettings()
 				Fill =
 				{
 					Texture = "SharedMediaBantoBar",
-					TextureDimensions = { Width = 256, Height = 32 },
+					TextureDimensions = { Width = 512, Height = 64 },
 					Alpha = 1,
 					Priority = Obsidian.Castbar.FillPriority.Normal,
 				},

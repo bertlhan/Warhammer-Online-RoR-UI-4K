@@ -232,9 +232,9 @@ function Obsidian.Setup.Demo.Enable(windowName, enableEffects)
 		demoHostileEffects = Obsidian.EffectContainer:Create("ObsidianDemoHostile", Obsidian.TargetType.Hostile, Obsidian.Settings.EffectTracker.Hostile);
 	end
 
-	local yOffset = 20;
+	local yOffset = 40;
 	if (enableEffects) then
-		yOffset = 100;
+		yOffset = 200;
 	end
 
 	demoCastbar:AnchorTo(windowName, "bottom", "top", 0, yOffset);

@@ -55,7 +55,7 @@ function Head:Create(windowName,parentWindow,tracker)
 			RelativePoint	="topleft",
 			RelativeTo		=CwindowName,
 			XOffset			=1,
-			YOffset			=-98,
+			YOffset			=-196,
 	}
 
 	for buffSlot = 1, tracker.m_maxBuffs
@@ -175,7 +175,7 @@ function DAoCBuffHeadTracker:Create(windowName,parentName,options)
 		then
 			WindowSetScale(windowName,options.anchor.scale)
 		end
-		WindowAddAnchor(windowName,"center","Root","center",0,-300)
+		WindowAddAnchor(windowName,"center","Root","center",0,-600)
 	end
 	LayoutEditor.RegisterWindow(windowName,towstring(windowName),L"Alternative Buffwindow. (Head)",false,false,true,nil)
 	WindowSetShowing(windowName,false)

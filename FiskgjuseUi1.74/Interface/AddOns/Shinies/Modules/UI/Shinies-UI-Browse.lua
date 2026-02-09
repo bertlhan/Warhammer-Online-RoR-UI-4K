@@ -1086,7 +1086,7 @@ function InitializeUI()
 	WindowClearAnchors( windowSearches )
 	
 	-- Anchor the criteria window to the left side of the window
-	WindowSetDimensions( windowCriteria, 260, 0 )
+	WindowSetDimensions( windowCriteria, 520, 0 )
 	WindowAddAnchor( windowCriteria, "topleft", config.windowId, "topleft", 0, 0 )
 	WindowAddAnchor( windowCriteria, "bottomleft", config.windowId, "bottomleft", 0, 0 )
 	
@@ -1095,7 +1095,7 @@ function InitializeUI()
 	WindowAddAnchor( windowSearches, "left", config.windowId, "right", 0, 0 )
 	
 	-- Anchor the results window in the lower right portion of the window
-	WindowAddAnchor( windowResults, "topright", windowCriteria, "topleft", 0, 10 )
+	WindowAddAnchor( windowResults, "topright", windowCriteria, "topleft", 0, 20 )
 	WindowAddAnchor( windowResults, "bottomright", config.windowId, "bottomright", 0, 0 )
 	
 	-- Stop/hide our animation window

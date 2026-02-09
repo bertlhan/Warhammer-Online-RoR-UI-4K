@@ -42,13 +42,13 @@ SocialWindow.ContextMenuAnchor = {
             Point = "bottomright", 
             RelativePoint = "bottomleft", 
             RelativeTo = "ChatWindowSocialWindowButton", 
-            XOffset = 5, 
+            XOffset = 10, 
             YOffset = 0 }
 SocialWindow.ContextSubMenuAnchor = {
             Point = "bottomright", 
             RelativePoint = "bottomleft", 
             RelativeTo = "EA_Window_ContextMenu1", 
-            XOffset = 5, 
+            XOffset = 10, 
             YOffset = 0 }
             
 SocialWindow.TabTooltips = {
@@ -549,7 +549,7 @@ function SocialWindow.OnMouseOverListMember()
     
     WindowSetShowing("SocialWindowListWindowSelection", true)
     WindowClearAnchors("SocialWindowListWindowSelection")
-    WindowAddAnchor("SocialWindowListWindowSelection", "topleft", SystemData.MouseOverWindow.name, "topleft", 0, -2)
+    WindowAddAnchor("SocialWindowListWindowSelection", "topleft", SystemData.MouseOverWindow.name, "topleft", 0, -4)
     WindowAddAnchor("SocialWindowListWindowSelection", "bottomright", SystemData.MouseOverWindow.name.."ZoneName", "bottomright", 0, 2)
     
     -- Offline members do not have information
@@ -678,7 +678,7 @@ function SocialWindow.OnMouseOverTab()
     Tooltips.SetTooltipColorDef (1, 1, Tooltips.COLOR_HEADING)	
     Tooltips.Finalize ()
     
-    local anchor = { Point="bottom", RelativeTo=windowName, RelativePoint="top", XOffset=0, YOffset=32 }
+    local anchor = { Point="bottom", RelativeTo=windowName, RelativePoint="top", XOffset=0, YOffset=64 }
     Tooltips.AnchorTooltip (anchor)
     Tooltips.SetTooltipAlpha (1)
 end

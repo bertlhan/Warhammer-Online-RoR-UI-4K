@@ -26,7 +26,7 @@ local GetSetting
 local SetSetting
 
 
-local offset = 15
+local offset = 30
 
 local c_TIDY_ROLL_OPTIONS = "TidyRollOptions"
 local c_TROLL_TITLE = c_TIDY_ROLL_OPTIONS .. "TitleText"
@@ -144,8 +144,8 @@ function TidyRollOptions.Initialize()
 	-- Title Text
 	if( CreateWindowFromTemplate(c_TROLL_TITLE, "EA_Label_DefaultText", c_TIDY_ROLL_OPTIONS) ) then
 		WindowSetHandleInput(c_TROLL_TITLE, false)
-		WindowAddAnchor(c_TROLL_TITLE, "topleft", c_TIDY_ROLL_OPTIONS, "topleft", 0, 10)
-		WindowAddAnchor(c_TROLL_TITLE, "topright", c_TIDY_ROLL_OPTIONS, "topright", 0, 10)
+		WindowAddAnchor(c_TROLL_TITLE, "topleft", c_TIDY_ROLL_OPTIONS, "topleft", 0, 20)
+		WindowAddAnchor(c_TROLL_TITLE, "topright", c_TIDY_ROLL_OPTIONS, "topright", 0, 20)
 		
 		LabelSetFont(c_TROLL_TITLE, "font_clear_large_bold", 20)
 		LabelSetText(c_TROLL_TITLE, L"Tidy Roll Options")
@@ -154,8 +154,8 @@ function TidyRollOptions.Initialize()
 	-- Version Text
 	if( CreateWindowFromTemplate(c_TROLL_VERSION, "EA_Label_DefaultText", c_TIDY_ROLL_OPTIONS) ) then
 		WindowSetHandleInput(c_TROLL_VERSION, false)
-		WindowSetDimensions(c_TROLL_VERSION, 80, 30)
-		WindowAddAnchor(c_TROLL_VERSION, "bottomleft", c_TIDY_ROLL_OPTIONS, "bottomleft", 2, -2)
+		WindowSetDimensions(c_TROLL_VERSION, 160, 60)
+		WindowAddAnchor(c_TROLL_VERSION, "bottomleft", c_TIDY_ROLL_OPTIONS, "bottomleft", 2, -4)
 		
 		LabelSetText(c_TROLL_VERSION, TidyRoll.dVersion)
 	end
@@ -169,7 +169,7 @@ function TidyRollOptions.Initialize()
 	if( CreateWindowFromTemplate(c_TROLL_APPLY, "TRollButton", c_TIDY_ROLL_OPTIONS) ) then
 		WindowRegisterCoreEventHandler(c_TROLL_APPLY, "OnLButtonUp", "TidyRollOptions.OnApply")
 		
-		WindowAddAnchor(c_TROLL_APPLY, "bottom", c_TIDY_ROLL_OPTIONS, "bottom", 0, -10)
+		WindowAddAnchor(c_TROLL_APPLY, "bottom", c_TIDY_ROLL_OPTIONS, "bottom", 0, -20)
 		
 		ButtonSetText(c_TROLL_APPLY, L"Apply")
     end
@@ -199,7 +199,7 @@ function TidyRollOptions.Initialize()
 		
 		WindowSetId(tabButton, c_TROLL_GENERAL_TAB)
 		
-		WindowAddAnchor(tabButton, "bottomleft", c_TROLL_TITLE, "topleft", 6, 4)
+		WindowAddAnchor(tabButton, "bottomleft", c_TROLL_TITLE, "topleft", 12, 4)
 		
 		ButtonSetText(tabButton, L"General")
     end
@@ -281,7 +281,7 @@ function TidyRollOptions.Initialize()
 	
 	-- Number of buttons textbox
 	if( CreateWindowFromTemplate(c_TROLL_BNUM_TBOX, "EA_EditBox_DefaultFrame", tabWindowName) ) then
-		WindowSetDimensions(c_TROLL_BNUM_TBOX, 50, 32)
+		WindowSetDimensions(c_TROLL_BNUM_TBOX, 100, 64)
 		WindowSetLayer(c_TROLL_BNUM_TBOX, Window.Layers.POPUP)
 		WindowAddAnchor(c_TROLL_BNUM_TBOX, "right", c_TROLL_BNUM_LABEL, "left", 0, 0)
     end
@@ -295,7 +295,7 @@ function TidyRollOptions.Initialize()
 	
 	-- Buttons' offset textbox
 	if( CreateWindowFromTemplate(c_TROLL_OFFSET_TBOX, "EA_EditBox_DefaultFrame", tabWindowName) ) then
-		WindowSetDimensions(c_TROLL_OFFSET_TBOX, 50, 32)
+		WindowSetDimensions(c_TROLL_OFFSET_TBOX, 100, 64)
 		WindowSetLayer(c_TROLL_OFFSET_TBOX, Window.Layers.POPUP)
 		WindowAddAnchor(c_TROLL_OFFSET_TBOX, "right", c_TROLL_OFFSET_LABEL, "left", 0, 0)
     end
@@ -358,7 +358,7 @@ function TidyRollOptions.Initialize()
 	if( CreateWindowFromTemplate(c_TROLL_ONESC_RADIO .. 1, "TRollRadioTemplate", tabWindowName) ) then
 		
 		
-		WindowSetDimensions(c_TROLL_ONESC_RADIO .. 1, 140, 37)
+		WindowSetDimensions(c_TROLL_ONESC_RADIO .. 1, 280, 74)
 		WindowSetId(c_TROLL_ONESC_RADIO .. 1, 1)
 		WindowAddAnchor(c_TROLL_ONESC_RADIO .. 1, "bottomleft", c_TROLL_ONESC_COMBO, "topleft", offset, offset )
 		
@@ -371,7 +371,7 @@ function TidyRollOptions.Initialize()
 		
 		WindowSetId(c_TROLL_ONESC_RADIO .. 2, 2)
 		WindowAddAnchor(c_TROLL_ONESC_RADIO .. 2, "topright", c_TROLL_ONESC_RADIO .. 1, "topleft", 0, 0 )
-		WindowAddAnchor(c_TROLL_ONESC_RADIO .. 2, "topright", tabWindowName, "topright", -10, 0 )
+		WindowAddAnchor(c_TROLL_ONESC_RADIO .. 2, "topright", tabWindowName, "topright", -20, 0 )
 		
 		LabelSetText(c_TROLL_ONESC_RADIO .. 2 .. "Label", L"on visible only")
 	end
@@ -379,7 +379,7 @@ function TidyRollOptions.Initialize()
 	-- Binds label
 	if( CreateWindowFromTemplate(c_TROLL_BINDS_LABEL, "TRollLabel", tabWindowName) ) then
 		WindowAddAnchor(c_TROLL_BINDS_LABEL, "bottomleft", c_TROLL_ONESC_RADIO .. 1, "topleft", -offset, offset )
-		WindowAddAnchor(c_TROLL_BINDS_LABEL, "topright", tabWindowName, "topright", -10, 0 )
+		WindowAddAnchor(c_TROLL_BINDS_LABEL, "topright", tabWindowName, "topright", -20, 0 )
 		
 		LabelSetFont(c_TROLL_BINDS_LABEL, "font_clear_medium", 20)
 		LabelSetText(c_TROLL_BINDS_LABEL, L"Mouse controls:")
@@ -387,7 +387,7 @@ function TidyRollOptions.Initialize()
     
     -- Need text
 	if( CreateWindowFromTemplate(c_TROLL_NEED_LABEL, "TRollLabel", tabWindowName) ) then
-		WindowSetDimensions(c_TROLL_NEED_LABEL, 70, 20)
+		WindowSetDimensions(c_TROLL_NEED_LABEL, 140, 40)
 		WindowAddAnchor(c_TROLL_NEED_LABEL, "bottomleft", c_TROLL_BINDS_LABEL, "topleft", 0, offset)
 		
 		LabelSetText(c_TROLL_NEED_LABEL, L"Need:")
@@ -423,7 +423,7 @@ function TidyRollOptions.Initialize()
 		if( CreateWindowFromTemplate(c_TROLL_NEED_MODIF_RADIO .. index, "TRollRadioTemplate", tabWindowName) ) then
 			
 			
-			WindowSetDimensions(c_TROLL_NEED_MODIF_RADIO .. index, 80, 37)
+			WindowSetDimensions(c_TROLL_NEED_MODIF_RADIO .. index, 160, 74)
 			WindowSetId(c_TROLL_NEED_MODIF_RADIO .. index, index)
 			WindowAddAnchor(c_TROLL_NEED_MODIF_RADIO .. index, anchor.Point, anchor.RelativeTo, anchor.RelativePoint, anchor.XOffset, anchor.YOffset)
 			
@@ -441,7 +441,7 @@ function TidyRollOptions.Initialize()
 	
     -- Greed text
 	if( CreateWindowFromTemplate(c_TROLL_GREED_LABEL, "TRollLabel", tabWindowName) ) then
-		WindowSetDimensions(c_TROLL_GREED_LABEL, 70, 20)
+		WindowSetDimensions(c_TROLL_GREED_LABEL, 140, 40)
 		WindowAddAnchor(c_TROLL_GREED_LABEL, "bottomleft", c_TROLL_NEED_MODIF_RADIO .. 1, "topleft", -offset, offset / 3)
 		
 		LabelSetText(c_TROLL_GREED_LABEL, L"Greed:")
@@ -477,7 +477,7 @@ function TidyRollOptions.Initialize()
 		if( CreateWindowFromTemplate(c_TROLL_GREED_MODIF_RADIO .. index, "TRollRadioTemplate", tabWindowName) ) then
 			
 			
-			WindowSetDimensions(c_TROLL_GREED_MODIF_RADIO .. index, 80, 37)
+			WindowSetDimensions(c_TROLL_GREED_MODIF_RADIO .. index, 160, 74)
 			WindowSetId(c_TROLL_GREED_MODIF_RADIO .. index, index)
 			WindowAddAnchor(c_TROLL_GREED_MODIF_RADIO .. index, anchor.Point, anchor.RelativeTo, anchor.RelativePoint, anchor.XOffset, anchor.YOffset)
 			
@@ -495,7 +495,7 @@ function TidyRollOptions.Initialize()
 	
 	-- Pass text
 	if( CreateWindowFromTemplate(c_TROLL_PASS_LABEL, "TRollLabel", tabWindowName) ) then
-		WindowSetDimensions(c_TROLL_PASS_LABEL, 70, 20)
+		WindowSetDimensions(c_TROLL_PASS_LABEL, 140, 40)
 		WindowAddAnchor(c_TROLL_PASS_LABEL, "bottomleft", c_TROLL_GREED_MODIF_RADIO .. 1, "topleft", -offset, offset / 3)
 		
 		LabelSetText(c_TROLL_PASS_LABEL, L"Pass:")
@@ -531,7 +531,7 @@ function TidyRollOptions.Initialize()
 		if( CreateWindowFromTemplate(c_TROLL_PASS_MODIF_RADIO .. index, "TRollRadioTemplate", tabWindowName) ) then
 			
 			
-			WindowSetDimensions(c_TROLL_PASS_MODIF_RADIO .. index, 80, 37)
+			WindowSetDimensions(c_TROLL_PASS_MODIF_RADIO .. index, 160, 74)
 			WindowSetId(c_TROLL_PASS_MODIF_RADIO .. index, index)
 			WindowAddAnchor(c_TROLL_PASS_MODIF_RADIO .. index, anchor.Point, anchor.RelativeTo, anchor.RelativePoint, anchor.XOffset, anchor.YOffset)
 			
@@ -577,7 +577,7 @@ function TidyRollOptions.Initialize()
     if( CreateWindowFromTemplate(c_TROLL_MANAGE_AUTO_ROLL_BUTTON, "TRollButton", tabWindowName) ) then
 		WindowRegisterCoreEventHandler(c_TROLL_MANAGE_AUTO_ROLL_BUTTON, "OnLButtonUp", "TidyRoll.CustomAutoRoll.ToggleOptions")
 		
-		WindowAddAnchor(c_TROLL_MANAGE_AUTO_ROLL_BUTTON, "right", c_TROLL_AUTO_NEED_FOR_MEDALLIONS, "left", 0, -5)
+		WindowAddAnchor(c_TROLL_MANAGE_AUTO_ROLL_BUTTON, "right", c_TROLL_AUTO_NEED_FOR_MEDALLIONS, "left", 0, -10)
 		
 		ButtonSetText(c_TROLL_MANAGE_AUTO_ROLL_BUTTON, L"Manage")
     end
@@ -588,7 +588,7 @@ function TidyRollOptions.Initialize()
 		
 		WindowAddAnchor(c_TROLL_TIMER_TEXT, "bottomleft", c_TROLL_AUTO_NEED_FOR_MEDALLIONS, "topleft", 0, offset - 10)
 		--WindowAddAnchor(c_TROLL_TIMER_TEXT, "bottomright", c_TROLL_AUTO_NEED_FOR_MEDALLIONS, "topright", 0, 0)
-		WindowAddAnchor(c_TROLL_TIMER_TEXT, "topright", tabWindowName, "topright", -10, 0)
+		WindowAddAnchor(c_TROLL_TIMER_TEXT, "topright", tabWindowName, "topright", -20, 0)
 		
 		LabelSetText(c_TROLL_TIMER_TEXT .. "Label", L"Show timer text")
     end
@@ -686,7 +686,7 @@ function TidyRollOptions.Initialize()
 	
 	-- Sort type text
 	if( CreateWindowFromTemplate(c_TROLL_SORT_TYPE_TEXT, "TRollLabel", tabWindowName) ) then
-		WindowSetDimensions(c_TROLL_SORT_TYPE_TEXT, 70, 20)
+		WindowSetDimensions(c_TROLL_SORT_TYPE_TEXT, 140, 40)
 		WindowAddAnchor(c_TROLL_SORT_TYPE_TEXT, "bottomleft", c_TROLL_SORTING_TEXT, "topleft", 0, offset)
 		
 		LabelSetText(c_TROLL_SORT_TYPE_TEXT, L"Sort by")
@@ -705,7 +705,7 @@ function TidyRollOptions.Initialize()
     
     -- Sort order text
 	if( CreateWindowFromTemplate(c_TROLL_SORT_ORDER_TEXT, "TRollLabel", tabWindowName) ) then
-		WindowSetDimensions(c_TROLL_SORT_ORDER_TEXT, 70, 20)
+		WindowSetDimensions(c_TROLL_SORT_ORDER_TEXT, 140, 40)
 		WindowAddAnchor(c_TROLL_SORT_ORDER_TEXT, "bottomleft", c_TROLL_SORT_TYPE_TEXT, "topleft", 0, offset)
 		
 		LabelSetText(c_TROLL_SORT_ORDER_TEXT, L"Order")

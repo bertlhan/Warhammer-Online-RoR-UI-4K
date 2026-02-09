@@ -225,7 +225,7 @@ function Settings.WindowHiderShow(name,show)
 	WindowSetShowing(name.."ButtonClosed",not show)
 	WindowSetShowing(name.."_Content",show)
 	WindowClearAnchors(name.."End")
-	WindowAddAnchor(name.."End","bottomleft",show and name.."_Content" or name,"bottomleft",0,5)
+	WindowAddAnchor(name.."End","bottomleft",show and name.."_Content" or name,"bottomleft",0,10)
 	ScrollWindowUpdateScrollRect("Vectors_Settings_ScrollWindow")
 end
 

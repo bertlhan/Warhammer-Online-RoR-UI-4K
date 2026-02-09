@@ -76,11 +76,11 @@ function VerticalTactics.AnchorTacticButtons()
 
 	local anchorToWindow    = "EA_TacticsEditor";
 	local offsetX           = 1;
-	local offsetY           = 47;
+	local offsetY           = 94;
 	local relativePoint     = "topleft";
 	local point             = "topleft";
 	if VerticalTactics.reverse then
-		offsetY           = -47;
+		offsetY           = -94;
 		relativePoint     = "bottomleft";
 		point             = "bottomleft";
 	end
@@ -97,7 +97,7 @@ function VerticalTactics.AnchorTacticButtons()
 			anchorToWindow  = "TacticButton"..previousButtonId;
 			offsetX         = 0;
 			if VerticalTactics.reverse then
-				offsetY         = -2;
+				offsetY         = -4;
 				point           = "topleft";
 			else
 				offsetY         = 2;

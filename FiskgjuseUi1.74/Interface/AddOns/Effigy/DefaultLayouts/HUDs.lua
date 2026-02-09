@@ -138,7 +138,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 		visibility_group = "none",
 		name = "TargetHostile",
 		interactive_type = "none",
-		height = 256,
+		height = 512,
 		pos_at_world_object = false,
 		border = 
 		{
@@ -186,7 +186,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 		watching_states = {},
 		hide_if_zero = false,
 		show_with_target = false,
-		width = 64,
+		width = 128,
 		show = true,
 		icon = 
 		{
@@ -219,7 +219,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 				layer = "secondary",
 				always_show = false,
 				alpha = 1,
-				width = 300,
+				width = 600,
 				show = true,
 				font = 
 				{
@@ -229,7 +229,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 				},
 				scale = 0.8,
 				visibility_group = "none",
-				height = 17,
+				height = 34,
 				colorsettings = 
 				{
 					ColorPreset = "none",
@@ -396,7 +396,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 		visibility_group = "CombatOrNotFull",
 		name = "PlayerHP",
 		interactive_type = "player",
-		height = 256,
+		height = 512,
 		pos_at_world_object = false,
 		border = 
 		{
@@ -444,7 +444,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 		watching_states = {},
 		hide_if_zero = false,
 		show_with_target = false,
-		width = 64,
+		width = 128,
 		show = true,
 		invValue = false,
 		interactive = true,
@@ -470,7 +470,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 				layer = "secondary",
 				always_show = false,
 				alpha = 1,
-				width = 150,
+				width = 300,
 				show = true,
 				font = 
 				{
@@ -480,7 +480,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 				},
 				scale = 0.8,
 				visibility_group = "none",
-				height = 17,
+				height = 34,
 				colorsettings = 
 				{
 					ColorPreset = "none",
@@ -637,7 +637,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 		state = "PlayerAP",
 		name = "PlayerAP",
 		interactive_type = "player",
-		height = 256,
+		height = 512,
 		scale = 1,
 		border = 
 		{
@@ -686,7 +686,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 		hide_if_zero = false,
 		show_with_target = false,
 		visibility_group = "CombatOrNotFull",
-		width = 64,
+		width = 128,
 		show = true,
 		invValue = false,
 		interactive = true,
@@ -711,7 +711,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 				visibility_group = "none",
 				layer = "overlay",
 				alpha = 1,
-				width = 100,
+				width = 200,
 				show = true,
 				font = 
 				{
@@ -720,7 +720,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 					case = "none",
 				},
 				scale = 0.8,
-				height = 17,
+				height = 34,
 				colorsettings = 
 				{
 					ColorPreset = "__YELLOW_DARK",
@@ -855,7 +855,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 		state = "FTHP",
 		name = "TargetFriendly",
 		interactive_type = "none",
-		height = 256,
+		height = 512,
 		scale = 1,
 		border = 
 		{
@@ -904,7 +904,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 		hide_if_zero = false,
 		show_with_target = false,
 		visibility_group = "none",
-		width = 64,
+		width = 128,
 		show = true,
 		invValue = false,
 		interactive = false,
@@ -968,7 +968,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 				layer = "secondary",
 				always_show = false,
 				alpha = 1,
-				width = 300,
+				width = 600,
 				show = true,
 				font = 
 				{
@@ -978,7 +978,7 @@ UFTemplates.Layouts["HUD-Glow"] =
 				},
 				scale = 0.8,
 				visibility_group = "none",
-				height = 17,
+				height = 34,
 				colorsettings = 
 				{
 					ColorPreset = "none",

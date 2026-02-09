@@ -302,8 +302,8 @@ local dlg =
 			type = "int[]",
 			size = 2,
 			default = Enemy.DefaultSettings.groupIconsOffset,
-			min = { -1000, -1000 },
-			max = { 1000, 1000 }
+			min = { -4000, -4000 },
+			max = { 4000, 4000 }
 		},
 		groupIconsHPColor =
 		{
@@ -387,8 +387,8 @@ local dlg =
 			type = "int[]",
 			size = 2,
 			default = Enemy.DefaultSettings.groupIconsOtherGroupsOffset,
-			min = { -1000, -1000 },
-			max = { 1000, 1000 }
+			min = { -4000, -4000 },
+			max = { 4000, 4000 }
 		},
 		groupIconsOtherGroupsHPColor =
 		{
@@ -471,8 +471,8 @@ local dlg =
 			type = "int[]",
 			size = 2,
 			default = Enemy.DefaultSettings.groupIconsPetOffset,
-			min = { -1000, -1000 },
-			max = { 1000, 1000 }
+			min = { -4000, -4000 },
+			max = { 4000, 4000 }
 		},
 		groupIconsPetIconColor =
 		{
@@ -527,7 +527,7 @@ function Enemy.GroupIconsUI_ConfigDialog_OnInitialize (section)
 	dlg.cwn = root.."Config"
 	local width, height = Enemy.CreateConfigurationWindow (dlg.cwn, root, dlg.properties, Enemy.GroupIconsUI_ConfigDialog_TestSettings)
 
---	WindowAddAnchor (dlg.section.windowName.."ContentScrollChildGroupIconPartsLabel", "bottomleft", dlg.cwn, "topleft", 40, 40)
+--	WindowAddAnchor (dlg.section.windowName.."ContentScrollChildGroupIconPartsLabel", "bottomleft", dlg.cwn, "topleft", 80, 80)
 --	LabelSetText (dlg.section.windowName.."ContentScrollChildGroupIconPartsLabel", L"Visual parts")
 --	WindowSetTintColor (dlg.section.windowName.."ContentScrollChildGroupIconPartsListBackground", 100, 100, 100)
 --	WindowSetAlpha (dlg.section.windowName.."ContentScrollChildGroupIconPartsListBackground", 0.5)

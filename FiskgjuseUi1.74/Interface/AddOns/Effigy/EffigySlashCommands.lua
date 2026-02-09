@@ -67,7 +67,7 @@ function Addon.SlashHandler(cmd)
 			DestroyWindow("test")
 		end
 		CreateWindowFromTemplate("test", args, "Root")
-		WindowSetDimensions("test", 500, 100)
+		WindowSetDimensions("test", 1000, 200)
 		WindowClearAnchors("test")
 		WindowAddAnchor("test", "center", "Root", "center", 0, 0)
 		return

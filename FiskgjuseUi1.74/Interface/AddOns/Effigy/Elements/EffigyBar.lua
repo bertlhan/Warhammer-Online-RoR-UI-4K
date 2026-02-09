@@ -148,7 +148,7 @@ function EffigyBar:setup()
             CreateWindowFromTemplate(invisiName, "EffigyEmpty", "Root")
 			WindowSetShowing(invisiName, false)
 			WindowSetHandleInput(invisiName, false)
-			WindowSetDimensions(invisiName, 50, 5)
+			WindowSetDimensions(invisiName, 100, 10)
         end
         self.anchors[1].parent = invisiName
         WindowSetParent(self.name, invisiName)

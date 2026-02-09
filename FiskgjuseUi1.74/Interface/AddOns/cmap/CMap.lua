@@ -1099,8 +1099,8 @@ function CMapWindow.zoomUP()
     then
         --WindowSetShowing("CMapWindow",false)
         --WindowSetShowing("CMapWindowMapWorldMapButton",true)
-        WindowSetDimensions( "CMapWindow", 225, 255 )
-        --WindowSetDimensions( "CMapWindowAreaNameText", 225, 30 )
+        WindowSetDimensions( "CMapWindow", 450, 510 )
+        --WindowSetDimensions( "CMapWindowAreaNameText", 450, 60 )
     else
         WindowSetDimensions( "CMapWindow", breadth/multi, height/multi )
         --WindowSetDimensions( "CMapWindowAreaNameText", breadth/multi, 30 )

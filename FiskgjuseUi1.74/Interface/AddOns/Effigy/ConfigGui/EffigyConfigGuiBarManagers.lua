@@ -80,8 +80,8 @@ end
 
 function Addon.BarPanel.Create()
 	local frameName = Addon.Name.."SettingsWindowCreateBarPopUp"
-	local frameSizeW = 640
-	local frameSizeH = 480
+	local frameSizeW = 1280
+	local frameSizeH = 960
 	
 	if (nil ~= Addon.BarPanel.W) then
 		Addon.BarPanel.Destroy()
@@ -321,8 +321,8 @@ end
 Addon.TemplateBarSettings = {}
 function Addon.TemplateBarSettings.Create()
 	local frameName = Addon.Name.."SettingsWindowTemplatesPopUp"
-	local frameSizeW = 640
-	local frameSizeH = 280
+	local frameSizeW = 1280
+	local frameSizeH = 560
 	
 	if (nil ~= Addon.BarPanel.W) then
 		Addon.BarPanel.Destroy()

@@ -93,7 +93,7 @@ function Addon.CreateRvRIndicator(bar)
 					RelativeTo      = icon.name, --icon.parent,	--WindowGetParent (frameName), 
 					RelativePoint   = "top",   
 					XOffset         = 0, 
-					YOffset         = 20 
+					YOffset         = 40 
 				}
 				Tooltips.AnchorTooltip (tooltip_anchor)
 			end

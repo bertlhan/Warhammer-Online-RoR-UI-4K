@@ -14,7 +14,7 @@ local spentPoints = 0
 local CheckButton = false
 local currentSpecSave = nil
 
-local  ANCHOR_CURSOR    = { Point = "topleft", RelativeTo = "CursorWindow", RelativePoint = "bottomleft", XOffset = 30, YOffset = -20 }
+local  ANCHOR_CURSOR    = { Point = "topleft", RelativeTo = "CursorWindow", RelativePoint = "bottomleft", XOffset = 60, YOffset = -40 }
 local LookUpTable = {
 	[9902] = {window="MightIWindow",
 			  followedBy=9903,

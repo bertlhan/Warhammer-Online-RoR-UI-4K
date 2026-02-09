@@ -243,7 +243,7 @@ function Sequencer.OnMouseOver()
 	local TempButton = Sequencer.TempSeq.Button
 	local TempReset = Sequencer.TempSeq.Reset
 	local TempTimer = Sequencer.TempSeq.Timer	
-	local anchor = { Point = "top", RelativeTo = SystemData.MouseOverWindow.name, RelativePoint = "bottom", XOffset = 0, YOffset = -64 };
+	local anchor = { Point = "top", RelativeTo = SystemData.MouseOverWindow.name, RelativePoint = "bottom", XOffset = 0, YOffset = -128 };
 	if string.find(WinName,"Sequencer_WindowButton") then
 	if IDNumber ~= 0 then
 	

@@ -26,12 +26,12 @@ local tiled = {
 }
 
 local dims = {
-	["amethystSharedMediaFlat"] 		= {256,32},
-	["amethystSharedMediaSmoothv2"] 	= {256,32},
-	["amethystSharedMediaMinimalist"] 	= {256,32},
-	["PureGraphite"] 					= {256,32},	
-	--["PureBar"] 						= {256,32},
-	--["FoghladhaBar"] 					= {256,32},
+	["amethystSharedMediaFlat"] 		= {512,64},
+	["amethystSharedMediaSmoothv2"] 	= {512,64},
+	["amethystSharedMediaMinimalist"] 	= {512,64},
+	["PureGraphite"] 					= {512,64},	
+	--["PureBar"] 						= {512,64},
+	--["FoghladhaBar"] 					= {512,64},
 }
 
 local tags = {

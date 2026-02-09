@@ -180,7 +180,7 @@ local function GetDefaultYakLabelName()
 		},
 		parent = "Bar",
 		visibility_group = "none",
-		height = 15,
+		height = 30,
 		colorsettings = 
 		{
 			ColorPreset = "none",
@@ -245,11 +245,11 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 			alpha_group = "none",
 			scale = 1,
 			alpha = 0.6,
-			width = 600,
+			width = 1200,
 			show = true,
 			visibility_group = "none",
 			layer = "overlay",
-			height = 70,
+			height = 140,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -284,9 +284,9 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 				name = "LiquidIPFX",
 				slice = "none",
 				scale = 1,
-				height = 70,
+				height = 140,
 				y = 0,
-				width = 600,
+				width = 1200,
 			},
 		},
 		Background = 
@@ -296,11 +296,11 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 			alpha_group = "none",
 			scale = 1,
 			alpha = 0.8,
-			width = 600,
+			width = 1200,
 			show = true,
 			visibility_group = "none",
 			layer = "background",
-			height = 70,
+			height = 140,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -331,11 +331,11 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 			texture = 
 			{
 				scale = 1,
-				width = 600,
+				width = 1200,
 				texture_group = "none",
 				x = 0,
 				--style = "cut",
-				height = 70,
+				height = 140,
 				slice = "none",
 				y = 0,
 				name = "LiquidIPBG",
@@ -410,9 +410,9 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 	interactive = false,
 	visibility_group = "none",
 	show_with_target = false,
-	width = 600,
+	width = 1200,
 	interactive_type = "none",
-	height = 70,
+	height = 140,
 	name = "InfoPanel",
 	state = "PlayerHP",
 	anchors = {
@@ -447,7 +447,7 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 				case = "upper",
 			},
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -494,7 +494,7 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 				case = "upper",
 			},
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -532,7 +532,7 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 			follow = "no",
 			always_show = false,
 			alpha = 1,
-			width = 230,
+			width = 460,
 			show = true,
 			font = 
 			{
@@ -542,7 +542,7 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 			},
 			visibility_group = "none",
 			parent = "Bar",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -589,7 +589,7 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 			},
 			always_show = false,
 			parent = "Bar",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -636,7 +636,7 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 				case = "none",
 			},
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -683,7 +683,7 @@ UFTemplates.Bars.YakUI_140_InfoPanel =
 				case = "none",
 			},
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -782,11 +782,11 @@ UFTemplates.Bars.YakUI_140_WorldGroupMember =
 		texture = 
 		{
 			scale = 0,
-			width = 48,
+			width = 96,
 			texture_group = "none",
 			slice = "none",
 			name = "SharedMediaYGroupIconShape",
-			height = 48,
+			height = 96,
 			x = 0,
 			y = 0,
 			style = "cut",
@@ -839,11 +839,11 @@ UFTemplates.Bars.YakUI_140_WorldGroupMember =
 		texture = 
 		{
 			scale = 2,
-			width = 50,
+			width = 100,
 			texture_group = "none",
 			x = 4,
 			name = "SharedMediaYGroupIconShape",
-			height = 50,
+			height = 100,
 			slice = "none",
 			y = 7,
 			--style = "cut",
@@ -874,10 +874,10 @@ UFTemplates.Bars.YakUI_140_WorldGroupMember =
 	interactive = false,
 	visibility_group = "none",
 	show_with_target = false,
-	width = 34,
+	width = 68,
 	state = "grp1hp",
 	interactive_type = "none",
-	height = 34,
+	height = 68,
 	name = "WorldGroupMember1",
 	anchors = {
 		[1] = {
@@ -901,11 +901,11 @@ UFTemplates.Bars.YakUI_140_WorldGroupMember =
 			alpha_group = "none",
 			scale = 1,
 			alpha = 1,
-			width = 36,
+			width = 72,
 			show = true,
 			visibility_group = "none",
 			layer = "overlay",
-			height = 36,
+			height = 72,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -941,8 +941,8 @@ UFTemplates.Bars.YakUI_140_WorldGroupMember =
 				slice = "none",
 				scale = 1,
 				texture_group = "none",
-				height = 50,
-				width = 50,
+				height = 100,
+				width = 100,
 			},
 		},
 	},
@@ -966,11 +966,11 @@ UFTemplates.Bars.YakUI_140_GroupMember =
 			parent = "Bar",
 			alpha_group = "none",
 			alpha = 0.6,
-			width = 170,
+			width = 340,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
-			height = 50,
+			height = 100,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1013,8 +1013,8 @@ UFTemplates.Bars.YakUI_140_GroupMember =
 				slice = "none",
 				scale = 1,
 				texture_group = "none",
-				height = 128,
-				width = 512,
+				height = 256,
+				width = 1024,
 			},
 		},
 		Background = 
@@ -1023,11 +1023,11 @@ UFTemplates.Bars.YakUI_140_GroupMember =
 			parent = "Bar",
 			alpha_group = "none",
 			alpha = 0.8,
-			width = 170,
+			width = 340,
 			show = true,
 			visibility_group = "none",
 			layer = "background",
-			height = 50,
+			height = 100,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1070,8 +1070,8 @@ UFTemplates.Bars.YakUI_140_GroupMember =
 				slice = "none",
 				scale = 1,
 				texture_group = "none",
-				height = 128,
-				width = 512,
+				height = 256,
+				width = 1024,
 			},
 		},
 	},
@@ -1092,9 +1092,9 @@ UFTemplates.Bars.YakUI_140_GroupMember =
 	},
 	show_with_target = false,
 	visibility_group = "none",
-	width = 162,
+	width = 324,
 	interactive_type = "group",
-	height = 50,
+	height = 100,
 	anchors = {
 		[1] = {
 			parent = "Root",
@@ -1125,7 +1125,7 @@ UFTemplates.Bars.YakUI_140_GroupMember =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1173,7 +1173,7 @@ UFTemplates.Bars.YakUI_140_GroupMember =
 				name = "font_clear_small_bold",
 				case = "none",
 			},
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1238,18 +1238,18 @@ UFTemplates.Bars.YakUI_140_PlayerHP =
 				slice = "none",
 				scale = 1,
 				y = 0,
-				height = 128,
-				width = 512,
+				height = 256,
+				width = 1024,
 			},
 			parent = "Bar",
 			alpha_group = "none",
 			scale = 1,
 			alpha = 0.6,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
-			height = 66,
+			height = 132,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1288,18 +1288,18 @@ UFTemplates.Bars.YakUI_140_PlayerHP =
 				slice = "none",
 				scale = 1,
 				y = 0,
-				height = 128,
-				width = 512,
+				height = 256,
+				width = 1024,
 			},
 			parent = "Root",
 			alpha_group = "none",
 			scale = 1,
 			alpha = 0.8,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "background",
-			height = 66,
+			height = 132,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1343,12 +1343,12 @@ UFTemplates.Bars.YakUI_140_PlayerHP =
 		alpha_group = "none",
 	},
 	show_with_target = false,
-	width = 220,
+	width = 440,
 	show = true,
 	visibility_group = "none",
 	interactive = true,
 	interactive_type = "player",
-	height = 30,
+	height = 60,
 	name = "PlayerHP",
 	anchors = {
 		[1] = {
@@ -1381,7 +1381,7 @@ UFTemplates.Bars.YakUI_140_PlayerHP =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1429,7 +1429,7 @@ UFTemplates.Bars.YakUI_140_PlayerHP =
 			},
 			parent = "Bar",
 			alpha_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1499,10 +1499,10 @@ UFTemplates.Bars.YakUI_140_PlayerAP =
 		alpha_group = "none",
 	},
 	show_with_target = false,
-	width = 220,
+	width = 440,
 	visibility_group = "none",
 	interactive_type = "player",
-	height = 11,
+	height = 22,
 	interactive = true,
 	state = "PlayerAP",
 	anchors = {
@@ -1536,7 +1536,7 @@ UFTemplates.Bars.YakUI_140_PlayerAP =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1590,7 +1590,7 @@ UFTemplates.Bars.YakUI_140_PlayerCareer =
 	scale = 1,
 	slow_changing_value = false,
 	watching_states = {},
-	width = 220,
+	width = 440,
 	no_tooltip = true,
 	hide_if_zero = false,
 	alphasettings = 
@@ -1604,7 +1604,7 @@ UFTemplates.Bars.YakUI_140_PlayerCareer =
 	show = true,
 	interactive = true,
 	interactive_type = "player",
-	height = 25,
+	height = 50,
 	name = "PlayerCareer",
 	state = "PlayerCareer",
 	anchors = {
@@ -1636,7 +1636,7 @@ UFTemplates.Bars.YakUI_140_PlayerCareer =
 			},
 			scale = 1,
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1693,11 +1693,11 @@ UFTemplates.Bars.YakUI_140_FriendlyTarget =
 			alpha_group = "none",
 			scale = 1,
 			alpha = 0.6,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
-			height = 50,
+			height = 100,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1735,11 +1735,11 @@ UFTemplates.Bars.YakUI_140_FriendlyTarget =
 			texture = 
 			{
 				scale = 1,
-				width = 512,
+				width = 1024,
 				y = 0,
 				x = 0,
 				--style = "cut",
-				height = 128,
+				height = 256,
 				name = "LiquidUFFX",
 				texture_group = "none",
 				slice = "none",
@@ -1756,8 +1756,8 @@ UFTemplates.Bars.YakUI_140_FriendlyTarget =
 			parent = "Bar",
 			layer = "background",
 			
-			width = 220,
-			height = 50,
+			width = 440,
+			height = 100,
 			scale = 1,
 			
 			anchors = {
@@ -1798,11 +1798,11 @@ UFTemplates.Bars.YakUI_140_FriendlyTarget =
 			texture = 
 			{
 				scale = 1,
-				width = 512,
+				width = 1024,
 				y = 0,
 				x = 0,
 				--style = "cut",
-				height = 128,
+				height = 256,
 				name = "LiquidUFBG",
 				texture_group = "none",
 				slice = "none",
@@ -1813,7 +1813,7 @@ UFTemplates.Bars.YakUI_140_FriendlyTarget =
 	pos_at_world_object = false,
 	slow_changing_value = false,
 	watching_states = {},
-	width = 220,
+	width = 440,
 	no_tooltip = true,
 	hide_if_zero = false,
 	--interactive = true,
@@ -1827,7 +1827,7 @@ UFTemplates.Bars.YakUI_140_FriendlyTarget =
 	show = true,
 	visibility_group = "none",
 	interactive_type = "friendly",
-	height = 50,
+	height = 100,
 	name = "FriendlyTarget",
 	state = "FTHP",
 	anchors = {
@@ -1860,7 +1860,7 @@ UFTemplates.Bars.YakUI_140_FriendlyTarget =
 			},
 			scale = 0.9,
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1908,7 +1908,7 @@ UFTemplates.Bars.YakUI_140_FriendlyTarget =
 			},
 			scale = 0.9,
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -1956,7 +1956,7 @@ UFTemplates.Bars.YakUI_140_FriendlyTarget =
 			show = false,
 			visibility_group = "none",
 			scale = 0.86,
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2066,11 +2066,11 @@ UFTemplates.Bars.YakUI_140_Castbar =
 			},
 			parent = "Bar",
 			alpha = 0.6,
-			width = 225,
+			width = 450,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
-			height = 20,
+			height = 40,
 			alpha_group = "none",
 			anchors = {
 				[1] = {
@@ -2091,9 +2091,9 @@ UFTemplates.Bars.YakUI_140_Castbar =
 				name = "LiquidCBBG",
 				x = 0,
 				scale = 1,
-				height = 20,
+				height = 40,
 				y = 0,
-				width = 225,
+				width = 450,
 			},
 			scale = 1,
 			colorsettings = 
@@ -2116,11 +2116,11 @@ UFTemplates.Bars.YakUI_140_Castbar =
 			},
 			parent = "Bar",
 			alpha = 0.8,
-			width = 225,
+			width = 450,
 			show = true,
 			visibility_group = "none",
 			layer = "background",
-			height = 20,
+			height = 40,
 			alpha_group = "none",
 			anchors = {
 				[1] = {
@@ -2139,11 +2139,11 @@ UFTemplates.Bars.YakUI_140_Castbar =
 			alpha_group = "none",
 			scale = 1,
 			alpha = 1,
-			width = 20,
+			width = 40,
 			show = true,
 			visibility_group = "none",
 			layer = "secondary",
-			height = 25,
+			height = 50,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2179,8 +2179,8 @@ UFTemplates.Bars.YakUI_140_Castbar =
 				x = 0,
 				scale = 1,
 				y = 0,
-				height = 25,
-				width = 20,
+				height = 50,
+				width = 40,
 			},
 		},
 	},
@@ -2189,7 +2189,7 @@ UFTemplates.Bars.YakUI_140_Castbar =
 	interactive = false,
 	slow_changing_value = false,
 	watching_states = {},
-	width = 225,
+	width = 450,
 	no_tooltip = true,
 	state = "Castbar",
 	hide_if_zero = true,
@@ -2198,7 +2198,7 @@ UFTemplates.Bars.YakUI_140_Castbar =
 	block_layout_editor = false,
 	visibility_group = "none",
 	interactive_type = "none",
-	height = 20,
+	height = 40,
 	anchors = {
 		[1] = {
 			parent = "Root",
@@ -2232,7 +2232,7 @@ UFTemplates.Bars.YakUI_140_Castbar =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2267,11 +2267,11 @@ UFTemplates.Bars.YakUI_140_Castbar =
 UFTemplates.Bars.YakUI_140_Castbar.fg = GetDefaultYakBarFG()
 UFTemplates.Bars.YakUI_140_Castbar.fg.texture = {
 	scale = 1,
-	width = 211,
+	width = 422,
 	texture_group = "none",
 	slice = "none",
 	name = "LiquidCBBar",
-	height = 10,
+	height = 20,
 	style = "cut",
 	y = 0,
 	x = 0,
@@ -2290,15 +2290,15 @@ UFTemplates.Bars.YakUI_140_Castbar.images.Background.colorsettings.color = { r =
 UFTemplates.Bars.YakUI_140_Castbar.images.Background.alpha = 0.8
 UFTemplates.Bars.YakUI_140_Castbar.images.Background.layer = "background"
 UFTemplates.Bars.YakUI_140_Castbar.images.Background.anchors[2] = Addon.GetDefaultAnchorTwo()
---UFTemplates.Bars.YakUI_140_Castbar.images.Background.width = 225
---UFTemplates.Bars.YakUI_140_Castbar.images.Background.height = 20
+--UFTemplates.Bars.YakUI_140_Castbar.images.Background.width = 450
+--UFTemplates.Bars.YakUI_140_Castbar.images.Background.height = 40
 UFTemplates.Bars.YakUI_140_Castbar.images.Foreground = Addon.GetDefaultImage()
 UFTemplates.Bars.YakUI_140_Castbar.images.Foreground.texture.name = "LiquidCBFX"
 UFTemplates.Bars.YakUI_140_Castbar.images.Foreground.colorsettings.color = { r = 180, g = 220, b = 255 }
 UFTemplates.Bars.YakUI_140_Castbar.images.Foreground.alpha = 0.6
 UFTemplates.Bars.YakUI_140_Castbar.images.Foreground.anchors[2] = Addon.GetDefaultAnchorTwo()
---UFTemplates.Bars.YakUI_140_Castbar.images.Foreground.width = 225
---UFTemplates.Bars.YakUI_140_Castbar.images.Foreground.height = 20
+--UFTemplates.Bars.YakUI_140_Castbar.images.Foreground.width = 450
+--UFTemplates.Bars.YakUI_140_Castbar.images.Foreground.height = 40
 
 UFTemplates.Bars.YakUI_140_Castbar.icon = Addon.GetDefaultCareerIcon()
 UFTemplates.Bars.YakUI_140_Castbar.rvr_icon = Addon.GetDefaultRvrIcon()
@@ -2317,11 +2317,11 @@ UFTemplates.Bars.YakUI_140_Targets =
 			texture = 
 			{
 				scale = 1,
-				width = 512,
+				width = 1024,
 				texture_group = "none",
 				x = 0,
 				name = "LiquidUFFX",
-				height = 128,
+				height = 256,
 				y = 0,
 				slice = "none",
 			},
@@ -2329,12 +2329,12 @@ UFTemplates.Bars.YakUI_140_Targets =
 			alpha_group = "none",
 			layer = "default",
 			alpha = 0.6,
-			width = 140,
+			width = 280,
 			show = true,
 			visibility_group = "none",
 			alpha_group = "none",
 			scale = 1,
-			height = 32,
+			height = 64,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2377,11 +2377,11 @@ UFTemplates.Bars.YakUI_140_Targets =
 			texture = 
 			{
 				scale = 1,
-				width = 512,
+				width = 1024,
 				texture_group = "none",
 				x = 0,
 				name = "LiquidUFBG",
-				height = 128,
+				height = 256,
 				y = 0,
 				slice = "none",
 			},
@@ -2389,12 +2389,12 @@ UFTemplates.Bars.YakUI_140_Targets =
 			alpha_group = "none",
 			layer = "background",
 			alpha = 0.8,
-			width = 140,
+			width = 280,
 			show = true,
 			visibility_group = "none",
 			alpha_group = "none",
 			scale = 1,
-			height = 32,
+			height = 64,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2445,12 +2445,12 @@ UFTemplates.Bars.YakUI_140_Targets =
 		alpha_group = "none",
 	},
 	show_with_target = false,
-	width = 132,
+	width = 264,
 	show = true,
 	visibility_group = "none",
 	interactive = true,
 	interactive_type = "friendly",
-	height = 28,
+	height = 56,
 	name = "TargetsHostile1",
 	anchors = {
 		[1] = {
@@ -2481,7 +2481,7 @@ UFTemplates.Bars.YakUI_140_Targets =
 			},
 			alpha_group = "none",
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2530,7 +2530,7 @@ UFTemplates.Bars.YakUI_140_Targets =
 			},
 			scale = 0.86,
 			visibility_group = "none",
-			height = 24,
+			height = 48,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2596,11 +2596,11 @@ UFTemplates.Bars.YakUI_140_MouseoverTarget =
 			texture = 
 			{
 				scale = 1,
-				width = 512,
+				width = 1024,
 				y = 0,
 				slice = "none",
 				--style = "grow",
-				height = 128,
+				height = 256,
 				x = 0,
 				texture_group = "none",
 				name = "LiquidUFFX",
@@ -2609,11 +2609,11 @@ UFTemplates.Bars.YakUI_140_MouseoverTarget =
 			alpha_group = "none",
 			scale = 1,
 			alpha = 0.6,
-			width = 219,
+			width = 438,
 			show = true,
 			visibility_group = "none",
 			layer = "default",
-			height = 50,
+			height = 100,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2647,11 +2647,11 @@ UFTemplates.Bars.YakUI_140_MouseoverTarget =
 			texture = 
 			{
 				scale = 1,
-				width = 512,
+				width = 1024,
 				y = 0,
 				slice = "none",
 				--style = "grow",
-				height = 128,
+				height = 256,
 				x = 0,
 				texture_group = "none",
 				name = "LiquidUFBG",
@@ -2660,11 +2660,11 @@ UFTemplates.Bars.YakUI_140_MouseoverTarget =
 			alpha_group = "none",
 			scale = 1,
 			alpha = 0.8,
-			width = 220,
+			width = 440,
 			show = true,
 			visibility_group = "none",
 			layer = "background",
-			height = 50,
+			height = 100,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2860,7 +2860,7 @@ UFTemplates.Bars.YakUI_140_MouseoverTarget =
 		alpha_group = "none",
 	},
 	show_with_target = false,
-	width = 220,
+	width = 440,
 	anchors = {
 		[1] = {
 			parent = "EA_Window_RvRTracker",
@@ -2873,7 +2873,7 @@ UFTemplates.Bars.YakUI_140_MouseoverTarget =
 	visibility_group = "none",
 	name = "MouseoverTarget",
 	interactive_type = "none",
-	height = 50,
+	height = 100,
 	interactive = false,
 	show = true,
 	labels = 
@@ -2896,7 +2896,7 @@ UFTemplates.Bars.YakUI_140_MouseoverTarget =
 			},
 			parent = "Bar",
 			visibility_group = "none",
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -2939,7 +2939,7 @@ UFTemplates.Bars.YakUI_140_MouseoverTarget =
 			visibility_group = "none",
 			alpha_group = "none",
 			scale = 0.9,
-			height = 13,
+			height = 26,
 			anchors = {
 				[1] = {
 					parent = "Bar",
@@ -2982,12 +2982,12 @@ UFTemplates.Bars.YakUI_140_MouseoverTarget =
 			formattemplate = "$title",
 			layer = "overlay",
 			alpha = 1,
-			width = 200,
+			width = 400,
 			show = true,
 			visibility_group = "none",
 			alpha_group = "none",
 			scale = 0.9,
-			height = 15,
+			height = 30,
 			colorsettings = 
 			{
 				ColorPreset = "none",
@@ -3161,7 +3161,7 @@ UFTemplates.Bars.YakUI_140_InfoPanelRenown =
 			slice = "none",
 		},
 	},
-	width = 260,
+	width = 520,
 	no_tooltip = false,
 	hide_if_zero = false,
 	alphasettings = 
@@ -3175,7 +3175,7 @@ UFTemplates.Bars.YakUI_140_InfoPanelRenown =
 	visibility_group = "none",
 	interactive = true,
 	interactive_type = "state",
-	height = 20,
+	height = 40,
 	scale = 1,
 	anchors = {
 		[1] = {
@@ -3334,9 +3334,9 @@ UFTemplates.Bars.YakUI_140_InfoPanelExp =
 	},
 	show_with_target = false,
 	visibility_group = "none",
-	width = 260,
+	width = 520,
 	interactive_type = "state",
-	height = 20,
+	height = 40,
 	name = "InfoPanelExp",
 	state = "Exp",
 	anchors = {

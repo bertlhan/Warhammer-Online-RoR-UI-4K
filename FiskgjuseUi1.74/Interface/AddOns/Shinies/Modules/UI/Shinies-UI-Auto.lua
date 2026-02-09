@@ -1225,7 +1225,7 @@ function InitializeUI()
 	
 	-- Anchor the list below the item window
 	WindowAddAnchor( windowAuto, "bottomleft", windowControl, "topleft", 0, 0 )
-	WindowAddAnchor( windowAuto, "bottomright", config.windowId, "bottomright", 0, -2 )
+	WindowAddAnchor( windowAuto, "bottomright", config.windowId, "bottomright", 0, -4 )
 	
 	-- Create our text logs
 	TextLogCreate( summaryLog, 4096 )

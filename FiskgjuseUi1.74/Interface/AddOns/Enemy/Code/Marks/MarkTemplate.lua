@@ -27,7 +27,7 @@ function EnemyMarkTemplate.New (data)
 	obj.scale = 1.0
 	obj.showCareerIcon = true
 	obj.layer = Window.Layers.POPUP
-	obj.offsetY = 50
+	obj.offsetY = 100
 	obj.targetOnClick = true
 	obj.display = 2
 	obj.text = L""
@@ -130,7 +130,7 @@ function EnemyMarkTemplate:Apply (windowName, objectName, isPlayer, isFriendly, 
 
 	LabelSetFont (windowName.."ContentText", self.font, WindowUtils.FONT_DEFAULT_TEXT_LINESPACING)
 	LabelSetText (windowName.."ContentText", L"")
-	WindowSetDimensions (windowName.."ContentText", 200, 200)
+	WindowSetDimensions (windowName.."ContentText", 400, 400)
 
 	if (self.display == 1)
 	then

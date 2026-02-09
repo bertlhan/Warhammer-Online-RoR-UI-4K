@@ -547,7 +547,7 @@ function AuraConfig.OnLButtonUpTimerTintColor()
 	if( not WindowGetShowing( AuraColorPicker.Window ) ) then
 		timerTintWindowVisible = true
 		WindowClearAnchors( AuraConfig.ColorPicker )
-		WindowAddAnchor( AuraConfig.ColorPicker, "bottomright", "AuraConfigTitleBar", "topleft", 0, 300 )
+		WindowAddAnchor( AuraConfig.ColorPicker, "bottomright", "AuraConfigTitleBar", "topleft", 0, 600 )
 		WindowSetShowing( AuraConfig.ColorPicker, true )
 		WindowSetTintColor( AuraConfig.WindowTimer  .. "TintColorFrame", 255, 85, 0 )
 	    

@@ -437,7 +437,7 @@ function SocialWindowTabSearch.OnMouseOverSortButton()
     Tooltips.SetTooltipColorDef (1, 1, Tooltips.COLOR_HEADING)	
     Tooltips.Finalize ()
     
-    local anchor = { Point="top", RelativeTo=windowName, RelativePoint="center", XOffset=0, YOffset=-32 }
+    local anchor = { Point="top", RelativeTo=windowName, RelativePoint="center", XOffset=0, YOffset=-64 }
     Tooltips.AnchorTooltip (anchor)
     Tooltips.SetTooltipAlpha (1)
 end

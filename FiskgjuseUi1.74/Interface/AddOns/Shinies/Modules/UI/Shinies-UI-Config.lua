@@ -131,14 +131,14 @@ function InitializeUI()
 	WindowSetDimensions( windowModules, 240, dy * MAX_VISIBLE_ROWS )
 	
 	-- Anchor the Modules window to the top left portion of the window
-	WindowAddAnchor( windowModules, "topleft", config.windowId, "topleft", 0, -4 )
+	WindowAddAnchor( windowModules, "topleft", config.windowId, "topleft", 0, -8 )
 	
 	-- Anchor the Buttons window just below the Modules window
 	WindowAddAnchor( windowButtons, "bottomright", windowModules, "topright", 0, 0 )
 	WindowAddAnchor( windowButtons, "bottomleft", config.windowId, "bottomleft", 4, 0 )
 	
 	-- Anchor the Display window to the right portion of the window
-	WindowAddAnchor( windowDisplay, "topright", windowModules, "topleft", 8, 0 )
+	WindowAddAnchor( windowDisplay, "topright", windowModules, "topleft", 16, 0 )
 	WindowAddAnchor( windowDisplay, "bottomright", config.windowId, "bottomright", 0, 0 )
 	
 	-- Highlight the modules rows

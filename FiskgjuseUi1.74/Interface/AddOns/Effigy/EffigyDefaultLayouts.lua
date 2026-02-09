@@ -35,8 +35,8 @@ HUDUF.WBTemplate =
 		interactive = true,
 		interactive_type = "player",
 		grow = "right",
-		width = 80,
-		height = 40,
+		width = 160,
+		height = 80,
 		pos_at_world_object = false,
 		relwin = "Root",
 		my_anchor = "center",
@@ -179,8 +179,8 @@ HUDUF.WBTemplate =
 				follow_bg_alpha = true,
 
 				--Size
-				width = 10,
-				height = 10,
+				width = 20,
+				height = 20,
 				scale = 1,
 				
 				color = {
@@ -223,8 +223,8 @@ HUDUF.WBTemplate =
 				follow_bg_alpha = true,
 
 				--Size
-				width = 10,
-				height = 10,
+				width = 20,
+				height = 20,
 				scale = 1,
 				color = {
 					r = 127,
@@ -266,8 +266,8 @@ HUDUF.WBTemplate =
 				follow_bg_alpha = true,
 				
 				--Size
-				width = 10,
-				height = 10,
+				width = 20,
+				height = 20,
 				scale = 1,
 				
 				color = {
@@ -310,8 +310,8 @@ HUDUF.WBTemplate =
 				follow_bg_alpha = true,
 
 				--Size
-				width = 10,
-				height = 10,
+				width = 20,
+				height = 20,
 				scale = 1,
 				--Color
 				color = {
@@ -358,7 +358,7 @@ HUDUF.WBTemplate =
 				pos_y = 0,
 				layer = "secondary",
 				
-				height = 24,
+				height = 48,
 				width = 0,						-- 0: width of Bar
 				scale = 1,
 				
@@ -394,8 +394,8 @@ HUDUF.SCTemplate =
 		interactive = true,
 		interactive_type = "player",
 		grow = "right",
-		width = 80,
-		height = 58,
+		width = 160,
+		height = 116,
 		pos_at_world_object = false,		
 		relwin = "Root",
 		my_anchor = "center",
@@ -538,8 +538,8 @@ HUDUF.SCTemplate =
 				follow_bg_alpha = true,
 
 				--Size
-				width = 10,
-				height = 10,
+				width = 20,
+				height = 20,
 				scale = 1,
 				
 				color = {
@@ -582,8 +582,8 @@ HUDUF.SCTemplate =
 				follow_bg_alpha = true,
 
 				--Size
-				width = 10,
-				height = 10,
+				width = 20,
+				height = 20,
 				scale = 1,
 				color = {
 					r = 127,
@@ -625,8 +625,8 @@ HUDUF.SCTemplate =
 				follow_bg_alpha = true,
 				
 				--Size
-				width = 10,
-				height = 10,
+				width = 20,
+				height = 20,
 				scale = 1,
 				
 				color = {
@@ -669,8 +669,8 @@ HUDUF.SCTemplate =
 				follow_bg_alpha = true,
 
 				--Size
-				width = 10,
-				height = 10,
+				width = 20,
+				height = 20,
 				scale = 1,
 				--Color
 				color = {
@@ -717,7 +717,7 @@ HUDUF.SCTemplate =
 				pos_y = 0,
 				layer = "secondary",
 				
-				height = 24,
+				height = 48,
 				width = 0,						-- 0: width of Bar
 				scale = 1,
 				
@@ -788,7 +788,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 				b = 220,
 			},
 			to_anchor = "topleft",
-			height = 24,
+			height = 48,
 			my_anchor = "topleft",
 			align = "left",
 			width = 0,
@@ -818,7 +818,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 				g = 220,
 				b = 220,
 			},
-			height = 24,
+			height = 48,
 			align = "right",
 			my_anchor = "bottomright",
 			to_anchor = "topright",
@@ -830,7 +830,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 		x = 3,
 		name = "PlayerHP",
 		interactive_type = "player",
-		height = 44,
+		height = 88,
 		my_anchor = "topleft",
 		tint = 
 		{
@@ -863,7 +863,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			in_combat = 1,
 			alter = "inv",
 		},
-		width = 241,
+		width = 482,
 		show = true,
 		interactive = true,
 		bg = 
@@ -875,9 +875,9 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 				slice = "none",
 				name = "EA_HUD_01",
 				scale = 0.7,
-				height = 20,
+				height = 40,
 				x = 514,
-				width = 20,
+				width = 40,
 			},
 			alpha = 
 			{
@@ -910,7 +910,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			},
 			follow = "top",
 			to_anchor = "right",
-			height = 24,
+			height = 48,
 			my_anchor = "right",
 		},
 		relwin = "Root",
@@ -958,7 +958,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 				r = 220,
 			},
 			align = "left",
-			height = 24,
+			height = 48,
 			my_anchor = "center",
 			to_anchor = "center",
 			width = 0,
@@ -991,7 +991,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			to_anchor = "topright",
 			align = "right",
 			my_anchor = "bottomright",
-			height = 24,
+			height = 48,
 			width = 0,
 		},
 		to_anchor = "left",
@@ -1000,7 +1000,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 		x = 16,
 		name = "PlayerHP",
 		interactive_type = "player",
-		height = 39,
+		height = 78,
 		my_anchor = "left",
 		tint = 
 		{
@@ -1033,7 +1033,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			in_combat = 1,
 			out_of_combat = 0.3,
 		},
-		width = 211,
+		width = 422,
 		show = true,
 		relwin = "Root",
 		bg = 
@@ -1059,9 +1059,9 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 				slice = "none",
 				name = "EA_HUD_01",
 				scale = 0.7,
-				height = 20,
+				height = 40,
 				x = 514,
-				width = 20,
+				width = 40,
 			},
 		},
 		scale = 0.72357028722763,
@@ -1080,7 +1080,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			},
 			follow = "bottom",
 			to_anchor = "right",
-			height = 24,
+			height = 48,
 			my_anchor = "right",
 		},
 		state = "PlayerHP",
@@ -1130,7 +1130,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			to_anchor = "topleft",
 			align = "left",
 			my_anchor = "topleft",
-			height = 24,
+			height = 48,
 			width = 0,
 		},
 		icon = 
@@ -1161,7 +1161,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			to_anchor = "bottomright",
 			align = "right",
 			my_anchor = "bottomright",
-			height = 24,
+			height = 48,
 			width = 0,
 		},
 		to_anchor = "center",
@@ -1170,7 +1170,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 		x = -252.00003051758,
 		name = "PlayerHP",
 		interactive_type = "",
-		height = 300,
+		height = 600,
 		my_anchor = "center",
 		tint = 
 		{
@@ -1204,7 +1204,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			in_combat = 1,
 			out_of_combat = 0,
 		},
-		width = 30,
+		width = 60,
 		show = true,
 		interactive = false,
 		bg = 
@@ -1251,7 +1251,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			},
 			always_show = false,
 			to_anchor = "right",
-			height = 24,
+			height = 48,
 			my_anchor = "right",
 		},
 		state = "PlayerHP",
@@ -1299,7 +1299,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 				r = 255,
 			},
 			to_anchor = "topleft",
-			height = 24,
+			height = 48,
 			my_anchor = "topleft",
 			align = "left",
 			width = 0,
@@ -1332,8 +1332,8 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			to_anchor = "right",
 			align = "right",
 			my_anchor = "right",
-			height = 24,
-			width = 45,
+			height = 48,
+			width = 90,
 		},
 		to_anchor = "center",
 		block_layout_editor = false,
@@ -1341,7 +1341,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 		x = -340,
 		name = "PlayerHP",
 		interactive_type = "player",
-		height = 58,
+		height = 116,
 		my_anchor = "center",
 		tint = 
 		{
@@ -1374,7 +1374,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			in_combat = 0.69310128688812,
 			out_of_combat = 0.69310128688812,
 		},
-		width = 342,
+		width = 684,
 		show = true,
 		interactive = true,
 		state = "PlayerHP",
@@ -1394,7 +1394,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			},
 			follow = "no",
 			to_anchor = "bottomleft",
-			height = 24,
+			height = 48,
 			my_anchor = "bottomleft",
 		},
 		scale = 0.54800027608871,
@@ -1469,7 +1469,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 				r = 220,
 			},
 			align = "left",
-			height = 24,
+			height = 48,
 			my_anchor = "center",
 			to_anchor = "center",
 			width = 0,
@@ -1502,7 +1502,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			to_anchor = "topright",
 			align = "right",
 			my_anchor = "bottomright",
-			height = 24,
+			height = 48,
 			width = 0,
 		},
 		to_anchor = "left",
@@ -1511,7 +1511,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 		x = 1,
 		name = "PlayerHP",
 		interactive_type = "player",
-		height = 34,
+		height = 68,
 		my_anchor = "left",
 		tint = 
 		{
@@ -1544,7 +1544,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			in_combat = 1,
 			out_of_combat = 0.3,
 		},
-		width = 318,
+		width = 636,
 		show = true,
 		interactive = true,
 		bg = 
@@ -1570,9 +1570,9 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 				slice = "none",
 				name = "EA_HUD_01",
 				scale = 0.7,
-				height = 20,
+				height = 40,
 				x = 514,
-				width = 20,
+				width = 40,
 			},
 		},
 		scale = 0.54751235246658,
@@ -1591,7 +1591,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			},
 			follow = "bottom",
 			to_anchor = "right",
-			height = 24,
+			height = 48,
 			my_anchor = "right",
 		},
 		state = "PlayerHP",
@@ -1639,7 +1639,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 				r = 255,
 			},
 			to_anchor = "topleft",
-			height = 24,
+			height = 48,
 			my_anchor = "topleft",
 			align = "left",
 			width = 0,
@@ -1672,8 +1672,8 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			to_anchor = "right",
 			align = "right",
 			my_anchor = "right",
-			height = 24,
-			width = 45,
+			height = 48,
+			width = 90,
 		},
 		to_anchor = "bottomleft",
 		block_layout_editor = false,
@@ -1681,7 +1681,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 		x = 238,
 		name = "PlayerHP",
 		interactive_type = "player",
-		height = 58,
+		height = 116,
 		my_anchor = "bottomleft",
 		tint = 
 		{
@@ -1714,7 +1714,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			in_combat = 1,
 			out_of_combat = 1,
 		},
-		width = 342,
+		width = 684,
 		show = true,
 		interactive = true,
 		state = "PlayerHP",
@@ -1734,7 +1734,7 @@ HUDUF.SCTemplate.border.colorsettings = default_colorsettings
 			},
 			my_anchor = "right",
 			to_anchor = "right",
-			height = 24,
+			height = 48,
 			always_show = true,
 		},
 		pos_at_world_object = false,
