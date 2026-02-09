@@ -1,35 +1,35 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.7" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_BattlefieldObjectiveTracker" sizeX="600.000000" sizeY="125.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693700" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_BattlefieldObjectiveTracker" sizeX="1200,000000" sizeY="250,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693700" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-387.113464" yOffset="0.000000" />
+                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-774,226928" yOffset="0,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_CityTracker" sizeX="600.000000" sizeY="0.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.894244" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_CityTracker" sizeX="1200,000000" sizeY="0,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.894244" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-3.787105" yOffset="0.000000" />
+                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-7,574210" yOffset="0,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_KeepObjectiveTracker" sizeX="300.000000" sizeY="125.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_KeepObjectiveTracker" sizeX="600,000000" sizeY="250,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-184.666748" yOffset="40.000000" />
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-369,333496" yOffset="80,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_PublicQuestTracker" sizeX="600.000000" sizeY="0.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.638581" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_PublicQuestTracker" sizeX="1200,000000" sizeY="0,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.638581" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-4.184958" yOffset="0.000000" />
+                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-8,369916" yOffset="0,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_ScenarioTracker" sizeX="300.000000" sizeY="276.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.778397" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_ScenarioTracker" sizeX="600,000000" sizeY="552,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.778397" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-3.814451" yOffset="0.000000" />
+                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-7,628902" yOffset="0,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_WinOMeter" sizeX="300.000000" sizeY="79.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.811063" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_WinOMeter" sizeX="600,000000" sizeY="158,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.811063" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-387.014618" yOffset="0.000000" />
+                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-774,029236" yOffset="0,000000" />
             </Anchors>
         </WindowSettings>
     </Windows>

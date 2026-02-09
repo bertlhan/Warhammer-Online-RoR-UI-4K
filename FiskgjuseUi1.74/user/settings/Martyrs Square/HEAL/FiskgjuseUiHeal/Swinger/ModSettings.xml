@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="false" lastLoadedVersion="0.1" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="1.0" savedVariablesVersion="1.0" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="SwingerWindow" sizeX="65.000000" sizeY="65.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572651" showing="false">
+        <WindowSettings xmlVersion="1.0" name="SwingerWindow" sizeX="130,000000" sizeY="130,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572651" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="282.944458" yOffset="48.611176" />
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="565,888916" yOffset="97,222352" />
             </Anchors>
         </WindowSettings>
     </Windows>

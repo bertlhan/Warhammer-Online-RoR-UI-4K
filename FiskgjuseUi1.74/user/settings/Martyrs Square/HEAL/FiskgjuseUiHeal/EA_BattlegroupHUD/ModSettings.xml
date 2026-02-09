@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.0" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="BattlegroupHUDGroup1LayoutWindow" sizeX="139.000000" sizeY="330.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.334247" showing="false">
+        <WindowSettings xmlVersion="1.0" name="BattlegroupHUDGroup1LayoutWindow" sizeX="278,000000" sizeY="660,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.334247" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="494.000000" yOffset="55.999989" />
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="988,000000" yOffset="111,999978" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="BattlegroupHUDGroup2LayoutWindow" sizeX="139.000000" sizeY="330.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.327036" showing="false">
+        <WindowSettings xmlVersion="1.0" name="BattlegroupHUDGroup2LayoutWindow" sizeX="278,000000" sizeY="660,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.327036" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-459.937744" yOffset="38.000000" />
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-919,875488" yOffset="76,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="BattlegroupHUDGroup3LayoutWindow" sizeX="139.000000" sizeY="330.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.350595" showing="false">
+        <WindowSettings xmlVersion="1.0" name="BattlegroupHUDGroup3LayoutWindow" sizeX="278,000000" sizeY="660,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.350595" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="520.000000" yOffset="98.000000" />
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="1040,000000" yOffset="196,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="BattlegroupHUDGroup4LayoutWindow" sizeX="139.000000" sizeY="330.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.281702" showing="false">
+        <WindowSettings xmlVersion="1.0" name="BattlegroupHUDGroup4LayoutWindow" sizeX="278,000000" sizeY="660,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.281702" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="481.000000" yOffset="121.000000" />
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="962,000000" yOffset="242,000000" />
             </Anchors>
         </WindowSettings>
     </Windows>

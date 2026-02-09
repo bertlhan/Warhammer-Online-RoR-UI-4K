@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="5.0.7" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="1.5" savedVariablesVersion="1.2" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="CMapWindow" sizeX="300.000000" sizeY="300.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+        <WindowSettings xmlVersion="1.0" name="CMapWindow" sizeX="600,000000" sizeY="600,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="bottomright" relativePoint="bottomright" relativeTo="Root" xOffset="-0.000114" yOffset="0.000024" />
+                <WindowAnchor xmlVersion="1.0" point="bottomright" relativePoint="bottomright" relativeTo="Root" xOffset="-0,000228" yOffset="0,000048" />
             </Anchors>
         </WindowSettings>
     </Windows>

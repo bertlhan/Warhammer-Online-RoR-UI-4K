@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.7" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="1.0" savedVariablesVersion="1.0" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="GuardLineSelfWindow" sizeX="70.000000" sizeY="70.000000" movable="false" alpha="0.000000" fontAlpha="1.000000" scale="0.600000" showing="true">
+        <WindowSettings xmlVersion="1.0" name="GuardLineSelfWindow" sizeX="140,000000" sizeY="140,000000" movable="false" alpha="0.000000" fontAlpha="1.000000" scale="0.600000" showing="true">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="-0.000012" yOffset="84.000031" />
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="-0,000024" yOffset="168,000062" />
             </Anchors>
         </WindowSettings>
     </Windows>

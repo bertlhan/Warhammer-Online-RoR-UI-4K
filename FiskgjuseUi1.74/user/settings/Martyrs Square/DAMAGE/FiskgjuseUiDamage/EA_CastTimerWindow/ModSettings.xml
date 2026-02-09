@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.0" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="LayerTimerWindow" sizeX="500.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.102406" showing="false">
+        <WindowSettings xmlVersion="1.0" name="LayerTimerWindow" sizeX="1000,000000" sizeY="100,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.102406" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="41.157085" yOffset="163.768661" />
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="82,314170" yOffset="327,537322" />
             </Anchors>
         </WindowSettings>
     </Windows>

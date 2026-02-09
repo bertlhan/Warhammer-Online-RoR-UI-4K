@@ -5,16 +5,36 @@ This repository contains Warhammer Online RoR UI files that have been scaled fro
 
 ## Changes Applied
 
-### Files Modified
+### Phase 1: Lua Files (Interface/AddOns/)
 - **Total files processed:** 398 Lua files
 - **Files modified:** 94 files
 - **Location:** `FiskgjuseUi1.74/Interface/AddOns/`
 
-### Scaling Method
+### Phase 2: XML Settings Files (user/settings/) ✨ NEW
+- **Total files processed:** 527 XML files
+- **Files modified:** 156 files
+- **Profiles scaled:**
+  - `DAMAGE/FiskgjuseUiDamage/` - 172 files
+  - `HEAL/FiskgjuseUiHeal/` - 173 files
+  - `TANK/FiskgjuseUiTank/` - 173 files
+
+### Why Both Were Needed
+The Lua files define the *default* UI layout, but the XML files in `user/settings/` contain the **actual saved positions and sizes** used when you import a profile. Without scaling the XML files, the UI would still appear small even though the Lua defaults were scaled.
+
+## Scaling Method
+
+### Lua Files
 A Python script (`scale_ui_4k_v2.py`) was created to systematically identify and scale UI-related numerical values while preserving:
 - Code structure and formatting
 - Variable names and comments
 - Non-UI numerical values (colors, alphas, scale factors, etc.)
+
+### XML Settings Files
+A PowerShell script (`Scale-UserSettings-Simple.ps1`) uses regex pattern matching to scale attributes in `ModSettings.xml` files:
+- `sizeX` - Window widths
+- `sizeY` - Window heights  
+- `xOffset` - X-axis positions
+- `yOffset` - Y-axis positions
 
 ### Values Scaled (×2.0)
 1. **WindowSetDimensions calls**
@@ -52,7 +72,9 @@ To ensure correctness, the following values were intentionally excluded from sca
 
 ## Examples of Changes
 
-### Before (HD - 1920x1080)
+### Lua Files (AddOns)
+
+#### Before (HD - 1920x1080)
 ```lua
 WindowSetDimensions("MyWindow", 630, 480)
 local offset = {10, 20}
@@ -61,7 +83,7 @@ size = {50, 50}
 width = 170
 ```
 
-### After (4K - 3840x2160)
+#### After (4K - 3840x2160)
 ```lua
 WindowSetDimensions("MyWindow", 1260, 960)
 local offset = {20, 40}
@@ -69,6 +91,49 @@ WindowAddAnchor("Window1", "topleft", "Root", "topleft", 200, 100)
 size = {100, 100}
 width = 340
 ```
+
+### XML Settings Files (User Profiles)
+
+#### Before (HD - 1920x1080)
+```xml
+<WindowSettings name="EnemyIcon" 
+    sizeX="32.000000" 
+    sizeY="32.000000" 
+    scale="0.625000">
+  <Anchors>
+    <WindowAnchor 
+        xOffset="-0.333494" 
+        yOffset="290.000031" />
+  </Anchors>
+</WindowSettings>
+```
+
+#### After (4K - 3840x2160)
+```xml
+<WindowSettings name="EnemyIcon" 
+    sizeX="64.000000" 
+    sizeY="64.000000" 
+    scale="0.625000">
+  <Anchors>
+    <WindowAnchor 
+        xOffset="-0.666988" 
+        yOffset="580.000062" />
+  </Anchors>
+</WindowSettings>
+```
+
+Note: The `scale` attribute was **not** changed (it's already a factor, not an absolute value).
+
+## Installation & Usage
+
+1. **Download** the repository
+2. **Copy** the entire `FiskgjuseUi1.74` folder to your WAR game directory
+3. **Start the game** in **4K resolution** (3840x2160)
+4. **On first login** with a character:
+   - UI Profile import dialog will appear
+   - Choose a profile: **FiskgjuseUiDamage**, **FiskgjuseUiHeal**, or **FiskgjuseUiTank**
+   - Click **Import**
+5. **Enjoy!** The UI should now be properly scaled for 4K
 
 ## Expected Behavior
 When using these UI files on a 4K display:

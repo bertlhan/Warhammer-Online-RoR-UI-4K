@@ -1,30 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="2.0" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="EnemyCombatLogIDSRow1" sizeX="250.000000" sizeY="30.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.888889" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EnemyCombatLogIDSRow1" sizeX="500,000000" sizeY="60,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.888889" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="topleft" relativeTo="EnemyCombatLogIDSAnchor" xOffset="0.000000" yOffset="0.000000" />
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="topleft" relativeTo="EnemyCombatLogIDSAnchor" xOffset="0,000000" yOffset="0,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EnemyCombatLogIDSRow2" sizeX="250.000000" sizeY="30.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.888889" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EnemyCombatLogIDSRow2" sizeX="500,000000" sizeY="60,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.888889" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="topleft" relativeTo="EnemyCombatLogIDSAnchor" xOffset="0.000000" yOffset="31.000000" />
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="topleft" relativeTo="EnemyCombatLogIDSAnchor" xOffset="0,000000" yOffset="62,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EnemyCombatLogIDSRow3" sizeX="250.000000" sizeY="30.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.888889" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EnemyCombatLogIDSRow3" sizeX="500,000000" sizeY="60,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.888889" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="topleft" relativeTo="EnemyCombatLogIDSAnchor" xOffset="0.000000" yOffset="62.000000" />
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="topleft" relativeTo="EnemyCombatLogIDSAnchor" xOffset="0,000000" yOffset="124,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EnemyCombatLogIDSRow4" sizeX="250.000000" sizeY="30.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.888889" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EnemyCombatLogIDSRow4" sizeX="500,000000" sizeY="60,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.888889" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="topleft" relativeTo="EnemyCombatLogIDSAnchor" xOffset="0.000000" yOffset="93.000000" />
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="topleft" relativeTo="EnemyCombatLogIDSAnchor" xOffset="0,000000" yOffset="186,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EnemyCombatLogIDSRow5" sizeX="250.000000" sizeY="30.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.888889" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EnemyCombatLogIDSRow5" sizeX="500,000000" sizeY="60,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.888889" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="topleft" relativeTo="EnemyCombatLogIDSAnchor" xOffset="0.000000" yOffset="124.000000" />
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="topleft" relativeTo="EnemyCombatLogIDSAnchor" xOffset="0,000000" yOffset="248,000000" />
             </Anchors>
         </WindowSettings>
     </Windows>

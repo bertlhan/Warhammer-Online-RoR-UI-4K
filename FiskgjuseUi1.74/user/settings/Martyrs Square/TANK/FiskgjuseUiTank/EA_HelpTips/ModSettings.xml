@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.1" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="EA_HelpTipsContainerWindow" sizeX="474.000000" sizeY="69.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.547708" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_HelpTipsContainerWindow" sizeX="948,000000" sizeY="138,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.547708" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="173.000000" yOffset="251.000000" />
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="346,000000" yOffset="502,000000" />
             </Anchors>
         </WindowSettings>
     </Windows>

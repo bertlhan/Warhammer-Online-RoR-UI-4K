@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="2.0" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_QuestTracker" sizeX="330.000000" sizeY="200.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.675764" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_QuestTracker" sizeX="660,000000" sizeY="400,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.675764" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-4.195507" yOffset="230.000000" />
+                <WindowAnchor xmlVersion="1.0" point="topright" relativePoint="topright" relativeTo="Root" xOffset="-8,391014" yOffset="460,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_QuestTrackerNub" sizeX="36.000000" sizeY="38.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.871528" showing="true">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_QuestTrackerNub" sizeX="72,000000" sizeY="76,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.871528" showing="true">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="bottomright" relativePoint="bottomright" relativeTo="Root" xOffset="-299.958801" yOffset="-64.881920" />
+                <WindowAnchor xmlVersion="1.0" point="bottomright" relativePoint="bottomright" relativeTo="Root" xOffset="-599,917602" yOffset="-129,763840" />
             </Anchors>
         </WindowSettings>
     </Windows>

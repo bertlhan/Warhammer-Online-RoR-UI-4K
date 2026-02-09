@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^powershell -ExecutionPolicy Bypass -File \\.\\\\Scale-UserSettings\\.ps1$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

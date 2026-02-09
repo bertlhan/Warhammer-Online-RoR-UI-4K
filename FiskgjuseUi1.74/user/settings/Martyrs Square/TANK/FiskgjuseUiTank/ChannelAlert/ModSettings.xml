@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="15" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="1.0" savedVariablesVersion="1.0" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="ChannelAlertWindow" sizeX="185.000000" sizeY="30.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.870884" showing="true">
+        <WindowSettings xmlVersion="1.0" name="ChannelAlertWindow" sizeX="370,000000" sizeY="60,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.870884" showing="true">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="0.390008" yOffset="226.000000" />
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="0,780016" yOffset="452,000000" />
             </Anchors>
         </WindowSettings>
     </Windows>

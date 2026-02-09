@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="2.4.4" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="1.0" savedVariablesVersion="1.0" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="SwiftAssist" sizeX="180.000000" sizeY="28.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.734542" showing="true">
+        <WindowSettings xmlVersion="1.0" name="SwiftAssist" sizeX="360,000000" sizeY="56,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.734542" showing="true">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="390.442108" yOffset="150.283615" />
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="780,884216" yOffset="300,567230" />
             </Anchors>
         </WindowSettings>
     </Windows>

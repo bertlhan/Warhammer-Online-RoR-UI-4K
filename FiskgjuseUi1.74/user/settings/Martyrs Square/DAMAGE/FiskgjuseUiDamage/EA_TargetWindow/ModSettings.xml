@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.0" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="FriendlyTargetWindow" sizeX="265.000000" sizeY="111.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.768561" showing="false">
+        <WindowSettings xmlVersion="1.0" name="FriendlyTargetWindow" sizeX="530,000000" sizeY="222,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.768561" showing="false">
             <Anchors />
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="PrimaryTargetLayoutWindow" sizeX="265.000000" sizeY="111.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.768561" showing="false">
+        <WindowSettings xmlVersion="1.0" name="PrimaryTargetLayoutWindow" sizeX="530,000000" sizeY="222,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.768561" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="left" relativePoint="left" relativeTo="Root" xOffset="211.000000" yOffset="-70.344864" />
+                <WindowAnchor xmlVersion="1.0" point="left" relativePoint="left" relativeTo="Root" xOffset="422,000000" yOffset="-140,689728" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="SecondaryTargetLayoutWindow" sizeX="265.000000" sizeY="111.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.697499" showing="false">
+        <WindowSettings xmlVersion="1.0" name="SecondaryTargetLayoutWindow" sizeX="530,000000" sizeY="222,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.697499" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="-446.581451" yOffset="-19.511040" />
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="-893,162902" yOffset="-39,022080" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="TargetWindow" sizeX="265.000000" sizeY="111.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.768561" showing="false">
+        <WindowSettings xmlVersion="1.0" name="TargetWindow" sizeX="530,000000" sizeY="222,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.768561" showing="false">
             <Anchors />
         </WindowSettings>
     </Windows>

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.2" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="GroupWindow" sizeX="240.000000" sizeY="600.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.187600" showing="false">
+        <WindowSettings xmlVersion="1.0" name="GroupWindow" sizeX="480,000000" sizeY="1200,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.187600" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="228.999969" yOffset="126.999985" />
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="457,999938" yOffset="253,999970" />
             </Anchors>
         </WindowSettings>
     </Windows>

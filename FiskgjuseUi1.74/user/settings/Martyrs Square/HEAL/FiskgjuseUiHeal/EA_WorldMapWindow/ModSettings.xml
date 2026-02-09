@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.6" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_CampaignMap" sizeX="350.000000" sizeY="150.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_CampaignMap" sizeX="700,000000" sizeY="300,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-144.666748" yOffset="83.000000" />
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-289,333496" yOffset="166,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_RRQTracker" sizeX="62.000000" sizeY="128.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.855781" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_RRQTracker" sizeX="124,000000" sizeY="256,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.855781" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="bottomright" relativePoint="bottomright" relativeTo="Root" xOffset="-331.275055" yOffset="-103.459953" />
+                <WindowAnchor xmlVersion="1.0" point="bottomright" relativePoint="bottomright" relativeTo="Root" xOffset="-662,550110" yOffset="-206,919906" />
             </Anchors>
         </WindowSettings>
     </Windows>

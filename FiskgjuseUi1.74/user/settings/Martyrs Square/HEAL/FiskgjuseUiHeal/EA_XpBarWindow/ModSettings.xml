@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.0" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="XpBarWindow" sizeX="260.449554" sizeY="24.662674" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.081236" showing="false">
+        <WindowSettings xmlVersion="1.0" name="XpBarWindow" sizeX="520,899108" sizeY="49,325348" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.081236" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-267.863007" yOffset="228.999969" />
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-535,726014" yOffset="457,999938" />
             </Anchors>
         </WindowSettings>
     </Windows>

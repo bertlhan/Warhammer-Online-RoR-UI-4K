@@ -1,40 +1,40 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.1" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup1Window" sizeX="139.000000" sizeY="330.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.329745" showing="false">
+        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup1Window" sizeX="278,000000" sizeY="660,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.329745" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="492.000000" yOffset="168.999985" />
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="984,000000" yOffset="337,999970" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup2Window" sizeX="139.000000" sizeY="330.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.342534" showing="false">
+        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup2Window" sizeX="278,000000" sizeY="660,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.342534" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-467.860626" yOffset="145.000000" />
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-935,721252" yOffset="290,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup3Window" sizeX="139.000000" sizeY="330.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.307544" showing="false">
+        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup3Window" sizeX="278,000000" sizeY="660,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.307544" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-387.292419" yOffset="128.000000" />
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-774,584838" yOffset="256,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup4Window" sizeX="139.000000" sizeY="330.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.334305" showing="false">
+        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup4Window" sizeX="278,000000" sizeY="660,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.334305" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="450.000000" yOffset="128.000000" />
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="900,000000" yOffset="256,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup5Window" sizeX="139.000000" sizeY="330.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.350894" showing="false">
+        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup5Window" sizeX="278,000000" sizeY="660,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.350894" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="502.999939" yOffset="145.000000" />
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="1005,999878" yOffset="290,000000" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup6Window" sizeX="139.000000" sizeY="330.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.338820" showing="false">
+        <WindowSettings xmlVersion="1.0" name="FloatingScenarioGroup6Window" sizeX="278,000000" sizeY="660,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.338820" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-505.118774" yOffset="168.999985" />
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-1010,237548" yOffset="337,999970" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="UngroupedPlayersWindow" sizeX="565.000000" sizeY="343.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+        <WindowSettings xmlVersion="1.0" name="UngroupedPlayersWindow" sizeX="1130,000000" sizeY="686,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="ScenarioGroupWindow" xOffset="0.000000" yOffset="200.000000" />
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="ScenarioGroupWindow" xOffset="0,000000" yOffset="400,000000" />
             </Anchors>
         </WindowSettings>
     </Windows>

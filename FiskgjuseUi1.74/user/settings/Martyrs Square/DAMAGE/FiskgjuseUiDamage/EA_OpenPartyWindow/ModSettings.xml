@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.3" messagingEnabled="false">
     <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
     <Windows>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_OpenParty" sizeX="1050.000000" sizeY="670.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_OpenParty" sizeX="2100,000000" sizeY="1340,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="" xOffset="326.666718" yOffset="78.888893" />
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="" xOffset="653,333436" yOffset="157,777786" />
             </Anchors>
         </WindowSettings>
-        <WindowSettings xmlVersion="1.0" name="EA_Window_OpenPartyFlyOutAnchor" sizeX="300.000000" sizeY="200.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+        <WindowSettings xmlVersion="1.0" name="EA_Window_OpenPartyFlyOutAnchor" sizeX="600,000000" sizeY="400,000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
             <Anchors>
-                <WindowAnchor xmlVersion="1.0" point="bottomleft" relativePoint="bottomleft" relativeTo="Root" xOffset="135.000000" yOffset="-217.700180" />
+                <WindowAnchor xmlVersion="1.0" point="bottomleft" relativePoint="bottomleft" relativeTo="Root" xOffset="270,000000" yOffset="-435,400360" />
             </Anchors>
         </WindowSettings>
     </Windows>
