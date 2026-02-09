@@ -1,0 +1,70 @@
+EA_Window_OpenPartyWorld.Settings = 
+{
+	hideFullParties = true,
+}
+
+
+
+EA_Window_OpenPartyLootRollOptions.Settings = 
+{
+	unusableEquipment = 
+	{
+		[5] = -1,
+		[6] = -1,
+		[2] = 1,
+		[3] = 1,
+		[4] = -1,
+	},
+	currency = 
+	{
+		[5] = 0,
+		[6] = -1,
+		[2] = 0,
+		[3] = 0,
+		[4] = -1,
+	},
+	potion = 
+	{
+		[5] = -1,
+		[6] = -1,
+		[2] = -1,
+		[3] = -1,
+		[4] = -1,
+	},
+	usableEquipment = 
+	{
+		[5] = -1,
+		[6] = -1,
+		[2] = 0,
+		[3] = 0,
+		[4] = -1,
+	},
+	trash = 0,
+	talisman = 
+	{
+		[5] = -1,
+		[6] = -1,
+		[2] = -1,
+		[3] = -1,
+		[4] = -1,
+	},
+	event = 
+	{
+		[5] = 0,
+		[6] = 0,
+		[2] = 0,
+		[3] = 0,
+		[4] = 0,
+	},
+	crafting = 
+	{
+		[5] = -1,
+		[6] = -1,
+		[2] = 0,
+		[3] = 0,
+		[4] = -1,
+	},
+}
+
+
+

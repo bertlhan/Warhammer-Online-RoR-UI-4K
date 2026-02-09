@@ -1,0 +1,327 @@
+<? version="1.0" encoding="UTF-8"?>
+    <!--
+    This application is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    The applications is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with the applications.  If not, see
+    <http://www.gnu.org/licenses/>.
+    -->
+    <Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Windows>
+        	
+        	<!-- The basic sort button definition -->
+            <Button name="ShiniesBrowseUI_ResultsSortButton" inherits="Shinies_Button_DefaultListSort">
+                <Size>
+                    <AbsPoint x="245" y="30" />
+                </Size>
+                <EventHandlers>
+                    <EventHandler event="OnLButtonUp" function="ShiniesBrowseUI.OnLButtonUp_Results_SortButton" />
+                </EventHandlers>
+            </Button>
+            
+            <Button name="ShiniesBrowseUI_SearchesSortButton" inherits="Shinies_Button_DefaultListSort">
+                <Size>
+                    <AbsPoint x="245" y="30" />
+                </Size>
+                <EventHandlers>
+                    <EventHandler event="OnLButtonUp" function="ShiniesBrowseUI.OnLButtonUp_Searches_SortButton" />
+                </EventHandlers>
+            </Button>
+            
+            <ComboBox name="ShiniesBrowseUI_ComboBox_Criteria_Modifiers" inherits="Shinies_ComboBox_DefaultResizableLarge">
+            	<EventHandlers>
+                    <EventHandler event="OnSelChanged" function="ShiniesBrowseUI.OnSelChanged_Criteria_ModifierCombo" />
+                </EventHandlers>
+            </ComboBox>
+            
+            <ComboBox name="ShiniesBrowseUI_ComboBox_Criteria_ItemTypes" inherits="Shinies_ComboBox_DefaultResizableLarge">
+            	<EventHandlers>
+                    <EventHandler event="OnSelChanged" function="ShiniesBrowseUI.OnSelChanged_Criteria_ItemTypeCombo" />
+                </EventHandlers>
+            </ComboBox>
+            
+            <ComboBox name="ShiniesBrowseUI_ComboBox_Criteria_ItemSlots" inherits="Shinies_ComboBox_DefaultResizableLarge">
+            	<EventHandlers>
+                    <EventHandler event="OnSelChanged" function="ShiniesBrowseUI.OnSelChanged_Criteria_ItemSlotCombo" />
+                </EventHandlers>
+            </ComboBox>
+        
+        	<Window name="ShiniesBrowseUI_ResultsRow" drawchildrenfirst="true">
+                <Size>
+                    <AbsPoint x="750" y="22"/>
+                </Size>
+                <EventHandlers>
+                	<EventHandler event="OnLButtonUp" 		function="ShiniesBrowseUI.OnLButtonUp_Results_ListItem" />
+                    <EventHandler event="OnRButtonUp" 		function="ShiniesBrowseUI.OnRButtonUp_Results_ListItem" />
+                    <EventHandler event="OnMouseOver"       function="ShiniesBrowseUI.OnMouseOver_Results_ListItem" />
+                	<EventHandler event="OnMouseOverEnd"    function="ShiniesBrowseUI.OnMouseOverEnd_Results_ListItem" />
+                </EventHandlers>
+                <Windows>
+                    <FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" />
+                            <Anchor point="bottomright" relativePoint="bottomright" />
+                        </Anchors>
+                    </FullResizeImage>
+                    <FullResizeImage name="$parentMouseover" texture="Shinies3pxBorder" layer="overlay" handleinput="false" showing="false" alpha="0.5">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"/>
+                            <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+                        </Anchors>
+                        <Sizes>
+                            <TopLeft x="3" y="3" />
+                            <BottomRight x="3" y="3" />
+                            <Middle x="58" y="58" />
+                        </Sizes>
+                        <TexSlices>
+                            <TopLeft      id="Border-Top-Left" />
+                            <TopCenter    id="Border-Top-Center" />
+                            <TopRight     id="Border-Top-Right" />
+                            <MiddleLeft   id="Border-Middle-Left" />
+                            <MiddleCenter id="Border-Middle-Center" />
+                            <MiddleRight  id="Border-Middle-Right" />
+                            <BottomLeft   id="Border-Bottom-Left" />
+                            <BottomCenter id="Border-Bottom-Center" />
+                            <BottomRight  id="Border-Bottom-Right" />
+                        </TexSlices>
+                        <TintColor r="0" g="240" b="24" />
+                    </FullResizeImage>
+                    <Label name="$parentPrice" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" handleinput="false" textalign="rightcenter" autoresize="false" autoresizewidth="false">
+                        <Size>
+                            <AbsPoint x="160" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="right" relativePoint="right" relativeTo="">
+                                <AbsPoint x="-3" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentPricePer" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" handleinput="false" textalign="rightcenter" autoresize="false" autoresizewidth="false">
+                        <Size>
+                            <AbsPoint x="140" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="left" relativePoint="right" relativeTo="$parentPrice">
+                                <AbsPoint x="0" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                   <Label name="$parentStack" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" handleinput="false" textalign="center" autoresize="false" autoresizewidth="false">
+                        <Size>
+                            <AbsPoint x="80" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="left" relativePoint="right" relativeTo="$parentPricePer">
+                                <AbsPoint x="0" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentSeller" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" handleinput="false" textalign="center" autoresize="false" autoresizewidth="false">
+                        <Size>
+                            <AbsPoint x="120" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="left" relativePoint="right" relativeTo="$parentStack">
+                            	<AbsPoint x="2" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentItem" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" handleinput="false" textalign="leftcenter" autoresize="false" autoresizewidth="false">
+                        <Size>
+                            <AbsPoint x="340" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                            	<AbsPoint x="2" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                </Windows>
+            </Window>
+            
+            
+            <Window name="ShiniesBrowseUI_SearchesRow" drawchildrenfirst="true">
+                <Size>
+                    <AbsPoint x="213" y="22"/>
+                </Size>
+                <EventHandlers>
+                	<EventHandler event="OnLButtonUp" 		function="ShiniesBrowseUI.OnLButtonUp_Searches" />
+                    <EventHandler event="OnRButtonUp" 		function="ShiniesBrowseUI.OnRButtonUp_Searches" />
+                    <EventHandler event="OnMouseOver"       function="ShiniesBrowseUI.OnMouseOver_Searches" />
+                	<EventHandler event="OnMouseOverEnd"    function="ShiniesBrowseUI.OnMouseOverEnd_Searches" />
+                </EventHandlers>
+                <Windows>
+                    <FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" />
+                            <Anchor point="bottomright" relativePoint="bottomright" />
+                        </Anchors>
+                    </FullResizeImage>
+                    <FullResizeImage name="$parentMouseover" texture="Shinies3pxBorder" layer="overlay" handleinput="false" showing="false">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                            	<AbsPoint x="0" y="0"/>
+                            </Anchor>
+                            <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+                        </Anchors>
+                        <Sizes>
+                            <TopLeft x="3" y="3" />
+                            <BottomRight x="3" y="3" />
+                            <Middle x="58" y="58" />
+                        </Sizes>
+                        <TexSlices>
+                            <TopLeft      id="Border-Top-Left" />
+                            <TopCenter    id="Border-Top-Center" />
+                            <TopRight     id="Border-Top-Right" />
+                            <MiddleLeft   id="Border-Middle-Left" />
+                            <MiddleCenter id="Border-Middle-Center" />
+                            <MiddleRight  id="Border-Middle-Right" />
+                            <BottomLeft   id="Border-Bottom-Left" />
+                            <BottomCenter id="Border-Bottom-Center" />
+                            <BottomRight  id="Border-Bottom-Right" />
+                        </TexSlices>
+                        <Color r="255" g="204" b="102" />
+                    </FullResizeImage>
+                    <Label name="$parentName" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" handleinput="false" textalign="leftcenter" autoresize="false" autoresizewidth="true">
+                        <Size>
+                            <AbsPoint x="213" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                            	<AbsPoint x="2" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                </Windows>
+            </Window>
+            
+        	<Window name="ShiniesBrowseUI" handleinput="true" popable="true" movable="false" savesettings="false">
+                <Size>
+                    <AbsPoint x="800" y="500"/>
+                </Size>
+                <EventHandlers>
+					<EventHandler event="OnShown"	function="ShiniesBrowseUI.OnShown" />
+					<EventHandler event="OnHidden" 	function="ShiniesBrowseUI.OnHidden" />
+				</EventHandlers>
+                <Windows>
+                    <Window name="$parent_Results">
+                        <Windows>
+                            <Button name="$parentPrice" inherits="ShiniesBrowseUI_ResultsSortButton" textalign="center" id="5">
+                                <Size>
+                                    <AbsPoint x="160" y="30" />
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="topright" relativePoint="bottomright" relativeTo="$parentList">
+                                        <AbsPoint x="-20" y="0" />
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="$parentPricePer" inherits="ShiniesBrowseUI_ResultsSortButton" textalign="center" id="4">
+                                <Size>
+                                    <AbsPoint x="140" y="30" />
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topright" relativeTo="$parentPrice">
+                                        <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="$parentStack" inherits="ShiniesBrowseUI_ResultsSortButton" textalign="center" id="3">
+                                <Size>
+                                    <AbsPoint x="80" y="30" />
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topright" relativeTo="$parentPricePer">
+                                        <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="$parentSeller" inherits="ShiniesBrowseUI_ResultsSortButton" textalign="center" id="2">
+                                <Size>
+                                    <AbsPoint x="120" y="30" />
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topright" relativeTo="$parentStack">
+                                        <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="$parentItem" inherits="ShiniesBrowseUI_ResultsSortButton" textalign="center" id="1">
+                                <Size>
+                                    <AbsPoint x="100" y="30" />
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topright" relativeTo="$parentSeller">
+                                       <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                    <Anchor point="topleft" relativePoint="bottomleft" relativeTo="$parentList">
+                                       <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="ShiniesBrowseUI_ResultsRow" visiblerows="24" rowspacing="0">
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topleft" relativeTo="">
+                                        <AbsPoint x="2" y="30" />
+                                    </Anchor>
+                                    <Anchor point="bottomright" relativePoint="bottomright">
+                                        <AbsPoint x="0" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                                <ListData table="ShiniesBrowseUI.listResultsData" populationfunction="ShiniesBrowseUI.PopulateResultsDisplay"/>
+                            </ListBox>
+                        </Windows>
+                    </Window>
+                    <AnimatedImage name="$parent_SearchingAnim" inherits="LoadingScreenWarSymbolAnimation" layer="overlay" >
+                        <Anchors>
+                            <Anchor point="center" relativePoint="center" relativeTo="$parent_Results">
+                                <AbsPoint x="0" y="0" />
+                            </Anchor>
+                        </Anchors>
+                    </AnimatedImage>
+	            </Windows>
+	        </Window>
+			
+			<Window name="ShiniesBrowseUI_Searches" inherits="EA_Window_Default" movable="false" handleinput="true" savesettings="false">
+			 	<Size>
+                    <AbsPoint x="250" y="400"/>
+                </Size>
+            	<Windows>
+		            <Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" />
+		            <Button name="$parentName" inherits="ShiniesBrowseUI_SearchesSortButton" textalign="center" id="1">
+                        <Size>
+                            <AbsPoint x="100" y="30" />
+                        </Size>
+                         <Anchors>
+                            <Anchor point="topleft" relativePoint="bottomleft" relativeTo="$parentList">
+                               <AbsPoint x="0" y="0" />
+                            </Anchor>
+                            <Anchor point="topright" relativePoint="bottomright" relativeTo="$parentList">
+                               <AbsPoint x="-21" y="0" />
+                            </Anchor>
+                        </Anchors>
+                    </Button>
+		            <ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="ShiniesBrowseUI_SearchesRow" visiblerows="15" rowspacing="0">
+		            	<Size>
+	                        <AbsPoint x="120" y="220" />
+	                    </Size>
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft">
+                                <AbsPoint x="8" y="64" />
+                            </Anchor>
+                            <Anchor point="bottomright" relativePoint="bottomright">
+                                <AbsPoint x="-8" y="-5"/>
+                            </Anchor>
+                        </Anchors>
+                        <ListData table="ShiniesBrowseUI.listSearchesData" populationfunction="ShiniesBrowseUI.PopulateSearchDisplay"/>
+                    </ListBox>
+		        </Windows>
+            </Window>
+        </Windows>
+    </Interface>

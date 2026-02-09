@@ -1,0 +1,164 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<!-- This is the settings template -->
+		<Window name="EffigyConfigGuiSettingsTemplate" handleinput="true" layer="popup" movable="true" show="false" savesettings="false">
+			<Size>
+				<AbsPoint x="640" y="240" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" />
+			</Anchors>
+			<Windows>
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" />
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				<Button name="$parentButtonClose" inherits="EA_Button_DefaultWindowClose" >
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="EffigyConfigGui.Settings.OnClickCloseSettings" />
+					</EventHandlers>
+				</Button>
+				<DynamicImage name="$parentCornerImage" inherits="EA_Default_CornerImage" texture="RV_CornerIcon_Mod" />
+				<Button name="$parentButtonOK" inherits="EA_Button_DefaultResizeable" >
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="bottomright">
+							<AbsPoint x="-20" y="-20" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="EffigyConfigGui.Settings.OnClickCloseSettings" />
+					</EventHandlers>
+				</Button>
+
+				<!-- Options -->
+				<!-- we are placing "show name" check box only as an example -->
+				<!--
+				<FullResizeImage name="$parentGrpBars" inherits="DefaultWindowBackground"  handleinput="true">
+					<Size>
+						<AbsPoint x="285" y="100" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" >
+							<AbsPoint x="30" y="50" />
+						</Anchor>
+					</Anchors>
+					
+					<Windows>
+						<Label name="$parentTitle" inherits="EA_Label_DefaultText" textalign="left">
+							<Size>
+								<AbsPoint x="220" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						<Button name="$parentCheckBoxShowGrpInWB" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitle">
+									<AbsPoint x="10" y="10" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="EffigyConfigGui.Settings.OnClickShowGrpInWB" />
+							</EventHandlers>
+						</Button>
+						<Label name="$parentLabelShowGrpInWB" inherits="EA_Label_DefaultText" textalign="leftcenter" autoresize="true" handlinput="false" >
+							<Size>
+								<AbsPoint x="220" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentCheckBoxShowGrpInWB">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						<Button name="$parentCheckBoxShowGrpInSC" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parentCheckBoxShowGrpInWB">
+									<AbsPoint x="0" y="5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="EffigyConfigGui.Settings.OnClickShowGrpInSC" />
+							</EventHandlers>
+						</Button>
+						<Label name="$parentLabelShowGrpInSC" inherits="EA_Label_DefaultText" textalign="leftcenter" autoresize="true" handlinput="false" >
+							<Size>
+								<AbsPoint x="220" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentCheckBoxShowGrpInSC">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+					</Windows>
+				</FullResizeImage>
+				-->
+				<FullResizeImage name="$parentCastBar" inherits="DefaultWindowBackground"  handleinput="true">
+					<Size>
+						<AbsPoint x="285" y="100" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="$parent" >
+							<AbsPoint x="-30" y="50" />
+						</Anchor>
+					</Anchors>
+					
+					<Windows>
+						<Label name="$parentTitle" inherits="EA_Label_DefaultText" textalign="left">
+							<Size>
+								<AbsPoint x="220" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						<Button name="$parentCheckBoxShowGCD" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitle">
+									<AbsPoint x="10" y="10" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="EffigyConfigGui.Settings.OnClickShowGCD" />
+							</EventHandlers>
+						</Button>
+						<Label name="$parentLabelShowGCD" inherits="EA_Label_DefaultText" textalign="leftcenter" autoresize="true" handlinput="false" >
+							<Size>
+								<AbsPoint x="220" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentCheckBoxShowGCD">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						<Button name="$parentCheckBoxInclLatency" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parentCheckBoxShowGCD">
+									<AbsPoint x="0" y="5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="EffigyConfigGui.Settings.OnClickInclLatency" />
+							</EventHandlers>
+						</Button>
+						<Label name="$parentLabelInclLatency" inherits="EA_Label_DefaultText" textalign="leftcenter" autoresize="true" handlinput="false" >
+							<Size>
+								<AbsPoint x="220" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentCheckBoxInclLatency">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+					</Windows>
+				</FullResizeImage>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

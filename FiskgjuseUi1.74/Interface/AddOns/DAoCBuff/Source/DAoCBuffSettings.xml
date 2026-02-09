@@ -1,0 +1,216 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="DAoCBuff_Settings" inherits="EA_Window_Default" movable="true" layer="secondary">
+			<Size>
+				<AbsPoint x="1000" y="750" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root" />
+			</Anchors>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="WindowUtils.TrapClick" />
+			</EventHandlers>
+			<Windows>
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" handleinput="true">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" >
+							<AbsPoint x="27" y="0" />
+						</Anchor>
+						<Anchor point="topright" relativePoint="topright">
+							<AbsPoint x="-3" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.CloseOptionswindow" />
+					</EventHandlers>
+				</Button>
+
+				<!-- Whole window background -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame" handleinput="true">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="-10" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<Window name="$parentListBackground">
+					<Size>
+						<AbsPoint x="290"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+						<Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="$parentBackground">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<FullResizeImage name="$parentsGeneralBackground" inherits="SettingsSectionBackground" />
+					</Windows>
+				</Window>
+
+				<Window name="$parentGeneralButton" inherits="DAoCBuff_FakeSettingsRow" layer="secondary">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ShowGeneralOptions" />
+					</EventHandlers>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentListBackground">
+								<AbsPoint x="20" y="5" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentListMngrButton" inherits="DAoCBuff_FakeSettingsRow" layer="secondary">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ShowListManager" />
+					</EventHandlers>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGeneralButton">
+								<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<Button name="$parentReloadTrackers" inherits="EA_Button_DefaultResizeable" layer="secondary">
+					<Size>
+						<AbsPoint x="240" y="39"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentListMngrButton">
+							<AbsPoint x="0" y="3"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.RestartTracker" />
+					</EventHandlers>
+				</Button>
+
+				<Button name="$parentAddFrameButton" inherits="EA_Button_DefaultResizeable" layer="secondary">
+					<Size>
+						<AbsPoint x="240" y="39"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentReloadTrackers">
+							<AbsPoint x="0" y="3"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.AddFrame" />
+					</EventHandlers>
+				</Button>
+
+				<!-- ListBox -->
+				<ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="DAoCBuff_FrameSettingsRow" visiblerows="12" rowcount="120" rowspacing="1" layer="secondary">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAddFrameButton">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentListBackground">
+							<AbsPoint x="-10" y="-10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="" />
+					</EventHandlers>
+					<ListData table="DAoCBuffVar.Frames" populationfunction="DAoCBuffSettings.PopulateList">
+						<ListColumns>
+							<ListColumn windowname="Name" variable="name" format="wstring" />
+						</ListColumns>
+					</ListData>
+				</ListBox>
+
+				<ScrollWindow name="$parent_FrameSettings" inherits="DAoCBuffFrameSettingsTab">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentListBackground">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentBackground">
+							<AbsPoint x="-10" y="-10" />
+						</Anchor>
+					</Anchors>
+				</ScrollWindow>
+
+				<ScrollWindow name="$parent_ListManagerSettings" inherits="DAoCBuffListManagerTab">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentListBackground">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentBackground">
+							<AbsPoint x="-10" y="-10" />
+						</Anchor>
+					</Anchors>
+				</ScrollWindow>
+
+				<ScrollWindow name="$parent_GeneralSettings" inherits="DAoCBuffGeneralSettingsTab">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentListBackground">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentBackground">
+							<AbsPoint x="-10" y="-10" />
+						</Anchor>
+					</Anchors>
+				</ScrollWindow>
+			</Windows>
+		</Window>
+
+
+		<Window name="DAoCBuff_FakeSettingsRow" handleinput="true">
+			<Size>
+				<AbsPoint x="240" y="40" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"/>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentName" wordwrap="true" font="font_default_medium_heading" textalign="left" maxchars="40" handleinput="false">
+					<Size>
+						<AbsPoint x="240" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="center" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+
+		<Window name="DAoCBuff_FrameSettingsRow" handleinput="true" layer="secondary">
+			<Size>
+				<AbsPoint x="240" y="40" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.FrameSettingsRowItemOnLButtonUp" />
+			</EventHandlers>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"/>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentName" wordwrap="true" font="font_default_medium_heading" textalign="left" maxchars="40" handleinput="false">
+					<Size>
+						<AbsPoint x="240" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="center" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+
+	</Windows>
+</Interface>

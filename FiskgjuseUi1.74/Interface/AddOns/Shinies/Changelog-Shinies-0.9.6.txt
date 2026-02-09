@@ -1,0 +1,569 @@
+------------------------------------------------------------------------
+r148 | Zomega | 2024-01-02
+Even more checks removed as it seems K8P/KAK wouldn't work if you logged
+in to that zone due to how the add-on was checking zone data.
+
+Tagging as 0.9.6
+------------------------------------------------------------------------
+r147 | Zomega | 2024-01-02
+Zone checks removed, the add-on now works in all zones. This allows
+private servers to add auction house NPCs in any zone they want without
+this add-on having to be updated to support it. Servers are responsible
+for doing their own checks to ensure the player is trying to use the
+auction house from a valid location.
+
+Game version in Shinies.mod updated to 1.4.8.
+
+Tagging as 0.9.5
+------------------------------------------------------------------------
+r146 | squibblegut | 2022-09-12
+Changed paths:
+   fixed many wstring to string comparisons so they dont spew errors.
+
+Tagging as 0.9.4
+------------------------------------------------------------------------
+r145 | wikki | 2011-01-07 02:31:47 +0000 (Fri, 07 Jan 2011) | 1 line
+Changed paths:
+   A /tags/0.9.3-beta (from /trunk:144)
+
+Tagging as 0.9.3-beta
+------------------------------------------------------------------------
+r144 | wikki | 2011-01-07 02:31:05 +0000 (Fri, 07 Jan 2011) | 2 lines
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Shinies.mod
+   M /trunk/Source/Shinies.lua
+
+Fixed small issue in the auto posting code related to user set prices.
+Mark 0.9.3
+------------------------------------------------------------------------
+r142 | wikki | 2011-01-06 03:14:48 +0000 (Thu, 06 Jan 2011) | 1 line
+Changed paths:
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Price.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+
+Fixed a small issue with the SPA not returning fixed item price.
+------------------------------------------------------------------------
+r141 | wikki | 2011-01-06 03:08:45 +0000 (Thu, 06 Jan 2011) | 1 line
+Changed paths:
+   M /trunk/Shinies.mod
+   M /trunk/Source/Shinies.lua
+
+Version bump to 0.9.2
+------------------------------------------------------------------------
+r140 | wikki | 2011-01-06 03:05:02 +0000 (Thu, 06 Jan 2011) | 1 line
+Changed paths:
+   M /trunk/Modules/Config/Shinies-Config-General.lua
+   M /trunk/Modules/Config/Shinies-Config-General.xml
+
+Added slider control for UI scale
+------------------------------------------------------------------------
+r139 | wikki | 2011-01-06 01:43:28 +0000 (Thu, 06 Jan 2011) | 1 line
+Changed paths:
+   M /trunk/Source/Shinies.lua
+
+Fixed an issue with the registration calls for the default AH window.
+------------------------------------------------------------------------
+r138 | wikki | 2011-01-02 00:41:22 +0000 (Sun, 02 Jan 2011) | 1 line
+Changed paths:
+   M /trunk/Modules/Config/Shinies-Config-General.lua
+   M /trunk/Source/Shinies.lua
+
+Added general config UI.
+------------------------------------------------------------------------
+r137 | wikki | 2011-01-01 23:23:39 +0000 (Sat, 01 Jan 2011) | 1 line
+Changed paths:
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Tooltip.lua
+   M /trunk/Modules/Tooltip/Shinies-Tooltip-Debug.lua
+
+Fixed the window layer issue w/ the tooltips.
+------------------------------------------------------------------------
+r136 | wikki | 2011-01-01 11:41:22 +0000 (Sat, 01 Jan 2011) | 1 line
+Changed paths:
+   M /trunk/Modules/Data/Shinies-Data-Inventory.lua
+
+Removed debug statement
+------------------------------------------------------------------------
+r135 | wikki | 2011-01-01 10:26:07 +0000 (Sat, 01 Jan 2011) | 2 lines
+Changed paths:
+   M /trunk/Modules/Data/Shinies-Data-Inventory.lua
+   M /trunk/Shinies.mod
+
+Little more clean up of the inventory code.
+Added alpha xml tags for the debug  item tooltip.
+------------------------------------------------------------------------
+r134 | wikki | 2011-01-01 09:00:52 +0000 (Sat, 01 Jan 2011) | 3 lines
+Changed paths:
+   M /trunk/Modules/API/Shinies-API.lua
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Price.lua
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Tooltip.lua
+   A /trunk/Modules/Config/Shinies-Config-General.lua
+   A /trunk/Modules/Config/Shinies-Config-General.xml
+   M /trunk/Modules/Config/Shinies-Config-Price.lua
+   M /trunk/Modules/Data/Shinies-Data-Inventory.lua
+   M /trunk/Modules/Module.lua
+   M /trunk/Modules/Stat/Shinies-Stat-Basic.lua
+   A /trunk/Modules/Tooltip/Shinies-Tooltip-Debug.lua
+   M /trunk/Modules/Tooltip/Shinies-Tooltip-Inventory.lua
+   M /trunk/Modules/Tooltip/Shinies-Tooltip-Stats.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Browse.lua
+   M /trunk/Modules/UI/Shinies-UI-Config.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Shinies.mod
+   M /trunk/Source/Shinies.lua
+
+Removed the on profile change handling code for the time being
+Fixed an issue where bank information was not being maintained during logout.
+Fixed a latency issue when the bank was first opened for maintaining inventory.
+------------------------------------------------------------------------
+r133 | wikki | 2010-12-31 21:41:18 +0000 (Fri, 31 Dec 2010) | 2 lines
+Changed paths:
+   A /trunk/Ideas and Suggestions.txt
+   M /trunk/Modules/API/Shinies-API-Item.lua
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Tooltip.lua
+   M /trunk/Modules/Base/Data.lua
+   M /trunk/Modules/Base/Stat.lua
+   A /trunk/Modules/Base/Tooltip.lua
+   M /trunk/Modules/Data/Shinies-Data-Inventory.lua
+   M /trunk/Modules/Stat/Shinies-Stat-Basic.lua
+   A /trunk/Modules/Tooltip
+   A /trunk/Modules/Tooltip/Shinies-Tooltip-Crafting.lua
+   A /trunk/Modules/Tooltip/Shinies-Tooltip-Inventory.lua
+   A /trunk/Modules/Tooltip/Shinies-Tooltip-Stats.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Config.lua
+   M /trunk/Shinies.mod
+   M /trunk/Source/Shinies.lua
+
+Added a new base module for tooltips, these are the only modules the tooltip aggregator will use for information.
+Moved the tooltip functionality from stats and inventory to their own tooltip module.
+------------------------------------------------------------------------
+r131 | wikki | 2010-12-31 05:11:03 +0000 (Fri, 31 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Shinies.mod
+   M /trunk/Source/Shinies.lua
+
+Lets bump to 0.9.0 and package an alpha!
+------------------------------------------------------------------------
+r130 | wikki | 2010-12-31 04:23:50 +0000 (Fri, 31 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/Data/Shinies-Data-Inventory.lua
+
+Small bug fix when cleaning up old item data
+------------------------------------------------------------------------
+r129 | wikki | 2010-12-31 03:51:30 +0000 (Fri, 31 Dec 2010) | 2 lines
+Changed paths:
+   M /trunk/Modules/Data/Shinies-Data-Inventory.lua
+
+Removed the extra debug statements.
+Only characters that have some of the item in their inventory will be displayed on the tooltip.
+------------------------------------------------------------------------
+r128 | wikki | 2010-12-31 03:44:38 +0000 (Fri, 31 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Tooltip.lua
+   M /trunk/Modules/Data/Shinies-Data-Auction.lua
+   A /trunk/Modules/Data/Shinies-Data-Inventory.lua
+   M /trunk/Modules/Stat/Shinies-Stat-Basic.lua
+   M /trunk/Shinies.mod
+   M /trunk/Source/ShiniesUITemplates.xml
+
+Initial version of the item data tooltip module
+------------------------------------------------------------------------
+r127 | wikki | 2010-12-30 20:40:03 +0000 (Thu, 30 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+
+Removing stray debug statement
+------------------------------------------------------------------------
+r126 | wikki | 2010-12-30 20:39:18 +0000 (Thu, 30 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/Stat/Shinies-Stat-Basic.lua
+   M /trunk/Modules/UI/Shinies-UI-Auctions.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Browse.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+
+Added checks for all of the execution buttons in the UI modules to check their enabled states, as disabled buttons still trigger their events
+------------------------------------------------------------------------
+r125 | wikki | 2010-12-30 20:30:04 +0000 (Thu, 30 Dec 2010) | 2 lines
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Source/ShiniesUITemplates.xml
+
+Removed the window inheritance from the tooltip window.
+Made a few small display changes for Auto to make the information reported a bit clearer
+------------------------------------------------------------------------
+r124 | wikki | 2010-12-30 09:00:16 +0000 (Thu, 30 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Tooltip.lua
+   M /trunk/Modules/Stat/Shinies-Stat-Basic.lua
+
+Found a bug in the Mythic tooltip handling code in regards to extra window placement.  Added a temp full replacement of the function to allow further development to take place.
+------------------------------------------------------------------------
+r123 | wikki | 2010-12-30 07:55:38 +0000 (Thu, 30 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/API/Shinies-API.lua
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Tooltip.lua
+   M /trunk/Modules/Base/Data.lua
+   M /trunk/Modules/Base/Stat.lua
+   M /trunk/Modules/Module.lua
+   M /trunk/Modules/Stat/Shinies-Stat-Basic.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Shinies.mod
+   M /trunk/Source/Shinies.xml
+   M /trunk/Source/ShiniesUITemplates.xml
+
+Initial submission of a functioning tooltip aggregator
+------------------------------------------------------------------------
+r122 | wikki | 2010-12-29 03:02:20 +0000 (Wed, 29 Dec 2010) | 3 lines
+Changed paths:
+   M /trunk/Libraries/AceAddon-3.0.lua
+   M /trunk/Modules/API/Shinies-API-Inventory.lua
+   M /trunk/Modules/API/Shinies-API.lua
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Price.lua
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Tooltip.lua
+   M /trunk/Modules/Base/Data.lua
+   M /trunk/Modules/Base/Stat.lua
+   M /trunk/Modules/Config/Shinies-Config-Price.lua
+   M /trunk/Modules/Data/Shinies-Data-Auction.lua
+   M /trunk/Modules/Module.lua
+   M /trunk/Modules/Stat/Shinies-Stat-Basic.lua
+   M /trunk/Modules/UI/Shinies-UI-Auctions.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Browse.lua
+   M /trunk/Modules/UI/Shinies-UI-Config.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Source/Shinies.lua
+   M /trunk/Source/Shinies.xml
+
+Made a few changes to when SPA is setup on those that use it.
+Auto items are not processed in alphabetical order
+Added some extra debugging reporting when the API receives invalid arguments
+------------------------------------------------------------------------
+r121 | wikki | 2010-12-27 22:48:48 +0000 (Mon, 27 Dec 2010) | 2 lines
+Changed paths:
+   M /trunk/Modules/Config/Shinies-Config-Price.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.xml
+
+Fixed an issue where a few local functions were inadvertantly global.
+Added an alpha change on the price mod settings on Auto if the user sets a price to attempt to show a difference between the settings.
+------------------------------------------------------------------------
+r120 | wikki | 2010-12-27 11:15:29 +0000 (Mon, 27 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.xml
+
+Added the start of a summary log to the Auto tab.
+------------------------------------------------------------------------
+r119 | wikki | 2010-12-26 08:17:02 +0000 (Sun, 26 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/API/Shinies-API.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+
+Removed a debug statement
+------------------------------------------------------------------------
+r118 | wikki | 2010-12-26 07:33:21 +0000 (Sun, 26 Dec 2010) | 2 lines
+Changed paths:
+   M /trunk/Modules/API/Shinies-API-Auction.lua
+   M /trunk/Modules/API/Shinies-API-Query.lua
+   M /trunk/Modules/API/Shinies-API.lua
+   M /trunk/Modules/UI/Shinies-UI-Auctions.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.xml
+   M /trunk/Modules/UI/Shinies-UI-Browse.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+
+Fixed the ID10T error w/ the on AH available callback.
+Added a min price option for Auto, so that if a mod price is below that min the auction will not get posted.
+------------------------------------------------------------------------
+r117 | wikki | 2010-12-24 11:20:41 +0000 (Fri, 24 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Libraries
+   M /trunk/Modules/API/Shinies-API.lua
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Price.lua
+   M /trunk/Modules/Stat/Shinies-Stat-Basic.lua
+   M /trunk/Modules/UI/Shinies-UI-Auctions.xml
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.xml
+   M /trunk/Modules/UI/Shinies-UI-Browse.xml
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.xml
+
+All of the kinks seem to be worked out of the Auto algorithm.
+------------------------------------------------------------------------
+r116 | wikki | 2010-12-23 08:23:56 +0000 (Thu, 23 Dec 2010) | 2 lines
+Changed paths:
+   M /trunk/Modules/API/Shinies-API.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+
+Renamed a local api function to make it appropriate to its functionality
+Fixed a small issue in the new post UI
+------------------------------------------------------------------------
+r115 | wikki | 2010-12-23 07:54:47 +0000 (Thu, 23 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Shinies.mod
+   M /trunk/Source/Shinies.lua
+
+Version bump to 0.8.6
+------------------------------------------------------------------------
+r114 | wikki | 2010-12-23 07:48:32 +0000 (Thu, 23 Dec 2010) | 3 lines
+Changed paths:
+   M /trunk/Modules/API/Shinies-API-Auction.lua
+   M /trunk/Modules/API/Shinies-API-Query.lua
+   M /trunk/Modules/API/Shinies-API.lua
+   M /trunk/Modules/UI/Shinies-UI-Auctions.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.xml
+   M /trunk/Modules/UI/Shinies-UI-Browse.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.xml
+
+Added IsServerAvailable checks a majority of the API requests with proper return values if the server isnt available.
+Converted Post's ItemUI from XML to LibGUI
+Added server available callback handling on all 4 UI tabs to proper disable actions when the server isnt available.
+------------------------------------------------------------------------
+r113 | wikki | 2010-12-23 04:50:10 +0000 (Thu, 23 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.xml
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Shinies.mod
+
+Lots of work on Auto UI
+------------------------------------------------------------------------
+r112 | wikki | 2010-12-22 23:34:31 +0000 (Wed, 22 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/API/Shinies-API.lua
+
+Added Reikwald and The Max
+------------------------------------------------------------------------
+r111 | wikki | 2010-12-22 05:58:54 +0000 (Wed, 22 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Source/ShiniesConstants.lua
+
+Adding duration constant index for 0
+------------------------------------------------------------------------
+r110 | wikki | 2010-12-22 04:08:26 +0000 (Wed, 22 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/API/Shinies-API.lua
+
+Added altdorf zone id
+------------------------------------------------------------------------
+r109 | wikki | 2010-12-21 06:48:43 +0000 (Tue, 21 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Auctions.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Shinies.mod
+
+Quick debug clean up, fixed small post usage issue
+------------------------------------------------------------------------
+r108 | wikki | 2010-12-21 06:21:35 +0000 (Tue, 21 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/API/Shinies-API.lua
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Price.lua
+   M /trunk/Modules/UI/Shinies-UI-Auctions.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.lua
+   M /trunk/Modules/UI/Shinies-UI-Auto.xml
+   M /trunk/Modules/UI/Shinies-UI-Post.xml
+   M /trunk/Modules/UI/Shinies-UI-Scan.lua
+   M /trunk/Source/ShiniesUITemplates.xml
+
+Check in before travel tomorrow
+------------------------------------------------------------------------
+r107 | wikki | 2010-12-19 22:38:46 +0000 (Sun, 19 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+
+Added a small change to the tooltip display so that it updates when a new item is dropped.
+------------------------------------------------------------------------
+r106 | wikki | 2010-12-17 03:24:32 +0000 (Fri, 17 Dec 2010) | 1 line
+Changed paths:
+   A /trunk/Modules/Aggregator/Shinies-Aggregator-Tooltip.lua
+   M /trunk/Modules/UI/Shinies-UI-Browse.lua
+
+Start of the tooltip aggregator
+------------------------------------------------------------------------
+r105 | wikki | 2010-12-17 02:40:06 +0000 (Fri, 17 Dec 2010) | 1 line
+Changed paths:
+   A /trunk/Modules/API/Shinies-API-DateTime.lua
+   M /trunk/Modules/API/Shinies-API.lua
+   A /trunk/Modules/Base/Data.lua
+   A /trunk/Modules/Base/Stat.lua
+   A /trunk/Modules/Data
+   A /trunk/Modules/Data/Shinies-Data-Auction.lua
+   M /trunk/Modules/Price/Shinies-Price-Flat.lua
+   M /trunk/Modules/Price/Shinies-Price-Percent.lua
+   A /trunk/Modules/Stat
+   A /trunk/Modules/Stat/Shinies-Stat-Basic.lua
+   M /trunk/Modules/UI/Shinies-UI-Auctions.lua
+   M /trunk/Modules/UI/Shinies-UI-Browse.lua
+   M /trunk/Modules/UI/Shinies-UI-Config.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Shinies.mod
+
+Initial submission of the data and stat basic modules.
+------------------------------------------------------------------------
+r104 | wikki | 2010-12-15 17:04:20 +0000 (Wed, 15 Dec 2010) | 3 lines
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+
+Fixed a few issues where PoV wouldnt allow the user to change their price.
+
+Fixed a bug where items can have the same name and different stats.  Comparisons are no longer done by name, but by uniqueID when filtering out results.
+------------------------------------------------------------------------
+r103 | wikki | 2010-12-14 04:29:30 +0000 (Tue, 14 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/API/Shinies-API-Auction.lua
+   M /trunk/Modules/API/Shinies-API-Display.lua
+   M /trunk/Modules/API/Shinies-API-Item.lua
+   M /trunk/Modules/API/Shinies-API-Query.lua
+   M /trunk/Modules/Base/UI.lua
+   M /trunk/Modules/UI/Shinies-UI-Auctions.lua
+   M /trunk/Modules/UI/Shinies-UI-Auctions.xml
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.xml
+   M /trunk/Shinies.mod
+   M /trunk/Source/ShiniesConstants.lua
+
+Lets reintroduce the time left on an auction display!
+------------------------------------------------------------------------
+r102 | wikki | 2010-12-14 00:12:34 +0000 (Tue, 14 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Browse.lua
+
+Changed default sort by for price per
+------------------------------------------------------------------------
+r101 | wikki | 2010-12-13 22:30:10 +0000 (Mon, 13 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.xml
+   M /trunk/Source/ShiniesUITemplates.xml
+
+Small fix to the rarity highlighting
+------------------------------------------------------------------------
+r100 | wikki | 2010-12-13 21:09:44 +0000 (Mon, 13 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Assets/Assets.xml
+   A /trunk/Assets/IconBorderHighlight.dds
+   A /trunk/Assets/IconBorderNormal.dds
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.xml
+   M /trunk/Source/ShiniesUITemplates.xml
+
+Added icon border textures (ala nRarity) to the base addon, and added them to post.
+------------------------------------------------------------------------
+r99 | wikki | 2010-12-13 20:07:26 +0000 (Mon, 13 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Shinies.mod
+
+Changed the CF flags from debug to alpha for the modules
+------------------------------------------------------------------------
+r98 | wikki | 2010-12-13 20:04:35 +0000 (Mon, 13 Dec 2010) | 1 line
+Changed paths:
+   A /trunk/Modules/UI/Shinies-UI-Auto.lua
+   A /trunk/Modules/UI/Shinies-UI-Auto.xml
+   A /trunk/Modules/UI/Shinies-UI-Scan.lua
+   A /trunk/Modules/UI/Shinies-UI-Scan.xml
+   M /trunk/Shinies.mod
+   M /trunk/Source/Shinies.lua
+
+Adding the bases for the next 2 modules
+------------------------------------------------------------------------
+r97 | wikki | 2010-12-13 07:19:52 +0000 (Mon, 13 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+
+One last change for the night!  Use some default colors
+------------------------------------------------------------------------
+r96 | wikki | 2010-12-13 07:17:43 +0000 (Mon, 13 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Source/Shinies.lua
+
+Some base module clean up.  Had a function accidentally globally defined.
+------------------------------------------------------------------------
+r95 | wikki | 2010-12-13 07:01:43 +0000 (Mon, 13 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/API/Shinies-API-Item.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+
+Converted the profit over vendor to API call and made appropriate usage changes
+------------------------------------------------------------------------
+r94 | wikki | 2010-12-13 06:56:44 +0000 (Mon, 13 Dec 2010) | 2 lines
+Changed paths:
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Price.lua
+   M /trunk/Modules/Config/Shinies-Config-Price.lua
+   M /trunk/Modules/UI/Shinies-UI-Auctions.lua
+   M /trunk/Modules/UI/Shinies-UI-Browse.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+
+Cleaned up the color display a bit
+Added Profit Over Vendor display on post window
+------------------------------------------------------------------------
+r93 | wikki | 2010-12-13 05:55:50 +0000 (Mon, 13 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Price.lua
+   M /trunk/Modules/Config/Shinies-Config-Price.lua
+   M /trunk/Modules/Module.lua
+   M /trunk/Modules/Price/Shinies-Price-Flat.lua
+   M /trunk/Modules/Price/Shinies-Price-Match.lua
+   M /trunk/Modules/Price/Shinies-Price-Multiplier.lua
+   M /trunk/Modules/Price/Shinies-Price-Percent.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Modules/UI/Shinies-UI-Post.xml
+
+Renamed the GetModuleName function to GetDisplayName, seems more appropriate
+------------------------------------------------------------------------
+r92 | wikki | 2010-12-13 04:47:23 +0000 (Mon, 13 Dec 2010) | 2 lines
+Changed paths:
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Price.lua
+   M /trunk/Modules/Config/Shinies-Config-Price.lua
+   M /trunk/Modules/Config/Shinies-Config-Price.xml
+   M /trunk/Modules/Price/Shinies-Price-Flat.lua
+   M /trunk/Modules/Price/Shinies-Price-Match.lua
+   M /trunk/Modules/Price/Shinies-Price-Multiplier.lua
+   M /trunk/Modules/Price/Shinies-Price-Percent.lua
+   M /trunk/Shinies.mod
+   M /trunk/Source/Shinies.lua
+
+Initial submission of a functional pricing configuration module.
+This includes changes to the SPA and new default settings setup.
+------------------------------------------------------------------------
+r91 | wikki | 2010-12-12 04:41:34 +0000 (Sun, 12 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/Config/Shinies-Config-Price.lua
+
+Small change to the base idea of how the prices are configured
+------------------------------------------------------------------------
+r90 | wikki | 2010-12-07 03:02:20 +0000 (Tue, 07 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+
+Fixed issue where changing the stack count was not enabling the post auction button properly
+------------------------------------------------------------------------
+r89 | wikki | 2010-12-06 04:52:17 +0000 (Mon, 06 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/Modules/Aggregator/Shinies-Aggregator-Price.lua
+   M /trunk/Modules/Base/Config.lua
+   M /trunk/Modules/Base/Price.lua
+   M /trunk/Modules/Config/Shinies-Config-Price.lua
+   A /trunk/Modules/Config/Shinies-Config-Price.xml
+   M /trunk/Modules/Price/Shinies-Price-Fixed.lua
+   M /trunk/Modules/Price/Shinies-Price-Flat.lua
+   M /trunk/Modules/Price/Shinies-Price-Match.lua
+   M /trunk/Modules/Price/Shinies-Price-Multiplier.lua
+   M /trunk/Modules/Price/Shinies-Price-Percent.lua
+   M /trunk/Modules/UI/Shinies-UI-Config.lua
+   A /trunk/Modules/UI/Shinies-UI-Heartbeat.lua
+   A /trunk/Modules/UI/Shinies-UI-Heartbeat.xml
+   M /trunk/Modules/UI/Shinies-UI-Post.lua
+   M /trunk/Shinies.mod
+   M /trunk/Source/Shinies.lua
+
+Added functionality to the price aggregator to be used by the pricing config UI.
+------------------------------------------------------------------------

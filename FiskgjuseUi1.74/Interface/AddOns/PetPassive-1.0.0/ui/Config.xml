@@ -1,0 +1,131 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+
+		<Window name="PetPassiveConfigWindow" movable="true"  >
+		
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="400" y="50" />
+				</Anchor>
+			</Anchors>
+		
+			<Size>
+				<AbsPoint x="260" y="165" />
+			</Size>
+			
+			<Windows>
+
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="true" layer="background">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+					</Anchors>				
+				</FullResizeImage>
+
+				<!-- Topright Close Button: BEGIN -->
+				<Button name="$parentCloseButton" inherits="EA_Button_DefaultWindowClose" layer="popup" handleinput="true" >
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="PetPassive.hideConfigWindow" />
+					</EventHandlers>
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parentBackground">
+							<AbsPoint x="-12" y="12" />
+						</Anchor>
+					</Anchors>
+				</Button>
+				<!-- Topright Close Button: END -->
+
+
+				<!-- Config Window Title: BEGIN -->
+				<Label name="$parentTitle" font="font_clear_medium_bold" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="180" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentBackground">
+							<AbsPoint x="15" y="15" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<!-- Config Window Title: END -->
+				
+				<!-- Config Togglers: BEGIN -->
+                    <!-- ShowDebug Toggler: BEGIN -->
+                    <Button name="$parentShowDebugCheckBox" inherits="EA_Button_DefaultCheckBox" handleinput="true" >
+                        <Anchors>
+                            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitle">
+                                <AbsPoint x="0" y="25" />
+                            </Anchor>
+                        </Anchors>
+                        <EventHandlers>
+                            <EventHandler event="OnLButtonUp" function="PetPassive.ToggleShowDebug" />
+                        </EventHandlers>
+                    </Button>
+                    <Label name="$parentShowDebugCheckBoxLabel" font="font_clear_small_bold" autoresize="false" textalign="left" layer="popup" popable="false" handleinput="false" >
+                        <Size>
+                            <AbsPoint x="300" y="15" />
+                        </Size>
+                        <Anchors>
+                            <Anchor point="right" relativePoint="left" relativeTo="$parentShowDebugCheckBox">
+                                <AbsPoint x="5" y="-1" />
+                            </Anchor>
+                        </Anchors>
+                        <Color r="255" g="255" b="255" />
+                    </Label>
+                    <!-- ShowDebug Toggler: END -->
+					
+					<!-- AutoPassiveStance Toggler: BEGIN -->
+                    <Button name="$parentPassiveStanceCheckBox" inherits="EA_Button_DefaultCheckBox" handleinput="true" >
+                        <Anchors>
+                            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentShowDebugCheckBox">
+                                <AbsPoint x="0" y="10" />
+                            </Anchor>
+                        </Anchors>
+                        <EventHandlers>
+                            <EventHandler event="OnLButtonUp" function="PetPassive.TogglePassiveStance" />
+                        </EventHandlers>
+                    </Button>
+                    <Label name="$parentPassiveStanceCheckBoxLabel" font="font_clear_small_bold" autoresize="false" textalign="left" layer="popup" popable="false" handleinput="false" >
+                        <Size>
+                            <AbsPoint x="300" y="15" />
+                        </Size>
+                        <Anchors>
+                            <Anchor point="right" relativePoint="left" relativeTo="$parentPassiveStanceCheckBox">
+                                <AbsPoint x="5" y="-1" />
+                            </Anchor>
+                        </Anchors>
+                        <Color r="255" g="255" b="255" />
+                    </Label>
+                    <!-- AutoPassiveStance Toggler: BEGIN -->
+					
+					<!-- AutoAbilityDisabled Toggler: BEGIN -->
+                    <Button name="$parentAutoAbilityDisabledCheckBox" inherits="EA_Button_DefaultCheckBox" handleinput="true" >
+                        <Anchors>
+                            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPassiveStanceCheckBox">
+                                <AbsPoint x="0" y="10" />
+                            </Anchor>
+                        </Anchors>
+                        <EventHandlers>
+                            <EventHandler event="OnLButtonUp" function="PetPassive.ToggleAutoAbilityDisabled" />
+                        </EventHandlers>
+                    </Button>
+                    <Label name="$parentAutoAbilityDisabledCheckBoxLabel" font="font_clear_small_bold" autoresize="false" textalign="left" layer="popup" popable="false" handleinput="false" >
+                        <Size>
+                            <AbsPoint x="450" y="15" />
+                        </Size>
+                        <Anchors>
+                            <Anchor point="right" relativePoint="left" relativeTo="$parentAutoAbilityDisabledCheckBox">
+                                <AbsPoint x="5" y="-1" />
+                            </Anchor>
+                        </Anchors>
+                        <Color r="255" g="255" b="255" />
+                    </Label>
+                    <!-- AutoAbilityDisabled Toggler: BEGIN -->
+			
+				<!-- Config Togglers: END -->
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

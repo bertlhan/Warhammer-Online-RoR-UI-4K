@@ -1,0 +1,116 @@
+<Interface xmlns:xsi="http://www.w3.org/1001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="DAoCBuffCondenseTooltipItem" handleinput="false">
+			<Size>
+				<AbsPoint x="390" y="16"/>
+			</Size>
+			<Windows>
+				<DynamicImage name="$parentIcon" handleinput="false" layer="background">
+					<Size>
+						<AbsPoint x="32" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="5" y="5" />
+						</Anchor>
+					</Anchors>
+					<TexDims x="64" y="64" />
+				</DynamicImage>
+				<Label name="$parentEffectName" font="font_chat_text" maxchars="256" textalign="left" autoresize="true" autoresizewidth="true" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="370" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentIcon">
+							<AbsPoint x="7" y="8"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255"/>
+				</Label>
+			</Windows>
+		</Window>
+
+		<Window name="DAoCBuffCondenseTooltip" inherits="TooltipBase" >
+			<Size>
+				<AbsPoint x="400" y="67" />
+			</Size>
+			<Windows>
+				<Window name="$parentBackground" inherits="EA_Window_DefaultTooltipBackground">
+					<Size>
+						<AbsPoint x="0" y="0" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Label name="$parentTitle" sticky="false" font="font_default_text" maxchars="1024" text="" textalign="left" autoresize="true" autoresizewidth="true" wordwrap="true" >
+					<Size>
+						<AbsPoint x="390" y="0" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="10" y="10" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="102" a="255"/>
+				</Label>
+				<Label name="$parentText" sticky="false" font="font_default_text" maxchars="1024" text="" textalign="left"  autoresize="true" autoresizewidth="true"  wordwrap="true" >
+					<Size>
+						<AbsPoint x="390" y="0" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitle">
+							<AbsPoint x="0" y="4" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Window name="$parentEffect1" inherits="DAoCBuffCondenseTooltipItem" >
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentText" >
+							<AbsPoint x="0" y="4" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentEffect2" inherits="DAoCBuffCondenseTooltipItem" >
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffect1" >
+							<AbsPoint x="0" y="4" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentEffect3" inherits="DAoCBuffCondenseTooltipItem" >
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffect2" >
+							<AbsPoint x="0" y="4" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentEffect4" inherits="DAoCBuffCondenseTooltipItem" >
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffect3" >
+							<AbsPoint x="0" y="4" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentEffect5" inherits="DAoCBuffCondenseTooltipItem" >
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffect4" >
+							<AbsPoint x="0" y="4" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentEffect6" inherits="DAoCBuffCondenseTooltipItem" >
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffect5" >
+							<AbsPoint x="0" y="4" />
+						</Anchor>
+					</Anchors>
+				</Window>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

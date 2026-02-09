@@ -1,0 +1,13 @@
+2011-02-03  Philosound  <Philosound>
+
+[ad5664cb8b80] [v2.6.7.4]
+* Effigy.mod:
+
+isSelf rule fix version bump
+
+2021-05-29 Schett
+2.8.1
+Fixed slayer/choppa rage mechanic color
+Added BO/SW mechanic color
+
+

@@ -1,0 +1,213 @@
+<? version="1.0" encoding="UTF-8"?>
+    <!--
+    This application is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    The applications is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with the applications.  If not, see
+    <http://www.gnu.org/licenses/>.
+    -->
+    <Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Windows>
+        
+        
+            <Button name="ShiniesConfigPrice_IncreaseButton" inherits="DefaultButton" backgroundtexture="EA_HUD_01" highlighttexture="EA_HUD_01" texturescale="0.88">
+                <Size>
+                    <AbsPoint x="22" y="22" />
+                </Size>
+                <TexSlices>
+                    <Normal          id="Map-Plus-Button"            />
+                    <NormalHighlit   id="Map-Plus-Button-ROLLOVER"   />
+                    <Pressed         id="Map-Plus-Button-Depressed"  />
+                    <PressedHighlit  id="Map-Plus-Button-Depressed"  />
+                    <Disabled        id="Map-Plus-Button-Disabled"   />
+                    <DisabledPressed id="Map-Plus-Button-Disabled"   />
+                </TexSlices>
+                <TexDims x="25" y="25" />
+                <EventHandlers>
+	                <EventHandler event="OnLButtonUp" function="ShiniesConfigPrice.OnLButtonUp_IncreasePriority" />
+	            </EventHandlers>
+            </Button>
+            
+            
+            <Button name="ShiniesConfigPrice_DecreaseButton" inherits="DefaultButton" backgroundtexture="EA_HUD_01" highlighttexture="EA_HUD_01" texturescale="0.88">
+                <Size>
+                    <AbsPoint x="22" y="22" />
+                </Size>
+                <TexSlices>
+                    <Normal          id="Map-Minus-Button"            />
+                    <NormalHighlit   id="Map-Minus-Button-ROLLOVER"   />
+                    <Pressed         id="Map-Minus-Button-Depressed"  />
+                    <PressedHighlit  id="Map-Minus-Button-Depressed"  />
+                    <Disabled        id="Map-Minus-Button-Disabled"   />
+                    <DisabledPressed id="Map-Minus-Button-Disabled"   />
+                </TexSlices>
+                <TexDims x="25" y="25" />
+                <EventHandlers>
+	                <EventHandler event="OnLButtonUp" function="ShiniesConfigPrice.OnLButtonUp_DecreasePriority" />
+	            </EventHandlers>
+            </Button>
+            
+            <Button name="ShiniesConfigPrice_CheckBox" inherits="EA_Button_DefaultCheckBox" handleinput="true" texturescale="1.0"/>
+            
+            <Window name="ShiniesConfigPrice_PriorityRow" drawchildrenfirst="true">
+                <Size>
+                    <AbsPoint x="430" y="22"/>
+                </Size>
+                <!--
+                <EventHandlers>
+                    <EventHandler event="OnRButtonUp" 		function="ShiniesPostUI.OnRButtonUp_Results_ListItem" />
+                    <EventHandler event="OnMouseOver"       function="ShiniesPostUI.OnMouseOver_Results_ListItem" />
+                    <EventHandler event="OnMouseOverEnd"    function="ShiniesPostUI.OnMouseOverEnd_Results_ListItem" />
+                </EventHandlers>
+                -->
+                <Windows>
+                    <FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" />
+                            <Anchor point="bottomright" relativePoint="bottomright" />
+                        </Anchors>
+                    </FullResizeImage>
+                    
+                    <Button name="$parentEnable" inherits="EA_Button_DefaultCheckBox">
+                        <Size>
+                            <AbsPoint x="22" y="22"/>
+                        </Size>
+                        <EventHandlers>
+			                <EventHandler event="OnInitialize" function="EA_GenericCheckButton.Initialize" />
+			                <EventHandler event="OnLButtonUp" function="ShiniesConfigPrice.OnLButtonUp_EnableModule" />
+			            </EventHandlers>
+                        <Anchors>
+                            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                                <AbsPoint x="4" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Button>
+                     <Button name="$parentIncrease" inherits="ShiniesConfigPrice_IncreaseButton">
+                        <Size>
+                            <AbsPoint x="22" y="22"/>
+                        </Size>
+                        <Anchors>
+                           <Anchor point="right" relativePoint="left" relativeTo="$parentEnable">
+                                <AbsPoint x="8" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Button>
+                    <Button name="$parentDecrease" inherits="ShiniesConfigPrice_DecreaseButton">
+                        <Size>
+                            <AbsPoint x="22" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="right" relativePoint="left" relativeTo="$parentIncrease">
+                                <AbsPoint x="8" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Button>
+                    
+                  	<Label name="$parentPriority" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="2" textalign="center" autoresize="false" autoresizewidth="false">
+                        <Size>
+                            <AbsPoint x="40" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="right" relativePoint="right">
+                                <AbsPoint x="-2" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    
+                    
+                    <Label name="$parentModule" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" textalign="leftcenter" autoresize="false" autoresizewidth="false">
+                        <Size>
+                            <AbsPoint x="300" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="topright" relativePoint="topleft" relativeTo="$parentDecrease">
+                                <AbsPoint x="6" y="0"/>
+                            </Anchor>
+                            <Anchor point="bottomleft" relativePoint="bottomright" relativeTo="$parentPriority">
+                                <AbsPoint x="-6" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                </Windows>
+            </Window>
+            
+            <Window name="ShiniesConfigPrice_Priority_Template">
+		        <Windows>
+		        	<Button name="$parentEnable" inherits="Shinies_Button_ListSort" textalign="center" id="1">
+		                <Size>
+		                    <AbsPoint x="30" y="30" />
+		                </Size>
+		                <Anchors>
+		                    <Anchor point="topleft" relativePoint="topleft">
+		                       <AbsPoint x="0" y="0" />
+		                    </Anchor>
+		                </Anchors>
+		            </Button>
+		            <Button name="$parentIncrease" inherits="Shinies_Button_ListSort" textalign="center" id="2">
+		                <Size>
+		                    <AbsPoint x="30" y="30" />
+		                </Size>
+		                <Anchors>
+		                    <Anchor point="topright" relativePoint="topleft" relativeTo="$parentEnable">
+		                        <AbsPoint x="0" y="0" />
+		                    </Anchor>
+		                </Anchors>
+		            </Button>
+		            <Button name="$parentDecrease" inherits="Shinies_Button_ListSort" textalign="center" id="3">
+		                <Size>
+		                    <AbsPoint x="30" y="30" />
+		                </Size>
+		                <Anchors>
+		                    <Anchor point="topright" relativePoint="topleft" relativeTo="$parentIncrease">
+		                        <AbsPoint x="0" y="0" />
+		                    </Anchor>
+		                </Anchors>
+		            </Button>
+		            
+		            <Button name="$parentPriority" inherits="Shinies_Button_ListSort" textalign="center" id="5">
+		                <Size>
+		                    <AbsPoint x="40" y="30" />
+		                </Size>
+		                <Anchors>
+		                    <Anchor point="topright" relativePoint="topright">
+		                        <AbsPoint x="-22" y="0" />
+		                    </Anchor>
+		                </Anchors>
+		            </Button>
+		            
+		            <Button name="$parentModule" inherits="Shinies_Button_ListSort" textalign="center" id="4">
+		                <Size>
+		                    <AbsPoint x="300" y="30" />
+		                </Size>
+		                <Anchors>
+		                    <Anchor point="topright" relativePoint="topleft" relativeTo="$parentDecrease">
+		                        <AbsPoint x="0" y="0" />
+		                    </Anchor>
+		                    <Anchor point="topleft" relativePoint="topright" relativeTo="$parentPriority">
+		                        <AbsPoint x="0" y="0" />
+		                    </Anchor>
+		                </Anchors>
+		            </Button>
+		            
+		        	<ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="ShiniesConfigPrice_PriorityRow" visiblerows="4" rowspacing="0">
+		                <Anchors>
+		                    <Anchor point="topleft" relativePoint="topleft" relativeTo="">
+		                        <AbsPoint x="2" y="30" />
+		                    </Anchor>
+		                    <Anchor point="bottomright" relativePoint="bottomright">
+		                        <AbsPoint x="0" y="0"/>
+		                    </Anchor>
+		                </Anchors>
+		                <ListData table="ShiniesConfigPrice.listDisplayData" populationfunction="ShiniesConfigPrice.PopulatePriorityDisplay"/>
+		            </ListBox>
+		        </Windows>
+		    </Window>
+            
+        </Windows>
+    </Interface>

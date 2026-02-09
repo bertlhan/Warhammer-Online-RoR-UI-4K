@@ -1,0 +1,3235 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<ScrollWindow name="DAoCBuffFrameSettingsTab" childscrollwindow="$parent_ScrollChild" scrollbar="$parent_Scrollbar" lineheight="18">
+			<Windows>
+				<VerticalScrollbar name="$parent_Scrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+					<Size>
+						<AbsPoint x="20" y="360"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+							<AbsPoint x="-4" y="0"/>
+						</Anchor>
+					</Anchors>
+				</VerticalScrollbar>
+				<Window name="$parent_ScrollChild">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+
+						<Button name="$parent_RemoveFrame" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+									<AbsPoint x="-30" y="15"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.RemoveFrame" />
+							</EventHandlers>
+						</Button>
+
+
+							<FullResizeImage name="$parentFrameSettingsFrame" inherits="EA_FullResizeImage_DefaultFrame" >
+								<Anchors>
+									<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_FrameSettingsLabel">
+										<AbsPoint x="-20" y="-20" />
+									</Anchor>
+									<Anchor point="topright" relativePoint="bottomright" relativeTo="$parent">
+										<AbsPoint x="-30" y="500" />
+									</Anchor>
+								</Anchors>
+							</FullResizeImage>
+							<Label name="$parent_FrameSettingsLabel" inherits="EA_Settings_SectionTitle">
+							<Size>
+								<AbsPoint x="350" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" >
+									<AbsPoint x="15" y="85" />
+								</Anchor>
+							</Anchors>
+						</Label>
+
+						<Label name="$parent_FrameNameEditBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_FrameSettingsLabel" >
+									<AbsPoint x="15" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<EditBox name="$parent_FrameNameEditBox" inherits="EA_EditBox_DefaultFrame" history="0" maxchars="40" taborder="1">
+							<Size>
+								<AbsPoint x="250" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_FrameNameEditBoxText">
+									<AbsPoint x="55" y="-4" />
+								</Anchor>
+							</Anchors>
+						</EditBox>
+						<Label name="$parent_FrameNameEditErrorText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_FrameNameEditBoxText">
+									<AbsPoint x="0" y="40"/>
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="0" b="0" a="255" />
+						</Label>
+						<Button name="$parent_FrameNameEditBoxButton" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="right" relativeTo="$parent_FrameNameEditBox">
+									<AbsPoint x="0" y="40"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ChangeFrameName" />
+							</EventHandlers>
+						</Button>
+
+						<Label name="$parent_ActiveCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="345" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_FrameNameEditBoxText" >
+									<AbsPoint x="0" y="85" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_ActiveCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_ActiveCheckBoxText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+
+						<Label name="$parent_TypeComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_ActiveCheckBoxText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_TypeComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_TypeComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.TypeChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Label name="$parent_TargetComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_TypeComboText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_TargetComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_TargetComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.TargetChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Label name="$parent_DivideComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_TargetComboText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_DivideComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_DivideComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.DivideChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Label name="$parent_SelfEffectsCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="345" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_DivideComboText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_SelfEffectsCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_DivideComboBox">
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+
+						<Label name="$parent_RefreshComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_SelfEffectsCheckBoxText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_RefreshComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_RefreshComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.RefreshChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Label name="$parent_StickComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_RefreshComboText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_StickComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="250" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_StickComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.StickChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<FullResizeImage name="$parentLayoutFrame" inherits="EA_FullResizeImage_DefaultFrame" >
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_LayoutLabel">
+									<AbsPoint x="-20" y="-20" />
+								</Anchor>
+								<Anchor point="topright" relativePoint="bottomright" relativeTo="$parent">
+									<AbsPoint x="-30" y="1050" />
+								</Anchor>
+							</Anchors>
+						</FullResizeImage>
+						<Label name="$parent_LayoutLabel" inherits="EA_Settings_SectionTitle">
+							<Size>
+								<AbsPoint x="350" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_StickComboText" >
+									<AbsPoint x="-15" y="40" />
+								</Anchor>
+							</Anchors>
+						</Label>
+
+						<Label name="$parent_CountComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_LayoutLabel" >
+									<AbsPoint x="15" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_CountComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_CountComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.CountChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Label name="$parent_RowComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_CountComboText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_RowComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_RowComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.RowChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Label name="$parent_GrowLeftComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_RowComboText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_GrowLeftComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_GrowLeftComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.GrowLeftChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Label name="$parent_GrowUpComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_GrowLeftComboText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_GrowUpComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_GrowUpComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.GrowUpChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Label name="$parent_GrowHorizontalComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_GrowUpComboText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_GrowHorizontalComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_GrowHorizontalComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.GrowHorizontalChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Label name="$parent_FontComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_GrowHorizontalComboText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_FontComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_FontComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FontChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Label name="$parent_BuffsBelowCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="345" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_FontComboText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_BuffsBelowCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_FontComboBox">
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+
+						<Label name="$parent_HideLongtimeCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="345" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_BuffsBelowCheckBoxText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_HideLongtimeCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_BuffsBelowCheckBox">
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+
+						<Label name="$parent_LongtoPermaCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="400" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_HideLongtimeCheckBoxText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_LongtoPermaCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_HideLongtimeCheckBox">
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+
+						<Label name="$parent_ShowBorderCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="345" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_LongtoPermaCheckBoxText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_ShowBorderCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_LongtoPermaCheckBox">
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+
+						<Label name="$parent_GlassCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="345" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ShowBorderCheckBoxText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_GlassCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_ShowBorderCheckBox">
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+
+						<Label name="$parent_HPTECheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="345" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_GlassCheckBoxText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_HPTECheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_GlassCheckBox">
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+
+						<FullResizeImage name="$parentSortFrame" inherits="EA_FullResizeImage_DefaultFrame" >
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_SortLabel">
+									<AbsPoint x="-20" y="-20" />
+								</Anchor>
+								<Anchor point="topright" relativePoint="bottomright" relativeTo="$parent">
+									<AbsPoint x="-30" y="1205" />
+								</Anchor>
+							</Anchors>
+						</FullResizeImage>
+						<Label name="$parent_SortLabel" inherits="EA_Settings_SectionTitle">
+							<Size>
+								<AbsPoint x="350" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_HPTECheckBoxText" >
+									<AbsPoint x="-15" y="40" />
+								</Anchor>
+							</Anchors>
+						</Label>
+
+						<Label name="$parent_PermabuffsComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_SortLabel" >
+									<AbsPoint x="15" y="10" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_PermabuffsComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_PermabuffsComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.PermabuffsChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Label name="$parent_BufforderComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_PermabuffsComboText" >
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_BufforderComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+							<Size>
+								<AbsPoint x="150" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_BufforderComboText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.BufforderChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<FullResizeImage name="$parentFilterFrame" inherits="EA_FullResizeImage_DefaultFrame" >
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_FilterLabel">
+									<AbsPoint x="-20" y="-20" />
+								</Anchor>
+								<Anchor point="topright" relativePoint="bottomright" relativeTo="$parent">
+									<AbsPoint x="-30" y="1810" />
+								</Anchor>
+							</Anchors>
+						</FullResizeImage>
+						<Label name="$parent_FilterLabel" inherits="EA_Settings_SectionTitle">
+							<Size>
+								<AbsPoint x="350" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BufforderComboText" >
+									<AbsPoint x="-15" y="40" />
+								</Anchor>
+							</Anchors>
+						</Label>
+
+						<Label name="$parent_AdvancedFiltersCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="345" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_FilterLabel" >
+									<AbsPoint x="15" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_AdvancedFiltersCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_AdvancedFiltersCheckBoxText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+						<DynamicImage name="$parent_AdvancedFiltersTooltip" id="103" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+							<Size>
+								<AbsPoint x="32" y="32" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_AdvancedFiltersCheckBox">
+									<AbsPoint x="5" y="0" />
+								</Anchor>
+							</Anchors>
+							<TexDims x="32" y="32" />
+							<EventHandlers>
+								<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+							</EventHandlers>
+						</DynamicImage>
+
+						<Label name="$parent_StaticCondenseCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="345" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_AdvancedFiltersCheckBoxText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_StaticCondenseCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_StaticCondenseCheckBoxText">
+									<AbsPoint x="395" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+
+						<!-- ListBox -->
+						<ListBox name="$parent_FilterList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="DAoCBuffFrameSettings_FilterRow" visiblerows="5" rowcount="50" rowspacing="1">
+							<Size>
+								<AbsPoint x="360" y="205" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_StaticCondenseCheckBoxText">
+									<AbsPoint x="0" y="125" />
+								</Anchor>
+							</Anchors><!-- FUNC -->
+							<ListData table="DAoCBuffSettings.TmpFilter" populationfunction="DAoCBuffSettings.PopulateFilterList">
+								<ListColumns>
+									<ListColumn windowname="Name" variable="name" format="wstring" />
+								</ListColumns>
+							</ListData>
+						</ListBox>
+						<DynamicImage name="$parent_FilterListTooltip" id="104" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+							<Size>
+								<AbsPoint x="32" y="32" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="bottomleft" relativeTo="$parent_FilterList">
+									<AbsPoint x="5" y="0" />
+								</Anchor>
+							</Anchors>
+							<TexDims x="32" y="32" />
+							<EventHandlers>
+								<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+							</EventHandlers>
+						</DynamicImage>
+
+						<Button name="$parent_FilterUpButton" inherits="EA_ScrollBar_DefaultUpArrowButton" layer="secondary">
+							<Size>
+								<AbsPoint x="26" y="26"/>
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_FilterList">
+									<AbsPoint x="15" y="70"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.MoveFilterUp" />
+							</EventHandlers>
+						</Button>
+						<Label name="$parent_FilterUpButtonText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_FilterUpButton" >
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Button name="$parent_FilterDownButton" inherits="EA_ScrollBar_DefaultDownArrowButton" layer="secondary">
+							<Size>
+								<AbsPoint x="26" y="26"/>
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_FilterUpButton">
+									<AbsPoint x="0" y="40"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.MoveFilterDown" />
+							</EventHandlers>
+						</Button>
+						<Label name="$parent_FilterDownButtonText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_FilterDownButton" >
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+
+						<Button name="$parent_AddFilterButton" inherits="EA_Button_DefaultResizeable" layer="secondary">
+							<Size>
+								<AbsPoint x="175" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_FilterList">
+									<AbsPoint x="50" y="15"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.AddFilter" />
+							</EventHandlers>
+						</Button>
+
+						<Button name="$parent_RemoveFilterButton" inherits="EA_Button_DefaultResizeable" layer="secondary">
+							<Size>
+								<AbsPoint x="175" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomright" relativePoint="bottomleft" relativeTo="$parent_FilterList">
+									<AbsPoint x="50" y="-15"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.RemoveFilter" />
+							</EventHandlers>
+						</Button>
+
+						<Button name="$parent_FilterEditButton" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_FilterList">
+									<AbsPoint x="50" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.EditFilterOnLButtonUp" />
+							</EventHandlers>
+						</Button>
+
+						<Label name="$parent_FilterNameEditBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_FilterEditButton" >
+									<AbsPoint x="0" y="30" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<EditBox name="$parent_FilterNameEditBox" inherits="EA_EditBox_DefaultFrame" history="0" maxchars="40" taborder="1">
+							<Size>
+								<AbsPoint x="250" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="right" relativeTo="$parent_FilterNameEditBoxText">
+									<AbsPoint x="520" y="-4" />
+								</Anchor>
+							</Anchors>
+						</EditBox>
+						<Label name="$parent_FilterNameEditErrorText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_FilterNameEditBoxText">
+									<AbsPoint x="0" y="40"/>
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="0" b="0" a="255" />
+						</Label>
+						<Button name="$parent_FilterNameEditBoxButton" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="right" relativeTo="$parent_FilterNameEditBox">
+									<AbsPoint x="0" y="40"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.FilterNameChanged" />
+							</EventHandlers>
+						</Button>
+					</Windows>
+				</Window>
+			</Windows>
+		</ScrollWindow>
+
+		<Window name="DAoCBuff_Settings_Filter" inherits="EA_Window_Default" movable="true" layer="secondary">
+			<Size>
+				<AbsPoint x="800" y="750" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root" />
+			</Anchors>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="WindowUtils.TrapClick" />
+			</EventHandlers>
+			<Windows>
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" handleinput="true">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" >
+							<AbsPoint x="27" y="0" />
+						</Anchor>
+						<Anchor point="topright" relativePoint="topright">
+							<AbsPoint x="-3" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.FilterSettings.Close" />
+					</EventHandlers>
+				</Button>
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame" handleinput="true">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="-10" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<ScrollWindow name="$parentFrame" childscrollwindow="$parent_ScrollChild" scrollbar="$parent_Scrollbar" lineheight="18">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<VerticalScrollbar name="$parent_Scrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+							<Size>
+								<AbsPoint x="20" y="360"/>
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+									<AbsPoint x="-4" y="0"/>
+								</Anchor>
+							</Anchors>
+						</VerticalScrollbar>
+						<Window name="$parent_ScrollChild">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+								<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+								<Label name="$parent_EnableFilterCheckBoxText" inherits="EA_Settings_SectionTitle" textalign="center">
+									<Size>
+										<AbsPoint x="345" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentActionFrame" >
+											<AbsPoint x="0" y="-50" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parent_EnableFilterCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="30" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parent_EnableFilterCheckBoxText">
+											<AbsPoint x="395" y="5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+									</EventHandlers>
+								</Window>
+								<FullResizeImage name="$parentActionFrame" inherits="EA_FullResizeImage_DefaultFrame" >
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="10" y="70" />
+										</Anchor>
+										<Anchor point="topright" relativePoint="bottomright" relativeTo="$parent">
+											<AbsPoint x="-30" y="480" />
+										</Anchor>
+									</Anchors>
+								</FullResizeImage>
+								<Label name="$parent_ActionLabel" inherits="EA_Settings_SectionTitle">
+									<Size>
+										<AbsPoint x="350" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentActionFrame" >
+											<AbsPoint x="15" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+
+								<Label name="$parent_DeleteCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="345" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ActionLabel" >
+											<AbsPoint x="20" y="40" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parent_DeleteCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="30" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_DeleteCheckBoxText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+									</EventHandlers>
+								</Window>
+								<DynamicImage name="$parent_DeleteTooltip" id="105" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+									<Size>
+										<AbsPoint x="32" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parent_DeleteCheckBox">
+											<AbsPoint x="5" y="0" />
+										</Anchor>
+									</Anchors>
+									<TexDims x="32" y="32" />
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+									</EventHandlers>
+								</DynamicImage>
+
+								<Label name="$parent_EndaCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="345" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_DeleteCheckBoxText" >
+											<AbsPoint x="0" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parent_EndaCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="30" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_EndaCheckBoxText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+									</EventHandlers>
+								</Window>
+								<DynamicImage name="$parent_EndaTooltip" id="106" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+									<Size>
+										<AbsPoint x="32" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parent_EndaCheckBox">
+											<AbsPoint x="5" y="0" />
+										</Anchor>
+									</Anchors>
+									<TexDims x="32" y="32" />
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+									</EventHandlers>
+								</DynamicImage>
+
+								<Label name="$parent_CondenseCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="345" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_EndaCheckBoxText" >
+											<AbsPoint x="0" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parent_CondenseCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="30" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_CondenseCheckBoxText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+									</EventHandlers>
+								</Window>
+								<DynamicImage name="$parent_CondenseTooltip" id="108" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+									<Size>
+										<AbsPoint x="32" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parent_CondenseCheckBox">
+											<AbsPoint x="5" y="0" />
+										</Anchor>
+									</Anchors>
+									<TexDims x="32" y="32" />
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+									</EventHandlers>
+								</DynamicImage>
+
+								<Label name="$parent_ColorCCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="145" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_CondenseCheckBoxText" >
+											<AbsPoint x="0" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parent_ColorCCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="30" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ColorCCheckBoxText">
+											<AbsPoint x="195" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+									</EventHandlers>
+								</Window>
+								<Label name="$parent_ColorBCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="145" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_ColorCCheckBox" >
+											<AbsPoint x="20" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parent_ColorBCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="30" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ColorBCheckBoxText">
+											<AbsPoint x="195" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+									</EventHandlers>
+								</Window>
+
+								<SliderBar name="$parent_SliderCR" inherits="EA_Default_SliderBar" numticks="510" locktoticks="false">
+									<Size>
+										<AbsPoint x="140" y="33" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ColorCCheckBoxText" >
+											<AbsPoint x="20" y="20" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="DAoCBuffSettings.FilterSettings.OnSlideCR" />
+									</EventHandlers>
+								</SliderBar>
+								<Label name="$parent_SliderCRLabel" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="220" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_SliderCR" >
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+
+								<SliderBar name="$parent_SliderCG" inherits="EA_Default_SliderBar" numticks="510" locktoticks="false">
+									<Size>
+										<AbsPoint x="140" y="33" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_SliderCR" >
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="DAoCBuffSettings.FilterSettings.OnSlideCG" />
+									</EventHandlers>
+								</SliderBar>
+								<Label name="$parent_SliderCGLabel" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="220" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_SliderCG" >
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+
+								<SliderBar name="$parent_SliderCB" inherits="EA_Default_SliderBar" numticks="510" locktoticks="false">
+									<Size>
+										<AbsPoint x="140" y="33" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_SliderCG" >
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="DAoCBuffSettings.FilterSettings.OnSlideCB" />
+									</EventHandlers>
+								</SliderBar>
+								<Label name="$parent_SliderCBLabel" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="220" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_SliderCB" >
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+
+								<SliderBar name="$parent_SliderBR" inherits="EA_Default_SliderBar" numticks="510" locktoticks="false">
+									<Size>
+										<AbsPoint x="140" y="33" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ColorBCheckBoxText" >
+											<AbsPoint x="20" y="20" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="DAoCBuffSettings.FilterSettings.OnSlideBR" />
+									</EventHandlers>
+								</SliderBar>
+								<Label name="$parent_SliderBRLabel" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="220" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_SliderBR" >
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+
+								<SliderBar name="$parent_SliderBG" inherits="EA_Default_SliderBar" numticks="510" locktoticks="false">
+									<Size>
+										<AbsPoint x="140" y="33" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_SliderBR" >
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="DAoCBuffSettings.FilterSettings.OnSlideBG" />
+									</EventHandlers>
+								</SliderBar>
+								<Label name="$parent_SliderBGLabel" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="220" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_SliderBG" >
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+
+								<SliderBar name="$parent_SliderBB" inherits="EA_Default_SliderBar" numticks="510" locktoticks="false">
+									<Size>
+										<AbsPoint x="140" y="33" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_SliderBG" >
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="DAoCBuffSettings.FilterSettings.OnSlideBB" />
+									</EventHandlers>
+								</SliderBar>
+								<Label name="$parent_SliderBBLabel" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="220" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_SliderBB" >
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+
+								<DynamicImage name="$parent_Icon" texture="DAoC_whiteframe" filtering="true" handleinput="false">
+									<Size>
+										<AbsPoint x="50" y="50" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_SliderBRLabel">
+											<AbsPoint x="40" y="40" />
+										</Anchor>
+									</Anchors>
+									<TexDims x="64" y="64" />
+								</DynamicImage>
+								<DynamicImage name="$parent_Frame" texture="n_DAoCBuffBorder" filtering="true" handleinput="false">
+									<TexDims x="64" y="64" />
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_Icon">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+										<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent_Icon">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</DynamicImage>
+
+
+								<FullResizeImage name="$parentConditionFrame" inherits="EA_FullResizeImage_DefaultFrame" >
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentActionFrame">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+										<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentActionFrame">
+											<AbsPoint x="0" y="500" />
+										</Anchor>
+									</Anchors>
+								</FullResizeImage>
+								<Label name="$parent_ConditionLabel" inherits="EA_Settings_SectionTitle">
+									<Size>
+										<AbsPoint x="350" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentConditionFrame" >
+											<AbsPoint x="15" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+
+								<Button name="$parent_AddConditionButton" inherits="EA_Button_DefaultResizeable" layer="secondary">
+									<Size>
+										<AbsPoint x="275" y="39"/>
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ConditionLabel" >
+											<AbsPoint x="20" y="40" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.FilterSettings.AddCondition" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parent_RemoveConditionButton" inherits="EA_Button_DefaultResizeable" layer="secondary">
+									<Size>
+										<AbsPoint x="275" y="39"/>
+									</Size>
+									<Anchors>
+										<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_AddConditionButton">
+											<AbsPoint x="30" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.FilterSettings.RemoveCondition" />
+									</EventHandlers>
+								</Button>
+
+								<Label name="$parent_G4HistoryBrowserComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_AddConditionButton" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parent_G4HistoryBrowserComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+									<Size>
+										<AbsPoint x="250" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_G4HistoryBrowserComboText">
+											<AbsPoint x="295" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.G4HistoryBrowserChanged" />
+									</EventHandlers>
+								</ComboBox>
+								<DynamicImage name="$parent_G4HistoryBrowserTooltip" id="109" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+									<Size>
+										<AbsPoint x="32" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parent_G4HistoryBrowserComboBox">
+											<AbsPoint x="5" y="0" />
+										</Anchor>
+									</Anchors>
+									<TexDims x="32" y="32" />
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+									</EventHandlers>
+								</DynamicImage>
+
+								<Label name="$parent_ConditionComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_G4HistoryBrowserComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parent_ConditionComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+									<Size>
+										<AbsPoint x="250" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ConditionComboText">
+											<AbsPoint x="295" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.ConditionChanged" />
+									</EventHandlers>
+								</ComboBox>
+
+								<Label name="$parent_ConditionTypeComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ConditionComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+
+								<ComboBox name="$parent_ConditionTypeComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+									<Size>
+										<AbsPoint x="250" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ConditionTypeComboText">
+											<AbsPoint x="295" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.ConditionTypeChanged" />
+									</EventHandlers>
+								</ComboBox>
+								<DynamicImage name="$parent_LayerTooltip" id="111" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+									<Size>
+										<AbsPoint x="32" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parent_ConditionTypeComboBox">
+											<AbsPoint x="5" y="0" />
+										</Anchor>
+									</Anchors>
+									<TexDims x="32" y="32" />
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+									</EventHandlers>
+								</DynamicImage>
+
+								<Label name="$parent_FakeLabel" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="1" y="450" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ConditionTypeComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="0" />
+								</Label>
+
+								<Window name="$parent_G1FilterWindow" inherits="DAoCBuffFrameSettings_G1Filter">
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ConditionTypeComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+								</Window>
+
+								<Window name="$parent_G2FilterWindow" inherits="DAoCBuffFrameSettings_G2Filter">
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ConditionTypeComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+								</Window>
+
+								<Window name="$parent_G4FilterWindow" inherits="DAoCBuffFrameSettings_G4Filter">
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ConditionTypeComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+								</Window>
+
+								<Window name="$parent_G5FilterWindow" inherits="DAoCBuffFrameSettings_G5Filter">
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ConditionTypeComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+								</Window>
+
+
+								<FullResizeImage name="$parentEnvironmentFrame" inherits="EA_FullResizeImage_DefaultFrame" >
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentConditionFrame">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+										<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentConditionFrame">
+											<AbsPoint x="0" y="200" />
+										</Anchor>
+									</Anchors>
+								</FullResizeImage>
+								<Label name="$parent_EnvironmentLabel" inherits="EA_Settings_SectionTitle">
+									<Size>
+										<AbsPoint x="350" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentEnvironmentFrame" >
+											<AbsPoint x="15" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+
+								<Label name="$parent_InvertResultCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="345" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_EnvironmentLabel" >
+											<AbsPoint x="20" y="40" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parent_InvertResultCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="30" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_InvertResultCheckBoxText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+									</EventHandlers>
+								</Window>
+								<DynamicImage name="$parent_InvertTooltip" id="107" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+									<Size>
+										<AbsPoint x="32" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parent_InvertResultCheckBox">
+											<AbsPoint x="5" y="0" />
+										</Anchor>
+									</Anchors>
+									<TexDims x="32" y="32" />
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+									</EventHandlers>
+								</DynamicImage>
+
+								<Label name="$parent_UseandComboBoxText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_InvertResultCheckBoxText" >
+											<AbsPoint x="0" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parent_UseandComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+									<Size>
+										<AbsPoint x="150" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parent_UseandComboBoxText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.UseandChanged" />
+									</EventHandlers>
+								</ComboBox>
+
+
+								<FullResizeImage name="$parentMiscFrame" inherits="EA_FullResizeImage_DefaultFrame" >
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnvironmentFrame">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+										<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentEnvironmentFrame">
+											<AbsPoint x="0" y="500" />
+										</Anchor>
+									</Anchors>
+								</FullResizeImage>
+								<Label name="$parent_MiscLabel" inherits="EA_Settings_SectionTitle">
+									<Size>
+										<AbsPoint x="350" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentMiscFrame" >
+											<AbsPoint x="15" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+
+								<Label name="$parent_TextureText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_MiscLabel" >
+											<AbsPoint x="20" y="40" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<DynamicImage name="$parent_CondenseIconPreview" texture="DAoC_new_qm" filtering="true" handleinput="true" layer="background">
+									<Size>
+										<AbsPoint x="48" y="48" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_TextureText">
+											<AbsPoint x="350" y="-35" />
+										</Anchor>
+									</Anchors>
+									<TexDims x="64" y="64" />
+								</DynamicImage>
+								<ComboBox name="$parent_TextureTypeComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+									<Size>
+										<AbsPoint x="150" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_TextureText">
+											<AbsPoint x="0" y="25" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.TextureTypeChanged" />
+									</EventHandlers>
+								</ComboBox>
+								<ComboBox name="$parent_TextureComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+									<Size>
+										<AbsPoint x="250" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_TextureTypeComboBox">
+											<AbsPoint x="120" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.TextureChanged" />
+									</EventHandlers>
+								</ComboBox>
+
+								<Label name="$parent_CombatHideCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="345" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_TextureTypeComboBox" >
+											<AbsPoint x="0" y="25" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parent_CombatHideCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="30" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_CombatHideCheckBoxText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+									</EventHandlers>
+								</Window>
+
+								<Label name="$parent_FilterPropertyComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_CombatHideCheckBoxText" >
+											<AbsPoint x="0" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parent_FilterPropertyComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+									<Size>
+										<AbsPoint x="150" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parent_FilterPropertyComboText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.FilterPropertyChanged" />
+									</EventHandlers>
+								</ComboBox>
+
+								<Label name="$parent_EnableClasstableCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="345" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_FilterPropertyComboText" >
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parent_EnableClasstableCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="30" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_EnableClasstableCheckBoxText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+									</EventHandlers>
+								</Window>
+
+								<Label name="$parent_ClassTableComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_EnableClasstableCheckBoxText" >
+											<AbsPoint x="0" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parent_ClassTableComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+									<Size>
+										<AbsPoint x="250" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parent_ClassTableComboText">
+											<AbsPoint x="295" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.ClassTableChanged" />
+									</EventHandlers>
+								</ComboBox>
+								<Button name="$parent_AddClassTableButton" inherits="EA_Button_DefaultResizeable" layer="secondary">
+									<Size>
+										<AbsPoint x="275" y="39"/>
+									</Size>
+									<Anchors>
+										<Anchor point="bottomright" relativePoint="topright" relativeTo="$parent_ClassTableComboBox" >
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.FilterSettings.AddClassTable" />
+									</EventHandlers>
+								</Button>
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+			</Windows>
+		</Window>
+
+		<Window name="DAoCBuffFrameSettings_FilterRow" handleinput="true" layer="secondary">
+			<Size>
+				<AbsPoint x="360" y="40" />
+			</Size>
+			<EventHandlers> <!-- FUNC -->
+				<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.FilterRowOnLButtonUp" />
+			</EventHandlers>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"/>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentName" wordwrap="true" font="font_default_medium_heading" textalign="left" maxchars="40" handleinput="false">
+					<Size>
+						<AbsPoint x="360" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="center" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+
+		<Window name="DAoCBuffFrameSettings_G1Filter" handleinput="true" layer="secondary">
+			<Size>
+				<AbsPoint x="700" y="40" />
+			</Size>
+			<Windows>
+				<Label name="$parent_G1ComboText" inherits="DefaultWindowSmallText" textalign="left">
+					<Size>
+						<AbsPoint x="245" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<ComboBox name="$parent_G1ComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+					<Size>
+						<AbsPoint x="250" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_G1ComboText">
+							<AbsPoint x="295" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.G1FilterChanged" />
+					</EventHandlers>
+				</ComboBox>
+			</Windows>
+		</Window>
+
+		<Window name="DAoCBuffFrameSettings_G2Filter" handleinput="true" layer="secondary">
+			<Size>
+				<AbsPoint x="700" y="40" />
+			</Size>
+			<Windows>
+				<Label name="$parent_G2ComboText" inherits="DefaultWindowSmallText" textalign="left">
+					<Size>
+						<AbsPoint x="245" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<ComboBox name="$parent_G2ComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+					<Size>
+						<AbsPoint x="250" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_G2ComboText">
+							<AbsPoint x="295" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.G2ListChanged" />
+					</EventHandlers>
+				</ComboBox>
+				<DynamicImage name="$parent_G2Tooltip" id="110" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+					<Size>
+						<AbsPoint x="32" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parent_G2ComboBox">
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+					<TexDims x="32" y="32" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+				<Label name="$parent_ErrorText" inherits="DefaultWindowSmallText" maxchars="100"  textalign="left" wordwrap="true" font="font_clear_small_bold">
+					<Size>
+						<AbsPoint x="260" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parent_G2ComboBox">
+							<AbsPoint x="0" y="8" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="0" b="0" a="255" />
+				</Label>
+			</Windows>
+		</Window>
+
+		<Window name="DAoCBuffFrameSettings_G5Filter" handleinput="true" layer="secondary">
+			<Size>
+				<AbsPoint x="700" y="140" />
+			</Size>
+			<Windows>
+				<Label name="$parent_G5ComboText" inherits="DefaultWindowSmallText" textalign="left">
+					<Size>
+						<AbsPoint x="245" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<ComboBox name="$parent_G5ComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+					<Size>
+						<AbsPoint x="250" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_G5ComboText">
+							<AbsPoint x="295" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.G5FilterChanged" />
+					</EventHandlers>
+				</ComboBox>
+				<Label name="$parent_G5DurationComboText" inherits="DefaultWindowSmallText" textalign="left">
+					<Size>
+						<AbsPoint x="245" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_G5ComboText" >
+							<AbsPoint x="0" y="40" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<ComboBox name="$parent_G5DurationComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+					<Size>
+						<AbsPoint x="250" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_G5DurationComboText">
+							<AbsPoint x="295" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.G5DurationChanged" />
+					</EventHandlers>
+				</ComboBox>
+			</Windows>
+		</Window>
+
+		<Window name="DAoCBuffFrameSettings_G4Filter" handleinput="true" layer="secondary">
+			<Size>
+				<AbsPoint x="700" y="440" />
+			</Size>
+			<Windows>
+				<Label name="$parent_G4UseandComboText" inherits="DefaultWindowSmallText" textalign="left">
+					<Size>
+						<AbsPoint x="245" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<ComboBox name="$parent_G4UseandComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="popup">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_G4UseandComboText">
+							<AbsPoint x="395" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="DAoCBuffSettings.FilterSettings.G4UseandChanged" />
+					</EventHandlers>
+				</ComboBox>
+
+				<Label name="$parent_G4NotResultCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+					<Size>
+						<AbsPoint x="345" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_G4UseandComboText" >
+							<AbsPoint x="0" y="40" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Window name="$parent_G4NotResultCheckBox" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="30" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent_G4NotResultCheckBoxText">
+							<AbsPoint x="395" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+						<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+					</EventHandlers>
+				</Window>
+				<DynamicImage name="$parent_G4NotResultTooltip" id="107" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+					<Size>
+						<AbsPoint x="32" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parent_G4NotResultCheckBox">
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+					<TexDims x="32" y="32" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+
+				<Button name="$parent_G4RecursiveConditionsButton" inherits="EA_Button_DefaultResizeable" >
+					<Size>
+						<AbsPoint x="225" y="39"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="right" relativeTo="$parent_G4NotResultCheckBoxText">
+							<AbsPoint x="0" y="40"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.FilterSettings.ChangeG4RecursiveConditions" />
+					</EventHandlers>
+				</Button>
+			</Windows>
+		</Window>
+
+		<ScrollWindow name="DAoCBuffGeneralSettingsTab" childscrollwindow="$parent_ScrollChild" scrollbar="$parent_Scrollbar" lineheight="18">
+			<Windows>
+				<VerticalScrollbar name="$parent_Scrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+					<Size>
+						<AbsPoint x="20" y="360"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+							<AbsPoint x="-4" y="0"/>
+						</Anchor>
+					</Anchors>
+				</VerticalScrollbar>
+				<Window name="$parent_ScrollChild">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<DynamicImage name="DAoCBuff_Knot" texture="DAoC_knot" filtering="true" handleinput="false">
+							<Size>
+								<AbsPoint x="256" y="256" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+									<AbsPoint x="-35" y="15" />
+								</Anchor>
+							</Anchors>
+							<TexDims x="256" y="256" />
+						</DynamicImage>
+
+						<Label name="$parent_GeneralSettingsLabel" inherits="EA_Settings_SectionTitle">
+							<Size>
+								<AbsPoint x="350" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="50" />
+								</Anchor>
+							</Anchors>
+						</Label>
+
+
+						<Label name="$parent_KillBuffsCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="200" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_GeneralSettingsLabel" >
+									<AbsPoint x="15" y="15" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_KillBuffsCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_KillBuffsCheckBoxText">
+									<AbsPoint x="30" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+						<DynamicImage name="$parent_KillBuffsTooltip" id="101" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+							<Size>
+								<AbsPoint x="32" y="32" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_KillBuffsCheckBox">
+									<AbsPoint x="5" y="0" />
+								</Anchor>
+							</Anchors>
+							<TexDims x="32" y="32" />
+							<EventHandlers>
+								<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+							</EventHandlers>
+						</DynamicImage>
+
+						<Label name="$parent_ToggleTestModeCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="200" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_KillBuffsCheckBoxText" >
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_ToggleTestModeCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_ToggleTestModeCheckBoxText">
+									<AbsPoint x="30" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+
+						<Button name="$parent_ImExportButton" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="270" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="topleft" relativeTo="$parent_ToggleTestModeCheckBoxText">
+									<AbsPoint x="-50" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ImExport.Open" />
+							</EventHandlers>
+						</Button>
+
+						<Label name="$parent_GlobalFrameSettingsLabel" inherits="EA_Settings_SectionTitle">
+							<Size>
+								<AbsPoint x="300" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ToggleTestModeCheckBoxText">
+									<AbsPoint x="-15" y="80" />
+								</Anchor>
+							</Anchors>
+						</Label>
+
+						<Label name="$parent_ChangeGlobalSizeText" inherits="DefaultWindowSmallText" textalign="left" autosize="true">
+							<Size>
+								<AbsPoint x="400" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_GlobalFrameSettingsLabel" >
+									<AbsPoint x="15" y="19" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_ChangeGlobalSizeComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+							<Size>
+								<AbsPoint x="250" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ChangeGlobalSizeText">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</ComboBox>
+						<Button name="$parent_ChangeGlobalSizeButton" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_ChangeGlobalSizeComboBox">
+									<AbsPoint x="40" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ChangeGlobalSize" />
+							</EventHandlers>
+						</Button>
+
+						<Label name="$parent_ChangeGlobalRefreshText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="525" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ChangeGlobalSizeComboBox" >
+									<AbsPoint x="0" y="19" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_ChangeGlobalRefreshComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+							<Size>
+								<AbsPoint x="250" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ChangeGlobalRefreshText">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</ComboBox>
+						<Button name="$parent_ChangeGlobalRefreshButton" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_ChangeGlobalRefreshComboBox">
+									<AbsPoint x="40" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ChangeGlobalRefresh" />
+							</EventHandlers>
+						</Button>
+
+						<Label name="$parent_ChangeGlobalFontText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="455" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ChangeGlobalRefreshComboBox" >
+									<AbsPoint x="0" y="19" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_ChangeGlobalFontComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+							<Size>
+								<AbsPoint x="250" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ChangeGlobalFontText">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</ComboBox>
+						<Button name="$parent_ChangeGlobalFontButton" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_ChangeGlobalFontComboBox">
+									<AbsPoint x="40" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ChangeGlobalFont" />
+							</EventHandlers>
+						</Button>
+
+						<Label name="$parent_ChangeGlobalBorderText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="455" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ChangeGlobalFontComboBox" >
+									<AbsPoint x="0" y="19" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_ChangeGlobalBorderComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+							<Size>
+								<AbsPoint x="250" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ChangeGlobalBorderText">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</ComboBox>
+						<Button name="$parent_ChangeGlobalBorderButton" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_ChangeGlobalBorderComboBox">
+									<AbsPoint x="40" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ChangeGlobalBorder" />
+							</EventHandlers>
+						</Button>
+
+						<Label name="$parent_ChangeGlobalGlassText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="455" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ChangeGlobalBorderComboBox" >
+									<AbsPoint x="0" y="19" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_ChangeGlobalGlassComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+							<Size>
+								<AbsPoint x="250" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ChangeGlobalGlassText">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</ComboBox>
+						<Button name="$parent_ChangeGlobalGlassButton" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_ChangeGlobalGlassComboBox">
+									<AbsPoint x="40" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ChangeGlobalGlass" />
+							</EventHandlers>
+						</Button>
+
+						<Label name="$parent_GlobalFakeText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="1" y="60" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ChangeGlobalGlassComboBox" >
+									<AbsPoint x="0" y="19" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+					</Windows>
+				</Window>
+			</Windows>
+		</ScrollWindow>
+
+
+
+		<ScrollWindow name="DAoCBuffListManagerTab" childscrollwindow="$parent_ScrollChild" scrollbar="$parent_Scrollbar" lineheight="18">
+			<Windows>
+				<VerticalScrollbar name="$parent_Scrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+					<Size>
+						<AbsPoint x="20" y="360"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+							<AbsPoint x="-4" y="0"/>
+						</Anchor>
+					</Anchors>
+				</VerticalScrollbar>
+				<Window name="$parent_ScrollChild">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+
+						<FullResizeImage name="$parentAddDeleteFrame" inherits="EA_FullResizeImage_DefaultFrame" >
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="40" />
+								</Anchor>
+								<Anchor point="topright" relativePoint="bottomright" relativeTo="$parent">
+									<AbsPoint x="-30" y="280" />
+								</Anchor>
+							</Anchors>
+						</FullResizeImage>
+						<Label name="$parent_ListSettingsLabel" inherits="EA_Settings_SectionTitle" autosize="true">
+							<Size>
+								<AbsPoint x="400" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentAddDeleteFrame" >
+									<AbsPoint x="15" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						<DynamicImage name="$parent_ListManagerTooltip" id="102" texture="DAoC_tooltip_qm" filtering="true" handleinput="true" layer="background">
+							<Size>
+								<AbsPoint x="32" y="32" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_ListSettingsLabel">
+									<AbsPoint x="5" y="0" />
+								</Anchor>
+							</Anchors>
+							<TexDims x="32" y="32" />
+							<EventHandlers>
+								<EventHandler event="OnMouseOver" function="DAoCBuffSettings.ShowTooltip" />
+							</EventHandlers>
+						</DynamicImage>
+						<Label name="$parent_AddListEditBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ListSettingsLabel">
+									<AbsPoint x="10" y="15" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<EditBox name="$parent_AddListEditBox" inherits="EA_EditBox_DefaultFrame" history="0" maxchars="40" taborder="1">
+							<Size>
+								<AbsPoint x="250" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parent_AddListEditBoxText">
+									<AbsPoint x="55" y="-4" />
+								</Anchor>
+							</Anchors>
+						</EditBox>
+						<Label name="$parent_AddListEditErrorText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="left" relativePoint="left" relativeTo="$parent_AddListEditBoxText">
+									<AbsPoint x="0" y="40"/>
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="0" b="0" a="255" />
+						</Label>
+						<Button name="$parent_AddListEditBoxButton" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="right" relativeTo="$parent_AddListEditBox">
+									<AbsPoint x="0" y="40"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.AddList" />
+							</EventHandlers>
+						</Button>
+
+						<Label name="$parent_RemoveListEditBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_AddListEditErrorText" >
+									<AbsPoint x="0" y="19" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_RemoveListComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+							<Size>
+								<AbsPoint x="250" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_RemoveListEditBoxText">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.RemoveListChanged" />
+							</EventHandlers>
+						</ComboBox>
+						<Button name="$parent_RemoveListEditBoxButton" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="right" relativeTo="$parent_AddListEditBoxButton">
+									<AbsPoint x="0" y="89"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.RemoveList" />
+							</EventHandlers>
+						</Button>
+
+
+						<FullResizeImage name="$parentManagerFrame" inherits="EA_FullResizeImage_DefaultFrame" >
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAddDeleteFrame">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+								<Anchor point="topright" relativePoint="bottomright" relativeTo="$parent">
+									<AbsPoint x="-30" y="1050" />
+								</Anchor>
+							</Anchors>
+						</FullResizeImage>
+						<Label name="$parent_ManagerModeComboText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentManagerFrame" >
+									<AbsPoint x="15" y="20" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<ComboBox name="$parent_ManagerModeComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+							<Size>
+								<AbsPoint x="250" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_ManagerModeComboText">
+									<AbsPoint x="55" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.ManagerModeChanged" />
+							</EventHandlers>
+						</ComboBox>
+						<Label name="$parent_RightClickCopyCheckBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ManagerModeComboText" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Window name="$parent_RightClickCopyCheckBox" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="30" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_RightClickCopyCheckBoxText">
+									<AbsPoint x="200" y="-5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ToggleCheckBox" />
+							</EventHandlers>
+						</Window>
+
+
+						<ListBox name="$parent_LeftList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="DAoCBuffLeftListManager_ListRow" visiblerows="8" rowcount="250" rowspacing="1" layer="secondary">
+							<Size>
+								<AbsPoint x="250" y="320" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_RightClickCopyCheckBoxText">
+									<AbsPoint x="0" y="75" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="" />
+							</EventHandlers>
+							<ListData table="DAoCBuffSettings.LeftTable" populationfunction="DAoCBuffSettings.PopulateLeftListManager" />
+						</ListBox>
+						<ListBox name="$parent_RightList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="DAoCBuffRightListManager_ListRow" visiblerows="8" rowcount="250" rowspacing="1" layer="secondary">
+							<Size>
+								<AbsPoint x="250" y="320" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_LeftList">
+									<AbsPoint x="90" y="0" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="" />
+							</EventHandlers>
+							<ListData table="DAoCBuffSettings.RightTable" populationfunction="DAoCBuffSettings.PopulateRightListManager" />
+						</ListBox>
+
+						<ComboBox name="$parent_LeftListComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+							<Size>
+								<AbsPoint x="250" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="top" relativePoint="bottom" relativeTo="$parent_LeftList">
+									<AbsPoint x="0" y="-8" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.LeftListChanged" />
+							</EventHandlers>
+						</ComboBox>
+						<ComboBox name="$parent_RightListComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+							<Size>
+								<AbsPoint x="250" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="top" relativePoint="bottom" relativeTo="$parent_RightList">
+									<AbsPoint x="0" y="-8" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="DAoCBuffSettings.RightListChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+						<Button name="$parent_CopyLeftToRight" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parent_LeftList">
+									<AbsPoint x="0" y="15"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.CopyLeftToRight" />
+							</EventHandlers>
+						</Button>
+						<Button name="$parent_CopyRightToLeft" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parent_RightList">
+									<AbsPoint x="0" y="15"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.CopyRightToLeft" />
+							</EventHandlers>
+						</Button>
+
+						<Button name="$parent_MoveLeftToRight" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parent_CopyLeftToRight">
+									<AbsPoint x="0" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.MoveLeftToRight" />
+							</EventHandlers>
+						</Button>
+						<Button name="$parent_MoveRightToLeft" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parent_CopyRightToLeft">
+									<AbsPoint x="0" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.MoveRightToLeft" />
+							</EventHandlers>
+						</Button>
+
+						<Button name="$parent_RemoveLeft" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parent_MoveLeftToRight">
+									<AbsPoint x="0" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.RemoveLeft" />
+							</EventHandlers>
+						</Button>
+						<Button name="$parent_RemoveRight" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parent_MoveRightToLeft">
+									<AbsPoint x="0" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.RemoveRight" />
+							</EventHandlers>
+						</Button>
+
+						<Button name="$parent_ClearLeft" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parent_RemoveLeft">
+									<AbsPoint x="0" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ClearLeft" />
+							</EventHandlers>
+						</Button>
+						<Button name="$parent_ClearRight" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parent_RemoveRight">
+									<AbsPoint x="0" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ClearRight" />
+							</EventHandlers>
+						</Button>
+
+						<Label name="$parent_FakeLabel" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="1" y="100" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_ClearLeft" >
+									<AbsPoint x="0" y="40" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="0" />
+						</Label>
+
+						<Button name="$parent_Add" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parent_LeftList">
+									<AbsPoint x="0" y="15"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.AddEntry" />
+							</EventHandlers>
+						</Button>
+
+						<Label name="$parent_NameEditBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topleft" relativeTo="$parent_LeftList">
+									<AbsPoint x="90" y="0" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<Label name="$parent_ErrorText" inherits="DefaultWindowSmallText" textalign="left" wordwrap="true" font="font_clear_small_bold">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="top" relativePoint="bottom" relativeTo="$parent_NameEditBoxText">
+									<AbsPoint x="0" y="-8" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="0" b="0" a="255" />
+						</Label>
+						<EditBox name="$parent_NameEditBox" inherits="EA_EditBox_DefaultFrame" history="0" maxchars="100" taborder="1">
+							<Size>
+								<AbsPoint x="250" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_NameEditBoxText">
+									<AbsPoint x="0" y="5" />
+								</Anchor>
+							</Anchors>
+						</EditBox>
+						<Label name="$parent_IDEditBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_NameEditBox">
+									<AbsPoint x="0" y="15" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<EditBox name="$parent_IDEditBox" inherits="EA_EditBox_DefaultFrame" history="0" maxchars="100" taborder="1" input="numbers">
+							<Size>
+								<AbsPoint x="250" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_IDEditBoxText">
+									<AbsPoint x="0" y="5" />
+								</Anchor>
+							</Anchors>
+						</EditBox>
+						<Label name="$parent_DescEditBoxText" inherits="DefaultWindowSmallText" textalign="left">
+							<Size>
+								<AbsPoint x="245" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_IDEditBox">
+									<AbsPoint x="0" y="15" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<EditBox name="$parent_DescEditBox" inherits="EA_EditBox_DefaultFrame_Multiline" history="0" maxchars=16384 taborder="1" scrolling="vert">
+							<Size>
+								<AbsPoint x="250" y="170"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_DescEditBoxText">
+									<AbsPoint x="0" y="5" />
+								</Anchor>
+							</Anchors>
+						</EditBox>
+						<Button name="$parent_Apply" inherits="EA_Button_DefaultResizeable" >
+							<Size>
+								<AbsPoint x="225" y="39"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parent_DescEditBox">
+									<AbsPoint x="0" y="15"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ApplyEffectEdit" />
+							</EventHandlers>
+						</Button>
+						<Label name="$parent_ApplyErrorText" inherits="DefaultWindowSmallText" textalign="left" wordwrap="true" font="font_clear_small_bold">
+							<Size>
+								<AbsPoint x="260" y="50" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottom" relativePoint="top" relativeTo="$parent_Apply">
+									<AbsPoint x="0" y="8" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="0" b="0" a="255" />
+						</Label>
+					</Windows>
+				</Window>
+			</Windows>
+		</ScrollWindow>
+
+		<Window name="DAoCBuffLeftListManager_ListRow" handleinput="true" layer="secondary">
+			<Size>
+				<AbsPoint x="235" y="40" />
+			</Size>
+			<EventHandlers> <!-- FUNC -->
+				<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.LeftListOnLButtonUp" />
+				<EventHandler event="OnMouseOver" function="DAoCBuffSettings.LeftListOnMouseOver" />
+				<EventHandler event="OnRButtonUp" function="DAoCBuffSettings.LeftListOnRButtonUp" />
+			</EventHandlers>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"/>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+					</Anchors>
+				</FullResizeImage>
+				<DynamicImage name="$parentIcon" texture="DAoC_new_qm" filtering="true" handleinput="false" layer="background">
+					<Size>
+						<AbsPoint x="32" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="4" y="0" />
+						</Anchor>
+					</Anchors>
+					<TexDims x="64" y="64" />
+				</DynamicImage>
+				<Label name="$parentName" wordwrap="false" font="font_clear_small_bold" textalign="left" maxchars="40" handleinput="false">
+					<Size>
+						<AbsPoint x="200" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentIcon">
+							<AbsPoint x="4" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+
+		<Window name="DAoCBuffRightListManager_ListRow" handleinput="true" layer="secondary">
+			<Size>
+				<AbsPoint x="235" y="40" />
+			</Size>
+			<EventHandlers> <!-- FUNC -->
+				<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.RightListOnLButtonUp" />
+				<EventHandler event="OnMouseOver" function="DAoCBuffSettings.RightListOnMouseOver" />
+				<EventHandler event="OnRButtonUp" function="DAoCBuffSettings.RightListOnRButtonUp" />
+			</EventHandlers>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"/>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+					</Anchors>
+				</FullResizeImage>
+				<DynamicImage name="$parentIcon" texture="DAoC_new_qm" filtering="true" handleinput="false" layer="background">
+					<Size>
+						<AbsPoint x="32" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="4" y="0" />
+						</Anchor>
+					</Anchors>
+					<TexDims x="64" y="64" />
+				</DynamicImage>
+				<Label name="$parentName" wordwrap="false" font="font_clear_small_bold" textalign="left" maxchars="40" handleinput="false">
+					<Size>
+						<AbsPoint x="200" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentIcon">
+							<AbsPoint x="4" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+
+
+
+		<Window name="DAoCBuff_Settings_ImExport" inherits="EA_Window_Default" movable="true" layer="secondary">
+			<Size>
+				<AbsPoint x="800" y="750" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root" />
+			</Anchors>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="WindowUtils.TrapClick" />
+			</EventHandlers>
+			<Windows>
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" handleinput="true">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" >
+							<AbsPoint x="27" y="0" />
+						</Anchor>
+						<Anchor point="topright" relativePoint="topright">
+							<AbsPoint x="-3" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ImExport.Close" />
+					</EventHandlers>
+				</Button>
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame" handleinput="true">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="-10" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<ScrollWindow name="$parentFrame" childscrollwindow="$parent_ScrollChild" scrollbar="$parent_Scrollbar" lineheight="18">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<VerticalScrollbar name="$parent_Scrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+							<Size>
+								<AbsPoint x="20" y="360"/>
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+									<AbsPoint x="-4" y="-0"/>
+								</Anchor>
+							</Anchors>
+						</VerticalScrollbar>
+						<Window name="$parent_ScrollChild">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+								<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+
+								<Label name="$parent_TypeComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="20" y="20"/>
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parent_TypeComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+									<Size>
+										<AbsPoint x="250" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parent_TypeComboText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="DAoCBuffSettings.ImExport.PopulateImEx" />
+									</EventHandlers>
+								</ComboBox>
+								<Label name="$parent_ExportTypeComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_TypeComboText">
+											<AbsPoint x="0" y="5"/>
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parent_ExportTypeComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+									<Size>
+										<AbsPoint x="250" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parent_ExportTypeComboText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="DAoCBuffSettings.ImExport.PopulateExportTypeSettings" />
+									</EventHandlers>
+								</ComboBox>
+								<Label name="$parent_FrameComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_ExportTypeComboText">
+											<AbsPoint x="0" y="5"/>
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parent_FrameComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+									<Size>
+										<AbsPoint x="250" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parent_FrameComboText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="DAoCBuffSettings.ImExport.FrameChanged" />
+									</EventHandlers>
+								</ComboBox>
+								<Label name="$parent_FilterComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_FrameComboText">
+											<AbsPoint x="0" y="5"/>
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parent_FilterComboBox" inherits="EA_ComboBox_DefaultResizable" layer="popup">
+									<Size>
+										<AbsPoint x="250" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parent_FilterComboText">
+											<AbsPoint x="395" y="-5" />
+										</Anchor>
+									</Anchors>
+								</ComboBox>
+
+								<EditBox name="$parent_EditBox" inherits="EA_EditBox_DefaultFrame_Multiline" maxchars=65536 scrolling="vert" >
+									<Size>
+										<AbsPoint x="700" y="400"/>
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_TypeComboText">
+											<AbsPoint x="0" y="200"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="DAoCBuffSettings.ImExport.TextChanged" />
+									</EventHandlers>
+								</EditBox>
+								<Button name="$parent_ImExportButton" inherits="EA_Button_DefaultResizeable" >
+									<Size>
+										<AbsPoint x="270" y="39"/>
+									</Size>
+									<Anchors>
+										<Anchor point="bottomright" relativePoint="topright" relativeTo="$parent_EditBox">
+											<AbsPoint x="0" y="5"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.ImExport.ImExport" />
+									</EventHandlers>
+								</Button>
+
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

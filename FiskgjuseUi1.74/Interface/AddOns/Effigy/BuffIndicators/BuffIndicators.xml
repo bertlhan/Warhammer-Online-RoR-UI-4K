@@ -1,0 +1,13 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+		<!-- LibGUI ComboBox OnSelChanged bad WarAPI Workaround -->
+		<ComboBox name="BuffIndicatorsComboBoxTemplate" inherits="EA_ComboBox_DefaultResizable" >
+			<EventHandlers>
+				<EventHandler event="OnSelChanged" function="BuffIndicators.OnSelChanged" />
+			</EventHandlers>
+		</ComboBox>
+		
+	</Windows>
+
+</Interface>

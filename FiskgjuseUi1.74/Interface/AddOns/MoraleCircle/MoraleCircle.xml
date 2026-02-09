@@ -1,0 +1,701 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Assets>
+
+     <Texture name="Circle" file="circle.tga" />
+
+  </Assets>
+
+   <Scripts>
+      <Script file="MoraleCircle.lua" />
+   </Scripts>
+      <Windows>
+
+<!--[ Only need 1 Morale Circle as i duplicate it via LUA script ]-->
+		<Window name="MoraleTemplate" layer="default" movable="true" popable="false" sticky="true" savesettings="true" handleinput="true">
+		<EventHandlers>
+		<EventHandler event="OnLButtonUp" function="MoraleCircle.Click" />
+		<EventHandler event="OnLButtonDown" function="MoraleCircle.Click" />
+		<EventHandler event="OnMButtonDown" function="MoraleCircle.Reset" />
+		<EventHandler event="OnRButtonUp" function="MoraleCircle.RightClick" />
+		<EventHandler event="OnMouseOver" function="MoraleCircle.OnMouseOverStart"/>
+		<EventHandler event="OnMouseWheel"  function="MoraleCircle.OnMouseWheel" />
+		</EventHandlers>
+        <Size>
+		<AbsPoint x="65" y="65" />
+		</Size>
+        <Anchors>
+		<Anchor point="center" relativePoint="center" relativeTo="Root">
+		<AbsPoint x="0" y="0" />
+		</Anchor>
+        </Anchors>
+
+		<Windows>
+			<AnimatedImage name="$parentGlow" inherits="EA_MoraleButtonAnimation" fps="13" layer="overlay" texture="anim_morale_glow" textureScale="1.2" alpha="1"handleinput="false">
+			<Size>
+			<AbsPoint x="140" y="140"/>
+			</Size>
+			<Anchors>
+			<Anchor relativePoint="center" point="center" relativeTo="$parent">
+			<AbsPoint x="-8" y="-10" />
+			</Anchor>
+			</Anchors>
+			</AnimatedImage>
+
+			<CircleImage name="$parentBG" textureScale="1.25" numsegments="32"  texture="Circle" layer="overlay"  sticky="true" handleinput="false" popable="false">
+			<Size>
+			<AbsPoint x="60" y="60" />
+			</Size>
+			<Anchors>
+			<Anchor point="center" relativePoint="center" relativeTo="$parent">
+			<AbsPoint x="0" y="0" />
+			</Anchor>
+			</Anchors>
+			<TexCoords x="25" y="25" />
+			</CircleImage>
+
+			<CircleImage name="$parentEmpty" textureScale="1.2" numsegments="32"  texture="Circle" layer="overlay" sticky="true" handleinput="false" popable="false">
+			<Size>
+			<AbsPoint x="54" y="54" />
+			</Size>
+			<Anchors>
+			<Anchor point="center" relativePoint="center" relativeTo="$parent">
+			<AbsPoint x="0" y="0" />
+			</Anchor>
+			</Anchors>
+			<TexCoords x="25" y="25" />
+			</CircleImage>
+
+			<CircleImage name="$parentFillBG" textureScale="1.2" numsegments="32"  texture="Circle" layer="overlay" sticky="true" handleinput="false" popable="false">
+			<Size>
+			<AbsPoint x="55" y="55" />
+			</Size>
+			<Anchors>
+			<Anchor point="center" relativePoint="center" relativeTo="$parent">
+			<AbsPoint x="0" y="0" />
+			</Anchor>
+			</Anchors>
+			<TexCoords x="25" y="25" />
+			</CircleImage>
+
+			<CircleImage name="$parentFill" textureScale="1.2" numsegments="32"  texture="Circle" layer="overlay" sticky="true" handleinput="false" popable="false">
+			<Size>
+			<AbsPoint x="54" y="54" />
+			</Size>
+			<Anchors>
+			<Anchor point="center" relativePoint="center" relativeTo="$parent">
+			<AbsPoint x="0" y="0" />
+			</Anchor>
+			</Anchors>
+			<TexCoords x="25" y="25" />
+			</CircleImage>
+
+			<CircleImage name="$parentIconBG" textureScale="0.8" numsegments="32"  texture="Circle" layer="overlay" sticky="true" handleinput="false" popable="false">
+			<Size>
+			<AbsPoint x="46" y="46" />
+			</Size>
+			<Anchors>
+			<Anchor point="center" relativePoint="center" relativeTo="$parent">
+			<AbsPoint x="0" y="0" />
+			</Anchor>
+			</Anchors>
+			<TexCoords x="25" y="25" />
+			</CircleImage>
+
+			<CircleImage name="$parentIcon" textureScale="0.8" numsegments="32"  texture="Circle" layer="overlay" sticky="true" handleinput="false" popable="false">
+			<Size>
+			<AbsPoint x="42" y="42" />
+			</Size>
+			<Anchors>
+			<Anchor point="center" relativePoint="center" relativeTo="$parent">
+			<AbsPoint x="0" y="0" />
+			</Anchor>
+			</Anchors>
+			<TexCoords x="25" y="25" />
+			</CircleImage>
+
+				<CooldownDisplay name="$parentAbilityCooldown" handleinput="false" movable="true" layer="overlay" cooldownshape="circle" sticky="true" popable="false" segments="32" >
+				<Size>
+				<AbsPoint x="42" y="42" />
+				</Size>
+				<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="$parent"/>
+				</Anchors>
+				</CooldownDisplay>
+
+			<AnimatedImage name="$parentFlash" inherits="EA_MoraleButtonAnimation" fps="20" layer="overlay" texture="anim_morale_flash" textureScale="1.2" handleinput="false">
+			<Size>
+			<AbsPoint x="150" y="150"/>
+			</Size>
+			<Anchors>
+			<Anchor relativePoint="center" point="center" relativeTo="$parent">
+			<AbsPoint x="-2" y="-3" />
+			</Anchor>
+			</Anchors>
+			</AnimatedImage>
+
+			<Label name="$parentCooldownLabel" font="font_clear_small_bold" autoresize="true" textalign="center" wordwrap="true" layer="overlay" alpha="1" popable="false" handleinput="false">
+			<Size>
+			<AbsPoint x="50" y="45" />
+			</Size>
+			<Anchors>
+			<Anchor point="center" relativePoint="center" relativeTo="$parent">
+			<AbsPoint x="0" y="0" />
+			</Anchor>
+			</Anchors>
+			<Color r="255" g="255" b="77" />
+			</Label>
+
+			<Label name="$parentMoraleLabelBG" font="font_clear_medium_bold" maxchars="5" autoresize="false" textalign="center" sticky="true"  wordwrap="true" layer="overlay" alpha="1" popable="false" handleinput="false">
+			<Size>
+			<AbsPoint x="70" y="45" />
+			</Size>
+			<Anchors>
+			<Anchor point="bottom" relativePoint="bottom" relativeTo="$parent">
+			<AbsPoint x="2" y="14" />
+			</Anchor>
+			</Anchors>
+			<Color r="0" g="0" b="0" />
+			</Label>
+
+			<Label name="$parentMoraleLabel" font="font_clear_medium_bold" maxchars="5" autoresize="false" textalign="center" sticky="true"  wordwrap="true" layer="overlay" alpha="1" popable="false" handleinput="false">
+			<Size>
+			<AbsPoint x="70" y="45" />
+			</Size>
+			<Anchors>
+			<Anchor point="bottom" relativePoint="bottom" relativeTo="$parent">
+			<AbsPoint x="0" y="12" />
+			</Anchor>
+			</Anchors>
+			<Color r="255" g="255" b="255" />
+			</Label>
+
+      <Label name="$parentMoraleBindLabelBG" font="font_clear_small_bold" maxchars="4" autoresize="true" textalign="center" sticky="true"  wordwrap="true" layer="overlay" alpha="1" popable="false" handleinput="false" skipinput="true">
+			<Size>
+			<AbsPoint x="50" y="45" />
+			</Size>
+			<Anchors>
+			<Anchor point="top" relativePoint="top" relativeTo="$parent">
+			<AbsPoint x="0" y="10" />
+			</Anchor>
+			</Anchors>
+			<Color r="0" g="0" b="0" />
+			</Label>
+
+			<Label name="$parentMoraleBindLabel" font="font_clear_small_bold" maxchars="4" autoresize="true" textalign="center" sticky="true"  wordwrap="true" layer="overlay" alpha="1" popable="false" handleinput="false" skipinput="true">
+			<Size>
+			<AbsPoint x="50" y="45" />
+			</Size>
+			<Anchors>
+			<Anchor point="top" relativePoint="top" relativeTo="$parent">
+			<AbsPoint x="0" y="10" />
+			</Anchor>
+			</Anchors>
+			<Color r="255" g="255" b="255" />
+			</Label>
+
+
+
+		</Windows>
+	</Window>
+
+  <Window name="MoraleSliders" layer="default" movable="false" popable="true" sticky="true" savesettings="false" handleinput="true">
+    <Size>
+<AbsPoint x="210" y="170" />
+</Size>
+<Windows>
+
+  <FullResizeImage name="$parentCustomColorSwatch" inherits="EA_FullResizeImage_WhiteTransparent" alpha="1.0">
+      <Size>
+          <AbsPoint x="50" y="50" />
+      </Size>
+      <Anchors>
+          <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorGreenSlider">
+              <AbsPoint x="75" y="-5" />
+          </Anchor>
+      </Anchors>
+  </FullResizeImage>
+
+  <!-- Custom Color Slider (Red) -->
+  <!-- Custom Color Swatch -->
+  <Label name="$parentCustomColorRedText" font="font_clear_small_bold" autoresize="true">
+      <Size>
+          <AbsPoint x="60" y="50" />
+      </Size>
+      <Anchors>
+          <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentCustomColorRedSlider">
+              <AbsPoint x="0" y="-15" />
+          </Anchor>
+      </Anchors>
+  </Label>
+  <Label name="$parentCustomColorRedValue" font="font_clear_small_bold" autoresize="true">
+      <Size>
+          <AbsPoint x="60" y="50" />
+      </Size>
+      <Anchors>
+          <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorRedText">
+              <AbsPoint x="110" y="0" />
+          </Anchor>
+      </Anchors>
+  </Label>
+  <SliderBar name="$parentCustomColorRedSlider" inherits="EA_Default_SliderBar" >
+      <Size>
+          <AbsPoint x="140" y="33" />
+      </Size>
+      <Anchors>
+          <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="0" y="30" />
+          </Anchor>
+      </Anchors>
+      <EventHandlers>
+          <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColor" />
+      </EventHandlers>
+  </SliderBar>
+  <!-- Custom Color Slider (Green) -->
+  <!-- Custom Color Swatch -->
+  <Label name="$parentCustomColorGreenText" font="font_clear_small_bold" autoresize="true">
+      <Size>
+          <AbsPoint x="60" y="50" />
+      </Size>
+      <Anchors>
+          <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorRedSlider">
+              <AbsPoint x="0" y="0" />
+          </Anchor>
+      </Anchors>
+  </Label>
+  <Label name="$parentCustomColorGreenValue" font="font_clear_small_bold" autoresize="true">
+      <Size>
+          <AbsPoint x="60" y="50" />
+      </Size>
+      <Anchors>
+          <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorGreenText">
+              <AbsPoint x="110" y="0" />
+          </Anchor>
+      </Anchors>
+  </Label>
+  <SliderBar name="$parentCustomColorGreenSlider" inherits="EA_Default_SliderBar" >
+      <Size>
+          <AbsPoint x="140" y="33" />
+      </Size>
+      <Anchors>
+          <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorGreenText">
+              <AbsPoint x="0" y="0" />
+          </Anchor>
+      </Anchors>
+      <EventHandlers>
+          <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColor" />
+      </EventHandlers>
+  </SliderBar>
+  <!-- Custom Color Slider (Blue) -->
+  <!-- Custom Color Swatch -->
+  <Label name="$parentCustomColorBlueValue" font="font_clear_small_bold" autoresize="true">
+    <Size>
+      <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+      <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorBlueText">
+        <AbsPoint x="70" y="0" />
+      </Anchor>
+    </Anchors>
+  </Label>
+  <Label name="$parentCustomColorBlueText" font="font_clear_small_bold" autoresize="true">
+      <Size>
+          <AbsPoint x="100" y="50" />
+      </Size>
+      <Anchors>
+          <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorGreenSlider">
+              <AbsPoint x="0" y="0" />
+          </Anchor>
+      </Anchors>
+  </Label>
+  <SliderBar name="$parentCustomColorBlueSlider" inherits="EA_Default_SliderBar" scale="0.4" >
+      <Size>
+          <AbsPoint x="140" y="33" />
+      </Size>
+      <Anchors>
+          <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorBlueText">
+              <AbsPoint x="0" y="0" />
+          </Anchor>
+      </Anchors>
+      <EventHandlers>
+          <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColor" />
+      </EventHandlers>
+  </SliderBar>
+</Windows>
+</Window>
+
+<Window name="MoraleSlidersFill" layer="default" movable="false" popable="false" sticky="false" savesettings="false" handleinput="true">
+  <Size>
+<AbsPoint x="210" y="170" />
+</Size>
+<Windows>
+
+<FullResizeImage name="$parentCustomColorSwatch" inherits="EA_FullResizeImage_WhiteTransparent" alpha="1.0">
+    <Size>
+        <AbsPoint x="50" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorGreenSlider">
+            <AbsPoint x="75" y="-5" />
+        </Anchor>
+    </Anchors>
+</FullResizeImage>
+
+<!-- Custom Color Slider (Red) -->
+<!-- Custom Color Swatch -->
+<Label name="$parentCustomColorRedText" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentCustomColorRedSlider">
+            <AbsPoint x="0" y="-15" />
+        </Anchor>
+    </Anchors>
+</Label>
+<Label name="$parentCustomColorRedValue" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorRedText">
+            <AbsPoint x="110" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<SliderBar name="$parentCustomColorRedSlider" inherits="EA_Default_SliderBar" >
+    <Size>
+        <AbsPoint x="140" y="33" />
+    </Size>
+    <Anchors>
+        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+            <AbsPoint x="0" y="30" />
+        </Anchor>
+    </Anchors>
+    <EventHandlers>
+        <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColorFill" />
+    </EventHandlers>
+</SliderBar>
+<!-- Custom Color Slider (Green) -->
+<!-- Custom Color Swatch -->
+<Label name="$parentCustomColorGreenText" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorRedSlider">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<Label name="$parentCustomColorGreenValue" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorGreenText">
+            <AbsPoint x="110" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<SliderBar name="$parentCustomColorGreenSlider" inherits="EA_Default_SliderBar" >
+    <Size>
+        <AbsPoint x="140" y="33" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorGreenText">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+    <EventHandlers>
+        <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColorFill" />
+    </EventHandlers>
+</SliderBar>
+<!-- Custom Color Slider (Blue) -->
+<!-- Custom Color Swatch -->
+<Label name="$parentCustomColorBlueValue" font="font_clear_small_bold" autoresize="true">
+  <Size>
+    <AbsPoint x="60" y="50" />
+  </Size>
+  <Anchors>
+    <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorBlueText">
+      <AbsPoint x="70" y="0" />
+    </Anchor>
+  </Anchors>
+</Label>
+<Label name="$parentCustomColorBlueText" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="100" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorGreenSlider">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<SliderBar name="$parentCustomColorBlueSlider" inherits="EA_Default_SliderBar" scale="0.4" >
+    <Size>
+        <AbsPoint x="140" y="33" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorBlueText">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+    <EventHandlers>
+        <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColorFill" />
+    </EventHandlers>
+</SliderBar>
+</Windows>
+</Window>
+
+<Window name="MoraleSlidersFull" layer="default" movable="false" popable="false" sticky="false" savesettings="false" handleinput="true">
+  <Size>
+<AbsPoint x="210" y="170" />
+</Size>
+<Windows>
+
+<FullResizeImage name="$parentCustomColorSwatch" inherits="EA_FullResizeImage_WhiteTransparent" alpha="1.0">
+    <Size>
+        <AbsPoint x="50" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorGreenSlider">
+            <AbsPoint x="75" y="-5" />
+        </Anchor>
+    </Anchors>
+</FullResizeImage>
+
+<!-- Custom Color Slider (Red) -->
+<!-- Custom Color Swatch -->
+<Label name="$parentCustomColorRedText" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentCustomColorRedSlider">
+            <AbsPoint x="0" y="-15" />
+        </Anchor>
+    </Anchors>
+</Label>
+<Label name="$parentCustomColorRedValue" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorRedText">
+            <AbsPoint x="110" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<SliderBar name="$parentCustomColorRedSlider" inherits="EA_Default_SliderBar" >
+    <Size>
+        <AbsPoint x="140" y="33" />
+    </Size>
+    <Anchors>
+        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+            <AbsPoint x="0" y="30" />
+        </Anchor>
+    </Anchors>
+    <EventHandlers>
+        <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColorFull" />
+    </EventHandlers>
+</SliderBar>
+<!-- Custom Color Slider (Green) -->
+<!-- Custom Color Swatch -->
+<Label name="$parentCustomColorGreenText" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorRedSlider">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<Label name="$parentCustomColorGreenValue" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorGreenText">
+            <AbsPoint x="110" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<SliderBar name="$parentCustomColorGreenSlider" inherits="EA_Default_SliderBar" >
+    <Size>
+        <AbsPoint x="140" y="33" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorGreenText">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+    <EventHandlers>
+        <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColorFull" />
+    </EventHandlers>
+</SliderBar>
+<!-- Custom Color Slider (Blue) -->
+<!-- Custom Color Swatch -->
+<Label name="$parentCustomColorBlueValue" font="font_clear_small_bold" autoresize="true">
+  <Size>
+    <AbsPoint x="60" y="50" />
+  </Size>
+  <Anchors>
+    <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorBlueText">
+      <AbsPoint x="70" y="0" />
+    </Anchor>
+  </Anchors>
+</Label>
+<Label name="$parentCustomColorBlueText" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="100" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorGreenSlider">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<SliderBar name="$parentCustomColorBlueSlider" inherits="EA_Default_SliderBar" scale="0.4" >
+    <Size>
+        <AbsPoint x="140" y="33" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorBlueText">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+    <EventHandlers>
+        <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColorFull" />
+    </EventHandlers>
+</SliderBar>
+</Windows>
+</Window>
+
+<Window name="MoraleSlidersEmpty" layer="default" movable="false" popable="false" sticky="false" savesettings="false" handleinput="true">
+  <Size>
+<AbsPoint x="210" y="170" />
+</Size>
+<Windows>
+
+<FullResizeImage name="$parentCustomColorSwatch" inherits="EA_FullResizeImage_WhiteTransparent" alpha="1.0">
+    <Size>
+        <AbsPoint x="50" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorGreenSlider">
+            <AbsPoint x="75" y="-5" />
+        </Anchor>
+    </Anchors>
+</FullResizeImage>
+
+<!-- Custom Color Slider (Red) -->
+<!-- Custom Color Swatch -->
+<Label name="$parentCustomColorRedText" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentCustomColorRedSlider">
+            <AbsPoint x="0" y="-15" />
+        </Anchor>
+    </Anchors>
+</Label>
+<Label name="$parentCustomColorRedValue" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorRedText">
+            <AbsPoint x="110" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<SliderBar name="$parentCustomColorRedSlider" inherits="EA_Default_SliderBar" >
+    <Size>
+        <AbsPoint x="140" y="33" />
+    </Size>
+    <Anchors>
+        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+            <AbsPoint x="0" y="30" />
+        </Anchor>
+    </Anchors>
+    <EventHandlers>
+        <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColorEmpty" />
+    </EventHandlers>
+</SliderBar>
+<!-- Custom Color Slider (Green) -->
+<!-- Custom Color Swatch -->
+<Label name="$parentCustomColorGreenText" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorRedSlider">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<Label name="$parentCustomColorGreenValue" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="60" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorGreenText">
+            <AbsPoint x="110" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<SliderBar name="$parentCustomColorGreenSlider" inherits="EA_Default_SliderBar" >
+    <Size>
+        <AbsPoint x="140" y="33" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorGreenText">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+    <EventHandlers>
+        <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColorEmpty" />
+    </EventHandlers>
+</SliderBar>
+<!-- Custom Color Slider (Blue) -->
+<!-- Custom Color Swatch -->
+<Label name="$parentCustomColorBlueValue" font="font_clear_small_bold" autoresize="true">
+  <Size>
+    <AbsPoint x="60" y="50" />
+  </Size>
+  <Anchors>
+    <Anchor point="right" relativePoint="right" relativeTo="$parentCustomColorBlueText">
+      <AbsPoint x="70" y="0" />
+    </Anchor>
+  </Anchors>
+</Label>
+<Label name="$parentCustomColorBlueText" font="font_clear_small_bold" autoresize="true">
+    <Size>
+        <AbsPoint x="100" y="50" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorGreenSlider">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+</Label>
+<SliderBar name="$parentCustomColorBlueSlider" inherits="EA_Default_SliderBar" scale="0.4" >
+    <Size>
+        <AbsPoint x="140" y="33" />
+    </Size>
+    <Anchors>
+        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomColorBlueText">
+            <AbsPoint x="0" y="0" />
+        </Anchor>
+    </Anchors>
+    <EventHandlers>
+        <EventHandler event="OnSlide" function="MoraleCircle.OnSetCustomColorEmpty" />
+    </EventHandlers>
+</SliderBar>
+</Windows>
+</Window>
+   </Windows>
+</Interface>

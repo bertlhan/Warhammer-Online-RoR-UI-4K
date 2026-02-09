@@ -1,0 +1,28 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+     <Assets>
+	 	    <Texture name="Rune" file="Rune.tga">
+            <Slice id="Damage" left="0" top="0" width="250" height="132" />
+            <Slice id="Healing" left="0" top="133" width="250" height="132" />
+			</Texture>  
+			
+			<Texture name="Harbinger" file="Harbinger.tga">
+            <Slice id="Damage" left="0" top="0" width="250" height="132" />
+            <Slice id="Healing" left="0" top="133" width="250" height="132" />
+			</Texture>      
+  </Assets>
+   <Scripts>
+      <Script file="Harbinger.lua" />
+   </Scripts>
+   <Windows>
+      <Window name="HarbingerWindow" handleinput="false" savesettings="true" popable="false">
+         <Size><AbsPoint x="250" y="125" /></Size>
+         <Anchors><Anchor point="center" relativePoint="center" relativeTo="Root"><AbsPoint x="0" y="-150" /></Anchor></Anchors>
+         <Windows>
+                 <DynamicImage name="$parentFrame" texture="Rune" handleinput="false" slice="Healing" texturescale="1" layer="overlay">
+					<Size><AbsPoint x="250" y="125" /></Size>
+                    <Anchors><Anchor point="top" relativePoint="top" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+				 </DynamicImage>
+         </Windows>
+      </Window>
+   </Windows>
+</Interface>

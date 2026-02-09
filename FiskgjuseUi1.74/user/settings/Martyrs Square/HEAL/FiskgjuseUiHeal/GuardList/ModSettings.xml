@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UiModuleSettings xmlVersion="1.0" enabled="false" lastLoadedVersion="1.7" messagingEnabled="false">
+    <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
+    <Windows>
+        <WindowSettings xmlVersion="1.0" name="GuardList_Window0" sizeX="250.000000" sizeY="35.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.638189" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="59.106728" yOffset="116.168327" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="GuardList_Window1" sizeX="178.456451" sizeY="19.586683" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.510551" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="GuardList_Window0" xOffset="0.000000" yOffset="3.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="GuardList_Window2" sizeX="178.456451" sizeY="19.586683" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.510551" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="top" relativeTo="GuardList_Window1" xOffset="0.000000" yOffset="7.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="GuardList_Window3" sizeX="89.228226" sizeY="19.586683" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.510551" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="top" relativeTo="GuardList_Window2" xOffset="0.000000" yOffset="7.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="GuardList_Window4" sizeX="250.000000" sizeY="35.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.510551" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="top" relativeTo="GuardList_Window3" xOffset="0.000000" yOffset="7.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="GuardList_Window5" sizeX="250.000000" sizeY="35.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.510551" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="top" relativeTo="GuardList_Window4" xOffset="0.000000" yOffset="7.000000" />
+            </Anchors>
+        </WindowSettings>
+    </Windows>
+</UiModuleSettings>

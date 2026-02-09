@@ -1,0 +1,6 @@
+These are the current list of ideas and suggestions:
+
+
+* Ability to scale/resize the user interface
+* Add some of the CraftInfoTooltip data into Shinies
+* Cancel multiple auctions at once

@@ -1,0 +1,14 @@
+
+== Changelog ==
+=== Version 0.94.2: ===
+* updated for 1.3.1
+
+=== Version 0.94.1: ===
+* fixed a update Bug in Classic mode
+
+=== Version 0.94: ===
+* added bar layout
+* added custom colors for global or individual abilities
+* added high precision display of timers below 2 sec
+* smother animation
+* new settings window

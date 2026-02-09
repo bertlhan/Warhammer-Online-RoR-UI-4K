@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.2.5" messagingEnabled="false">
+    <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="1.0" savedVariablesVersion="1.0" />
+    <Windows>
+        <WindowSettings xmlVersion="1.0" name="ShiniesWindow" sizeX="1050.000000" sizeY="615.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.833333" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="" xOffset="-133.611450" yOffset="-323.750122" />
+            </Anchors>
+        </WindowSettings>
+    </Windows>
+</UiModuleSettings>

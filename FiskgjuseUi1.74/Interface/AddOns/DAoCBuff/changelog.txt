@@ -1,0 +1,54 @@
+
+== Changelog ==
+
+=== Version 1.01.91: ===
+* fixed a rare bug that damaged a packet during export
+* added more detailed error messages for an import
+* fixed missing import message on a list import
+
+=== Version 1.01.9: ===
+* fixed a display bug when importing a list
+
+=== Version 1.01.8: ===
+* fixed a clicking bug
+
+=== Version 1.01.7: ===
+* fixed rare bug at importing filters
+
+=== Version 1.01.6: ===
+* added Headframes to Layout Editor for scaling
+* fixed scaling in General Settings for Groupframes
+
+=== Version 1.01.5: ===
+* fixed a bug in the Settings Window regarding Immunities in filters
+* fixed an import bug
+* fixed Testmode
+
+=== Version 1.01.4: ===
+* fixed wrongly activation of filter-cache for some conditions
+* fixed import of additionally included lists
+
+=== Version 1.01.3: ===
+* fixed a display bugs of showing wrong messages on import
+* fixed a bug with importing filters
+
+=== Version 1.01.2: ===
+* fixed a display bug regarding the "abilityId" condition
+* fixed settings window crash after an import of a complete settings pack
+* fixed a bug that prevented import of existent lists
+* fixed a bug that prevented import of a complete pack of settings
+* fixed a bug that prevented import of a never used frame
+
+=== Version 1.01.1: ===
+* fixed bug that crashed DAoCBuff on a single duration condition
+
+=== Version 1.01: ===
+* Performance increase
+* more consistent display of Effects
+* added support for Group as target
+* added Headframe support
+* added option for highprecision timer display
+* restructured Filtersettings window
+* Filter can now change the Border and Icon color
+* settings can now be exported and imported
+* Effect Lists for Filter can now be manually edited

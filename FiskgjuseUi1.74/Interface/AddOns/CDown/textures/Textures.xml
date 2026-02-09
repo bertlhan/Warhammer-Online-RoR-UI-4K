@@ -1,0 +1,11 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Assets>
+		<Texture name="CDown_Border" file="textures\cdown_border.dds" />
+		<Texture name="CDown_Statusbar" file="textures\cdown_bar.tga" />
+		<Texture name="CDown_StatusbarEnd" file="textures\cdown_bar_end.tga" />
+		<Texture name="CDown_StatusbarR" file="textures\cdown_barR.tga" />
+		<Texture name="CDown_StatusbarEndR1" file="textures\cdown_bar_endR1.tga" />
+		<Texture name="CDown_StatusbarEndR2" file="textures\cdown_bar_endR2.tga" />
+		<Texture name="CDown_Glass" file="textures\cdown_glass.tga" />
+	</Assets>
+</Interface>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="2.0" messagingEnabled="false">
+    <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="1.0" savedVariablesVersion="2.0" />
+    <Windows>
+        <WindowSettings xmlVersion="1.0" name="RetAlert_Main" sizeX="256.000000" sizeY="256.000000" movable="false" alpha="0.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="0.000000" yOffset="-171.999985" />
+            </Anchors>
+        </WindowSettings>
+    </Windows>
+</UiModuleSettings>

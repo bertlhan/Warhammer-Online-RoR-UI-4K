@@ -1,0 +1,6 @@
+RVAPI_ColorDialog.CurrentConfiguration = 
+{
+}
+
+
+

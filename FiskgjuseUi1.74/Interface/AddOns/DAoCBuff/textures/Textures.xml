@@ -1,0 +1,49 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Assets>
+		<Texture name="n_DAoCBuffBorder" file="textures\n_border.dds" />
+		<Texture name="DAoC_glass" file="textures\daoc_glass.tga" />
+		<Texture name="DAoC_knot" file="textures\daoc_knot.dds" />
+		<Texture name="DAoC_tooltip_qm" file="textures\tooltip_qm.dds" />
+		<Texture name="DAoC_new_qm" file="textures\daoc_new_qm.dds" />
+		<Texture name="DAoC_whiteframe" file="textures\whiteframe.dds" />
+		<Texture name="Chart" file="textures\chart.tga" />
+
+		<Texture name="DAoC_new_disease1" file="textures\daoc_new_disease1.dds" />
+		<Texture name="DAoC_new_hot1" file="textures\daoc_new_hot1.dds" />
+		<Texture name="DAoC_new_root1" file="textures\daoc_new_root1.dds" />
+		<Texture name="DAoC_new_snare1" file="textures\daoc_new_snare1.dds" />
+		<Texture name="DAoC_new_stun1" file="textures\daoc_new_stun1.dds" />
+		<Texture name="DAoC_new_stun_immunity1" file="textures\daoc_new_stun_immunity1.dds" />
+		<Texture name="DAoC_new_dot1" file="textures\daoc_new_dot1.dds" />
+		<Texture name="DAoC_new_dot2" file="textures\daoc_new_dot2.dds" />
+		<Texture name="DAoC_new_str-con" file="textures\daoc_new_str-con.dds" />
+		<Texture name="DAoC_new_clean1" file="textures\daoc_new_clean1.dds" />
+		<Texture name="DAoC_old_disease1" file="textures\daoc_old_disease1.dds" />
+		<Texture name="DAoC_old_hot1" file="textures\daoc_old_hot1.dds" />
+		<Texture name="DAoC_old_root1" file="textures\daoc_old_root1.dds" />
+		<Texture name="DAoC_old_snare1" file="textures\daoc_old_snare1.dds" />
+		<Texture name="DAoC_old_stun1" file="textures\daoc_old_stun1.dds" />
+		<Texture name="DAoC_old_stun_immunity1" file="textures\daoc_old_stun_immunity1.dds" />
+		<Texture name="DAoC_old_dot1" file="textures\daoc_old_dot1.dds" />
+		<Texture name="DAoC_old_dot2" file="textures\daoc_old_dot2.dds" />
+		<Texture name="DAoC_old_str-con" file="textures\daoc_old_str-con.dds" />
+		<Texture name="DAoC_old_clean1" file="textures\daoc_old_clean1.dds" />
+		<Texture name="Yakar_battlemaster" file="textures\yakar_battlemaster.tga" />
+		<Texture name="Yakar_disarm" file="textures\yakar_disarm.tga" />
+		<Texture name="Yakar_dot" file="textures\yakar_dot.tga" />
+		<Texture name="Yakar_healbuff" file="textures\yakar_healbuff.tga" />
+		<Texture name="Yakar_healdebuff25" file="textures\yakar_healdebuff25.tga" />
+		<Texture name="Yakar_healdebuff50" file="textures\yakar_healdebuff50.tga" />
+		<Texture name="Yakar_healoutdebuff" file="textures\yakar_healoutdebuff.tga" />
+		<Texture name="Yakar_hot" file="textures\yakar_hot.tga" />
+		<Texture name="Yakar_lock_gifts" file="textures\yakar_lockgifts.tga" />
+		<Texture name="Yakar_root" file="textures\yakar_root.tga" />
+		<Texture name="Yakar_silence" file="textures\yakar_silence.tga" />
+		<Texture name="Yakar_silence!!!" file="textures\yakar_silence!!!.tga" />
+		<Texture name="Yakar_snare" file="textures\yakar_snare.tga" />
+		<Texture name="Yakar_statsbuff" file="textures\yakar_statsbuff.tga" />
+		<Texture name="Yakar_statsdebuff" file="textures\yakar_statsdebuff.tga" />
+		<Texture name="Yakar_detaunt" file="textures\yakar_detaunt.tga" />
+		<Texture name="Yakar_curable" file="textures\yakar_curable.tga" />
+	</Assets>
+</Interface>

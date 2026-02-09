@@ -1,0 +1,219 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="DAoCBuffMessageWindow" movable="true" layer="background" savesettings="false">
+			<Size>
+				<AbsPoint x="500" y="500" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" >
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			<Windows>
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" handleinput="true">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+						<Anchor point="topright" relativePoint="topright">
+							<AbsPoint x="-3" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="DAoCBuff.CloseMessageWindow" />
+					</EventHandlers>
+				</Button>
+
+				<!-- Whole window background -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame" handleinput="true">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<Label name="$parentTitle" inherits="DefaultWindowSmallText" textalign="center" layer="secondary">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentTitleBar" >
+							<AbsPoint x="50" y="10" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<ScrollWindow name="$parentScrollWindow" layer="secondary" childscrollwindow="$parentScrollChild" scrollbar="$parentScrollbar" lineheight="18">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft"  relativeTo="$parentTitleBar" >
+							<AbsPoint x="5" y="5" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright"  relativeTo="$parent" >
+							<AbsPoint x="-5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+							<Size>
+								<AbsPoint x="20" y="360"/>
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="-20" y="0"/>
+								</Anchor>
+							</Anchors>
+						</VerticalScrollbar>
+						<Window name="$parentScrollChild">
+							<Size>
+								<AbsPoint x="460" y="0"/>
+							</Size>
+							<Windows>
+									<!--
+								<Window name="$parentGeneralBG" layer="background">
+									<Size>
+										<AbsPoint x="450" y="660" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+										<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel4">
+											<AbsPoint x="-10" y="0" />
+										</Anchor>
+									</Anchors>
+									<Windows>
+										<FullResizeImage name="$parentsGeneralBackground" inherits="SettingsSectionBackground" />
+									</Windows>
+								</Window>
+									-->
+								<Label name="$parentTitleLabel" inherits="EA_Settings_SectionTitle">
+									<Size>
+										<AbsPoint x="450" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" >
+											<AbsPoint x="15" y="15" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								<Label name="$parentImportant" inherits="DefaultWindowSmallText" maxchars="512" textalign="left" wordwrap="true" autoresize="true" >
+									<Size>
+										<AbsPoint x="430" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentTitleLabel" >
+											<AbsPoint x="10" y="40" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="0" b="0" a="255" />
+								</Label>
+								<Label name="$parentTitleLabel1" inherits="DefaultWindowSubTitle" maxchars="512" textalign="left" wordwrap="true" autoresize="true" >
+									<Size>
+										<AbsPoint x="430" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentImportant" >
+											<AbsPoint x="-10" y="20" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Label name="$parentLabel1" inherits="DefaultWindowSmallText" maxchars="512" textalign="left" wordwrap="true" autoresize="true" >
+									<Size>
+										<AbsPoint x="430" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel1" >
+											<AbsPoint x="10" y="20" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Label name="$parentLabel2" inherits="DefaultWindowSmallText" maxchars="512" textalign="left" wordwrap="true" autoresize="true" >
+									<Size>
+										<AbsPoint x="430" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel1" >
+											<AbsPoint x="0" y="20" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Label name="$parentLabel3" inherits="DefaultWindowSmallText" maxchars="512" textalign="left" wordwrap="true" autoresize="true" >
+									<Size>
+										<AbsPoint x="430" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel2" >
+											<AbsPoint x="0" y="20" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Label name="$parentLabel4" inherits="DefaultWindowSmallText" maxchars="512" textalign="left" wordwrap="true" autoresize="true" >
+									<Size>
+										<AbsPoint x="430" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel3" >
+											<AbsPoint x="0" y="20" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<DynamicImage name="$parent_Chart" texture="Chart" filtering="true" handleinput="false">
+									<Size>
+										<AbsPoint x="430" y="430" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel2">
+											<AbsPoint x="0" y="20" />
+										</Anchor>
+									</Anchors>
+									<TexDims x="430" y="430" />
+								</DynamicImage>
+								<Button name="$parentOpenOptions" inherits="EA_Button_DefaultResizeable">
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="DAoCBuffSettings.OpenOptionswindow" />
+									</EventHandlers>
+									<Size>
+										<AbsPoint x="225" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_Chart">
+											<AbsPoint x="98" y="15" />
+										</Anchor>
+									</Anchors>
+								</Button>
+								<Label name="$parentFakeLabel" inherits="DefaultWindowSmallText" maxchars="1">
+									<Size>
+										<AbsPoint x="1" y="45" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottom" relativePoint="top" relativeTo="$parentOpenOptions" >
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

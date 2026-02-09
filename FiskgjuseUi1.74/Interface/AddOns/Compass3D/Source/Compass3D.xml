@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface>
+
+  <Windows>
+
+    <Window name="T_Compass3D_Point" movable="false" layer="background" handleinput="false" parent="root">
+      <Windows>
+        <DynamicImage name="$parent_Icon" movable="false" layer="background" handleinput="false" parent="$parent">
+          <Size>
+            <AbsPoint x="32" y="32"/>
+          </Size>
+          <TexDims x="64" y="64" />
+          <Anchors>
+            <Anchor point="center" relativePoint="center" relativeTo="$parent">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+      </Windows>
+    </Window>
+
+  </Windows>
+
+</Interface>

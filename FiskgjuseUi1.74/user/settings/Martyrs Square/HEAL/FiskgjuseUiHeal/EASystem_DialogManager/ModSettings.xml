@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.0" messagingEnabled="false">
+    <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
+    <Windows>
+        <WindowSettings xmlVersion="1.0" name="DuffTimer_Win1" sizeX="18.706562" sizeY="18.706562" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.544338" showing="true">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DuffTimer_Win2" sizeX="250.000000" sizeY="25.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DuffTimer_Win3" sizeX="250.000000" sizeY="25.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors />
+        </WindowSettings>
+    </Windows>
+</UiModuleSettings>

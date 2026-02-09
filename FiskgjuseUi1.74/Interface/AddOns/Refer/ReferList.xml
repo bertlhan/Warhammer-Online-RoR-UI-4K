@@ -1,0 +1,87 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+   <Scripts><Script file="Refer.lua" /></Scripts>
+   <Assets><Texture name="ReferIcon" file="Refer.tga" /></Assets>
+ 
+    <Windows>
+        <Window name="ReferList_Button" layer="secondary" movable="true" popable="false" handleinput="true" savesettings="true">
+            <EventHandlers>
+                <EventHandler event="OnMouseOver" function="ReferWindow.OnMouseOverStart"/>
+                <EventHandler event="OnRButtonUp" function="ReferWindow.OnTabRBU"/>
+            </EventHandlers>
+            <Size><AbsPoint x="32" y="32"/></Size>
+            <Anchors>
+                <Anchor point="bottom" relativePoint="top" relativeTo="EA_Window_OverheadMap">
+                    <AbsPoint x="0" y="2" />
+                </Anchor>
+            </Anchors>
+            
+            <Windows>
+                <DynamicImage name="$parentIcon" texture="ReferIcon" handleinput="false" textureScale="1" alpha="0.6" layer="overlay">
+                    <Size><AbsPoint x="19" y="18" /></Size>
+                </DynamicImage>
+            </Windows>
+        </Window>
+
+        <Window name="ReferPlayerBox_Template" layer="default" movable="false" popable="false" sticky="true" handleinput="true">
+            <Size><AbsPoint x="400" y="60" /></Size>
+            
+            <Windows>
+                <FullResizeImage name="$parentBG" inherits="EA_FullResizeImage_BlackTransparent" layer="background" alpha="0.8" handleinput="false">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                            <AbsPoint x="0" y="0"/>
+                        </Anchor>
+                        <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+                            <AbsPoint x="0" y="0"/>
+                        </Anchor>
+                    </Anchors>
+                </FullResizeImage>
+                
+                <Label name="$parentName" font="font_default_text" autoresize="false" textalign="left" wordwrap="false" layer="overlay" alpha="1" popable="false" handleinput="true">    
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="ReferWindow.OnClickName" />
+                    </EventHandlers>
+                    <Size><AbsPoint x="250" y="22" /></Size>
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                            <AbsPoint x="10" y="8" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="218" b="73" />
+                </Label>
+                
+                <Label name="$parentTimer" font="font_default_text_small" autoresize="false" textalign="left" wordwrap="false" layer="overlay" alpha="1" popable="false" handleinput="false">    
+                    <Size><AbsPoint x="250" y="22" /></Size>
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                            <AbsPoint x="10" y="35" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="180" g="180" b="180" />
+                </Label>
+                
+                <Button name="$parentNoBtn" inherits="EA_Button_DefaultResizeable" font="font_chat_text" textalign="center" handleinput="true">
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="ReferWindow.OnDecline" />
+                    </EventHandlers>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="right" relativeTo="$parent">
+                            <AbsPoint x="-5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+                
+                <Button name="$parentYesBtn" inherits="EA_Button_DefaultResizeable" font="font_chat_text" textalign="center" handleinput="true">
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="ReferWindow.OnAccept" />
+                    </EventHandlers>
+                    <Anchors>
+                        <Anchor point="left" relativePoint="right" relativeTo="$parentNoBtn">
+                            <AbsPoint x="-5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+            </Windows>
+        </Window>
+    </Windows>
+</Interface>

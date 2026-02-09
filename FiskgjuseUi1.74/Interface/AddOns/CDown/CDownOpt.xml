@@ -1,0 +1,465 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Scripts>
+		<Script file="CDown.lua" />
+		<Script file="CDownFrames.lua" />
+	</Scripts>
+
+	<Windows>
+		<!-- Main Dialog Window -->
+		<Window name="CDownOptWindow" layer="secondary" movable="true">
+			<Size>
+				<AbsPoint x="470" y="600" />
+			</Size>
+			<Anchors>
+				<Anchor point="bottomright" relativePoint="bottomright" >
+					<AbsPoint x="-50" y="-150" />
+				</Anchor>
+			</Anchors>
+			<Windows>
+				<FullResizeImage name="CDownOptWindowBackground" inherits="DefaultWindowBackground" >
+					<Size>
+						<AbsPoint x="470" y="600" />
+					</Size>
+				</FullResizeImage>
+				<Window name="$parentTitleBar" inherits="DefaultWindowTitleBar" />
+				<Label name="$parentTitle" inherits="DefaultWindowSmallText" textalign="center" layer="popup">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topeleft" relativePoint="topleft" relativeTo="$parentTitleBar" >
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Button name="$parentClose" inherits="DefaultWindowCloseButton">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CDown.Cancel" />
+					</EventHandlers>
+				</Button>
+				<DynamicImage name="$parentBottomFrame" inherits="DefaultWindowBottomFrame">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="bottomleft" relativeTo=""/>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo=""/>
+					</Anchors>
+				</DynamicImage>
+
+				<!-- Dialog Text Area-->
+				<ScrollWindow name="CDownOptWindowTextArea" childscrollwindow="CDownOptWindowTextAreaScrollChild" scrollbar="CDownOptWindowTextAreaScrollbar" lineheight="18">
+					<Size>
+						<AbsPoint x="465" y="515" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" >
+							<AbsPoint x="5" y="42" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+							<Size>
+								<AbsPoint x="20" y="360"/>
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+									<AbsPoint x="-4" y="0"/>
+								</Anchor>
+							</Anchors>
+						</VerticalScrollbar>
+						<Window name="$parentScrollChild">
+							<Size>
+								<AbsPoint x="460" y="0"/>
+							</Size>
+							<Windows>
+							
+								<Window name="$parentGeneralBG" layer="background">
+									<Size>
+										<AbsPoint x="425" y="220" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+									<Windows>
+										<FullResizeImage name="$parentSortBackground" inherits="CDownSectionBackground" />
+									</Windows>
+								</Window>
+								<Label name="$parentGeneralSectionLabel" inherits="EA_Settings_SectionTitle">
+									<Size>
+										<AbsPoint x="350" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentGeneralBG" >
+											<AbsPoint x="15" y="15" />
+										</Anchor>
+									</Anchors>
+								</Label>
+
+								<Label name="$parentCDSortComboText" inherits="DefaultWindowSmallText" textalign="left" wordwrap="true">
+									<Size>
+										<AbsPoint x="245" y="50" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentGeneralSectionLabel" >
+											<AbsPoint x="15" y="50" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parentCDSortCombo" inherits="EA_ComboBox_DefaultResizableSmall">
+										<Size>
+											<AbsPoint x="150" y="30" />
+										</Size>
+										<Anchors>
+											<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentCDSortComboText">
+												<AbsPoint x="245" y="0" />
+											</Anchor>
+										</Anchors>
+								</ComboBox>
+								<Label name="$parentMinCDownComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentCDSortComboText" >
+											<AbsPoint x="0" y="50" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parentMinCDownCombo" inherits="EA_ComboBox_DefaultResizableSmall">
+										<Size>
+											<AbsPoint x="150" y="30" />
+										</Size>
+										<Anchors>
+											<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentMinCDownComboText">
+												<AbsPoint x="245" y="-5" />
+											</Anchor>
+										</Anchors>
+								</ComboBox>
+								<Label name="$parentMaxCDownComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentMinCDownComboText" >
+											<AbsPoint x="0" y="50" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parentMaxCDownCombo" inherits="EA_ComboBox_DefaultResizableSmall">
+										<Size>
+											<AbsPoint x="150" y="30" />
+										</Size>
+										<Anchors>
+											<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentMaxCDownComboText">
+												<AbsPoint x="245" y="-5" />
+											</Anchor>
+										</Anchors>
+								</ComboBox>
+								<!-- END GENERAL -->
+								<!-- LAYOUT SECTION -->
+								<Window name="$parentLayoutBG" layer="background">
+									<Size>
+										<AbsPoint x="425" y="510" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft"  relativeTo="$parentGeneralBG">
+											<AbsPoint x="0" y="5" />
+										</Anchor>
+									</Anchors>
+									
+									<Windows>
+										<FullResizeImage name="$parentLayoutBackground" inherits="CDownSectionBackground" />
+									</Windows>
+								</Window>
+
+								<Label name="$parentLayoutSectionLabel" inherits="EA_Settings_SectionTitle">
+									<Size>
+										<AbsPoint x="300" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLayoutBG" >
+											<AbsPoint x="15" y="15" />
+										</Anchor>
+									</Anchors>
+								</Label>
+
+								<Label name="$parentRowComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLayoutSectionLabel" >
+											<AbsPoint x="15" y="50" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parentRowCombo" inherits="EA_ComboBox_DefaultResizableSmall">
+										<Size>
+											<AbsPoint x="150" y="30" />
+										</Size>
+										<Anchors>
+											<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentRowComboText">
+												<AbsPoint x="245" y="-5" />
+											</Anchor>
+										</Anchors>
+								</ComboBox>
+								<Label name="$parentCountComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentRowComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+											<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parentCountCombo" inherits="EA_ComboBox_DefaultResizableSmall">
+										<Size>
+											<AbsPoint x="150" y="30" />
+										</Size>
+										<Anchors>
+											<Anchor point="left" relativePoint="left" relativeTo="$parentCountComboText">
+												<AbsPoint x="245" y="-5" />
+											</Anchor>
+										</Anchors>
+								</ComboBox>
+								<Label name="$parentRefreshComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentCountComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+											<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parentRefreshCombo" inherits="EA_ComboBox_DefaultResizableSmall">
+										<Size>
+											<AbsPoint x="150" y="30" />
+										</Size>
+										<Anchors>
+											<Anchor point="left" relativePoint="left" relativeTo="$parentRefreshComboText">
+												<AbsPoint x="245" y="-5" />
+											</Anchor>
+										</Anchors>
+								</ComboBox>
+								<Label name="$parentFontComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentRefreshComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+											<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parentFontCombo" inherits="EA_ComboBox_DefaultResizableSmall">
+										<Size>
+											<AbsPoint x="150" y="30" />
+										</Size>
+										<Anchors>
+											<Anchor point="left" relativePoint="left" relativeTo="$parentFontComboText">
+												<AbsPoint x="245" y="-5" />
+											</Anchor>
+										</Anchors>
+								</ComboBox>
+								<Label name="$parentGrowLeftComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFontComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+											<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parentGrowLeftCombo" inherits="EA_ComboBox_DefaultResizableSmall">
+										<Size>
+											<AbsPoint x="150" y="30" />
+										</Size>
+										<Anchors>
+											<Anchor point="left" relativePoint="left" relativeTo="$parentGrowLeftComboText">
+												<AbsPoint x="245" y="-5" />
+											</Anchor>
+										</Anchors>
+								</ComboBox>
+								<Label name="$parentGrowUpComboText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentGrowLeftComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+											<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parentGrowUpCombo" inherits="EA_ComboBox_DefaultResizableSmall">
+										<Size>
+											<AbsPoint x="150" y="30" />
+										</Size>
+										<Anchors>
+											<Anchor point="left" relativePoint="left" relativeTo="$parentGrowUpComboText">
+												<AbsPoint x="245" y="-5" />
+											</Anchor>
+										</Anchors>
+								</ComboBox>
+								<Label name="$parentHorizontalText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="245" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentGrowUpComboText" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+											<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parentHorizontalCombo" inherits="EA_ComboBox_DefaultResizableSmall">
+										<Size>
+											<AbsPoint x="150" y="30" />
+										</Size>
+										<Anchors>
+											<Anchor point="left" relativePoint="left" relativeTo="$parentHorizontalText">
+												<AbsPoint x="245" y="-5" />
+											</Anchor>
+										</Anchors>
+								</ComboBox>
+								<Window name="$parentTimerBelowIconsCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="360" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parentHorizontalText" >
+											<AbsPoint x="0" y="33" />
+										</Anchor>
+									</Anchors>
+								</Window>
+								<Label name="$parentTimerBelowIconsText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="345" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentTimerBelowIconsCheckBox" >
+											<AbsPoint x="25" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parentFadeCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="360" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parentTimerBelowIconsCheckBox" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+								</Window>
+								<Label name="$parentFadeText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="345" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFadeCheckBox" >
+											<AbsPoint x="25" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parentBorderCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="360" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parentFadeCheckBox" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+								</Window>
+								<Label name="$parentBorderText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="345" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentBorderCheckBox" >
+											<AbsPoint x="25" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<Window name="$parentGlassCheckBox" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="360" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="$parentBorderCheckBox" >
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+								</Window>
+								<Label name="$parentGlassText" inherits="DefaultWindowSmallText" textalign="left">
+									<Size>
+										<AbsPoint x="345" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentGlassCheckBox" >
+											<AbsPoint x="25" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<!-- LAYOUT END -->
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+				<Button name="$parentSave" inherits="DefaultHorizResizeButton">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CDown.SaveSettings" />
+					</EventHandlers>
+					<Size>
+						<AbsPoint x="125" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="$parent">
+							<AbsPoint x="15" y="-1" />
+						</Anchor>
+					</Anchors>
+				</Button>
+				<Button name="$parentCancel" inherits="DefaultHorizResizeButton">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CDown.Cancel" />
+					</EventHandlers>
+					<Size>
+						<AbsPoint x="125" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+							<AbsPoint x="-15" y="-1" />
+						</Anchor>
+					</Anchors>
+				</Button>
+			</Windows>
+		</Window>
+        <FullResizeImage name="CDownSectionBackground" inherits="EA_FullResizeImage_DefaultFrame" handleinput="false" layer="background">
+            <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" >
+                    <AbsPoint x="0" y="0" />
+                </Anchor>
+                <Anchor point="bottomright" relativePoint="bottomright" >
+                    <AbsPoint x="0" y="0" />
+                </Anchor>
+            </Anchors>
+        </FullResizeImage>
+	</Windows>
+</Interface>

@@ -1,0 +1,39 @@
+Small guide:
+
+1 Turn your game off.
+
+2 Don't forget to save your old user and interface folders (if anything goes wrong+to save your old hotkeys).
+Normaly found here ->"C:\Program Files (x86)\Return of Reckoning"
+
+3 Remove your Interface and User folders from your warhammer folder and replace with the Interface and User folders I provide in the download.
+
+4 Launch your game and select Character.
+
+5 Open menu with esc into >User settings >Interface >Profiles. Select DAMAGE/HEAL/TANK.
+
+6 Do a /rel once to load all addons.
+
+7 Sett up Aura with /aura into >Share Auras. Shift-left click them to copy over and Shift-left click to activate the copy.
+
+8 Open macros in menue with esc and pull the swift assist macros to your hidden bar
+
+Done!
+(Optional)
+As of new version I will keep this step optimal if you wish to play with WikkisCooldownBar/pulse instead of Cdown.
+Esc> user interface> interface> mods/addons> active WikkisCooldownBar/pulse and deactivate Cdown. 
+Select profile in WikkisCooldownBar with /wcdb into >Profiles >Damage/Heal/Tank
+(Optional)
+
+If you wanna keep your old hotkeys this is where you find the file that saves them:
+Warhammer Online - Retrun of Reckoning>user>settings>Martyrs Square>"Character">"Active-profile">ProfileSettings.xml
+
+Save a set of hotkeys you like from a "Active-profile" in "Character" folder at a separate place on your pc. (For example: In a ui backup folder)
+Follow step 1-9 to settup FiskgjuseUi
+Turn off your game (It will not update if you do not).
+Now replace your hotkeys (the xml file) with mine in your "Active-profile" folder (mine are called FiskgjuseUiDamage/FiskgjuseUiHeal/FiskgjuseUiTank)
+
+Done!
+
+:boomer: :boomer: :boomer: :boomer: 
+Bonus link for scAlert:
+https://www.returnofreckoning.com/forum/viewtopic.php?f=66&t=20524#p225973 

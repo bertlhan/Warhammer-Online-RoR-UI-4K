@@ -1,0 +1,18 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Assets>
+    <Texture name="Reticle" file="Reticle.dds" />
+    <Texture name="default" file="textures/default.tga" />
+    <Texture name="crosshair1" file="textures/crosshair1.tga" />
+    <Texture name="crosshair2" file="textures/crosshair2.tga" />
+    <Texture name="crosshair3" file="textures/crosshair3.tga" />
+    <Texture name="crosshair4" file="textures/crosshair4.tga" />
+    <Texture name="crosshair5" file="textures/crosshair5.tga" />
+    <Texture name="crosshair6" file="textures/crosshair6.tga" />
+    <Texture name="crosshair7" file="textures/crosshair7.tga" />
+    <Texture name="crosshair8" file="textures/crosshair8.tga" />
+    <Texture name="crosshair9" file="textures/crosshair9.tga" />
+    <Texture name="1" file="textures/1.tga" />
+    <Texture name="2" file="textures/2.tga" />
+    <Texture name="3" file="textures/3.tga" />
+  </Assets>
+</Interface>

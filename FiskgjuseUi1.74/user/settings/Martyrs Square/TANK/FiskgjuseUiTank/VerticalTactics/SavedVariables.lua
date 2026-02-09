@@ -1,0 +1,2 @@
+VerticalTactics.reverse = false
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="2.2" messagingEnabled="false">
+    <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
+    <Windows>
+        <WindowSettings xmlVersion="1.0" name="MouseOverTargetWindow" sizeX="300.000000" sizeY="70.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.885716" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="435.301758" yOffset="171.999969" />
+            </Anchors>
+        </WindowSettings>
+    </Windows>
+</UiModuleSettings>

@@ -1,0 +1,29 @@
+<? version="1.0" encoding="UTF-8"?>
+    <!--
+    This application is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    The applications is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with the applications.  If not, see
+    <http://www.gnu.org/licenses/>.
+    -->
+    <Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Windows>
+            <Window name="ShiniesScanUI" inherits="EA_Window_Default" handleinput="true" popable="true" movable="false" savesettings="false">
+                <Size>
+                    <AbsPoint x="800" y="500"/>
+                </Size>
+                <EventHandlers>
+                    <EventHandler event="OnShown" 	function="ShiniesScanUI.OnShown" />
+                    <EventHandler event="OnHidden" 	function="ShiniesScanUI.OnHidden" />
+                </EventHandlers>
+                <Windows>
+                </Windows>
+            </Window>
+        </Windows>
+    </Interface>

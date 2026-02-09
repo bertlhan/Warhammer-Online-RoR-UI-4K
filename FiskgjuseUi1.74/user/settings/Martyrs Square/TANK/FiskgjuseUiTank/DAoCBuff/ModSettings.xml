@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.0191" messagingEnabled="false">
+    <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="1.0" savedVariablesVersion="1.0" />
+    <Windows>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffMsgWnd" sizeX="500.000000" sizeY="500.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow" sizeX="250.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="-263.447998" yOffset="86.310425" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow1" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="DAoCBuffWindow" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow10" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCBuffWindow9" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow11" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCBuffWindow10" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow12" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCBuffWindow11" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow13" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow14" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow15" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow16" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow17" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow18" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow19" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow2" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCBuffWindow1" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow20" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow21" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow22" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow23" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow24" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow25" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow26" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow27" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow28" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow29" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow3" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCBuffWindow2" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow30" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow4" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCBuffWindow3" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow5" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCBuffWindow4" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow6" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCBuffWindow5" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow7" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="bottomleft" relativeTo="DAoCBuffWindow1" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow8" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCBuffWindow7" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuffWindow9" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572416" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCBuffWindow8" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuff_Friendly_Buffs" sizeX="250.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.565386" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCBuff_Hostile_Debuffs" sizeX="250.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.572500" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow" sizeX="250.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="-9.171631" yOffset="229.565674" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow1" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="DAoCDebuffWindow" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow10" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow9" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow11" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="bottomleft" relativeTo="DAoCDebuffWindow6" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow12" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow11" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow13" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow12" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow14" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow13" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow15" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow14" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow16" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="bottomleft" relativeTo="DAoCDebuffWindow11" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow17" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow16" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow18" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow17" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow19" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow18" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow2" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow1" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow20" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow19" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow21" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow22" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow23" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow24" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow25" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow26" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow27" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow28" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow29" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow3" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow2" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow30" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow4" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow3" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow5" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow4" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow6" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="bottomleft" relativeTo="DAoCDebuffWindow1" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow7" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow6" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow8" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow7" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCDebuffWindow9" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.942627" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCDebuffWindow8" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow" sizeX="250.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="234.294189" yOffset="285.258850" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow1" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="DAoCFriendlyWindow" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow10" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCFriendlyWindow9" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow11" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCFriendlyWindow10" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow12" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCFriendlyWindow11" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow13" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow14" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow15" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow16" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow17" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow18" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow19" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow2" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCFriendlyWindow1" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow20" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow21" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow22" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow23" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow24" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow25" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow26" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow27" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow28" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow29" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow3" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCFriendlyWindow2" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow30" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.693333" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow4" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCFriendlyWindow3" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow5" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCFriendlyWindow4" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow6" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCFriendlyWindow5" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow7" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottomleft" relativePoint="topleft" relativeTo="DAoCFriendlyWindow1" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow8" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCFriendlyWindow7" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCFriendlyWindow9" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.570354" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCFriendlyWindow8" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow" sizeX="250.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="234.089355" yOffset="156.217896" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow1" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="DAoCHostileDebuffWindow" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow10" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCHostileDebuffWindow9" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow11" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCHostileDebuffWindow10" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow12" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCHostileDebuffWindow11" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow13" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow14" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow15" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow16" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow17" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow18" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow19" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow2" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCHostileDebuffWindow1" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow20" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow21" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow22" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow23" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow24" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow25" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow26" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow27" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow28" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow29" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow3" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCHostileDebuffWindow2" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow30" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.700000" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow4" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCHostileDebuffWindow3" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow5" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCHostileDebuffWindow4" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow6" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCHostileDebuffWindow5" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow7" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottomleft" relativePoint="topleft" relativeTo="DAoCHostileDebuffWindow1" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow8" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCHostileDebuffWindow7" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DAoCHostileDebuffWindow9" sizeX="50.000000" sizeY="50.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.568715" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="right" relativePoint="left" relativeTo="DAoCHostileDebuffWindow8" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="NewDAoCBuffOptWindow" sizeX="580.000000" sizeY="600.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="" xOffset="670.000000" yOffset="-300.000000" />
+            </Anchors>
+        </WindowSettings>
+    </Windows>
+</UiModuleSettings>

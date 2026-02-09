@@ -1,0 +1,218 @@
+<? version="1.0" encoding="UTF-8"?>
+    <!--
+    This application is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    The applications is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with the applications.  If not, see
+    <http://www.gnu.org/licenses/>.
+    -->
+    <Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Windows>
+        
+        	<EditBox name="ShiniesAuctionsUI_EditBox" font="font_clear_medium" background="EA_FullResizeImage_TanBorder" taborder="1">
+            	<TextOffset x="4" y="2" />
+                <Size>
+                    <AbsPoint x="800" y="28" />
+                </Size>
+                <EventHandlers>
+                    <EventHandler event="OnKeyEnter" function="" />
+                    <EventHandler event="OnKeyEscape" function="" />
+                </EventHandlers>
+            </EditBox>
+		                    
+          	<Button name="ShiniesAuctionsUI_SortButton" inherits="Shinies_Button_DefaultListSort">
+                <Size>
+                    <AbsPoint x="245" y="30" />
+                </Size>
+                <EventHandlers>
+                    <EventHandler event="OnLButtonUp" function="ShiniesAuctionsUI.OnLButtonUp_Results_SortButton" />
+                </EventHandlers>
+            </Button>
+            
+            <!-- The basic definition of a results entry -->
+            <Window name="ShiniesAuctionsUI_ResultsRow" drawchildrenfirst="true">
+                <Size>
+                    <AbsPoint x="1010" y="22"/>
+                </Size>
+                <EventHandlers>
+                    <EventHandler event="OnRButtonUp" 		function="ShiniesAuctionsUI.OnRButtonUp_Results_ListItem" />
+                    <EventHandler event="OnMouseOver"       function="ShiniesAuctionsUI.OnMouseOver_Results_ListItem" />
+                	<EventHandler event="OnMouseOverEnd"    function="ShiniesAuctionsUI.OnMouseOverEnd_Results_ListItem" />
+                </EventHandlers>
+                <Windows>
+                    <FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" />
+                            <Anchor point="bottomright" relativePoint="bottomright" />
+                        </Anchors>
+                    </FullResizeImage>
+                    <FullResizeImage name="$parentMouseover" texture="Shinies3pxBorder" layer="overlay" handleinput="false" showing="false" alpha="0.5">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"/>
+                            <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+                        </Anchors>
+                        <Sizes>
+                            <TopLeft x="3" y="3" />
+                            <BottomRight x="3" y="3" />
+                            <Middle x="58" y="58" />
+                        </Sizes>
+                        <TexSlices>
+                            <TopLeft      id="Border-Top-Left" />
+                            <TopCenter    id="Border-Top-Center" />
+                            <TopRight     id="Border-Top-Right" />
+                            <MiddleLeft   id="Border-Middle-Left" />
+                            <MiddleCenter id="Border-Middle-Center" />
+                            <MiddleRight  id="Border-Middle-Right" />
+                            <BottomLeft   id="Border-Bottom-Left" />
+                            <BottomCenter id="Border-Bottom-Center" />
+                            <BottomRight  id="Border-Bottom-Right" />
+                        </TexSlices>
+                        <TintColor r="0" g="240" b="24" />
+                    </FullResizeImage>
+                    <Label name="$parentPrice" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" handleinput="false" textalign="rightcenter" autoresize="false" autoresizewidth="false" warnOnTextCropped="false">
+                        <Size>
+                            <AbsPoint x="240" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="right" relativePoint="right" relativeTo="">
+                                <AbsPoint x="-3" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentPricePer" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" handleinput="false" textalign="rightcenter" autoresize="false" autoresizewidth="false" warnOnTextCropped="false">
+                        <Size>
+                            <AbsPoint x="220" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="left" relativePoint="right" relativeTo="$parentPrice">
+                                <AbsPoint x="0" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentTimeLeft" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" handleinput="false" textalign="center" autoresize="false" autoresizewidth="false" warnOnTextCropped="false">
+                        <Size>
+                            <AbsPoint x="95" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="left" relativePoint="right" relativeTo="$parentPricePer">
+                                <AbsPoint x="0" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentStack" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" handleinput="false" textalign="center" autoresize="false" autoresizewidth="false" warnOnTextCropped="false">
+                        <Size>
+                            <AbsPoint x="95" y="22"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="left" relativePoint="right" relativeTo="$parentTimeLeft">
+                                <AbsPoint x="0" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentItem" inherits="Shinies_Default_Label_ClearSmallFont" maxchars="80" handleinput="false" textalign="leftcenter" autoresize="false" autoresizewidth="false" warnOnTextCropped="false">
+                        <Anchors>
+                            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                            	<AbsPoint x="2" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                </Windows>
+            </Window>
+        	
+			<Window name="ShiniesAuctionsUI" inherits="EA_Window_Default" handleinput="true" popable="true" movable="false" savesettings="false">
+	            <Size>
+	                <AbsPoint x="1050" y="500"/>
+	            </Size>
+	            <EventHandlers>
+					<EventHandler event="OnShown" 	function="ShiniesAuctionsUI.OnShown" />
+					<EventHandler event="OnHidden" 	function="ShiniesAuctionsUI.OnHidden" />
+				</EventHandlers>
+	            <Windows>
+	            	<!-- This is the window that dipslays the current auctions for the item being auctioned -->
+                    <Window name="$parent_Results">
+                        <Windows>
+                            <Button name="$parentPrice" inherits="ShiniesAuctionsUI_SortButton" textalign="center" id="5" warnOnTextCropped="false">
+                                <Size>
+                                    <AbsPoint x="240" y="30" />
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="topright" relativePoint="bottomright" relativeTo="$parentList">
+                                        <AbsPoint x="-20" y="0" />
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="$parentPricePer" inherits="ShiniesAuctionsUI_SortButton" textalign="center" id="4" warnOnTextCropped="false">
+                                <Size>
+                                    <AbsPoint x="220" y="30" />
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topright" relativeTo="$parentPrice">
+                                        <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="$parentTimeLeft" inherits="ShiniesAuctionsUI_SortButton" textalign="center" id="3" warnOnTextCropped="false">
+                                <Size>
+                                    <AbsPoint x="95" y="30" />
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topright" relativeTo="$parentPricePer" >
+                                        <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="$parentStack" inherits="ShiniesAuctionsUI_SortButton" textalign="center" id="2" warnOnTextCropped="false">
+                                <Size>
+                                    <AbsPoint x="95" y="30" />
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topright" relativeTo="$parentTimeLeft" >
+                                        <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="$parentItem" inherits="ShiniesAuctionsUI_SortButton" textalign="center" id="1" warnOnTextCropped="false">
+                                <Size>
+                                    <AbsPoint x="105" y="30" />
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topright" relativeTo="$parentStack">
+                                       <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                    <Anchor point="topleft" relativePoint="bottomleft" relativeTo="$parentList">
+                                       <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            
+                            <ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="ShiniesAuctionsUI_ResultsRow" visiblerows="21" rowspacing="0">
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topleft" relativeTo="">
+                                        <AbsPoint x="2" y="30" />
+                                    </Anchor>
+                                    <Anchor point="bottomright" relativePoint="bottomright">
+                                        <AbsPoint x="0" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                                <ListData table="ShiniesAuctionsUI.listDisplayData" populationfunction="ShiniesAuctionsUI.PopulateResultsDisplay"/>
+                            </ListBox>
+                        </Windows>
+                    </Window>
+                    
+                    <AnimatedImage name="$parent_SearchingAnim" inherits="LoadingScreenWarSymbolAnimation" layer="overlay" >
+                        <Anchors>
+                            <Anchor point="center" relativePoint="center" relativeTo="$parent_Results">
+                                <AbsPoint x="0" y="0" />
+                            </Anchor>
+                        </Anchors>
+                    </AnimatedImage>
+                </Windows>
+	        </Window>       
+        </Windows>
+    </Interface>

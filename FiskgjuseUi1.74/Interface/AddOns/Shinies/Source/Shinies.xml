@@ -1,0 +1,95 @@
+<? version="1.0" encoding="UTF-8"?>
+    <!--
+    This application is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    The applications is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with the applications.  If not, see
+    <http://www.gnu.org/licenses/>.
+    -->
+    <Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Windows>
+            <Window name="Shinies_TitleBar_Default">
+                <Size>
+                    <AbsPoint x="350" y="36" />
+                </Size>
+                <Anchors>
+                    <Anchor point="topleft" relativePoint="topleft" >
+                        <AbsPoint x="0" y="3" />
+                    </Anchor>
+                    <Anchor point="topright" relativePoint="topright" >
+                        <AbsPoint x="0" y="3" />
+                    </Anchor>
+                </Anchors>
+                <Windows>
+                    <HorizontalResizeImage name="$parentBackground" inherits="EA_HorizontalResizeImage_DefaultTopFrame">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                                <AbsPoint x="0" y="0" />
+                            </Anchor>
+                            <Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+                                <AbsPoint x="0" y="0" />
+                            </Anchor>
+                        </Anchors>
+                    </HorizontalResizeImage>
+                    <Label name="$parentText" font="font_clear_large" maxchars="128" textalign="center" >
+                        <Size>
+                            <AbsPoint x="320" y="30" />
+                        </Size>
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" >
+                                <AbsPoint x="74" y="5" />
+                            </Anchor>
+                            <Anchor point="topright" relativePoint="topright" >
+                                <AbsPoint x="-74" y="5" />
+                            </Anchor>
+                        </Anchors>
+                        <Color r="255" g="255" b="255" a="255" />
+                    </Label>
+                </Windows>
+            </Window>
+            <Window name="ShiniesWindow" inherits="EA_Window_Default" popable="false" layer="default" handleinput="true" movable="true" savesettings="true">
+                <Size>
+                    <AbsPoint x="1050" y="615"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="center" relativePoint="center" relativeTo=""/>
+                </Anchors>
+                <EventHandlers>
+	                <EventHandler event="OnShown"       function="Shinies.OnShown" />
+	                <EventHandler event="OnHidden"      function="Shinies.OnHidden" />
+	            </EventHandlers>
+                <Windows>
+                	<Window name="$parentTitleBar" inherits="Shinies_TitleBar_Default" />
+                    <Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" />
+                    <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose" >
+                        <EventHandlers>
+                            <EventHandler event="OnLButtonUp" function="Shinies.OnLButtonUp_Close" />
+                        </EventHandlers>
+                    </Button>
+                    <!--
+                    <Button name="$parentResizeButton" inherits="CoreWindowResizeButtonBottomRight" layer="popup" >
+                        <Anchors>
+                            <Anchor point="bottomright" relativePoint="bottomright" relativeTo="" >
+                                <AbsPoint x="0" y="0" />
+                            </Anchor>
+                        </Anchors>
+                        <EventHandlers>
+                            <EventHandler event="OnLButtonDown" function="Shinies.OnResizeBegin" />
+                        </EventHandlers>
+                    </Button>
+                    -->
+                </Windows>
+            </Window>
+            <Window name="ShiniesTabs" layer="default">
+                <Size>
+                    <AbsPoint x="0" y="40"/>
+                </Size>
+            </Window>
+        </Windows>
+    </Interface>

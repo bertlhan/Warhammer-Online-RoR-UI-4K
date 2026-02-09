@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.6" messagingEnabled="false">
+    <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
+    <Windows>
+        <WindowSettings xmlVersion="1.0" name="EA_Window_CampaignMap" sizeX="350.000000" sizeY="150.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="top" relativePoint="top" relativeTo="Root" xOffset="-144.666748" yOffset="83.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="EA_Window_RRQTracker" sizeX="62.000000" sizeY="128.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.846005" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottomright" relativePoint="bottomright" relativeTo="Root" xOffset="-330.881134" yOffset="0.000100" />
+            </Anchors>
+        </WindowSettings>
+    </Windows>
+</UiModuleSettings>

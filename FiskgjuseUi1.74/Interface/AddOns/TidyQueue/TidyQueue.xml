@@ -1,0 +1,137 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Window name="TQueueCheckboxTemplate" layer="popup">
+      <Size>
+        <AbsPoint x="180" y="28" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="TidyQueue.OnCheckboxLBU"/>
+        <EventHandler event="OnRButtonUp" function="TidyQueue.OnCheckboxRBU"/>
+      </EventHandlers>
+      <Windows>
+
+        <Button name="$parentButton" inherits="EA_Button_DefaultCheckBox" handleinput="false">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+        </Button>
+
+        <Label name="$parentLabel" handleinput="false" font="font_clear_tiny" textalign="left" wordwrap="true" autoresize="true">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="30" y="4" />
+            </Anchor>
+            <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+          <Color r="255" g="204" b="102" />
+        </Label>
+
+      </Windows>
+    </Window>
+
+
+
+
+    <Window name="TidyQueue" movable="false" savesettings="false" layer="default">
+      <Size>
+        <AbsPoint x="220" y="220" />
+      </Size>
+      <Windows>
+        <Window name="$parentBackground" inherits="EA_Window_DefaultFrame" handleinput="false" layer="background">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" >
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+            <Anchor point="bottomright" relativePoint="bottomright" >
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+        </Window>
+
+        <Window name="$parentAutojoinCheckbox" inherits="TQueueCheckboxTemplate">
+          <Anchors>
+            <Anchor point="top" relativePoint="top" >
+              <AbsPoint x="0" y="12" />
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="TidyQueue.OnAutojoinLBU"/>
+            <EventHandler event="OnRButtonUp" function="TidyQueue.OnAutojoinLBU"/>
+          </EventHandlers>
+        </Window>
+
+        <Button name="$parentSelectAll" inherits="EA_Button_DefaultResizeable" layer="popup">
+          <Size>
+            <AbsPoint x="100" y="37" />
+          </Size>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="TidyQueue.OnSelectAll" />
+          </EventHandlers>
+          <Anchors>
+            <Anchor point="top" relativePoint="topright" relativeTo="$parent">
+              <AbsPoint x="0" y="51" />
+            </Anchor>
+          </Anchors>
+        </Button>
+        
+        <Button name="$parentSelectNone" inherits="EA_Button_DefaultResizeable" layer="popup">
+          <Size>
+            <AbsPoint x="100" y="37" />
+          </Size>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="TidyQueue.OnSelectNone" />
+          </EventHandlers>
+          <Anchors>
+            <Anchor point="top" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="0" y="51" />
+            </Anchor>
+          </Anchors>
+        </Button>
+
+        <Button name="$parentJoinSelected" inherits="EA_Button_DefaultResizeable" layer="popup">
+          <Size>
+            <AbsPoint x="140" y="39" />
+          </Size>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="TidyQueue.OnJoinSelected" />
+          </EventHandlers>
+          <Anchors>
+            <Anchor point="bottom" relativePoint="bottom" relativeTo="$parent">
+              <AbsPoint x="0" y="-11" />
+            </Anchor>
+          </Anchors>
+        </Button>
+
+        <Window name="$parentCheckboxesWindow" movable="false" layer="secondary">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="0" y="95" />
+            </Anchor>
+            <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+              <AbsPoint x="0" y="-55" />
+            </Anchor>
+          </Anchors>
+        </Window>
+
+      </Windows>
+    </Window>
+
+
+    <Window name="TidyQueueTimer" movable="false" popable="false" layer="background" savesettings="false" handleinput="false" >
+      <EventHandlers>
+        <EventHandler event="OnUpdate" function="TidyQueue.OnUpdate" />
+      </EventHandlers>
+      <Anchors>
+        <Anchor point="topleft" relativePoint="topleft" relativeTo="Root">
+          <AbsPoint x="0" y="0"/>
+        </Anchor>
+      </Anchors>
+    </Window>
+    
+
+  </Windows>
+</Interface>

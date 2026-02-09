@@ -1,0 +1,2 @@
+LibGuard.UsePet = true
+

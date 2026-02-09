@@ -1,0 +1,117 @@
+<? version="1.0" encoding="UTF-8"?>
+    <!--
+    This application is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    The applications is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with the applications.  If not, see
+    <http://www.gnu.org/licenses/>.
+    -->
+    <Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Windows>
+        
+            <Window name="ShiniesConfigUI_ModulesRow">
+                <Size>
+                    <AbsPoint x="240" y="32"/>
+                </Size>
+                <EventHandlers>
+                    <EventHandler event="OnLButtonUp" function="ShiniesConfigUI.OnLButtonUp_ListItem" />
+                </EventHandlers>
+                <Windows>
+                    <FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" />
+                            <Anchor point="bottomright" relativePoint="bottomright" />
+                        </Anchors>
+                    </FullResizeImage>
+                    <Label name="$parentName" inherits="Shinies_Default_Label_ClearLargeFont"  maxchars="40" handleinput="false" textalign="center" autoresize="false" autoresizewidth="false" warnOnTextCropped="false">
+                        <Size>
+                            <AbsPoint x="100" y="32"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft">
+                                <AbsPoint x="0" y="0" />
+                            </Anchor>
+                            <Anchor point="bottomright" relativePoint="bottomright">
+                                <AbsPoint x="0" y="0" />
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                </Windows>
+            </Window>
+            
+            <Window name="ShiniesConfigUI" inherits="EA_Window_Default" handleinput="true" popable="true" movable="false" savesettings="false">
+                <Size>
+                    <AbsPoint x="1050" y="500" />
+                </Size>
+                <Windows>
+                    <Window name="$parent_Modules">
+                        <Size>
+                            <AbsPoint x="240" y="400" />
+                        </Size>
+                        <Anchors>
+                            <Anchor point="topright" relativePoint="topright">
+                                <AbsPoint x="0" y="0" />
+                            </Anchor>
+                        </Anchors>
+                        <Windows>
+                            <!-- <ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="ShiniesConfigUI_ModulesRow" visiblerows="14" rowspacing="0" scrollbarPosition="left"> -->
+                            <!-- We will go without a scroll bar here for now -->
+                            <ListBox name="$parentList" rowdef="ShiniesConfigUI_ModulesRow" visiblerows="14" rowspacing="0" scrollbarPosition="left">
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topleft">
+                                        <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                    <Anchor point="bottomright" relativePoint="bottomright">
+                                        <AbsPoint x="-8" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                                <ListData table="ShiniesConfigUI.listDisplayData" populationfunction="ShiniesConfigUI.PopulateDisplay">
+                                    <ListColumns>
+                                        <ListColumn windowname="Name" variable="Name" format="wstring" />
+                                    </ListColumns>
+                                </ListData>
+                            </ListBox>
+                        </Windows>
+                    </Window>
+                    <!-- Display Scroll Window -->
+                    <ScrollWindow name="$parent_Display" childscrollwindow="$parentChild" scrollbar="$parentBar" lineheight="18" autohidescrollbar="true">
+                        <Windows>
+                            <VerticalScrollbar name="$parentBar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+                                <Size>
+                                    <AbsPoint x="20" y="0"/>
+                                </Size>
+                                <Anchors>
+                                    <Anchor point="topright" relativePoint="topright">
+                                        <AbsPoint x="-2" y="0"/>
+                                    </Anchor>
+                                    <Anchor point="bottomright" relativePoint="bottomright">
+                                        <AbsPoint x="-2" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </VerticalScrollbar>
+                            <Window name="$parentChild">
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topleft" relativeTo="">
+                                        <AbsPoint x="0" y="0" />
+                                    </Anchor>
+                                    <!-- <Anchor point="bottomleft" relativePoint="bottomright" relativeTo="$parentBar">
+                                        <AbsPoint x="0" y="-2" />
+                                    </Anchor> -->
+                                    <Anchor point="topright" relativePoint="topright" relativeTo="">
+	                                    <AbsPoint x="-20" y="0" />
+	                                </Anchor>
+                                </Anchors>
+                                <Windows/>
+                            </Window>
+                        </Windows>
+                    </ScrollWindow>
+                </Windows>
+            </Window>
+        </Windows>
+    </Interface>

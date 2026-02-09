@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Scripts>
+		<Script file="ChannelAlert.lua" />
+	</Scripts>
+	<Windows>
+		<Window name="ChannelAlertWindow" inherits="EA_Window_Default" movable="false" handleinput="false" savesettings="true">
+
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="-500" />
+				</Anchor>
+			</Anchors>
+
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" textalign="center" hanldeinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+                </FullResizeImage>
+
+                <FullResizeImage name="$parentStatus1" inherits="EA_FullResizeImage_TintableSolidBackground"  handleinput="true"  >
+					<EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="ChannelAlert.TargetOne" />
+                    </EventHandlers>
+				</FullResizeImage>
+                <FullResizeImage name="$parentStatus2" inherits="EA_FullResizeImage_TintableSolidBackground" />
+                <FullResizeImage name="$parentStatus3" inherits="EA_FullResizeImage_TintableSolidBackground" />
+                <FullResizeImage name="$parentStatus4" inherits="EA_FullResizeImage_TintableSolidBackground" />
+                <FullResizeImage name="$parentStatus5" inherits="EA_FullResizeImage_TintableSolidBackground" />
+                <FullResizeImage name="$parentStatus6" inherits="EA_FullResizeImage_TintableSolidBackground" />
+				<Label name="$parentStatusText1" font="font_clear_small_bold" hanldeinput="false" textalign="center" />
+				<Label name="$parentStatusText2" font="font_clear_small_bold" hanldeinput="false" textalign="center" />
+				<Label name="$parentStatusText3" font="font_clear_small_bold" hanldeinput="false" textalign="center" />
+				<Label name="$parentStatusText4" font="font_clear_small_bold" hanldeinput="false" textalign="center" />
+				<Label name="$parentStatusText5" font="font_clear_small_bold" hanldeinput="false" textalign="center" />
+				<Label name="$parentStatusText6" font="font_clear_small_bold" hanldeinput="false" textalign="center" />
+
+				<CircleImage name="$parentStatusImage1" textureScale="1" numsegments="32"  texture="" layer="overlay" sticky="true" handleinput="false" popable="false" />
+				<CircleImage name="$parentStatusImage2" textureScale="1" numsegments="32"  texture="" layer="overlay" sticky="true" handleinput="false" popable="false" />
+				<CircleImage name="$parentStatusImage3" textureScale="1" numsegments="32"  texture="" layer="overlay" sticky="true" handleinput="false" popable="false" />
+				<CircleImage name="$parentStatusImage4" textureScale="1" numsegments="32"  texture="" layer="overlay" sticky="true" handleinput="false" popable="false" />
+				<CircleImage name="$parentStatusImage5" textureScale="1" numsegments="32"  texture="" layer="overlay" sticky="true" handleinput="false" popable="false" />
+				<CircleImage name="$parentStatusImage6" textureScale="1" numsegments="32"  texture="" layer="overlay" sticky="true" handleinput="false" popable="false" />
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

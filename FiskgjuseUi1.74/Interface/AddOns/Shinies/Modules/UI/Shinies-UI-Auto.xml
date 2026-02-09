@@ -1,0 +1,207 @@
+<? version="1.0" encoding="UTF-8"?>
+    <!--
+    This application is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    The applications is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with the applications.  If not, see
+    <http://www.gnu.org/licenses/>.
+    -->
+    <Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Windows>
+        	
+			<EditBox name="ShiniesAutoUI_GoldCoin_EditBox_DefaultFrame" inherits="Shinies_GoldCoin_EditBox_DefaultFrame">
+                <EventHandlers>
+                    <EventHandler event="OnTextChanged" function="ShiniesAutoUI.OnPriceChange" />
+                </EventHandlers>
+            </EditBox>
+            
+            <EditBox name="ShiniesAutoUI_SilverCoin_EditBox_DefaultFrame" inherits="Shinies_SilverCoin_EditBox_DefaultFrame">
+                <TextOffset x="4" y="3" />
+                <EventHandlers>
+                    <EventHandler event="OnTextChanged" function="ShiniesAutoUI.OnPriceChange" />
+                </EventHandlers>
+            </EditBox>
+            
+            <EditBox name="ShiniesAutoUI_BrassCoin_EditBox_DefaultFrame" inherits="Shinies_BrassCoin_EditBox_DefaultFrame">
+                <TextOffset x="4" y="3" />
+                <EventHandlers>
+                    <EventHandler event="OnTextChanged" function="ShiniesAutoUI.OnPriceChange" />
+                </EventHandlers>
+            </EditBox>
+        
+            <Window name="ShiniesAutoUI_ItemRow" drawchildrenfirst="true">
+                <Size>
+                    <AbsPoint x="1010" y="80"/>
+                </Size>
+                <EventHandlers>
+                    <EventHandler event="OnMouseOver"       function="ShiniesAutoUI.OnMouseOver_AutoListRow" />
+                    <EventHandler event="OnMouseOverEnd"    function="ShiniesAutoUI.OnMouseOverEnd_AutoListRow" />
+                    <EventHandler event="OnLButtonUp" 		function="ShiniesAutoUI.OnLButtonUp_AutoListRow" />
+                </EventHandlers>
+                <Windows>
+                    <FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" />
+                            <Anchor point="bottomright" relativePoint="bottomright" />
+                        </Anchors>
+                    </FullResizeImage>
+                    <FullResizeImage name="$parentMouseover" texture="Shinies3pxBorder" layer="overlay" handleinput="false" showing="false" alpha="0.5">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"/>
+                            <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+                        </Anchors>
+                        <Sizes>
+                            <TopLeft x="3" y="3" />
+                            <BottomRight x="3" y="3" />
+                            <Middle x="58" y="58" />
+                        </Sizes>
+                        <TexSlices>
+                            <TopLeft      id="Border-Top-Left" />
+                            <TopCenter    id="Border-Top-Center" />
+                            <TopRight     id="Border-Top-Right" />
+                            <MiddleLeft   id="Border-Middle-Left" />
+                            <MiddleCenter id="Border-Middle-Center" />
+                            <MiddleRight  id="Border-Middle-Right" />
+                            <BottomLeft   id="Border-Bottom-Left" />
+                            <BottomCenter id="Border-Bottom-Center" />
+                            <BottomRight  id="Border-Bottom-Right" />
+                        </TexSlices>
+                        <TintColor r="0" g="240" b="24" />
+                    </FullResizeImage>
+                    <Button name="$parentImage" inherits="Shinies_IconButton" handleinput="false" draganddrop="false">
+                        <Anchors>
+                            <Anchor point="left" relativePoint="left" relativeTo="">
+                                <AbsPoint x="15" y="0" />
+                            </Anchor>
+                        </Anchors>
+                    </Button>
+                    <Button name="$parentOverlay" inherits="Shinies_IconButton_Overlay" handleinput="false" layer="secondary">
+                        <Anchors>
+                            <Anchor point="center" relativePoint="center" relativeTo="$parentImage"/>
+                        </Anchors>
+                    </Button>
+                    <Label name="$parentName" inherits="Shinies_Default_Label_ClearLargeFont" textalign="leftcenter" maxchars="120" autoresize="false" handleinput="false" layer="secondary">
+                        <Size>
+                            <AbsPoint x="450" y="30" />
+                        </Size>
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft">
+                                <AbsPoint x="90" y="5" />
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentPriceDescription" inherits="Shinies_Default_Label_ClearSmallFont" textalign="left" maxchars="200" autoresize="false" handleinput="false" layer="secondary" wordwrap="true">
+                        <Size>
+                            <AbsPoint x="450" y="60" />
+                        </Size>
+                        <Color  r="222" g="192" b="50" />
+                        <Anchors>
+                            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentName">
+                                <AbsPoint x="0" y="2" />
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentStackSizeDescription" inherits="Shinies_Default_Label_ClearSmallFont" textalign="leftcenter" maxchars="40" autoresize="false" handleinput="false" layer="secondary">
+                        <Size>
+                            <AbsPoint x="150" y="22" />
+                        </Size>
+                        <Color  r="222" g="192" b="50" />
+                        <Anchors>
+                            <Anchor point="topright" relativePoint="topleft" relativeTo="$parentName">
+                                <AbsPoint x="5" y="0" />
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentStackSize" inherits="Shinies_Default_Label_ClearSmallFont" textalign="leftcenter" maxchars="3" autoresize="false" handleinput="false" layer="secondary">
+                        <Size>
+                            <AbsPoint x="60" y="22" />
+                        </Size>
+                        <Anchors>
+                            <Anchor point="right" relativePoint="left" relativeTo="$parentStackSizeDescription">
+                                <AbsPoint x="2" y="0" />
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentMinInventoryDescription" inherits="Shinies_Default_Label_ClearSmallFont" textalign="leftcenter" maxchars="40" autoresize="false" handleinput="false" layer="secondary">
+                        <Size>
+                            <AbsPoint x="150" y="22" />
+                        </Size>
+                        <Color  r="222" g="192" b="50" />
+                        <Anchors>
+                            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStackSizeDescription">
+                                <AbsPoint x="0" y="2" />
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Label name="$parentMinInventory" inherits="Shinies_Default_Label_ClearSmallFont" textalign="leftcenter" maxchars="20" autoresize="false" handleinput="false" layer="secondary">
+                        <Size>
+                            <AbsPoint x="100" y="22" />
+                        </Size>
+                        <Anchors>
+                            <Anchor point="right" relativePoint="left" relativeTo="$parentMinInventoryDescription">
+                                <AbsPoint x="2" y="0" />
+                            </Anchor>
+                        </Anchors>
+                    </Label>
+                    <Button name="$parentDelete" inherits="Shinies_Default_Button_ClearMediumFont" handleinput="true" layer="secondary">
+                        <Anchors>
+                            <Anchor point="right" relativePoint="right">
+                                <AbsPoint x="-10" y="0" />
+                            </Anchor>
+                        </Anchors>
+                        <EventHandlers>
+                            <EventHandler event="OnLButtonUp" 	function="ShiniesAutoUI.OnLButtonUp_AutoDelete" />
+                        </EventHandlers>
+                    </Button>
+                </Windows>
+            </Window>
+            <Window name="ShiniesAutoUI" inherits="EA_Window_Default" handleinput="true" popable="true" movable="false" savesettings="false">
+                <Size>
+                    <AbsPoint x="800" y="500"/>
+                </Size>
+                <EventHandlers>
+                    <EventHandler event="OnShown" 	function="ShiniesAutoUI.OnShown" />
+                    <EventHandler event="OnHidden" 	function="ShiniesAutoUI.OnHidden" />
+                </EventHandlers>
+                <Windows>
+                    <Window name="$parent_Auto">
+                        <Windows>
+                            <ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="ShiniesAutoUI_ItemRow" visiblerows="5" rowspacing="0">
+                                <Anchors>
+                                    <Anchor point="topleft" relativePoint="topleft" />
+                                    <Anchor point="bottomright" relativePoint="bottomright" />
+                                </Anchors>
+                                <ListData table="ShiniesAutoUI.listDisplayData" populationfunction="ShiniesAutoUI.PopulateAutoDisplay"/>
+                            </ListBox>
+                            <LogDisplay name="$parentSummary" font="font_chat_text" scrollbar="$parentScrollbar" scrollbarPosition="right" background="" maxchars="4096" maxentries="256">
+                                <Anchors>
+                                   <Anchor point="topleft" relativePoint="topleft">
+			                            <AbsPoint x="10" y="5" />
+			                        </Anchor>
+			                        <Anchor point="bottomright" relativePoint="bottomright">
+			                            <AbsPoint x="-10" y="-5" />
+			                        </Anchor>
+                                </Anchors>
+                                <Windows>
+                                    <VerticalScrollbar name="$parentScrollbar" inherits="EA_ScrollBar_DefaultVerticalChain">
+                                        <Anchors>
+                                            <Anchor point="topright" relativePoint="topleft">
+                                                <AbsPoint x="-20" y="0" />
+                                            </Anchor>
+                                            <Anchor point="bottomright" relativePoint="bottomright"/>
+                                        </Anchors>
+                                    </VerticalScrollbar>
+                                </Windows>
+                            </LogDisplay>
+                        </Windows>
+                    </Window>
+                </Windows>
+            </Window>
+        </Windows>
+    </Interface>

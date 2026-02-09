@@ -1,0 +1,437 @@
+<Interface
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+    <Scripts>
+        <Script file="AggroMeter.lua" />
+    </Scripts>
+    <Assets>
+        <Texture name="AggroMeterIcon" file="AggroMeterIcon.tga" />
+    </Assets>
+    <Windows>
+	
+        <Window name="AggroMeter_Button" layer="secondary" movable="true" popable="false"  handleinput="true" savesettings="true">
+            <EventHandlers>
+                <EventHandler event="OnMouseOver" function="AggroMeter.OnMouseOverStart"/>
+                <!-- <EventHandler event="OnRButtonUp" function="AggroMeter.OnTabRBU"/> -->
+            </EventHandlers>
+            <Size>
+                <AbsPoint x="32" y="32"/>
+            </Size>
+            <Anchors>
+                <Anchor point="bottom" relativePoint="center" relativeTo="EA_Window_OverheadMap">
+                    <AbsPoint x="0" y="2" />
+                </Anchor>
+            </Anchors>
+            <Windows>
+                <DynamicImage name="$parentIcon" texture="AggroMeterIcon" handleinput="false" textureScale="0.5" layer="overlay">
+                    <Size>
+                        <AbsPoint x="32" y="32" />
+                    </Size>
+                </DynamicImage>
+            </Windows>
+        </Window>
+		
+        <Button name="Aggro_Button_Template" handleinput="true" inherits="EA_Button_Default" backgroundtexture="EA_Training_Specialization" highlighttexture="EA_Training_Specialization"  textureScale="0.62" layer="default" drawchildrenfirst="false">
+            <Size>
+                <AbsPoint x="36" y="36" />
+            </Size>
+            <TexSlices>
+                <Normal          id="morale-black"   />
+                <NormalHighlit   id="morale-white"   />
+                <Pressed         id="morale-white"  />
+                <PressedHighlit  id="morale-white"  />
+                <Disabled        id="morale-white"   />
+                <DisabledPressed id="morale-white"  />
+            </TexSlices>
+            <Windows>
+                <CircleImage name="$parentIcon" textureScale="0.8" numsegments="32"  texture="" layer="overlay" sticky="true" handleinput="false" popable="false">
+                    <Size>
+                        <AbsPoint x="21" y="21" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                            <AbsPoint x="7" y="10" />
+                        </Anchor>
+                    </Anchors>
+                    <TexCoords x="0" y="0" />
+                </CircleImage>
+            </Windows>
+        </Button>
+        <Label name="Aggro_Label_Template" font="font_default_text_large" autoresize="false" textalign="right" wordwrap="false" layer="overlay" alpha="1" popable="false" handleinput="true">
+            <EventHandlers>
+                <EventHandler event="OnMouseOver" function="AggroMeter.SelectChar"/>
+                <EventHandler event="OnLButtonUp" function="AggroMeter.SelectChar" />
+            </EventHandlers>
+            <Size>
+                <AbsPoint x="135" y="22" />
+            </Size>
+            <Color r="255" g="255" b="77" />
+        </Label>
+        <DynamicImage name="Aggro_Tactic_Template" texture="" texturescale="0.35" handleinput="true" >
+            <EventHandlers>
+                <EventHandler event="OnMouseOver" function="AggroMeter.OnMouseOverStart"/>
+            </EventHandlers>
+            <Size>
+                <AbsPoint x="22" y="22" />
+            </Size>
+        </DynamicImage>
+        <Window name="Aggro_Timer_Template" inherits="EA_Window_DefaultFrameStatusBar" layer="overlay" handleinput="true" >
+            <EventHandlers>
+                <EventHandler event="OnMouseOver" function="AggroMeter.OnMouseOverStart"/>
+            </EventHandlers>
+            <Size>
+                <AbsPoint x="100" y="23" />
+            </Size>
+        </Window>
+        <Window name="AggroMeterWindow" layer="default" movable="false" popable="false" sticky="true" handleinput="true">
+            <Size>
+                <AbsPoint x="310" y="165" />
+            </Size>
+            <Anchors>
+                <Anchor point="topright" relativePoint="topright" relativeTo="AggroMeter_Button">
+                    <AbsPoint x="-20" y="20" />
+                </Anchor>
+            </Anchors>
+            <Windows>
+                <FullResizeImage name="$parentBorderCheck" inherits="EA_FullResizeImage_BlackTransparent" layer="background" alpha="0.5" handleinput="false">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                            <AbsPoint x="0" y="0"/>
+                        </Anchor>
+                        <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+                            <AbsPoint x="0" y="0"/>
+                        </Anchor>
+                    </Anchors>
+                </FullResizeImage>
+                <Label name="$parentNameLabel" font="font_default_text_large" autoresize="true" textalign="left" wordwrap="false" ellipsisOnCrop="true" warnOnTextCropped="false"  layer="default" alpha="1" popable="false" handleinput="false">
+                    <Size>
+                        <AbsPoint x="215" y="45" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                            <AbsPoint x="10" y="5" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="55" b="55" />
+                </Label>
+                <Label name="$parentCombatLabel" font="font_default_text_large" autoresize="true" textalign="right" wordwrap="true" layer="default" alpha="0.5" popable="false" handleinput="false">
+                    <Size>
+                        <AbsPoint x="150" y="45" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+                            <AbsPoint x="-10" y="5" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="245" g="245" b="245" />
+                </Label>
+                <!-- Aggro Holder #1 -->
+                <Window name="$parent_AggroWindow1" layer="default" movable="false" popable="false" sticky="true" handleinput="true">
+                    <Size>
+                        <AbsPoint x="310" y="30" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                            <AbsPoint x="0" y="30" />
+                        </Anchor>
+                    </Anchors>
+                    <Windows>
+                        <Label name="$parentLabel" inherits="Aggro_Label_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentButton">
+                                    <AbsPoint x="0" y="3" />
+                                </Anchor>
+                            </Anchors>
+                        </Label>
+                        <DynamicImage name="$parentTactic" inherits="Aggro_Tactic_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                                    <AbsPoint x="5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </DynamicImage>
+                        <Window name="$parentTimer" inherits="Aggro_Timer_Template">
+                            <Anchors>
+                                <Anchor point="right" relativePoint="right" relativeTo="$parent" >
+                                    <AbsPoint x="-5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </Window>
+                        <Button name="$parentButton" inherits="Aggro_Button_Template" >
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentTimer">
+                                    <AbsPoint x="0" y="-3" />
+                                </Anchor>
+                            </Anchors>
+                        </Button>
+                        <FullResizeImage name="$parentBorderCheck" inherits="EA_FullResizeImage_TintableSolidBackground" layer="background" alpha="0.1" handleinput="false">
+                            <Anchors>
+                                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                                    <AbsPoint x="3" y="0"/>
+                                </Anchor>
+                                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+                                    <AbsPoint x="-3" y="0"/>
+                                </Anchor>
+                            </Anchors>
+                            <TintColor r="0" g="0" b="0" a="30"/>
+                        </FullResizeImage>
+                    </Windows>
+                </Window>
+                <!-- Aggro Holder #2 -->
+                <Window name="$parent_AggroWindow2" layer="default" movable="false" popable="false" sticky="true" handleinput="true">
+                    <Size>
+                        <AbsPoint x="310" y="30" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottomright" relativePoint="topright" relativeTo="$parent_AggroWindow1">
+                            <AbsPoint x="0" y="7" />
+                        </Anchor>
+                    </Anchors>
+                    <Windows>
+                        <Label name="$parentLabel" inherits="Aggro_Label_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentButton">
+                                    <AbsPoint x="0" y="3" />
+                                </Anchor>
+                            </Anchors>
+                        </Label>
+                        <DynamicImage name="$parentTactic" inherits="Aggro_Tactic_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                                    <AbsPoint x="5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </DynamicImage>
+                        <Window name="$parentTimer" inherits="Aggro_Timer_Template">
+                            <Anchors>
+                                <Anchor point="right" relativePoint="right" relativeTo="$parent" >
+                                    <AbsPoint x="-5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </Window>
+                        <Button name="$parentButton" inherits="Aggro_Button_Template" >
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentTimer">
+                                    <AbsPoint x="0" y="-3" />
+                                </Anchor>
+                            </Anchors>
+                        </Button>
+                        <FullResizeImage name="$parentBorderCheck" inherits="EA_FullResizeImage_WhiteTransparent" layer="background" alpha="0.1" handleinput="false">
+                            <Anchors>
+                                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                                    <AbsPoint x="3" y="0"/>
+                                </Anchor>
+                                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+                                    <AbsPoint x="-3" y="0"/>
+                                </Anchor>
+                            </Anchors>
+                        </FullResizeImage>
+                    </Windows>
+                </Window>
+                <!-- Aggro Holder #3 -->
+                <Window name="$parent_AggroWindow3" layer="default" movable="false" popable="false" sticky="true" handleinput="true">
+                    <Size>
+                        <AbsPoint x="310" y="30" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottomright" relativePoint="topright" relativeTo="$parent_AggroWindow2">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Windows>
+                        <Label name="$parentLabel" inherits="Aggro_Label_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentButton">
+                                    <AbsPoint x="0" y="3" />
+                                </Anchor>
+                            </Anchors>
+                        </Label>
+                        <DynamicImage name="$parentTactic" inherits="Aggro_Tactic_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                                    <AbsPoint x="5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </DynamicImage>
+                        <Window name="$parentTimer" inherits="Aggro_Timer_Template">
+                            <Anchors>
+                                <Anchor point="right" relativePoint="right" relativeTo="$parent" >
+                                    <AbsPoint x="-5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </Window>
+                        <Button name="$parentButton" inherits="Aggro_Button_Template" >
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentTimer">
+                                    <AbsPoint x="0" y="-3" />
+                                </Anchor>
+                            </Anchors>
+                        </Button>
+                        <FullResizeImage name="$parentBorderCheck" inherits="EA_FullResizeImage_BlackTransparent" layer="background" alpha="0.1" handleinput="false">
+                            <Anchors>
+                                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                                    <AbsPoint x="3" y="0"/>
+                                </Anchor>
+                                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+                                    <AbsPoint x="-3" y="0"/>
+                                </Anchor>
+                            </Anchors>
+                        </FullResizeImage>
+                    </Windows>
+                </Window>
+                <!-- Aggro Holder #4 -->
+                <Window name="$parent_AggroWindow4" layer="default" movable="false" popable="false" sticky="true" handleinput="true">
+                    <Size>
+                        <AbsPoint x="310" y="30" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottomright" relativePoint="topright" relativeTo="$parent_AggroWindow3">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Windows>
+                        <Label name="$parentLabel" inherits="Aggro_Label_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentButton">
+                                    <AbsPoint x="0" y="3" />
+                                </Anchor>
+                            </Anchors>
+                        </Label>
+                        <DynamicImage name="$parentTactic" inherits="Aggro_Tactic_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                                    <AbsPoint x="5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </DynamicImage>
+                        <Window name="$parentTimer" inherits="Aggro_Timer_Template">
+                            <Anchors>
+                                <Anchor point="right" relativePoint="right" relativeTo="$parent" >
+                                    <AbsPoint x="-5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </Window>
+                        <Button name="$parentButton" inherits="Aggro_Button_Template" >
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentTimer">
+                                    <AbsPoint x="0" y="-3" />
+                                </Anchor>
+                            </Anchors>
+                        </Button>
+                        <FullResizeImage name="$parentBorderCheck" inherits="EA_FullResizeImage_WhiteTransparent" layer="background" alpha="0.1" handleinput="false">
+                            <Anchors>
+                                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                                    <AbsPoint x="3" y="0"/>
+                                </Anchor>
+                                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+                                    <AbsPoint x="-3" y="0"/>
+                                </Anchor>
+                            </Anchors>
+                        </FullResizeImage>
+                    </Windows>
+                </Window>
+                <!-- Aggro Holder #5 -->
+                <Window name="$parent_AggroWindow5" layer="default" movable="false" popable="false" sticky="true" handleinput="true">
+                    <Size>
+                        <AbsPoint x="310" y="30" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottomright" relativePoint="topright" relativeTo="$parent_AggroWindow4">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Windows>
+                        <Label name="$parentLabel" inherits="Aggro_Label_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentButton">
+                                    <AbsPoint x="0" y="3" />
+                                </Anchor>
+                            </Anchors>
+                        </Label>
+                        <DynamicImage name="$parentTactic" inherits="Aggro_Tactic_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                                    <AbsPoint x="5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </DynamicImage>
+                        <Window name="$parentTimer" inherits="Aggro_Timer_Template">
+                            <Anchors>
+                                <Anchor point="right" relativePoint="right" relativeTo="$parent" >
+                                    <AbsPoint x="-5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </Window>
+                        <Button name="$parentButton" inherits="Aggro_Button_Template" >
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentTimer">
+                                    <AbsPoint x="0" y="-3" />
+                                </Anchor>
+                            </Anchors>
+                        </Button>
+                        <FullResizeImage name="$parentBorderCheck" inherits="EA_FullResizeImage_BlackTransparent" layer="background" alpha="0.1" handleinput="false">
+                            <Anchors>
+                                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                                    <AbsPoint x="3" y="0"/>
+                                </Anchor>
+                                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+                                    <AbsPoint x="-3" y="0"/>
+                                </Anchor>
+                            </Anchors>
+                        </FullResizeImage>
+                    </Windows>
+                </Window>
+                <!-- Aggro Holder #6 -->
+                <Window name="$parent_AggroWindow6" layer="default" movable="false" popable="false" sticky="true" handleinput="true">
+                    <Size>
+                        <AbsPoint x="310" y="30" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottomright" relativePoint="topright" relativeTo="$parent_AggroWindow5">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Windows>
+                        <Label name="$parentLabel" inherits="Aggro_Label_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentButton">
+                                    <AbsPoint x="0" y="3" />
+                                </Anchor>
+                            </Anchors>
+                        </Label>
+                        <DynamicImage name="$parentTactic" inherits="Aggro_Tactic_Template">
+                            <Anchors>
+                                <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                                    <AbsPoint x="5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </DynamicImage>
+                        <Window name="$parentTimer" inherits="Aggro_Timer_Template">
+                            <Anchors>
+                                <Anchor point="right" relativePoint="right" relativeTo="$parent" >
+                                    <AbsPoint x="-5" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </Window>
+                        <Button name="$parentButton" inherits="Aggro_Button_Template" >
+                            <Anchors>
+                                <Anchor point="left" relativePoint="right" relativeTo="$parentTimer">
+                                    <AbsPoint x="0" y="-3" />
+                                </Anchor>
+                            </Anchors>
+                        </Button>
+                        <FullResizeImage name="$parentBorderCheck" inherits="EA_FullResizeImage_WhiteTransparent" layer="background" alpha="0.1" handleinput="false">
+                            <Anchors>
+                                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                                    <AbsPoint x="3" y="0"/>
+                                </Anchor>
+                                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+                                    <AbsPoint x="-3" y="0"/>
+                                </Anchor>
+                            </Anchors>
+                        </FullResizeImage>
+                    </Windows>
+                </Window>
+            </Windows>
+        </Window>
+    </Windows>
+</Interface>

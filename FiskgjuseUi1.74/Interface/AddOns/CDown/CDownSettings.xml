@@ -1,0 +1,224 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="CDown_Settings" savesettings="false" inherits="EA_Window_Default" handleinput="true" movable="true" layer="secondary">
+			<Size>
+				<AbsPoint x="1000" y="750" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="WindowUtils.TrapClick" />
+			</EventHandlers>
+			<Windows>
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" handleinput="true">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" >
+							<AbsPoint x="27" y="0" />
+						</Anchor>
+						<Anchor point="topright" relativePoint="topright">
+							<AbsPoint x="-3" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CDownSettings.CloseOptionswindow" />
+					</EventHandlers>
+				</Button>
+
+				<!-- Whole window background -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame" handleinput="true">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="-10" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<Window name="$parentListBackground">
+					<Size>
+						<AbsPoint x="290"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+						<Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="$parentBackground">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<FullResizeImage name="$parentsGeneralBackground" inherits="CDownSectionBackground" />
+					</Windows>
+				</Window>
+
+				<Window name="$parentGeneralButton" inherits="CDown_FakeSettingsRow" layer="secondary">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CDownSettings.ShowGeneralOptions" />
+					</EventHandlers>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentListBackground">
+								<AbsPoint x="20" y="5" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentLayoutButton" inherits="CDown_FakeSettingsRow" layer="secondary">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CDownSettings.ShowLayoutOptions" />
+					</EventHandlers>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGeneralButton">
+								<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentColorButton" inherits="CDown_FakeSettingsRow" layer="secondary">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CDownSettings.ShowColorOptions" />
+					</EventHandlers>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLayoutButton">
+								<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<Button name="$parentToggleTestmode" inherits="EA_Button_DefaultResizeable" layer="secondary">
+					<Size>
+						<AbsPoint x="240" y="39"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentColorButton">
+								<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CDownSettings.ToggleTestmode" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentRestartTracker" inherits="EA_Button_DefaultResizeable" layer="secondary">
+					<Size>
+						<AbsPoint x="240" y="39"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentToggleTestmode">
+								<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CDown.RestartTracker" />
+					</EventHandlers>
+				</Button>
+
+				<ScrollWindow name="$parent_GeneralSettings" inherits="CDownGeneralSettingsTab">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentListBackground">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentBackground">
+							<AbsPoint x="-10" y="-10" />
+						</Anchor>
+					</Anchors>
+				</ScrollWindow>
+
+				<ScrollWindow name="$parent_NLayoutSettings" inherits="CDownNLayoutSettingsTab">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentListBackground">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentBackground">
+							<AbsPoint x="-10" y="-10" />
+						</Anchor>
+					</Anchors>
+				</ScrollWindow>
+
+				<ScrollWindow name="$parent_SLayoutSettings" inherits="CDownSLayoutSettingsTab">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentListBackground">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentBackground">
+							<AbsPoint x="-10" y="-10" />
+						</Anchor>
+					</Anchors>
+				</ScrollWindow>
+
+				<ScrollWindow name="$parent_ColorSettings" inherits="CDownColorSettingsTab">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentListBackground">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentBackground">
+							<AbsPoint x="-10" y="-10" />
+						</Anchor>
+					</Anchors>
+				</ScrollWindow>
+
+<!--
+				<ScrollWindow name="$parent_FrameSettings" inherits="CDownFrameSettingsTab">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentListBackground">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentBackground">
+							<AbsPoint x="-10" y="-10" />
+						</Anchor>
+					</Anchors>
+				</ScrollWindow>
+
+				<ScrollWindow name="$parent_ListManagerSettings" inherits="CDownListManagerTab">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentListBackground">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentBackground">
+							<AbsPoint x="-10" y="-10" />
+						</Anchor>
+					</Anchors>
+				</ScrollWindow>
+
+-->
+
+			</Windows>
+		</Window>
+
+
+		<Window name="CDown_FakeSettingsRow" handleinput="true">
+			<Size>
+				<AbsPoint x="240" y="40" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parent_Background" inherits="EA_FullResizeImage_TintableSolidBackground">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"/>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parent_Text" wordwrap="true" font="font_default_medium_heading" textalign="left" maxchars="40" handleinput="false">
+					<Size>
+						<AbsPoint x="240" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="center" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+
+		<FullResizeImage name="CDownSectionBackground" inherits="EA_FullResizeImage_DefaultFrame" handleinput="false" layer="background">
+			<Anchors>
+				<Anchor point="topleft" relativePoint="topleft" >
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+				<Anchor point="bottomright" relativePoint="bottomright" >
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+		</FullResizeImage>
+
+
+	</Windows>
+</Interface>

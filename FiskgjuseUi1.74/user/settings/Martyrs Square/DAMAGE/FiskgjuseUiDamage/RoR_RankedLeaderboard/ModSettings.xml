@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1.5" messagingEnabled="false">
+    <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
+    <Windows>
+        <WindowSettings xmlVersion="1.0" name="RoR_RankedLeaderboard" sizeX="1028.000000" sizeY="655.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.750389" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="273.888916" yOffset="77.888885" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="RoR_RankedLeaderboard_Toggler" sizeX="17.000000" sizeY="33.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottomright" relativePoint="bottomright" relativeTo="Root" xOffset="-307.333466" yOffset="-1.999969" />
+            </Anchors>
+        </WindowSettings>
+    </Windows>
+</UiModuleSettings>

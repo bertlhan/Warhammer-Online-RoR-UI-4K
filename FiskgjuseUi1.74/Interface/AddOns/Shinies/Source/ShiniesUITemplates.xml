@@ -1,0 +1,307 @@
+<? version="1.0" encoding="UTF-8"?>
+    <!--
+    This application is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    The applications is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with the applications.  If not, see
+    <http://www.gnu.org/licenses/>.
+    -->
+    <Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Windows>
+        	<Window name="ShiniesWindowDefault" inhserits="EA_Window_Default" savesettings="false"/>
+            
+            <Window name="ShiniesTooltipWindow" handleinput="false" layer="overlay" savesettings="false">
+            	<Windows>
+            		<Window name="$parentBackground" inherits="EA_Window_DefaultTooltipBackground">
+	                    <Size>
+	                        <AbsPoint x="0" y="0" />
+	                    </Size>
+	                    <Anchors>
+	                        <Anchor point="topleft" relativePoint="topleft" />
+	                        <Anchor point="bottomright" relativePoint="bottomright">
+	                            <AbsPoint x="0" y="6" />
+	                        </Anchor>
+	                    </Anchors>
+	                </Window>
+	            </Windows>
+	        </Window>
+            
+            <Window name="ShiniesTooltipDefault" handleinput="false" layer="overlay" savesettings="false"/>
+
+            <Label name="ShiniesTooltipBaseLabel" sticky="false" font="font_chat_text" maxchars="1024" textalign="left" autoresize="true" wordwrap="false" handleinput="false">
+                <Size>
+                    <AbsPoint x="0" y="0" />
+                </Size>
+                <Color r="255" g="255" b="255" a="255" />
+            </Label>
+            
+            <EditBox name="Shinies_GoldCoin_EditBox_DefaultFrame" font="font_chat_text" background="EA_FullResizeImage_TanBorder" scrolling="none" input="numbers" maxChars="5" align="rightcenter">
+                <TextOffset x="4" y="3" />
+            </EditBox>
+            
+            <EditBox name="Shinies_SilverCoin_EditBox_DefaultFrame" font="font_chat_text" background="EA_FullResizeImage_TanBorder" scrolling="none" input="numbers" maxChars="2" align="rightcenter">
+                <TextOffset x="4" y="3" />
+            </EditBox>
+            
+            <EditBox name="Shinies_BrassCoin_EditBox_DefaultFrame" font="font_chat_text" background="EA_FullResizeImage_TanBorder" scrolling="none" input="numbers" maxChars="2" align="rightcenter">
+                <TextOffset x="4" y="3" />
+            </EditBox>
+            
+            <EditBox name="Shinies_Level_EditBox_DefaultFrame" font="font_chat_text" background="EA_FullResizeImage_TanBorder" scrolling="none" input="numbers" maxChars="3" align="center">
+                <TextOffset x="4" y="3" />
+            </EditBox>
+            
+            <EditBox name="Shinies_EditBox_DefaultFrame_ThreeNumber" font="font_chat_text" background="EA_FullResizeImage_TanBorder" scrolling="none" input="numbers" maxChars="3" align="center">
+                <TextOffset x="4" y="3" />
+            </EditBox>
+            
+            <EditBox name="Shinies_EditBox_DefaultFrame_TwoNumber" font="font_chat_text" background="EA_FullResizeImage_TanBorder" scrolling="none" input="numbers" maxChars="2" align="center">
+                <TextOffset x="4" y="3" />
+            </EditBox>
+            
+            <EditBox name="Shinies_EditBox_DefaultFrame" font="font_chat_text" background="EA_FullResizeImage_TanBorder" scrolling="none" maxChars="64" align="center">
+                <TextOffset x="4" y="3" />
+            </EditBox>
+            
+            <Window name="Shinies_GoldCoin" skipinput="true">
+                <Size>
+                    <AbsPoint x="19" y="19" />
+                </Size>
+                <Windows>
+                    <DynamicImage name="$parentImage" inherits="EA_Templates_GoldCoin">
+                        <Anchors>
+                            <Anchor point="center" relativePoint="center" relativeTo="$parent"/>
+                        </Anchors>
+                    </DynamicImage>
+                </Windows>
+            </Window>
+            
+            <Window name="Shinies_SilverCoin" skipinput="true">
+                <Size>
+                    <AbsPoint x="19" y="19" />
+                </Size>
+                <Windows>
+                    <DynamicImage name="$parentImage" inherits="EA_Templates_SilverCoin">
+                        <Anchors>
+                            <Anchor point="center" relativePoint="center" relativeTo="$parent"/>
+                        </Anchors>
+                    </DynamicImage>
+                </Windows>
+            </Window>
+            
+            <Window name="Shinies_BrassCoin" skipinput="true">
+                <Size>
+                    <AbsPoint x="19" y="19" />
+                </Size>
+                <Windows>
+                    <DynamicImage name="$parentImage" inherits="EA_Templates_BrassCoin">
+                        <Anchors>
+                            <Anchor point="center" relativePoint="center" relativeTo="$parent"/>
+                        </Anchors>
+                    </DynamicImage>
+                </Windows>
+            </Window>
+            
+            <Button name="Shinies_IconButton" inherits="EA_Button_Default" texturescale="1.0" drawchildrenfirst="true">
+	            <Size>
+                    <AbsPoint x="64" y="64" />
+                </Size>>
+	            <Windows>
+	            	<DynamicImage name="$parentIcon" handleinput="false" layer="background" >
+	                    <Anchors>
+	                        <Anchor point="topleft" relativePoint="topleft" />
+	                        <Anchor point="bottomright" relativePoint="bottomright" />
+	                    </Anchors>
+	                    <TexDims x="64" y="64" />
+	                </DynamicImage>
+	            </Windows>
+	            <TexCoords>
+		            <Normal texture="EA_SquareFrame" x="0" y="0" />
+	                <NormalHighlit texture="EA_SquareFrame_Highlight" x="0" y="0" />
+	                <Pressed texture="EA_SquareFrame_Pressed" x="0" y="0" />
+	                <Disabled texture="EA_SquareFrame" x="0" y="0" />
+				</TexCoords>
+	            <TextOffset x="5" />
+	        </Button>
+			
+			<Button name="Shinies_IconButton_Overlay" inherits="EA_Button_Default" handleinput="false" movable="false" savesettings="false">
+				<Size>
+					<AbsPoint x="64" y="64"/>
+				</Size>
+				<TexCoords>
+					<Normal texture="ShiniesIconBorderNormal" x="0" y="0" />
+					<NormalHighlit texture="ShiniesIconBorderHighlight" x="0" y="0" />
+					<Pressed texture="ShiniesIconBorderHighlight" x="0" y="0" />
+					<Disabled texture="ShiniesIconBorderNormal" x="0" y="0" />
+				</TexCoords>
+			</Button>
+			
+			<Button name="Shinies_Button_ListSort" font="font_clear_medium"  textalign="center">
+				<Size>
+					<AbsPoint x="125" y="31" />
+				</Size>
+				<ResizeImages>
+				    <Normal def="EA_Button_ListSortNormal" />
+				    <NormalHighlit def="EA_Button_ListSortHighlight" />
+				    <Pressed def="EA_Button_ListSortPressed" />
+				    <Disabled def="EA_Button_ListSortNormal" />
+				</ResizeImages>
+				<TextColors>
+				    <Normal             r="255" g="204" b="102" />
+				    <NormalHighlit      r="255" g="85" b="0" />
+				    <Pressed            r="255" g="85" b="0" />
+				    <PressedHighlit     r="255" g="85" b="0"/>
+				    <Disabled           r="255" g="204" b="102" />
+				</TextColors>
+				<TextOffset x="10" y="5" />
+        	</Button>
+        	
+        	<Button name="Shinies_Button_DefaultListSort" inherits="Shinies_Button_ListSort" >
+	            <Size>
+	                <AbsPoint x="150" y="30" />
+	            </Size>
+	            <Windows>
+	              <DynamicImage name="$parentUpArrow" inherits="EA_ListSortUpArrow">
+	                  <Anchors>
+	                      <Anchor point="right" relativePoint="right">
+	                          <AbsPoint x="-5" y="0"/>
+	                      </Anchor>
+	                  </Anchors>
+	              </DynamicImage>
+	              <DynamicImage name="$parentDownArrow" inherits="EA_ListSortDownArrow">
+	                  <Anchors>
+	                      <Anchor point="center" relativePoint="center" relativeTo="$parentUpArrow">
+	                          <AbsPoint x="0" y="0"/>
+	                      </Anchor>
+	                  </Anchors>
+	              </DynamicImage>
+	            </Windows>
+	        </Button>
+	        
+	        <Label name="Shinies_Default_Label" font="font_default_text" maxchars="512" handleinput="false" textalign="leftcenter" autoresize="false" autoresizewidth="false">
+                <Size>
+                    <AbsPoint x="25" y="24" />
+                </Size>
+                <Color r="255" g="255" b="255" a="255" />
+            </Label>
+            
+            <Label name="Shinies_Default_Label_ClearSmallFont" 			inherits="Shinies_Default_Label" 		font="font_clear_small" 			warnOnTextCropped="false"/>
+            <Label name="Shinies_Default_Label_ClearSmallFont_WordWrap" inherits="Shinies_Default_Label" 		font="font_clear_small" 			warnOnTextCropped="false" wordwrap="true" background="EA_FullResizeImage_TanBorder"/>
+		    <Label name="Shinies_Default_Label_ClearMediumFont" 		inherits="Shinies_Default_Label" 		font="font_clear_medium" 			warnOnTextCropped="false"/>
+            <Label name="Shinies_Default_Label_ClearMediumBoldFont" 	inherits="Shinies_Default_Label" 		font="font_clear_medium_bold" 		warnOnTextCropped="false"/>
+            <Label name="Shinies_Default_Label_ClearLargeFont" 			inherits="Shinies_Default_Label" 		font="font_clear_large" 			warnOnTextCropped="false"/>
+            <Label name="Shinies_Default_Label_ClearLargeBoldFont" 		inherits="Shinies_Default_Label" 		font="font_clear_large_bold" 		warnOnTextCropped="false"/>
+            
+            <EditBox name="Shinies_Default_Editbox_ClearSmallBold" 		inherits="EA_EditBox_DefaultFrame" 		font="font_clear_small_bold"		warnOnTextCropped="false"/>
+            <EditBox name="Shinies_Default_Editbox_ClearMedium" 		inherits="EA_EditBox_DefaultFrame" 		font="font_clear_medium" 			warnOnTextCropped="false"/>
+            <EditBox name="Shinies_Default_Editbox_ClearMediumBold" 	inherits="EA_EditBox_DefaultFrame" 		font="font_clear_medium_bold" 		warnOnTextCropped="false"/>
+            <EditBox name="Shinies_Default_Editbox_ClearLargeBold" 		inherits="EA_EditBox_DefaultFrame" 		font="font_clear_large_bold" 		warnOnTextCropped="false"/>
+            
+            <EditBox name="Shinies_Default_Editbox_DefaultLarge" 		inherits="EA_EditBox_DefaultFrame" 		font="font_default_text_large" 		warnOnTextCropped="false"/>
+            <EditBox name="Shinies_Default_Editbox_DefaultHuge" 		inherits="EA_EditBox_DefaultFrame" 		font="font_default_text_huge" 		warnOnTextCropped="false"/>
+            <EditBox name="Shinies_Default_Editbox_DefaultGiant" 		inherits="EA_EditBox_DefaultFrame" 		font="font_default_text_giant" 		warnOnTextCropped="false"/>
+        
+		    <Button name="Shinies_Default_Button_ClearSmallFont" 		inherits="EA_Button_DefaultResizeable" 	font="font_clear_small" 			warnOnTextCropped="false"/>
+		    <Button name="Shinies_Default_Button_ClearMediumFont" 		inherits="EA_Button_DefaultResizeable" 	font="font_clear_medium" 			warnOnTextCropped="false"/>
+		    <Button name="Shinies_Default_Button_ClearMediumBoldFont" 	inherits="EA_Button_DefaultResizeable" 	font="font_clear_medium_bold" 		warnOnTextCropped="false"/>
+		    <Button name="Shinies_Default_Button_ClearLargeBoldFont" 	inherits="EA_Button_DefaultResizeable" 	font="font_clear_large_bold" 		warnOnTextCropped="false"/>
+		
+			
+			<Button name="Shinies_Button_BottomTab" inherits="EA_Button_BottomTab" font="font_clear_medium"/>
+		
+		   	<Button name="Shinies_ComboBox_DefaultResizableComboBoxSelectedLarge" backgroundtexture="shared_01" handleinput="false" highlighttexture="shared_01" font="font_chat_text" textalign="left"
+                overlaytexture="shared_01" overlayhighlighttexture="shared_01">
+                <Size>
+                    <AbsPoint x="250" y="28" />
+                </Size>
+                <TextColors>
+                    <Normal r="255" g="255" b="255" a="255" />
+                    <NormalHighlit r="250" g="213" b="63" a="255" />
+                    <Pressed r="250" g="213" b="63" a="255" />
+                    <PressedHighlit r="250" g="213" b="63" a="255" />
+                    <Disabled r="92" g="92" b="92" a="255" />
+                </TextColors>
+                <ResizeImages>
+                    <Normal def="EA_HorizontalResizeImage_DefaultComboBox"  />
+                    <NormalHighlit def="EA_HorizontalResizeImage_DefaultComboBox" />
+                    <Pressed def="EA_HorizontalResizeImage_DefaultComboBox" />
+                    <PressedHighlit def="EA_HorizontalResizeImage_DefaultComboBox" />
+                    <Disabled def="EA_HorizontalResizeImage_DefaultComboBox" />
+                </ResizeImages>
+                <OverlaySize x="27" y="28" />
+                <OverlayOffset x="223" y="0" />
+                <OverlayTexCoords>
+                    <Normal x="0" y="28" />
+                    <NormalHighlit x="27" y="28" />
+                    <Pressed x="0" y="56" />
+                    <PressedHighlit x="0" y="56" />
+                    <Disabled x="27" y="56" />
+                </OverlayTexCoords>
+                <TextOffset x="5" y="5" />
+            </Button>
+            <Button name="Shinies_Button_DefaultMenuButtonLarge" font="font_chat_text"  textalign="left" >
+                <Size>
+                    <AbsPoint x="250" y="28" />
+                </Size>
+                <TextColors>
+                    <Normal r="255" g="255" b="255" a="255" />
+                    <NormalHighlit r="250" g="213" b="63" a="255" />
+                    <Pressed r="250" g="213" b="63" a="255" />
+                    <PressedHighlit r="250" g="213" b="63" a="255" />
+                    <Disabled r="92" g="92" b="92" a="255" />
+                </TextColors>
+                <ResizeImages>
+                    <NormalHighlit def="EA_FullResizeImage_RedTransparent" />
+                </ResizeImages>
+                <TextOffset x="5" y="5" />
+            </Button>
+            <ComboBox name="Shinies_ComboBox_DefaultResizableLarge" selectedbutton="Shinies_ComboBox_DefaultResizableComboBoxSelectedLarge"
+                menubackground="EA_Window_ComboBoxMenuBackground" menuitembutton="Shinies_Button_DefaultMenuButtonLarge"
+                scrollbar="EA_ScrollBar_DefaultVerticalChain" maxvisibleitems="8" >
+                <Size>
+                    <AbsPoint x="250" y="28" />
+                </Size>
+                <MenuButtonOffset x="5" y="5" />
+            </ComboBox>
+            
+            
+            <Window name="Shinies_CheckButtonWithLabel">
+                <Size>
+                    <AbsPoint x="280" y="32" />
+                </Size>
+                <EventHandlers>
+                    <EventHandler event="OnInitialize" function="EA_LabelCheckButton.Initialize" />
+                    <EventHandler event="OnLButtonUp" function="EA_LabelCheckButton.Toggle" />
+                </EventHandlers>
+                <Windows>
+                    <Button name="$parentButton" inherits="EA_Button_DefaultCheckBox" handleinput="false">
+                        <Anchors>
+                            <Anchor point="left" relativePoint="left">
+                                <AbsPoint x="0" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                    </Button>
+                    <Label name="$parentLabel" inherits="Shinies_Default_Label_ClearMediumFont" autoresize="true" autoresizewidth="true" handleinput="false" warnOnTextCropped="false">
+                        <Size>
+                            <AbsPoint x="255" y="16" />
+                        </Size>
+                        <Anchors>
+                            <Anchor point="right" relativePoint="left" relativeTo="$parentButton">
+                                <AbsPoint x="3" y="0" />
+                            </Anchor>
+                        </Anchors>
+                        <Color r="255" g="255" b="255" a="255" />
+                    </Label>
+                </Windows>
+            </Window>
+            
+		</Windows>
+    </Interface>
+
+
