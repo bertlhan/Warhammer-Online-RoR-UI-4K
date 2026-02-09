@@ -18,7 +18,8 @@ All UI element dimensions, positions, and coordinates in both **Lua AddOn files*
 
 ## Installation
 1. Download or clone this repository
-2. Copy the `FiskgjuseUi1.74` folder to your Warhammer Online RoR directory
+2. Copy the `Interface` and `user` folders from `FiskgjuseUi1.74/` to your Warhammer Online RoR directory
+   - The final structure should be: `WarhammerOnline/Interface/` and `WarhammerOnline/user/`
 3. Start the game in **4K resolution** (3840x2160)
 4. **On first login** with your character:
    - A UI Profile import dialog will appear
